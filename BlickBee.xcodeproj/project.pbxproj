@@ -1,0 +1,547 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A052530B1BE9F271007EF74F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A052530A1BE9F271007EF74F /* main.m */; };
+		A052530E1BE9F271007EF74F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A052530D1BE9F271007EF74F /* AppDelegate.m */; };
+		A05253111BE9F271007EF74F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05253101BE9F271007EF74F /* ViewController.m */; };
+		A05253141BE9F271007EF74F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A05253121BE9F271007EF74F /* Main.storyboard */; };
+		A05253161BE9F271007EF74F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A05253151BE9F271007EF74F /* Assets.xcassets */; };
+		A05253191BE9F271007EF74F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A05253171BE9F271007EF74F /* LaunchScreen.storyboard */; };
+		A05253241BE9F271007EF74F /* BlickBeeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A05253231BE9F271007EF74F /* BlickBeeTests.m */; };
+		A052532F1BE9F271007EF74F /* BlickBeeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A052532E1BE9F271007EF74F /* BlickBeeUITests.m */; };
+		A052533F1BE9F35A007EF74F /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A052533E1BE9F35A007EF74F /* SWRevealViewController.m */; };
+		A05253421BEA0B59007EF74F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05253411BEA0B59007EF74F /* HomeViewController.m */; };
+		A05253451BEA0EC9007EF74F /* LeftDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05253441BEA0EC9007EF74F /* LeftDeckController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A05253201BE9F271007EF74F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A05252FE1BE9F271007EF74F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A05253051BE9F271007EF74F;
+			remoteInfo = BlickBee;
+		};
+		A052532B1BE9F271007EF74F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A05252FE1BE9F271007EF74F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A05253051BE9F271007EF74F;
+			remoteInfo = BlickBee;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A05253061BE9F271007EF74F /* BlickBee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlickBee.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A052530A1BE9F271007EF74F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A052530C1BE9F271007EF74F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A052530D1BE9F271007EF74F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A052530F1BE9F271007EF74F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A05253101BE9F271007EF74F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A05253131BE9F271007EF74F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A05253151BE9F271007EF74F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A05253181BE9F271007EF74F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A052531A1BE9F271007EF74F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A052531F1BE9F271007EF74F /* BlickBeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlickBeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A05253231BE9F271007EF74F /* BlickBeeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlickBeeTests.m; sourceTree = "<group>"; };
+		A05253251BE9F271007EF74F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A052532A1BE9F271007EF74F /* BlickBeeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlickBeeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A052532E1BE9F271007EF74F /* BlickBeeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlickBeeUITests.m; sourceTree = "<group>"; };
+		A05253301BE9F271007EF74F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A052533D1BE9F35A007EF74F /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		A052533E1BE9F35A007EF74F /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		A05253401BEA0B59007EF74F /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		A05253411BEA0B59007EF74F /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		A05253431BEA0EC9007EF74F /* LeftDeckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftDeckController.h; sourceTree = "<group>"; };
+		A05253441BEA0EC9007EF74F /* LeftDeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftDeckController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A05253031BE9F271007EF74F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A052531C1BE9F271007EF74F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A05253271BE9F271007EF74F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A05252FD1BE9F271007EF74F = {
+			isa = PBXGroup;
+			children = (
+				A05253081BE9F271007EF74F /* BlickBee */,
+				A05253221BE9F271007EF74F /* BlickBeeTests */,
+				A052532D1BE9F271007EF74F /* BlickBeeUITests */,
+				A05253071BE9F271007EF74F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A05253071BE9F271007EF74F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A05253061BE9F271007EF74F /* BlickBee.app */,
+				A052531F1BE9F271007EF74F /* BlickBeeTests.xctest */,
+				A052532A1BE9F271007EF74F /* BlickBeeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A05253081BE9F271007EF74F /* BlickBee */ = {
+			isa = PBXGroup;
+			children = (
+				A052533C1BE9F2BD007EF74F /* SWRevealViewController */,
+				A052530C1BE9F271007EF74F /* AppDelegate.h */,
+				A052530D1BE9F271007EF74F /* AppDelegate.m */,
+				A052530F1BE9F271007EF74F /* ViewController.h */,
+				A05253101BE9F271007EF74F /* ViewController.m */,
+				A05253121BE9F271007EF74F /* Main.storyboard */,
+				A05253431BEA0EC9007EF74F /* LeftDeckController.h */,
+				A05253441BEA0EC9007EF74F /* LeftDeckController.m */,
+				A05253401BEA0B59007EF74F /* HomeViewController.h */,
+				A05253411BEA0B59007EF74F /* HomeViewController.m */,
+				A05253151BE9F271007EF74F /* Assets.xcassets */,
+				A05253171BE9F271007EF74F /* LaunchScreen.storyboard */,
+				A052531A1BE9F271007EF74F /* Info.plist */,
+				A05253091BE9F271007EF74F /* Supporting Files */,
+			);
+			path = BlickBee;
+			sourceTree = "<group>";
+		};
+		A05253091BE9F271007EF74F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A052530A1BE9F271007EF74F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A05253221BE9F271007EF74F /* BlickBeeTests */ = {
+			isa = PBXGroup;
+			children = (
+				A05253231BE9F271007EF74F /* BlickBeeTests.m */,
+				A05253251BE9F271007EF74F /* Info.plist */,
+			);
+			path = BlickBeeTests;
+			sourceTree = "<group>";
+		};
+		A052532D1BE9F271007EF74F /* BlickBeeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A052532E1BE9F271007EF74F /* BlickBeeUITests.m */,
+				A05253301BE9F271007EF74F /* Info.plist */,
+			);
+			path = BlickBeeUITests;
+			sourceTree = "<group>";
+		};
+		A052533C1BE9F2BD007EF74F /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A052533D1BE9F35A007EF74F /* SWRevealViewController.h */,
+				A052533E1BE9F35A007EF74F /* SWRevealViewController.m */,
+			);
+			name = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A05253051BE9F271007EF74F /* BlickBee */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A05253331BE9F271007EF74F /* Build configuration list for PBXNativeTarget "BlickBee" */;
+			buildPhases = (
+				A05253021BE9F271007EF74F /* Sources */,
+				A05253031BE9F271007EF74F /* Frameworks */,
+				A05253041BE9F271007EF74F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlickBee;
+			productName = BlickBee;
+			productReference = A05253061BE9F271007EF74F /* BlickBee.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A052531E1BE9F271007EF74F /* BlickBeeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A05253361BE9F271007EF74F /* Build configuration list for PBXNativeTarget "BlickBeeTests" */;
+			buildPhases = (
+				A052531B1BE9F271007EF74F /* Sources */,
+				A052531C1BE9F271007EF74F /* Frameworks */,
+				A052531D1BE9F271007EF74F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A05253211BE9F271007EF74F /* PBXTargetDependency */,
+			);
+			name = BlickBeeTests;
+			productName = BlickBeeTests;
+			productReference = A052531F1BE9F271007EF74F /* BlickBeeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A05253291BE9F271007EF74F /* BlickBeeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A05253391BE9F271007EF74F /* Build configuration list for PBXNativeTarget "BlickBeeUITests" */;
+			buildPhases = (
+				A05253261BE9F271007EF74F /* Sources */,
+				A05253271BE9F271007EF74F /* Frameworks */,
+				A05253281BE9F271007EF74F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A052532C1BE9F271007EF74F /* PBXTargetDependency */,
+			);
+			name = BlickBeeUITests;
+			productName = BlickBeeUITests;
+			productReference = A052532A1BE9F271007EF74F /* BlickBeeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A05252FE1BE9F271007EF74F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Sanchit Kumar Singh";
+				TargetAttributes = {
+					A05253051BE9F271007EF74F = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					A052531E1BE9F271007EF74F = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = A05253051BE9F271007EF74F;
+					};
+					A05253291BE9F271007EF74F = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = A05253051BE9F271007EF74F;
+					};
+				};
+			};
+			buildConfigurationList = A05253011BE9F271007EF74F /* Build configuration list for PBXProject "BlickBee" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A05252FD1BE9F271007EF74F;
+			productRefGroup = A05253071BE9F271007EF74F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A05253051BE9F271007EF74F /* BlickBee */,
+				A052531E1BE9F271007EF74F /* BlickBeeTests */,
+				A05253291BE9F271007EF74F /* BlickBeeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A05253041BE9F271007EF74F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A05253191BE9F271007EF74F /* LaunchScreen.storyboard in Resources */,
+				A05253161BE9F271007EF74F /* Assets.xcassets in Resources */,
+				A05253141BE9F271007EF74F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A052531D1BE9F271007EF74F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A05253281BE9F271007EF74F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A05253021BE9F271007EF74F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A05253111BE9F271007EF74F /* ViewController.m in Sources */,
+				A05253451BEA0EC9007EF74F /* LeftDeckController.m in Sources */,
+				A052530E1BE9F271007EF74F /* AppDelegate.m in Sources */,
+				A052530B1BE9F271007EF74F /* main.m in Sources */,
+				A05253421BEA0B59007EF74F /* HomeViewController.m in Sources */,
+				A052533F1BE9F35A007EF74F /* SWRevealViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A052531B1BE9F271007EF74F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A05253241BE9F271007EF74F /* BlickBeeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A05253261BE9F271007EF74F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A052532F1BE9F271007EF74F /* BlickBeeUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A05253211BE9F271007EF74F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A05253051BE9F271007EF74F /* BlickBee */;
+			targetProxy = A05253201BE9F271007EF74F /* PBXContainerItemProxy */;
+		};
+		A052532C1BE9F271007EF74F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A05253051BE9F271007EF74F /* BlickBee */;
+			targetProxy = A052532B1BE9F271007EF74F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A05253121BE9F271007EF74F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A05253131BE9F271007EF74F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A05253171BE9F271007EF74F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A05253181BE9F271007EF74F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A05253311BE9F271007EF74F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A05253321BE9F271007EF74F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A05253341BE9F271007EF74F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BlickBee/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.til.gaana.BlickBee;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A05253351BE9F271007EF74F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BlickBee/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.til.gaana.BlickBee;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A05253371BE9F271007EF74F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BlickBeeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.til.gaana.BlickBeeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlickBee.app/BlickBee";
+			};
+			name = Debug;
+		};
+		A05253381BE9F271007EF74F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BlickBeeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.til.gaana.BlickBeeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlickBee.app/BlickBee";
+			};
+			name = Release;
+		};
+		A052533A1BE9F271007EF74F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BlickBeeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.til.gaana.BlickBeeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BlickBee;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		A052533B1BE9F271007EF74F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BlickBeeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.til.gaana.BlickBeeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BlickBee;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A05253011BE9F271007EF74F /* Build configuration list for PBXProject "BlickBee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A05253311BE9F271007EF74F /* Debug */,
+				A05253321BE9F271007EF74F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A05253331BE9F271007EF74F /* Build configuration list for PBXNativeTarget "BlickBee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A05253341BE9F271007EF74F /* Debug */,
+				A05253351BE9F271007EF74F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A05253361BE9F271007EF74F /* Build configuration list for PBXNativeTarget "BlickBeeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A05253371BE9F271007EF74F /* Debug */,
+				A05253381BE9F271007EF74F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A05253391BE9F271007EF74F /* Build configuration list for PBXNativeTarget "BlickBeeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A052533A1BE9F271007EF74F /* Debug */,
+				A052533B1BE9F271007EF74F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A05252FE1BE9F271007EF74F /* Project object */;
+}
