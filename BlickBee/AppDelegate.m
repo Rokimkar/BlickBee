@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ProductsServiceClient.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+//    ProductsServiceClient *client = [[ProductsServiceClient alloc] init];
+//    [client fetchProdctRepoWithSuccess:^(ProductRepo *repo) {
+//        
+//    } failure:^(NSError *error) {
+//        
+//    }];
+    
     return YES;
 }
 

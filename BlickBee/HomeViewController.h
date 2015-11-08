@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ProductRepo.h"
+@interface HomeViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 
-@interface HomeViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITableView *homeTableView;
+@property (strong, nonatomic) ProductRepo *productRepo;
 
 @end

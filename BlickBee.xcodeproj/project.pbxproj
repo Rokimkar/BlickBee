@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C2F06FC1BEE458000F6B7DB /* ProductsServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F06FB1BEE458000F6B7DB /* ProductsServiceClient.m */; settings = {ASSET_TAGS = (); }; };
+		0C2F06FF1BEE45C000F6B7DB /* BaseServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F06FE1BEE45C000F6B7DB /* BaseServiceClient.m */; settings = {ASSET_TAGS = (); }; };
+		0C2F07011BEE58BD00F6B7DB /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2F07001BEE58BD00F6B7DB /* CoreFoundation.framework */; };
+		0C2F07031BEE58DB00F6B7DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2F07021BEE58DB00F6B7DB /* UIKit.framework */; };
+		0C2F07051BEE58E300F6B7DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2F07041BEE58E300F6B7DB /* Foundation.framework */; };
+		0C2F07071BEE58F000F6B7DB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2F07061BEE58F000F6B7DB /* SystemConfiguration.framework */; };
+		0C2F07091BEE58F800F6B7DB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2F07081BEE58F800F6B7DB /* Security.framework */; };
+		0C2F070B1BEE590100F6B7DB /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2F070A1BEE590100F6B7DB /* CoreText.framework */; };
+		0C2F070D1BEE590900F6B7DB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2F070C1BEE590900F6B7DB /* CoreGraphics.framework */; };
+		0C2F070F1BEE591400F6B7DB /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2F070E1BEE591400F6B7DB /* Accelerate.framework */; };
+		0C2F07131BEE6B1200F6B7DB /* Offer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F07121BEE6B1200F6B7DB /* Offer.m */; settings = {ASSET_TAGS = (); }; };
+		0C2F07161BEE6B2B00F6B7DB /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F07151BEE6B2B00F6B7DB /* Product.m */; settings = {ASSET_TAGS = (); }; };
+		0C2F07191BEE6B4A00F6B7DB /* DeliverySlot.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F07181BEE6B4A00F6B7DB /* DeliverySlot.m */; settings = {ASSET_TAGS = (); }; };
+		0C2F071F1BEE781B00F6B7DB /* ProductRepo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F071E1BEE781B00F6B7DB /* ProductRepo.m */; settings = {ASSET_TAGS = (); }; };
+		0C2F07221BEF369400F6B7DB /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F07211BEF369400F6B7DB /* BaseModel.m */; settings = {ASSET_TAGS = (); }; };
+		0C2F07281BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F07241BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		0C2F07291BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C2F07251BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		0C2F072A1BEF3A9A00F6B7DB /* TopZoneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F07271BEF3A9A00F6B7DB /* TopZoneView.m */; settings = {ASSET_TAGS = (); }; };
 		A052530B1BE9F271007EF74F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A052530A1BE9F271007EF74F /* main.m */; };
 		A052530E1BE9F271007EF74F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A052530D1BE9F271007EF74F /* AppDelegate.m */; };
 		A05253111BE9F271007EF74F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05253101BE9F271007EF74F /* ViewController.m */; };
@@ -18,6 +36,7 @@
 		A052533F1BE9F35A007EF74F /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A052533E1BE9F35A007EF74F /* SWRevealViewController.m */; };
 		A05253421BEA0B59007EF74F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05253411BEA0B59007EF74F /* HomeViewController.m */; };
 		A05253451BEA0EC9007EF74F /* LeftDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05253441BEA0EC9007EF74F /* LeftDeckController.m */; };
+		C3E264CD072D80A36A9931F1 /* libPods-BlickBee.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD1ACF0555B6623041FA7E8 /* libPods-BlickBee.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +57,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C2F06FA1BEE458000F6B7DB /* ProductsServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductsServiceClient.h; sourceTree = "<group>"; };
+		0C2F06FB1BEE458000F6B7DB /* ProductsServiceClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductsServiceClient.m; sourceTree = "<group>"; };
+		0C2F06FD1BEE45C000F6B7DB /* BaseServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseServiceClient.h; sourceTree = "<group>"; };
+		0C2F06FE1BEE45C000F6B7DB /* BaseServiceClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseServiceClient.m; sourceTree = "<group>"; };
+		0C2F07001BEE58BD00F6B7DB /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		0C2F07021BEE58DB00F6B7DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0C2F07041BEE58E300F6B7DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0C2F07061BEE58F000F6B7DB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0C2F07081BEE58F800F6B7DB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		0C2F070A1BEE590100F6B7DB /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		0C2F070C1BEE590900F6B7DB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0C2F070E1BEE591400F6B7DB /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		0C2F07111BEE6B1200F6B7DB /* Offer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Offer.h; sourceTree = "<group>"; };
+		0C2F07121BEE6B1200F6B7DB /* Offer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Offer.m; sourceTree = "<group>"; };
+		0C2F07141BEE6B2B00F6B7DB /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
+		0C2F07151BEE6B2B00F6B7DB /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
+		0C2F07171BEE6B4A00F6B7DB /* DeliverySlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliverySlot.h; sourceTree = "<group>"; };
+		0C2F07181BEE6B4A00F6B7DB /* DeliverySlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeliverySlot.m; sourceTree = "<group>"; };
+		0C2F071D1BEE781B00F6B7DB /* ProductRepo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductRepo.h; sourceTree = "<group>"; };
+		0C2F071E1BEE781B00F6B7DB /* ProductRepo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductRepo.m; sourceTree = "<group>"; };
+		0C2F07201BEF369400F6B7DB /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		0C2F07211BEF369400F6B7DB /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		0C2F07231BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopZoneCollectionViewCell.h; sourceTree = "<group>"; };
+		0C2F07241BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopZoneCollectionViewCell.m; sourceTree = "<group>"; };
+		0C2F07251BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopZoneCollectionViewCell.xib; sourceTree = "<group>"; };
+		0C2F07261BEF3A9A00F6B7DB /* TopZoneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopZoneView.h; sourceTree = "<group>"; };
+		0C2F07271BEF3A9A00F6B7DB /* TopZoneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopZoneView.m; sourceTree = "<group>"; };
+		0C2F072B1BEF3D6200F6B7DB /* BlickbeePrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlickbeePrefix.pch; sourceTree = "<group>"; };
+		211A8B9C81696E7B8A512D64 /* Pods-BlickBee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlickBee.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlickBee/Pods-BlickBee.release.xcconfig"; sourceTree = "<group>"; };
+		7BD1ACF0555B6623041FA7E8 /* libPods-BlickBee.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BlickBee.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A05253061BE9F271007EF74F /* BlickBee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlickBee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A052530A1BE9F271007EF74F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A052530C1BE9F271007EF74F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -60,6 +109,7 @@
 		A05253411BEA0B59007EF74F /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		A05253431BEA0EC9007EF74F /* LeftDeckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftDeckController.h; sourceTree = "<group>"; };
 		A05253441BEA0EC9007EF74F /* LeftDeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftDeckController.m; sourceTree = "<group>"; };
+		DCD2B634C8C2C33A60CD01E0 /* Pods-BlickBee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlickBee.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlickBee/Pods-BlickBee.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +117,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C2F070D1BEE590900F6B7DB /* CoreGraphics.framework in Frameworks */,
+				0C2F070F1BEE591400F6B7DB /* Accelerate.framework in Frameworks */,
+				0C2F070B1BEE590100F6B7DB /* CoreText.framework in Frameworks */,
+				0C2F07091BEE58F800F6B7DB /* Security.framework in Frameworks */,
+				0C2F07071BEE58F000F6B7DB /* SystemConfiguration.framework in Frameworks */,
+				0C2F07051BEE58E300F6B7DB /* Foundation.framework in Frameworks */,
+				0C2F07031BEE58DB00F6B7DB /* UIKit.framework in Frameworks */,
+				0C2F07011BEE58BD00F6B7DB /* CoreFoundation.framework in Frameworks */,
+				C3E264CD072D80A36A9931F1 /* libPods-BlickBee.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +146,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C2F06F91BEE453C00F6B7DB /* ServiceClients */ = {
+			isa = PBXGroup;
+			children = (
+				0C2F06FA1BEE458000F6B7DB /* ProductsServiceClient.h */,
+				0C2F06FB1BEE458000F6B7DB /* ProductsServiceClient.m */,
+				0C2F06FD1BEE45C000F6B7DB /* BaseServiceClient.h */,
+				0C2F06FE1BEE45C000F6B7DB /* BaseServiceClient.m */,
+			);
+			name = ServiceClients;
+			sourceTree = "<group>";
+		};
+		0C2F07101BEE6AF100F6B7DB /* ModalClasses */ = {
+			isa = PBXGroup;
+			children = (
+				0C2F07201BEF369400F6B7DB /* BaseModel.h */,
+				0C2F07211BEF369400F6B7DB /* BaseModel.m */,
+				0C2F07111BEE6B1200F6B7DB /* Offer.h */,
+				0C2F07121BEE6B1200F6B7DB /* Offer.m */,
+				0C2F07141BEE6B2B00F6B7DB /* Product.h */,
+				0C2F07151BEE6B2B00F6B7DB /* Product.m */,
+				0C2F07171BEE6B4A00F6B7DB /* DeliverySlot.h */,
+				0C2F07181BEE6B4A00F6B7DB /* DeliverySlot.m */,
+				0C2F071D1BEE781B00F6B7DB /* ProductRepo.h */,
+				0C2F071E1BEE781B00F6B7DB /* ProductRepo.m */,
+			);
+			name = ModalClasses;
+			sourceTree = "<group>";
+		};
+		2CAFED12EDEDE7337FE1D526 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DCD2B634C8C2C33A60CD01E0 /* Pods-BlickBee.debug.xcconfig */,
+				211A8B9C81696E7B8A512D64 /* Pods-BlickBee.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3BD114BFA0CEC4013852BFCC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C2F070E1BEE591400F6B7DB /* Accelerate.framework */,
+				0C2F070C1BEE590900F6B7DB /* CoreGraphics.framework */,
+				0C2F070A1BEE590100F6B7DB /* CoreText.framework */,
+				0C2F07081BEE58F800F6B7DB /* Security.framework */,
+				0C2F07061BEE58F000F6B7DB /* SystemConfiguration.framework */,
+				0C2F07041BEE58E300F6B7DB /* Foundation.framework */,
+				0C2F07021BEE58DB00F6B7DB /* UIKit.framework */,
+				0C2F07001BEE58BD00F6B7DB /* CoreFoundation.framework */,
+				7BD1ACF0555B6623041FA7E8 /* libPods-BlickBee.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A05252FD1BE9F271007EF74F = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +206,8 @@
 				A05253221BE9F271007EF74F /* BlickBeeTests */,
 				A052532D1BE9F271007EF74F /* BlickBeeUITests */,
 				A05253071BE9F271007EF74F /* Products */,
+				2CAFED12EDEDE7337FE1D526 /* Pods */,
+				3BD114BFA0CEC4013852BFCC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,9 +224,12 @@
 		A05253081BE9F271007EF74F /* BlickBee */ = {
 			isa = PBXGroup;
 			children = (
+				0C2F07101BEE6AF100F6B7DB /* ModalClasses */,
+				0C2F06F91BEE453C00F6B7DB /* ServiceClients */,
 				A052533C1BE9F2BD007EF74F /* SWRevealViewController */,
 				A052530C1BE9F271007EF74F /* AppDelegate.h */,
 				A052530D1BE9F271007EF74F /* AppDelegate.m */,
+				0C2F072B1BEF3D6200F6B7DB /* BlickbeePrefix.pch */,
 				A052530F1BE9F271007EF74F /* ViewController.h */,
 				A05253101BE9F271007EF74F /* ViewController.m */,
 				A05253121BE9F271007EF74F /* Main.storyboard */,
@@ -120,6 +237,11 @@
 				A05253441BEA0EC9007EF74F /* LeftDeckController.m */,
 				A05253401BEA0B59007EF74F /* HomeViewController.h */,
 				A05253411BEA0B59007EF74F /* HomeViewController.m */,
+				0C2F07231BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.h */,
+				0C2F07241BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.m */,
+				0C2F07251BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.xib */,
+				0C2F07261BEF3A9A00F6B7DB /* TopZoneView.h */,
+				0C2F07271BEF3A9A00F6B7DB /* TopZoneView.m */,
 				A05253151BE9F271007EF74F /* Assets.xcassets */,
 				A05253171BE9F271007EF74F /* LaunchScreen.storyboard */,
 				A052531A1BE9F271007EF74F /* Info.plist */,
@@ -170,9 +292,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A05253331BE9F271007EF74F /* Build configuration list for PBXNativeTarget "BlickBee" */;
 			buildPhases = (
+				9FC226D6DBE93F34F072646B /* Check Pods Manifest.lock */,
 				A05253021BE9F271007EF74F /* Sources */,
 				A05253031BE9F271007EF74F /* Frameworks */,
 				A05253041BE9F271007EF74F /* Resources */,
+				4DC8D606C6B87423A936B32E /* Embed Pods Frameworks */,
+				B3225A8432D02CA582701434 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -266,6 +391,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C2F07291BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.xib in Resources */,
 				A05253191BE9F271007EF74F /* LaunchScreen.storyboard in Resources */,
 				A05253161BE9F271007EF74F /* Assets.xcassets in Resources */,
 				A05253141BE9F271007EF74F /* Main.storyboard in Resources */,
@@ -288,17 +414,76 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4DC8D606C6B87423A936B32E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/myfile",
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/myfile",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BlickBee/Pods-BlickBee-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FC226D6DBE93F34F072646B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B3225A8432D02CA582701434 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BlickBee/Pods-BlickBee-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A05253021BE9F271007EF74F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C2F07281BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.m in Sources */,
+				0C2F071F1BEE781B00F6B7DB /* ProductRepo.m in Sources */,
 				A05253111BE9F271007EF74F /* ViewController.m in Sources */,
+				0C2F07161BEE6B2B00F6B7DB /* Product.m in Sources */,
+				0C2F06FF1BEE45C000F6B7DB /* BaseServiceClient.m in Sources */,
+				0C2F072A1BEF3A9A00F6B7DB /* TopZoneView.m in Sources */,
 				A05253451BEA0EC9007EF74F /* LeftDeckController.m in Sources */,
+				0C2F06FC1BEE458000F6B7DB /* ProductsServiceClient.m in Sources */,
 				A052530E1BE9F271007EF74F /* AppDelegate.m in Sources */,
+				0C2F07221BEF369400F6B7DB /* BaseModel.m in Sources */,
 				A052530B1BE9F271007EF74F /* main.m in Sources */,
+				0C2F07131BEE6B1200F6B7DB /* Offer.m in Sources */,
 				A05253421BEA0B59007EF74F /* HomeViewController.m in Sources */,
 				A052533F1BE9F35A007EF74F /* SWRevealViewController.m in Sources */,
+				0C2F07191BEE6B4A00F6B7DB /* DeliverySlot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,9 +622,13 @@
 		};
 		A05253341BE9F271007EF74F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCD2B634C8C2C33A60CD01E0 /* Pods-BlickBee.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/kunal/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
 				INFOPLIST_FILE = BlickBee/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.til.gaana.BlickBee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -448,9 +637,13 @@
 		};
 		A05253351BE9F271007EF74F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 211A8B9C81696E7B8A512D64 /* Pods-BlickBee.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/kunal/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
 				INFOPLIST_FILE = BlickBee/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.til.gaana.BlickBee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -524,6 +717,7 @@
 				A05253351BE9F271007EF74F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A05253361BE9F271007EF74F /* Build configuration list for PBXNativeTarget "BlickBeeTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +726,7 @@
 				A05253381BE9F271007EF74F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A05253391BE9F271007EF74F /* Build configuration list for PBXNativeTarget "BlickBeeUITests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +735,7 @@
 				A052533B1BE9F271007EF74F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
