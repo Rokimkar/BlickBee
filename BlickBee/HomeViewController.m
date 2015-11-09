@@ -21,10 +21,15 @@
     [super viewDidLoad];
     SWRevealViewController *swRevealVC = self.revealViewController;
     if(swRevealVC){
+        UIImage *image =[UIImage imageNamed:@"menu.png"];
+        self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc]init];
+        [self.navigationItem.leftBarButtonItem setImage:image];
         [self.navigationItem.leftBarButtonItem setTarget: self.revealViewController];
         [self.navigationItem.leftBarButtonItem setAction: @selector( revealToggle: )];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-        swRevealVC.rearViewRevealWidth=130.0f;
+        self.revealViewController.panGestureRecognizer.delegate=self;
+        self.navigationController.navigationBar.barTintColor=RGBA(246, 71, 17, 1);
+        swRevealVC.rearViewRevealWidth=270.0f;
         [self.homeTableView registerNib:[UINib nibWithNibName:@"TopZoneCollectionViewCell" bundle:nil] forCellReuseIdentifier:@"TopZoneCollectionViewCell"];
         ProductsServiceClient *client = [[ProductsServiceClient alloc] init];
         [client fetchProdctRepoWithSuccess:^(ProductRepo *repo) {
@@ -33,12 +38,14 @@
         } failure:^(NSError *error) {
             
         }];
-        
-        
     }
     self.title = @"BlickBee";
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    //self.navigationItem.leftBarButtonItem=[UIBarButtonItem alloc]init
+}
 
 
 - (void)didReceiveMemoryWarning {
@@ -92,13 +99,13 @@
 
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-    if (section==0 || section==1) {
-        return 10;
-    }
-    return 0;
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+//{
+//    if (section==0 || section==1) {
+//        return 10;
+//    }
+//    return 0;
+//}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     

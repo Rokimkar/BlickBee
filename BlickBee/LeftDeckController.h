@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface LeftDeckController : UIViewController
+@property (weak, nonatomic) IBOutlet UITableView *itemListingTableView;
 
 @end
