@@ -31,6 +31,8 @@
     self.itemListingTableView.scrollEnabled=NO;
     self.itemListingTableView.separatorColor=[UIColor clearColor];
     self.view.backgroundColor=RGBA(232, 233, 232, 1);
+    self.itemListingTableView.backgroundView=nil;
+    self.itemListingTableView.backgroundColor=RGBA(232, 233, 232, 1);
 //    self.itemListingTableView.backgroundColor=RGBA(202, 186, 186, 1);
   //  self.view.backgroundColor=RGBA(202, 186, 186, 1);
 }
@@ -49,6 +51,7 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"LeftDeckTableViewCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
+    
         cell.labelForDeckItem.text=[itemsArray objectAtIndex:indexPath.row];
         cell.imageForDeckItem.image=[UIImage imageNamed:[imageArray objectAtIndex:indexPath.row]];
         if(indexPath.row>4){
@@ -57,13 +60,19 @@
     return cell;
 }
 
+- (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UIView *headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 15)];
+    [headerView setBackgroundColor:RGBA(255, 255, 255, 1)];
+    return headerView;
+}
+
 - (CGFloat) tableView: (UITableView *)
 tableView heightForRowAtIndexPath: (NSIndexPath *)indexPath{
-    return 57;
+    return 48;
 }
 
 -(CGFloat) tableView:(UITableView *) tableView heightForHeaderInSection :(NSInteger) section{
-    return 0;
+    return 15;
 }
 
 - (void)didReceiveMemoryWarning {
