@@ -22,10 +22,15 @@
     SWRevealViewController *swRevealVC = self.revealViewController;
     if(swRevealVC){
         UIImage *image =[UIImage imageNamed:@"menu.png"];
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        btn.bounds = CGRectMake(0, 0, image.size.width-30, image.size.height-30);
         self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc]init];
-        [self.navigationItem.leftBarButtonItem setImage:image];
-        [self.navigationItem.leftBarButtonItem setTarget: self.revealViewController];
-        [self.navigationItem.leftBarButtonItem setAction: @selector( revealToggle: )];
+        [btn addTarget:self.revealViewController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
+        [btn setImage:image forState:UIControlStateNormal];
+        UIBarButtonItem *menuButton = [[UIBarButtonItem alloc]initWithCustomView:btn];
+//        [self.navigationItem.leftBarButtonItem setTarget: self.revealViewController];
+//        [self.navigationItem.leftBarButtonItem setAction: @selector( revealToggle: )];
+        self.navigationItem.leftBarButtonItem = menuButton;
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
         self.revealViewController.panGestureRecognizer.delegate=self;
         self.navigationController.navigationBar.barTintColor=RGBA(246, 71, 17, 1);
@@ -106,6 +111,8 @@
 //    }
 //    return 0;
 //}
+
+//section=1 fruit section=2 vegetable
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
