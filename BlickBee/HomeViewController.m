@@ -11,6 +11,7 @@
 #import "TopZoneView.h"
 #import "ProductsServiceClient.h"
 #import "TopZoneCollectionViewCell.h"
+#import "ProductViewController.h"
 @interface HomeViewController ()
 
 @end
@@ -94,6 +95,21 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSIndexPath *idx= indexPath;
+    NSLog(@"%ld",(long)idx.section);
+    if(indexPath.section==1){
+        ProductViewController *vc = [[ProductViewController alloc]init];
+        vc.productArray=self.productRepo.fruitsArray;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    else if (indexPath.section==2){
+        ProductViewController *vc = [[ProductViewController alloc]init];
+        vc.productArray=self.productRepo.vegetablesArray;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+}
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section==0) {
@@ -103,20 +119,5 @@
         return getScreenWidth()*192.0/320.0;
 
 }
-
-//- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-//{
-//    if (section==0 || section==1) {
-//        return 10;
-//    }
-//    return 0;
-//}
-
-//section=1 fruit section=2 vegetable
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-}
-
 
 @end

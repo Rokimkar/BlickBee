@@ -66,6 +66,24 @@
             </objects>
             <point key="canvasLocation" x="1141" y="719"/>
         </scene>
+        <!--Product View Controller-->
+        <scene sceneID="5c5-gi-zqF">
+            <objects>
+                <viewController storyboardIdentifier="ProductViewController" id="plb-Wq-3IG" customClass="ProductViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pt9-IR-XeM"/>
+                        <viewControllerLayoutGuide type="bottom" id="jwp-8f-Hy0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C3i-ps-QAQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gb6-5I-Nw2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1556" y="719"/>
+        </scene>
         <!--Left Deck Controller-->
         <scene sceneID="5HQ-FD-hPK">
             <objects>

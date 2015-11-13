@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface BaseTableView : UITableView
-
+@property (weak,nonatomic) NSMutableArray *productArray;
+-(id) initWithFrame:(CGRect)frame andProductsArray:(NSMutableArray*) prodsArray;
 @end
