@@ -8,7 +8,7 @@
 
 #import "LeftDeckController.h"
 #import "LeftDeckTableViewCell.h"
-
+#import "BlickbeePrefix.pch"
 @interface LeftDeckController (){
     NSArray *itemsArray;
     NSArray *imageArray;

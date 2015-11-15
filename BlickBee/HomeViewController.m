@@ -12,6 +12,7 @@
 #import "ProductsServiceClient.h"
 #import "TopZoneCollectionViewCell.h"
 #import "ProductViewController.h"
+#import "BlickbeePrefix.pch"
 @interface HomeViewController ()
 
 @end
