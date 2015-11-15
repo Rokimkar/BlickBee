@@ -58,7 +58,11 @@
         } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
         }];
     }
+    
+    [cell.labelForProductName setNumberOfLines:0];
     cell.labelForProductName.text=product.productName;
+    [cell.labelForProductName sizeToFit];
+    
     cell.labelForProductPrice.text=product.productPrice;
     cell.labelForProductQuantity.text=product.productQuantity;
     cell.selectionStyle=UITableViewCellSelectionStyleNone;
