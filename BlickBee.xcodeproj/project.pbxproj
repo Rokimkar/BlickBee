@@ -17,7 +17,6 @@
 		0C2F07281BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F07241BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.m */; };
 		0C2F07291BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C2F07251BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.xib */; };
 		0C2F072A1BEF3A9A00F6B7DB /* TopZoneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F07271BEF3A9A00F6B7DB /* TopZoneView.m */; };
-		0C81833A1BF8907100882A65 /* DummyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8183391BF8907100882A65 /* DummyModel.m */; settings = {ASSET_TAGS = (); }; };
 		A052530B1BE9F271007EF74F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A052530A1BE9F271007EF74F /* main.m */; };
 		A052530E1BE9F271007EF74F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A052530D1BE9F271007EF74F /* AppDelegate.m */; };
 		A05253111BE9F271007EF74F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05253101BE9F271007EF74F /* ViewController.m */; };
@@ -71,6 +70,10 @@
 		A0DA71B11BF074E10012490E /* veg_vector.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0DA718D1BF074E10012490E /* veg_vector.jpg */; };
 		A0DA71B51BF08D510012490E /* LeftDeckTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DA71B31BF08D500012490E /* LeftDeckTableViewCell.m */; };
 		A0DA71B61BF08D510012490E /* LeftDeckTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0DA71B41BF08D500012490E /* LeftDeckTableViewCell.xib */; };
+		A0DDA05B1BF89126000D9580 /* DummyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DDA05A1BF89126000D9580 /* DummyViewController.m */; };
+		A0DDA05D1BF8DA5C000D9580 /* cardLayout.png in Resources */ = {isa = PBXBuildFile; fileRef = A0DDA05C1BF8DA5C000D9580 /* cardLayout.png */; };
+		A0DDA0611BF8E1AC000D9580 /* AddToCartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DDA05F1BF8E1AC000D9580 /* AddToCartTableViewCell.m */; };
+		A0DDA0621BF8E1AC000D9580 /* AddToCartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0DDA0601BF8E1AC000D9580 /* AddToCartTableViewCell.xib */; };
 		C66BD62B4F6C18DF05937993 /* libPods-BlickBee.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB0F40B769FAB5BC701EF2B /* libPods-BlickBee.a */; };
 /* End PBXBuildFile section */
 
@@ -112,8 +115,6 @@
 		0C2F07261BEF3A9A00F6B7DB /* TopZoneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopZoneView.h; sourceTree = "<group>"; };
 		0C2F07271BEF3A9A00F6B7DB /* TopZoneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopZoneView.m; sourceTree = "<group>"; };
 		0C2F072B1BEF3D6200F6B7DB /* BlickbeePrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlickbeePrefix.pch; sourceTree = "<group>"; };
-		0C8183381BF8907100882A65 /* DummyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyModel.h; sourceTree = "<group>"; };
-		0C8183391BF8907100882A65 /* DummyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyModel.m; sourceTree = "<group>"; };
 		2E87C8E839077887CCA402AB /* Pods-BlickBee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlickBee.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlickBee/Pods-BlickBee.release.xcconfig"; sourceTree = "<group>"; };
 		8FB0F40B769FAB5BC701EF2B /* libPods-BlickBee.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BlickBee.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A05253061BE9F271007EF74F /* BlickBee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlickBee.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,6 +185,12 @@
 		A0DA71B21BF08D500012490E /* LeftDeckTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftDeckTableViewCell.h; sourceTree = "<group>"; };
 		A0DA71B31BF08D500012490E /* LeftDeckTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftDeckTableViewCell.m; sourceTree = "<group>"; };
 		A0DA71B41BF08D500012490E /* LeftDeckTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftDeckTableViewCell.xib; sourceTree = "<group>"; };
+		A0DDA0591BF89126000D9580 /* DummyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyViewController.h; sourceTree = "<group>"; };
+		A0DDA05A1BF89126000D9580 /* DummyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyViewController.m; sourceTree = "<group>"; };
+		A0DDA05C1BF8DA5C000D9580 /* cardLayout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardLayout.png; sourceTree = "<group>"; };
+		A0DDA05E1BF8E1AC000D9580 /* AddToCartTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddToCartTableViewCell.h; sourceTree = "<group>"; };
+		A0DDA05F1BF8E1AC000D9580 /* AddToCartTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddToCartTableViewCell.m; sourceTree = "<group>"; };
+		A0DDA0601BF8E1AC000D9580 /* AddToCartTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddToCartTableViewCell.xib; sourceTree = "<group>"; };
 		F4F9204652D14D4F60EC1A69 /* Pods-BlickBee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlickBee.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlickBee/Pods-BlickBee.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -289,10 +296,10 @@
 				0C2F07231BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.h */,
 				0C2F07241BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.m */,
 				0C2F07251BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.xib */,
+				A0DDA0591BF89126000D9580 /* DummyViewController.h */,
+				A0DDA05A1BF89126000D9580 /* DummyViewController.m */,
 				0C2F07261BEF3A9A00F6B7DB /* TopZoneView.h */,
 				0C2F07271BEF3A9A00F6B7DB /* TopZoneView.m */,
-				0C8183381BF8907100882A65 /* DummyModel.h */,
-				0C8183391BF8907100882A65 /* DummyModel.m */,
 				A05253151BE9F271007EF74F /* Assets.xcassets */,
 				A05253171BE9F271007EF74F /* LaunchScreen.storyboard */,
 				A052531A1BE9F271007EF74F /* Info.plist */,
@@ -344,6 +351,9 @@
 				A0DA71611BF0734B0012490E /* BaseTableViewCell.h */,
 				A0DA71621BF0734B0012490E /* BaseTableViewCell.m */,
 				A0DA71631BF0734B0012490E /* BaseTableViewCell.xib */,
+				A0DDA05E1BF8E1AC000D9580 /* AddToCartTableViewCell.h */,
+				A0DDA05F1BF8E1AC000D9580 /* AddToCartTableViewCell.m */,
+				A0DDA0601BF8E1AC000D9580 /* AddToCartTableViewCell.xib */,
 			);
 			name = BaseTableView;
 			sourceTree = "<group>";
@@ -351,6 +361,7 @@
 		A0DA71671BF074700012490E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A0DDA05C1BF8DA5C000D9580 /* cardLayout.png */,
 				A0DA716A1BF074E10012490E /* 1.png */,
 				A0DA716B1BF074E10012490E /* 2_a.png */,
 				A0DA716C1BF074E10012490E /* 2_b.png */,
@@ -534,7 +545,9 @@
 				A0DA71971BF074E10012490E /* customerservice.png in Resources */,
 				A05253191BE9F271007EF74F /* LaunchScreen.storyboard in Resources */,
 				A0DA71A61BF074E10012490E /* password.png in Resources */,
+				A0DDA0621BF8E1AC000D9580 /* AddToCartTableViewCell.xib in Resources */,
 				A0DA718E1BF074E10012490E /* 1.png in Resources */,
+				A0DDA05D1BF8DA5C000D9580 /* cardLayout.png in Resources */,
 				A0DA719E1BF074E10012490E /* logo+text 250x.png in Resources */,
 				A0DA71AC1BF074E10012490E /* share.png in Resources */,
 				A05253161BE9F271007EF74F /* Assets.xcassets in Resources */,
@@ -643,11 +656,12 @@
 				A052530E1BE9F271007EF74F /* AppDelegate.m in Sources */,
 				0C2F07221BEF369400F6B7DB /* BaseModel.m in Sources */,
 				A052530B1BE9F271007EF74F /* main.m in Sources */,
+				A0DDA05B1BF89126000D9580 /* DummyViewController.m in Sources */,
 				0C2F07131BEE6B1200F6B7DB /* Offer.m in Sources */,
 				A05253421BEA0B59007EF74F /* HomeViewController.m in Sources */,
 				A0D777E51BF4A0C500776479 /* ProductViewController.m in Sources */,
-				0C81833A1BF8907100882A65 /* DummyModel.m in Sources */,
 				A0DA71B51BF08D510012490E /* LeftDeckTableViewCell.m in Sources */,
+				A0DDA0611BF8E1AC000D9580 /* AddToCartTableViewCell.m in Sources */,
 				A052533F1BE9F35A007EF74F /* SWRevealViewController.m in Sources */,
 				0C2F07191BEE6B4A00F6B7DB /* DeliverySlot.m in Sources */,
 			);
@@ -798,7 +812,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Alok Ranjan (H686S25ZPL)";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/kunal/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
+				GCC_PREFIX_HEADER = /Users/Rokimkar/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
 				INFOPLIST_FILE = BlickBee/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -816,7 +830,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Alok Ranjan (H686S25ZPL)";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/kunal/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
+				GCC_PREFIX_HEADER = /Users/Rokimkar/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
 				INFOPLIST_FILE = BlickBee/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

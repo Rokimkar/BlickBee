@@ -7,7 +7,26 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Product.h"
+
+@protocol reloadTable <NSObject>
+-(void) addClicked:(Product *) product;
+-(void) subtractClicked:(Product *) product;
+@end
 
 @interface AddToCartTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *imageViewForProduct;
+- (IBAction)addButtonClicked:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *addButtonClicked;
+@property (weak, nonatomic) IBOutlet UIButton *subtractButtonClicked;
+@property (weak, nonatomic) IBOutlet UIImageView *imageViewForAddToCart;
+@property (weak, nonatomic) IBOutlet UILabel *labelForItemCount;
+@property (weak, nonatomic) IBOutlet UILabel *labelForProductName;
+@property (weak, nonatomic) IBOutlet UILabel *labelForPrice;
+@property (weak, nonatomic) IBOutlet UILabel *labelForQuantity;
+@property (strong, nonatomic) Product *itemData;
 
+- (IBAction)subtractButtonClicked:(id)sender;
+-(void) bindData:(Product*)product andQuantityAdded:(NSString *) quantity;
+@property (weak,nonatomic) id <reloadTable> reloadTableCellDelegate;
 @end

@@ -32,8 +32,8 @@
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSDictionary *params = @{@"request": @"allCategories()",
-                             @"user_id": @"525",
-                             @"auth_key": @"4cb54df515295cc989669629200baf82"};
+                             @"user_id": @"1056",
+                             @"auth_key": @"8d60d0527437a5ce4ba257fc8876dfaf"};
     
     manager.responseSerializer.acceptableContentTypes= [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     [manager POST:BASE_URL_STRING parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
