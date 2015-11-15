@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "BaseServiceClient.h"
 #import "ProductRepo.h"
+#import "User.h"
+#import "BlickbeeAppManager.h"
 @interface ProductsServiceClient : BaseServiceClient
 
 - (void) fetchProdctRepoWithSuccess:(void (^) (ProductRepo* repo))success failure:(void (^) (NSError *error)) failure;
