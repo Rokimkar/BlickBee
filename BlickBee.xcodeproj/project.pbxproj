@@ -17,11 +17,11 @@
 		0C2F07281BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F07241BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.m */; };
 		0C2F07291BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C2F07251BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.xib */; };
 		0C2F072A1BEF3A9A00F6B7DB /* TopZoneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F07271BEF3A9A00F6B7DB /* TopZoneView.m */; };
-		0C81833D1BF8DEC100882A65 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C81833C1BF8DEC100882A65 /* SignInViewController.m */; settings = {ASSET_TAGS = (); }; };
-		0C8183401BF8DECE00882A65 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C81833F1BF8DECE00882A65 /* SignUpViewController.m */; settings = {ASSET_TAGS = (); }; };
-		0C8183451BF9003400882A65 /* LoginServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8183441BF9003400882A65 /* LoginServiceClient.m */; settings = {ASSET_TAGS = (); }; };
-		0C8183481BF903D200882A65 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8183471BF903D200882A65 /* User.m */; settings = {ASSET_TAGS = (); }; };
-		0C81834C1BF914A000882A65 /* BlickbeeAppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C81834B1BF914A000882A65 /* BlickbeeAppManager.m */; settings = {ASSET_TAGS = (); }; };
+		0C81833D1BF8DEC100882A65 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C81833C1BF8DEC100882A65 /* SignInViewController.m */; };
+		0C8183401BF8DECE00882A65 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C81833F1BF8DECE00882A65 /* SignUpViewController.m */; };
+		0C8183451BF9003400882A65 /* LoginServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8183441BF9003400882A65 /* LoginServiceClient.m */; };
+		0C8183481BF903D200882A65 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8183471BF903D200882A65 /* User.m */; };
+		0C81834C1BF914A000882A65 /* BlickbeeAppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C81834B1BF914A000882A65 /* BlickbeeAppManager.m */; };
 		A052530B1BE9F271007EF74F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A052530A1BE9F271007EF74F /* main.m */; };
 		A052530E1BE9F271007EF74F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A052530D1BE9F271007EF74F /* AppDelegate.m */; };
 		A05253111BE9F271007EF74F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05253101BE9F271007EF74F /* ViewController.m */; };
@@ -36,7 +36,6 @@
 		A0D777E51BF4A0C500776479 /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D777E41BF4A0C500776479 /* ProductViewController.m */; };
 		A0DA715D1BF072860012490E /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DA715C1BF072860012490E /* BaseTableView.m */; };
 		A0DA71641BF0734B0012490E /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DA71621BF0734B0012490E /* BaseTableViewCell.m */; };
-		A0DA71651BF0734B0012490E /* BaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0DA71631BF0734B0012490E /* BaseTableViewCell.xib */; };
 		A0DA718E1BF074E10012490E /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = A0DA716A1BF074E10012490E /* 1.png */; };
 		A0DA718F1BF074E10012490E /* 2_a.png in Resources */ = {isa = PBXBuildFile; fileRef = A0DA716B1BF074E10012490E /* 2_a.png */; };
 		A0DA71901BF074E10012490E /* 2_b.png in Resources */ = {isa = PBXBuildFile; fileRef = A0DA716C1BF074E10012490E /* 2_b.png */; };
@@ -79,6 +78,7 @@
 		A0DDA05D1BF8DA5C000D9580 /* cardLayout.png in Resources */ = {isa = PBXBuildFile; fileRef = A0DDA05C1BF8DA5C000D9580 /* cardLayout.png */; };
 		A0DDA0611BF8E1AC000D9580 /* AddToCartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DDA05F1BF8E1AC000D9580 /* AddToCartTableViewCell.m */; };
 		A0DDA0621BF8E1AC000D9580 /* AddToCartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0DDA0601BF8E1AC000D9580 /* AddToCartTableViewCell.xib */; };
+		A0DDA0641BF9B716000D9580 /* BaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0DDA0631BF9B716000D9580 /* BaseTableViewCell.xib */; };
 		C66BD62B4F6C18DF05937993 /* libPods-BlickBee.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB0F40B769FAB5BC701EF2B /* libPods-BlickBee.a */; };
 /* End PBXBuildFile section */
 
@@ -160,7 +160,6 @@
 		A0DA715C1BF072860012490E /* BaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableView.m; sourceTree = "<group>"; };
 		A0DA71611BF0734B0012490E /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
 		A0DA71621BF0734B0012490E /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
-		A0DA71631BF0734B0012490E /* BaseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseTableViewCell.xib; sourceTree = "<group>"; };
 		A0DA716A1BF074E10012490E /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.png; path = "app_ui/app_ui/app icons/1.png"; sourceTree = "<group>"; };
 		A0DA716B1BF074E10012490E /* 2_a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2_a.png; path = "app_ui/app_ui/app icons/2_a.png"; sourceTree = "<group>"; };
 		A0DA716C1BF074E10012490E /* 2_b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2_b.png; path = "app_ui/app_ui/app icons/2_b.png"; sourceTree = "<group>"; };
@@ -206,6 +205,7 @@
 		A0DDA05E1BF8E1AC000D9580 /* AddToCartTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddToCartTableViewCell.h; sourceTree = "<group>"; };
 		A0DDA05F1BF8E1AC000D9580 /* AddToCartTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddToCartTableViewCell.m; sourceTree = "<group>"; };
 		A0DDA0601BF8E1AC000D9580 /* AddToCartTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddToCartTableViewCell.xib; sourceTree = "<group>"; };
+		A0DDA0631BF9B716000D9580 /* BaseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseTableViewCell.xib; sourceTree = "<group>"; };
 		F4F9204652D14D4F60EC1A69 /* Pods-BlickBee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlickBee.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlickBee/Pods-BlickBee.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -383,7 +383,7 @@
 				A0DA715C1BF072860012490E /* BaseTableView.m */,
 				A0DA71611BF0734B0012490E /* BaseTableViewCell.h */,
 				A0DA71621BF0734B0012490E /* BaseTableViewCell.m */,
-				A0DA71631BF0734B0012490E /* BaseTableViewCell.xib */,
+				A0DDA0631BF9B716000D9580 /* BaseTableViewCell.xib */,
 				A0DDA05E1BF8E1AC000D9580 /* AddToCartTableViewCell.h */,
 				A0DDA05F1BF8E1AC000D9580 /* AddToCartTableViewCell.m */,
 				A0DDA0601BF8E1AC000D9580 /* AddToCartTableViewCell.xib */,
@@ -566,7 +566,6 @@
 				A0DA71AA1BF074E10012490E /* search.png in Resources */,
 				A0DA719D1BF074E10012490E /* home.png in Resources */,
 				A0DA71AF1BF074E10012490E /* user icon.png in Resources */,
-				A0DA71651BF0734B0012490E /* BaseTableViewCell.xib in Resources */,
 				A0DA71A91BF074E10012490E /* rateus.png in Resources */,
 				A0DA71A41BF074E10012490E /* notifications_grey.png in Resources */,
 				A0DA71921BF074E10012490E /* 2.png in Resources */,
@@ -591,6 +590,7 @@
 				A0DA71AD1BF074E10012490E /* telephone46.png in Resources */,
 				A0DA71A01BF074E10012490E /* logo+text 350x.png in Resources */,
 				A0DA71911BF074E10012490E /* 2_c.png in Resources */,
+				A0DDA0641BF9B716000D9580 /* BaseTableViewCell.xib in Resources */,
 				A0DA71991BF074E10012490E /* email5.png in Resources */,
 				A0DA719A1BF074E10012490E /* eyesclosed.png in Resources */,
 				A0DA71981BF074E10012490E /* dropdown.png in Resources */,
