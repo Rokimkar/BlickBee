@@ -100,12 +100,15 @@
     NSIndexPath *idx= indexPath;
     NSLog(@"%ld",(long)idx.section);
     if(indexPath.section==1){
-        ProductViewController *vc = [[ProductViewController alloc]init];
+        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        ProductViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"ProductViewController"];
+//        ProductViewController *vc = [[ProductViewController alloc]init];
         vc.productArray=self.productRepo.fruitsArray;
         [self.navigationController pushViewController:vc animated:YES];
     }
     else if (indexPath.section==2){
-        ProductViewController *vc = [[ProductViewController alloc]init];
+        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        ProductViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"ProductViewController"];
         vc.productArray=self.productRepo.vegetablesArray;
         [self.navigationController pushViewController:vc animated:YES];
     }

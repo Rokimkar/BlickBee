@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#define CELL_HEIGHT 105
 
 @interface BaseTableView : UITableView
 -(id) initWithFrame:(CGRect)frame andProductsArray:(NSMutableArray*) prodsArray;

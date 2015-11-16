@@ -10,5 +10,6 @@
 
 @interface ProductViewController : UIViewController
 @property (weak,nonatomic) NSMutableArray *productArray;
+@property (weak, nonatomic) IBOutlet UIButton *floatingBtn;
 
 @end
