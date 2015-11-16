@@ -17,6 +17,11 @@
 		0C2F07281BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F07241BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.m */; };
 		0C2F07291BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C2F07251BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.xib */; };
 		0C2F072A1BEF3A9A00F6B7DB /* TopZoneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F07271BEF3A9A00F6B7DB /* TopZoneView.m */; };
+		0C81833D1BF8DEC100882A65 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C81833C1BF8DEC100882A65 /* SignInViewController.m */; settings = {ASSET_TAGS = (); }; };
+		0C8183401BF8DECE00882A65 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C81833F1BF8DECE00882A65 /* SignUpViewController.m */; settings = {ASSET_TAGS = (); }; };
+		0C8183451BF9003400882A65 /* LoginServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8183441BF9003400882A65 /* LoginServiceClient.m */; settings = {ASSET_TAGS = (); }; };
+		0C8183481BF903D200882A65 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8183471BF903D200882A65 /* User.m */; settings = {ASSET_TAGS = (); }; };
+		0C81834C1BF914A000882A65 /* BlickbeeAppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C81834B1BF914A000882A65 /* BlickbeeAppManager.m */; settings = {ASSET_TAGS = (); }; };
 		A052530B1BE9F271007EF74F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A052530A1BE9F271007EF74F /* main.m */; };
 		A052530E1BE9F271007EF74F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A052530D1BE9F271007EF74F /* AppDelegate.m */; };
 		A05253111BE9F271007EF74F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05253101BE9F271007EF74F /* ViewController.m */; };
@@ -115,6 +120,16 @@
 		0C2F07261BEF3A9A00F6B7DB /* TopZoneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopZoneView.h; sourceTree = "<group>"; };
 		0C2F07271BEF3A9A00F6B7DB /* TopZoneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopZoneView.m; sourceTree = "<group>"; };
 		0C2F072B1BEF3D6200F6B7DB /* BlickbeePrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlickbeePrefix.pch; sourceTree = "<group>"; };
+		0C81833B1BF8DEC100882A65 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		0C81833C1BF8DEC100882A65 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		0C81833E1BF8DECE00882A65 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		0C81833F1BF8DECE00882A65 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		0C8183431BF9003400882A65 /* LoginServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginServiceClient.h; sourceTree = "<group>"; };
+		0C8183441BF9003400882A65 /* LoginServiceClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginServiceClient.m; sourceTree = "<group>"; };
+		0C8183461BF903D200882A65 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		0C8183471BF903D200882A65 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		0C81834A1BF914A000882A65 /* BlickbeeAppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlickbeeAppManager.h; sourceTree = "<group>"; };
+		0C81834B1BF914A000882A65 /* BlickbeeAppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlickbeeAppManager.m; sourceTree = "<group>"; };
 		2E87C8E839077887CCA402AB /* Pods-BlickBee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlickBee.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlickBee/Pods-BlickBee.release.xcconfig"; sourceTree = "<group>"; };
 		8FB0F40B769FAB5BC701EF2B /* libPods-BlickBee.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BlickBee.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A05253061BE9F271007EF74F /* BlickBee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlickBee.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -227,6 +242,8 @@
 				0C2F06FB1BEE458000F6B7DB /* ProductsServiceClient.m */,
 				0C2F06FD1BEE45C000F6B7DB /* BaseServiceClient.h */,
 				0C2F06FE1BEE45C000F6B7DB /* BaseServiceClient.m */,
+				0C8183431BF9003400882A65 /* LoginServiceClient.h */,
+				0C8183441BF9003400882A65 /* LoginServiceClient.m */,
 			);
 			name = ServiceClients;
 			sourceTree = "<group>";
@@ -236,6 +253,8 @@
 			children = (
 				0C2F07201BEF369400F6B7DB /* BaseModel.h */,
 				0C2F07211BEF369400F6B7DB /* BaseModel.m */,
+				0C8183461BF903D200882A65 /* User.h */,
+				0C8183471BF903D200882A65 /* User.m */,
 				0C2F07111BEE6B1200F6B7DB /* Offer.h */,
 				0C2F07121BEE6B1200F6B7DB /* Offer.m */,
 				0C2F07141BEE6B2B00F6B7DB /* Product.h */,
@@ -246,6 +265,15 @@
 				0C2F071E1BEE781B00F6B7DB /* ProductRepo.m */,
 			);
 			name = ModalClasses;
+			sourceTree = "<group>";
+		};
+		0C8183491BF9147E00882A65 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				0C81834A1BF914A000882A65 /* BlickbeeAppManager.h */,
+				0C81834B1BF914A000882A65 /* BlickbeeAppManager.m */,
+			);
+			name = Managers;
 			sourceTree = "<group>";
 		};
 		A05252FD1BE9F271007EF74F = {
@@ -273,6 +301,7 @@
 		A05253081BE9F271007EF74F /* BlickBee */ = {
 			isa = PBXGroup;
 			children = (
+				0C8183491BF9147E00882A65 /* Managers */,
 				0C2F07101BEE6AF100F6B7DB /* ModalClasses */,
 				0C2F06F91BEE453C00F6B7DB /* ServiceClients */,
 				A052533C1BE9F2BD007EF74F /* SWRevealViewController */,
@@ -284,6 +313,10 @@
 				A052530F1BE9F271007EF74F /* ViewController.h */,
 				A05253101BE9F271007EF74F /* ViewController.m */,
 				A05253121BE9F271007EF74F /* Main.storyboard */,
+				0C81833B1BF8DEC100882A65 /* SignInViewController.h */,
+				0C81833C1BF8DEC100882A65 /* SignInViewController.m */,
+				0C81833E1BF8DECE00882A65 /* SignUpViewController.h */,
+				0C81833F1BF8DECE00882A65 /* SignUpViewController.m */,
 				A0D777E31BF4A0C500776479 /* ProductViewController.h */,
 				A0D777E41BF4A0C500776479 /* ProductViewController.m */,
 				A05253431BEA0EC9007EF74F /* LeftDeckController.h */,
@@ -643,15 +676,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C81833D1BF8DEC100882A65 /* SignInViewController.m in Sources */,
 				0C2F07281BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.m in Sources */,
 				0C2F071F1BEE781B00F6B7DB /* ProductRepo.m in Sources */,
 				A05253111BE9F271007EF74F /* ViewController.m in Sources */,
 				0C2F07161BEE6B2B00F6B7DB /* Product.m in Sources */,
+				0C8183401BF8DECE00882A65 /* SignUpViewController.m in Sources */,
+				0C8183451BF9003400882A65 /* LoginServiceClient.m in Sources */,
 				A0DA71641BF0734B0012490E /* BaseTableViewCell.m in Sources */,
 				0C2F06FF1BEE45C000F6B7DB /* BaseServiceClient.m in Sources */,
 				0C2F072A1BEF3A9A00F6B7DB /* TopZoneView.m in Sources */,
 				A05253451BEA0EC9007EF74F /* LeftDeckController.m in Sources */,
 				0C2F06FC1BEE458000F6B7DB /* ProductsServiceClient.m in Sources */,
+				0C81834C1BF914A000882A65 /* BlickbeeAppManager.m in Sources */,
+				0C8183481BF903D200882A65 /* User.m in Sources */,
 				A0DA715D1BF072860012490E /* BaseTableView.m in Sources */,
 				A052530E1BE9F271007EF74F /* AppDelegate.m in Sources */,
 				0C2F07221BEF369400F6B7DB /* BaseModel.m in Sources */,
