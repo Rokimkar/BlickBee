@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface BaseTableView : UITableView
-@property (weak,nonatomic) NSMutableArray *productArray;
 -(id) initWithFrame:(CGRect)frame andProductsArray:(NSMutableArray*) prodsArray;
+
+@property (strong,nonatomic) NSMutableArray *productArray;
+@property (strong,nonatomic) NSIndexPath *indexpth;
+@property (strong,nonatomic) NSMutableArray *quantitySelected;
 @end

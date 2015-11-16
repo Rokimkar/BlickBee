@@ -11,7 +11,17 @@
 #import "UIImageView+AFNetworking.h"
 #import "BlickbeePrefix.pch"
 #import "Product.h"
-@implementation BaseTableView
+#import "AddToCartTableViewCell.h"
+
+
+@interface BaseTableView() <reloadTable,productProtocolDelegate>{
+    
+}
+@end
+
+@implementation BaseTableView{
+    NSMutableArray *indexPathArray;
+}
 
 -(id) initWithFrame:(CGRect)frame andProductsArray:(NSMutableArray*) prodsArray{
     
@@ -20,8 +30,40 @@
     self.delegate=self;
     [self registerNib:[UINib nibWithNibName:@"BaseTableViewCell" bundle:nil] forCellReuseIdentifier:@"BaseTableViewCell"];
     self.backgroundColor=RGBA(0, 0, 255, 1);
+    indexPathArray = [[NSMutableArray alloc]init];
+    self.quantitySelected = [[NSMutableArray alloc] init];
+    for(int i=0;i<self.productArray.count;i++){
+        [self.quantitySelected addObject:@"0"];
+    }
     return [self initWithFrame:frame];
 }
+
+-(void) productRecievedFromCell: (Product*) product{
+    NSInteger row = [self.productArray indexOfObject:product];
+    if (row>=0 && row<self.productArray.count) {
+            self.quantitySelected[row]=@"1";
+        [self reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:row inSection:0]] withRowAnimation:NO];
+    }
+//    self.indexpth = [NSIndexPath indexPathForRow:row inSection:0];
+//    [indexPathArray addObject:self.indexpth];
+}
+
+-(void) addClicked:(Product *) product{
+    NSInteger row = [self.productArray indexOfObject:product];
+    if (row>=0 && row<self.productArray.count) {
+        self.quantitySelected[row]=[NSString stringWithFormat:@"%ld",(long)([self.quantitySelected[row] integerValue]+1)];
+        [self reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:row inSection:0]] withRowAnimation:NO];
+    }
+}
+-(void) subtractClicked:(Product *) product{
+    NSInteger row = [self.productArray indexOfObject:product];
+    if (row>=0 && row<self.productArray.count) {
+        self.quantitySelected[row]=[NSString stringWithFormat:@"%ld",(long)([self.quantitySelected[row] integerValue]-1)];
+        [self reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:row inSection:0]] withRowAnimation:NO];
+    }
+}
+
+
 
 - (NSInteger) numberOfSectionsInTableView : (UITableView *)tableView{
     return 1;
@@ -32,42 +74,31 @@
 }
 
 -(UITableViewCell *)tableView : (UITableView *)tableView cellForRowAtIndexPath : (NSIndexPath *) indexPath{
+    
+    //productqaty >0 - addtocart
+    //else - bAsetableviewcell
+    
     BaseTableViewCell *cell= (BaseTableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"BaseTableViewCell"];
     if(cell == nil){
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BaseTableViewCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
     Product *product = [self.productArray objectAtIndex:indexPath.row];
-    if([product.productImages objectAtIndex:0]){
-        NSURLRequest *req = [NSURLRequest requestWithURL:[NSURL URLWithString:[product.productImages objectAtIndex:0]] cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:60];
-        [cell.imageViewForProduct setImageWithURLRequest:req placeholderImage:[UIImage imageNamed:@"my orders empty.png"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
-            
-            if (!request) {
-                cell.imageViewForProduct.image=image;
-                cell.imageViewForProduct.contentMode=UIViewContentModeScaleToFill;
-            }
-            else{
-                
-                [UIView transitionWithView:cell.imageViewForProduct duration:1.0f options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
-                    cell.imageViewForProduct.image=image;
-                    cell.imageViewForProduct.contentMode=UIViewContentModeScaleToFill;
-                } completion:^(BOOL finished) {
-                    
-                }];
-            }
-        } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
-        }];
+       cell.selectionStyle=UITableViewCellSelectionStyleNone;
+    cell.productDelegate=self;
+   // cell.imageViewForCart.image=[UIImage imageNamed:@"cartadd.png"];
+    [cell bindData:product];
+    if(![[self.quantitySelected objectAtIndex:indexPath.row] isEqualToString:@"0"]){
+        AddToCartTableViewCell *coverCell = (AddToCartTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"AddToCartTableViewCell"];
+        if(coverCell == nil){
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"AddToCartTableViewCell" owner:self options:nil];
+            coverCell = [nib objectAtIndex:0];
+        }
+        coverCell.reloadTableCellDelegate=self;
+        [coverCell bindData:[self.productArray objectAtIndex:indexPath.row] andQuantityAdded:[self.quantitySelected objectAtIndex:indexPath.row]];
+        coverCell.selectionStyle=UITableViewCellSelectionStyleNone;
+        return coverCell;
     }
-    
-    [cell.labelForProductName setNumberOfLines:0];
-    cell.labelForProductName.text=product.productName;
-    [cell.labelForProductName sizeToFit];
-    
-    cell.labelForProductPrice.text=product.productPrice;
-    cell.labelForProductQuantity.text=product.productQuantity;
-    cell.selectionStyle=UITableViewCellSelectionStyleNone;
-    cell.imageViewForCart.image=[UIImage imageNamed:@"cartadd.png"];
-    cell.backgroundColor=RGBA(225, 225, 225, 1);
     return cell;
 }
 
@@ -79,7 +110,14 @@
 }
 
 -(CGFloat) tableView:(UITableView *) tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 75;
+    return 105;
 }
+
+
+//delegate - product
+//prodsarray - productid - index
+//index - indexpath - reload
+
+
 
 @end
