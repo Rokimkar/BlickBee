@@ -850,7 +850,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Alok Ranjan (H686S25ZPL)";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/Rokimkar/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
+				GCC_PREFIX_HEADER = /Users/kunal/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
 				INFOPLIST_FILE = BlickBee/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -868,7 +868,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Alok Ranjan (H686S25ZPL)";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/Rokimkar/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
+				GCC_PREFIX_HEADER = /Users/kunal/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
 				INFOPLIST_FILE = BlickBee/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

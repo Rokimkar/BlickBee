@@ -23,6 +23,15 @@
     productTableView = [[BaseTableView alloc]initWithFrame:CGRectMake(0, 0, getScreenWidth(), getScreenHeight()) andProductsArray:self.productArray];
     productTableView.separatorColor=[UIColor clearColor];
     [self.view addSubview:productTableView];
+    [self.view bringSubviewToFront:self.floatingBtn];
+}
+
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+}
+
+-(void) awakeFromNib{
+    
 }
 
 - (void)didReceiveMemoryWarning {

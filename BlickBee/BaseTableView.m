@@ -13,7 +13,6 @@
 #import "Product.h"
 #import "AddToCartTableViewCell.h"
 
-
 @interface BaseTableView() <reloadTable,productProtocolDelegate>{
     
 }
@@ -70,13 +69,28 @@
 }
 
 -(NSInteger) tableView :(UITableView *)tableView numberOfRowsInSection:(NSInteger) section{
-    return self.productArray.count;
+    return self.productArray.count+1;
 }
 
 -(UITableViewCell *)tableView : (UITableView *)tableView cellForRowAtIndexPath : (NSIndexPath *) indexPath{
     
     //productqaty >0 - addtocart
     //else - bAsetableviewcell
+    
+    if (indexPath.row==self.productArray.count) {
+        
+        static NSString *CellIdentifier = @"Cell";
+        
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        }
+        cell.backgroundColor = RGBA(225, 225, 225, 1);
+;
+        return cell;
+            
+    }
+    
     
     BaseTableViewCell *cell= (BaseTableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"BaseTableViewCell"];
     if(cell == nil){
@@ -110,7 +124,7 @@
 }
 
 -(CGFloat) tableView:(UITableView *) tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 105;
+    return CELL_HEIGHT;
 }
 
 

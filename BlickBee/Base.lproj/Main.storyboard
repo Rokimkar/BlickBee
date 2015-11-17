@@ -382,8 +382,28 @@
                     <view key="view" contentMode="scaleToFill" id="C3i-ps-QAQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QE2-Rs-ZO6">
+                                <rect key="frame" x="256" y="500" width="39" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="39" id="Sq6-50-IBA"/>
+                                    <constraint firstAttribute="height" constant="39" id="lah-hk-lqb"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="7" minY="0.0" maxX="0.0" maxY="7"/>
+                                <state key="normal" title="11" backgroundImage="floatingCart">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="QE2-Rs-ZO6" secondAttribute="trailing" constant="9" id="eDP-a9-717"/>
+                            <constraint firstItem="jwp-8f-Hy0" firstAttribute="top" secondItem="QE2-Rs-ZO6" secondAttribute="bottom" constant="29" id="lei-Qx-Sr6"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="floatingBtn" destination="QE2-Rs-ZO6" id="iZc-er-vYy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gb6-5I-Nw2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -442,6 +462,7 @@
     <resources>
         <image name="email5.png" width="64" height="64"/>
         <image name="eyesclosed.png" width="64" height="64"/>
+        <image name="floatingCart" width="39" height="39"/>
         <image name="logo+text 350x.png" width="350" height="350"/>
         <image name="password.png" width="64" height="64"/>
         <image name="telephone46.png" width="64" height="64"/>
