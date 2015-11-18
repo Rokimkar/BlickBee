@@ -12,5 +12,4 @@
 
 + (BlickbeeAppManager*)sharedInstance;
 @property (nonatomic,strong) User *user;
-
 @end

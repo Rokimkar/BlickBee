@@ -30,17 +30,13 @@
     [self registerNib:[UINib nibWithNibName:@"BaseTableViewCell" bundle:nil] forCellReuseIdentifier:@"BaseTableViewCell"];
     self.backgroundColor=RGBA(0, 0, 255, 1);
     indexPathArray = [[NSMutableArray alloc]init];
-    self.quantitySelected = [[NSMutableArray alloc] init];
-    for(int i=0;i<self.productArray.count;i++){
-        [self.quantitySelected addObject:@"0"];
-    }
     return [self initWithFrame:frame];
 }
 
 -(void) productRecievedFromCell: (Product*) product{
     NSInteger row = [self.productArray indexOfObject:product];
     if (row>=0 && row<self.productArray.count) {
-            self.quantitySelected[row]=@"1";
+        product.selectedProductQuantity=@"1";
         [self reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:row inSection:0]] withRowAnimation:NO];
     }
 //    self.indexpth = [NSIndexPath indexPathForRow:row inSection:0];
@@ -50,14 +46,14 @@
 -(void) addClicked:(Product *) product{
     NSInteger row = [self.productArray indexOfObject:product];
     if (row>=0 && row<self.productArray.count) {
-        self.quantitySelected[row]=[NSString stringWithFormat:@"%ld",(long)([self.quantitySelected[row] integerValue]+1)];
+        product.selectedProductQuantity=[NSString stringWithFormat:@"%ld",(long)([product.selectedProductQuantity integerValue]+1)];
         [self reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:row inSection:0]] withRowAnimation:NO];
     }
 }
 -(void) subtractClicked:(Product *) product{
     NSInteger row = [self.productArray indexOfObject:product];
     if (row>=0 && row<self.productArray.count) {
-        self.quantitySelected[row]=[NSString stringWithFormat:@"%ld",(long)([self.quantitySelected[row] integerValue]-1)];
+        product.selectedProductQuantity=[NSString stringWithFormat:@"%ld",(long)([product.selectedProductQuantity integerValue]-1)];
         [self reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:row inSection:0]] withRowAnimation:NO];
     }
 }
@@ -86,9 +82,7 @@
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         }
         cell.backgroundColor = RGBA(225, 225, 225, 1);
-;
         return cell;
-            
     }
     
     
@@ -102,14 +96,14 @@
     cell.productDelegate=self;
    // cell.imageViewForCart.image=[UIImage imageNamed:@"cartadd.png"];
     [cell bindData:product];
-    if(![[self.quantitySelected objectAtIndex:indexPath.row] isEqualToString:@"0"]){
+    if(![product.selectedProductQuantity isEqualToString:@"0"]){
         AddToCartTableViewCell *coverCell = (AddToCartTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"AddToCartTableViewCell"];
         if(coverCell == nil){
             NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"AddToCartTableViewCell" owner:self options:nil];
             coverCell = [nib objectAtIndex:0];
         }
         coverCell.reloadTableCellDelegate=self;
-        [coverCell bindData:[self.productArray objectAtIndex:indexPath.row] andQuantityAdded:[self.quantitySelected objectAtIndex:indexPath.row]];
+        [coverCell bindData:[self.productArray objectAtIndex:indexPath.row] andQuantityAdded:product.selectedProductQuantity];
         coverCell.selectionStyle=UITableViewCellSelectionStyleNone;
         return coverCell;
     }
@@ -126,12 +120,5 @@
 -(CGFloat) tableView:(UITableView *) tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return CELL_HEIGHT;
 }
-
-
-//delegate - product
-//prodsarray - productid - index
-//index - indexpath - reload
-
-
 
 @end

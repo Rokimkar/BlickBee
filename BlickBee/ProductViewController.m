@@ -7,8 +7,10 @@
 //
 
 #import "ProductViewController.h"
+#import "CartViewController.h"
 #import "BaseTableView.h"
 #import "BlickBeePrefix.pch"
+#import "BlickbeeAppManager.h"
 
 @interface ProductViewController (){
     BaseTableView *productTableView;
@@ -24,6 +26,13 @@
     productTableView.separatorColor=[UIColor clearColor];
     [self.view addSubview:productTableView];
     [self.view bringSubviewToFront:self.floatingBtn];
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"cartViewControllerSegue"]){
+        CartViewController *cartViewController = [segue destinationViewController];
+        cartViewController.productArray=self.productArray;
+    }
 }
 
 -(void) viewWillAppear:(BOOL)animated{

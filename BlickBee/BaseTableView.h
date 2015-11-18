@@ -14,5 +14,4 @@
 
 @property (strong,nonatomic) NSMutableArray *productArray;
 @property (strong,nonatomic) NSIndexPath *indexpth;
-@property (strong,nonatomic) NSMutableArray *quantitySelected;
 @end

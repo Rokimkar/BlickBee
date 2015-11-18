@@ -30,6 +30,7 @@
         self.productUnitQty=@"";
         self.productCap=@"";
         self.updatedDate=@"";
+        self.selectedProductQuantity=@"0";
         self.productImages=[[NSMutableArray alloc] init];
     }
     return self;

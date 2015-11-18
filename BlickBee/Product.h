@@ -26,5 +26,6 @@
 @property (nonatomic,strong) NSString *productCap;
 @property (nonatomic,strong) NSString *updatedDate;
 @property (nonatomic,strong) NSMutableArray *productImages;
+@property (nonatomic,strong) NSString *selectedProductQuantity;
 
 @end
