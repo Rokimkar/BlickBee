@@ -31,7 +31,7 @@
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"cartViewControllerSegue"]){
         CartViewController *cartViewController = [segue destinationViewController];
-        cartViewController.productArray=self.productArray;
+        cartViewController.productArray=[[BlickbeeAppManager sharedInstance] selectedProducts];
     }
 }
 

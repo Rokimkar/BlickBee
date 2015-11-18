@@ -8,6 +8,7 @@
 
 #import "BaseTableViewCell.h"
 #import "UIImageView+AFNetworking.h"
+#import "BlickbeeAppManager.h"
 
 @implementation BaseTableViewCell
 
@@ -25,6 +26,9 @@
     
     //delegate - product
     [self.productDelegate productRecievedFromCell:self.item];
+    if(![[[BlickbeeAppManager sharedInstance] selectedProducts] containsObject:self.item]){
+    [[[BlickbeeAppManager sharedInstance] selectedProducts] addObject:self.item];
+    }
 }
 
 

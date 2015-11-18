@@ -22,5 +22,6 @@
 
 -(void) bindData : (Product *) product;
 @property (weak, nonatomic) IBOutlet UILabel *labelForQuantity;
+@property (nonatomic,strong) Product *item;
 
 @end

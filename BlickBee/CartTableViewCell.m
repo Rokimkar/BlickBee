@@ -8,6 +8,7 @@
 
 #import "CartTableViewCell.h"
 #import "UIImageView+AFNetworking.h"
+#import "BlickbeeAppManager.h"
 
 @implementation CartTableViewCell
 
@@ -50,5 +51,10 @@
 - (IBAction)addButtonClicked:(id)sender {
 }
 - (IBAction)subtractButtonClicked:(id)sender {
+    if([self.item.selectedProductQuantity isEqualToString:@"0"]){
+        if([[[BlickbeeAppManager sharedInstance] selectedProducts] containsObject:self.item]){
+                [[[BlickbeeAppManager sharedInstance] selectedProducts] removeObject:self.item];
+        }
+    }
 }
 @end

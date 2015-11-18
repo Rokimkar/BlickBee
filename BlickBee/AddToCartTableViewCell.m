@@ -8,6 +8,7 @@
 
 #import "AddToCartTableViewCell.h"
 #import "UIImageView+AFNetworking.h"
+#import "BlickbeeAppManager.h"
 
 @implementation AddToCartTableViewCell{
     NSInteger items;
@@ -72,6 +73,11 @@
     if(items!=0){
     items-=1;
     }
-        [self.reloadTableCellDelegate subtractClicked:self.itemData];
+    if([self.itemData.selectedProductQuantity isEqualToString:@"0"]){
+        if([[[BlickbeeAppManager sharedInstance] selectedProducts] containsObject:self.itemData]){
+        [[[BlickbeeAppManager sharedInstance] selectedProducts] removeObject:self.itemData];
+        }
+    }
+    [self.reloadTableCellDelegate subtractClicked:self.itemData];
 }
 @end

@@ -12,4 +12,5 @@
 
 + (BlickbeeAppManager*)sharedInstance;
 @property (nonatomic,strong) User *user;
+@property (nonatomic,strong) NSMutableArray *selectedProducts;
 @end

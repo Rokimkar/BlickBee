@@ -31,6 +31,7 @@
 {
     self = [super init];
     self.user = [[User alloc] init];
+    self.selectedProducts = [[NSMutableArray alloc]init];
     return self;
     
 }
