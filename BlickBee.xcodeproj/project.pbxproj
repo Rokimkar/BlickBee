@@ -33,6 +33,12 @@
 		A052533F1BE9F35A007EF74F /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A052533E1BE9F35A007EF74F /* SWRevealViewController.m */; };
 		A05253421BEA0B59007EF74F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05253411BEA0B59007EF74F /* HomeViewController.m */; };
 		A05253451BEA0EC9007EF74F /* LeftDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05253441BEA0EC9007EF74F /* LeftDeckController.m */; };
+		A0D5E31A1BFDFE3C00650E58 /* DeliveryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D5E3191BFDFE3C00650E58 /* DeliveryDetailViewController.m */; };
+		A0D5E31E1BFE02BD00650E58 /* DeliveryDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D5E31C1BFE02BD00650E58 /* DeliveryDetailTableViewCell.m */; };
+		A0D5E31F1BFE02BD00650E58 /* DeliveryDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0D5E31D1BFE02BD00650E58 /* DeliveryDetailTableViewCell.xib */; };
+		A0D5E3221BFE049100650E58 /* DeliveryDetailTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D5E3211BFE049100650E58 /* DeliveryDetailTableView.m */; };
+		A0D5E3261BFE6AE800650E58 /* DeliveryTimeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D5E3241BFE6AE800650E58 /* DeliveryTimeTableViewCell.m */; };
+		A0D5E3271BFE6AE800650E58 /* DeliveryTimeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0D5E3251BFE6AE800650E58 /* DeliveryTimeTableViewCell.xib */; };
 		A0D777E51BF4A0C500776479 /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D777E41BF4A0C500776479 /* ProductViewController.m */; };
 		A0DA715D1BF072860012490E /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DA715C1BF072860012490E /* BaseTableView.m */; };
 		A0DA71641BF0734B0012490E /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DA71621BF0734B0012490E /* BaseTableViewCell.m */; };
@@ -158,6 +164,16 @@
 		A05253411BEA0B59007EF74F /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		A05253431BEA0EC9007EF74F /* LeftDeckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftDeckController.h; sourceTree = "<group>"; };
 		A05253441BEA0EC9007EF74F /* LeftDeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftDeckController.m; sourceTree = "<group>"; };
+		A0D5E3181BFDFE3C00650E58 /* DeliveryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliveryDetailViewController.h; sourceTree = "<group>"; };
+		A0D5E3191BFDFE3C00650E58 /* DeliveryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeliveryDetailViewController.m; sourceTree = "<group>"; };
+		A0D5E31B1BFE02BD00650E58 /* DeliveryDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliveryDetailTableViewCell.h; sourceTree = "<group>"; };
+		A0D5E31C1BFE02BD00650E58 /* DeliveryDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeliveryDetailTableViewCell.m; sourceTree = "<group>"; };
+		A0D5E31D1BFE02BD00650E58 /* DeliveryDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeliveryDetailTableViewCell.xib; sourceTree = "<group>"; };
+		A0D5E3201BFE049100650E58 /* DeliveryDetailTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliveryDetailTableView.h; sourceTree = "<group>"; };
+		A0D5E3211BFE049100650E58 /* DeliveryDetailTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeliveryDetailTableView.m; sourceTree = "<group>"; };
+		A0D5E3231BFE6AE800650E58 /* DeliveryTimeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliveryTimeTableViewCell.h; sourceTree = "<group>"; };
+		A0D5E3241BFE6AE800650E58 /* DeliveryTimeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeliveryTimeTableViewCell.m; sourceTree = "<group>"; };
+		A0D5E3251BFE6AE800650E58 /* DeliveryTimeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeliveryTimeTableViewCell.xib; sourceTree = "<group>"; };
 		A0D777E31BF4A0C500776479 /* ProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductViewController.h; sourceTree = "<group>"; };
 		A0D777E41BF4A0C500776479 /* ProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductViewController.m; sourceTree = "<group>"; };
 		A0DA715B1BF072860012490E /* BaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableView.h; sourceTree = "<group>"; };
@@ -319,6 +335,7 @@
 				A0DA71661BF073D80012490E /* BaseTableView */,
 				A0DA71671BF074700012490E /* Images */,
 				A0DDA06B1BFB2F86000D9580 /* Cart */,
+				A0D5E3171BFDFD5C00650E58 /* DeliveryDetailsViewController */,
 				A052530C1BE9F271007EF74F /* AppDelegate.h */,
 				A052530D1BE9F271007EF74F /* AppDelegate.m */,
 				0C2F072B1BEF3D6200F6B7DB /* BlickbeePrefix.pch */,
@@ -386,6 +403,23 @@
 				A052533E1BE9F35A007EF74F /* SWRevealViewController.m */,
 			);
 			name = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		A0D5E3171BFDFD5C00650E58 /* DeliveryDetailsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A0D5E3181BFDFE3C00650E58 /* DeliveryDetailViewController.h */,
+				A0D5E3191BFDFE3C00650E58 /* DeliveryDetailViewController.m */,
+				A0D5E3201BFE049100650E58 /* DeliveryDetailTableView.h */,
+				A0D5E3211BFE049100650E58 /* DeliveryDetailTableView.m */,
+				A0D5E31B1BFE02BD00650E58 /* DeliveryDetailTableViewCell.h */,
+				A0D5E31C1BFE02BD00650E58 /* DeliveryDetailTableViewCell.m */,
+				A0D5E31D1BFE02BD00650E58 /* DeliveryDetailTableViewCell.xib */,
+				A0D5E3231BFE6AE800650E58 /* DeliveryTimeTableViewCell.h */,
+				A0D5E3241BFE6AE800650E58 /* DeliveryTimeTableViewCell.m */,
+				A0D5E3251BFE6AE800650E58 /* DeliveryTimeTableViewCell.xib */,
+			);
+			name = DeliveryDetailsViewController;
 			sourceTree = "<group>";
 		};
 		A0DA71661BF073D80012490E /* BaseTableView */ = {
@@ -586,6 +620,7 @@
 			files = (
 				A0DDA0731BFB3DE2000D9580 /* CartTableViewCell.xib in Resources */,
 				A0DA71A21BF074E10012490E /* my orders empty.png in Resources */,
+				A0D5E31F1BFE02BD00650E58 /* DeliveryDetailTableViewCell.xib in Resources */,
 				A0DA71AB1BF074E10012490E /* settings.png in Resources */,
 				A0DA719B1BF074E10012490E /* eyesopen.png in Resources */,
 				A0DA71AE1BF074E10012490E /* truck.png in Resources */,
@@ -617,6 +652,7 @@
 				A0DA71AD1BF074E10012490E /* telephone46.png in Resources */,
 				A0DA71A01BF074E10012490E /* logo+text 350x.png in Resources */,
 				A0DA71911BF074E10012490E /* 2_c.png in Resources */,
+				A0D5E3271BFE6AE800650E58 /* DeliveryTimeTableViewCell.xib in Resources */,
 				A0DDA0641BF9B716000D9580 /* BaseTableViewCell.xib in Resources */,
 				A0DA71991BF074E10012490E /* email5.png in Resources */,
 				A0DA719A1BF074E10012490E /* eyesclosed.png in Resources */,
@@ -704,8 +740,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C81833D1BF8DEC100882A65 /* SignInViewController.m in Sources */,
+				A0D5E31E1BFE02BD00650E58 /* DeliveryDetailTableViewCell.m in Sources */,
 				0C2F07281BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.m in Sources */,
 				0C2F071F1BEE781B00F6B7DB /* ProductRepo.m in Sources */,
+				A0D5E31A1BFDFE3C00650E58 /* DeliveryDetailViewController.m in Sources */,
 				A05253111BE9F271007EF74F /* ViewController.m in Sources */,
 				0C2F07161BEE6B2B00F6B7DB /* Product.m in Sources */,
 				0C8183401BF8DECE00882A65 /* SignUpViewController.m in Sources */,
@@ -715,6 +753,7 @@
 				0C2F06FF1BEE45C000F6B7DB /* BaseServiceClient.m in Sources */,
 				0C2F072A1BEF3A9A00F6B7DB /* TopZoneView.m in Sources */,
 				A05253451BEA0EC9007EF74F /* LeftDeckController.m in Sources */,
+				A0D5E3221BFE049100650E58 /* DeliveryDetailTableView.m in Sources */,
 				0C2F06FC1BEE458000F6B7DB /* ProductsServiceClient.m in Sources */,
 				0C81834C1BF914A000882A65 /* BlickbeeAppManager.m in Sources */,
 				0C8183481BF903D200882A65 /* User.m in Sources */,
@@ -730,6 +769,7 @@
 				A0DA71B51BF08D510012490E /* LeftDeckTableViewCell.m in Sources */,
 				A0DDA0611BF8E1AC000D9580 /* AddToCartTableViewCell.m in Sources */,
 				A052533F1BE9F35A007EF74F /* SWRevealViewController.m in Sources */,
+				A0D5E3261BFE6AE800650E58 /* DeliveryTimeTableViewCell.m in Sources */,
 				0C2F07191BEE6B4A00F6B7DB /* DeliverySlot.m in Sources */,
 				A0DDA06E1BFB3D9B000D9580 /* CartTableView.m in Sources */,
 			);

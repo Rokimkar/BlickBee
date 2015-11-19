@@ -481,6 +481,7 @@
                                 </state>
                                 <connections>
                                     <action selector="proceedButtonClicked:" destination="uej-bX-zHJ" eventType="touchUpInside" id="CVT-fE-6vw"/>
+                                    <segue destination="Nlg-zg-BPt" kind="push" id="DoE-pz-5xS"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FYf-w6-fge">
@@ -545,6 +546,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="poC-ZZ-4hL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2082" y="719"/>
+        </scene>
+        <!--Delivery Detail View Controller-->
+        <scene sceneID="8Hi-gD-Tcm">
+            <objects>
+                <viewController id="Nlg-zg-BPt" customClass="DeliveryDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cU4-KD-rr3"/>
+                        <viewControllerLayoutGuide type="bottom" id="4jj-hS-SLG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PKh-VA-fEJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="x6n-sC-l5I"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AHg-5b-OJe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2477" y="719"/>
         </scene>
         <!--Left Deck Controller-->
         <scene sceneID="5HQ-FD-hPK">
