@@ -10,5 +10,4 @@
 
 @interface DeliveryDetailTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewFordeliveryDetail;
--(void) bindData : (UIImage *) image;
 @end

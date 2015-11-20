@@ -37,7 +37,6 @@
         cell = [nib objectAtIndex:0];
     }
     if(indexPath.row==0){
-    [cell bindData:[UIImage imageNamed:@"1.png"]];
     }
     else if(indexPath.row==1){
         DeliveryTimeTableViewCell *cell = (DeliveryTimeTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"DeliveryTimeTableViewCell"];
@@ -58,7 +57,10 @@
 }
 
 -(CGFloat) tableView:(UITableView *) tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 80;
+    if(indexPath.row==1){
+        return 110;
+    }
+    return 90;
 }
 
 @end

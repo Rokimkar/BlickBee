@@ -18,9 +18,4 @@
     [super setSelected:selected animated:animated];
 }
 
--(void) bindData : (UIImage *) image{
-    self.imageViewFordeliveryDetail.image=image;
-    self.imageViewFordeliveryDetail.sizeToFit;
-}
-
 @end

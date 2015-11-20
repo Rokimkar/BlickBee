@@ -11,13 +11,11 @@
 @implementation DeliveryTimeTableViewCell
 
 - (void)awakeFromNib {
+    self.backgroundColor=RGBA(225, 225, 225, 1);
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
-
 
 @end

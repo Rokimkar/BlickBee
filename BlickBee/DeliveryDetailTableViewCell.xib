@@ -18,15 +18,19 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cardLayout.png" translatesAutoresizingMaskIntoConstraints="NO" id="xQF-AM-srl">
                         <rect key="frame" x="8" y="8" width="356" height="68"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="S2c-J3-peN">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="S2c-J3-peN">
                         <rect key="frame" x="13" y="14" width="346" height="57"/>
                     </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="S2c-J3-peN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="1ES-Mh-vvW"/>
                     <constraint firstItem="xQF-AM-srl" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="5j2-gc-aYP"/>
                     <constraint firstItem="xQF-AM-srl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="8ZH-I7-hcj"/>
+                    <constraint firstItem="S2c-J3-peN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="6" id="A5N-Rh-Q6l"/>
                     <constraint firstItem="xQF-AM-srl" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="HG8-rD-qdb"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="S2c-J3-peN" secondAttribute="trailing" constant="5" id="V4R-2n-J9j"/>
                     <constraint firstItem="xQF-AM-srl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="ckw-J3-uWI"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="S2c-J3-peN" secondAttribute="bottom" constant="5" id="lIO-HI-PoT"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
