@@ -43,6 +43,8 @@
 		A0D5E3221BFE049100650E58 /* DeliveryDetailTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D5E3211BFE049100650E58 /* DeliveryDetailTableView.m */; };
 		A0D5E3261BFE6AE800650E58 /* DeliveryTimeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D5E3241BFE6AE800650E58 /* DeliveryTimeTableViewCell.m */; };
 		A0D5E3271BFE6AE800650E58 /* DeliveryTimeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0D5E3251BFE6AE800650E58 /* DeliveryTimeTableViewCell.xib */; };
+		A0D5E32B1BFF043600650E58 /* DeliveryAddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D5E3291BFF043600650E58 /* DeliveryAddressTableViewCell.m */; };
+		A0D5E32C1BFF043600650E58 /* DeliveryAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0D5E32A1BFF043600650E58 /* DeliveryAddressTableViewCell.xib */; };
 		A0D777E51BF4A0C500776479 /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D777E41BF4A0C500776479 /* ProductViewController.m */; };
 		A0DA715D1BF072860012490E /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DA715C1BF072860012490E /* BaseTableView.m */; };
 		A0DA71641BF0734B0012490E /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DA71621BF0734B0012490E /* BaseTableViewCell.m */; };
@@ -186,6 +188,9 @@
 		A0D5E3231BFE6AE800650E58 /* DeliveryTimeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliveryTimeTableViewCell.h; sourceTree = "<group>"; };
 		A0D5E3241BFE6AE800650E58 /* DeliveryTimeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeliveryTimeTableViewCell.m; sourceTree = "<group>"; };
 		A0D5E3251BFE6AE800650E58 /* DeliveryTimeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeliveryTimeTableViewCell.xib; sourceTree = "<group>"; };
+		A0D5E3281BFF043600650E58 /* DeliveryAddressTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliveryAddressTableViewCell.h; sourceTree = "<group>"; };
+		A0D5E3291BFF043600650E58 /* DeliveryAddressTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeliveryAddressTableViewCell.m; sourceTree = "<group>"; };
+		A0D5E32A1BFF043600650E58 /* DeliveryAddressTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeliveryAddressTableViewCell.xib; sourceTree = "<group>"; };
 		A0D777E31BF4A0C500776479 /* ProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductViewController.h; sourceTree = "<group>"; };
 		A0D777E41BF4A0C500776479 /* ProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductViewController.m; sourceTree = "<group>"; };
 		A0DA715B1BF072860012490E /* BaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableView.h; sourceTree = "<group>"; };
@@ -438,6 +443,9 @@
 				A0D5E3231BFE6AE800650E58 /* DeliveryTimeTableViewCell.h */,
 				A0D5E3241BFE6AE800650E58 /* DeliveryTimeTableViewCell.m */,
 				A0D5E3251BFE6AE800650E58 /* DeliveryTimeTableViewCell.xib */,
+				A0D5E3281BFF043600650E58 /* DeliveryAddressTableViewCell.h */,
+				A0D5E3291BFF043600650E58 /* DeliveryAddressTableViewCell.m */,
+				A0D5E32A1BFF043600650E58 /* DeliveryAddressTableViewCell.xib */,
 			);
 			name = DeliveryDetailsViewController;
 			sourceTree = "<group>";
@@ -650,6 +658,7 @@
 				A0DA71AF1BF074E10012490E /* user icon.png in Resources */,
 				A0DA71A91BF074E10012490E /* rateus.png in Resources */,
 				A0DA71A41BF074E10012490E /* notifications_grey.png in Resources */,
+				A0D5E32C1BFF043600650E58 /* DeliveryAddressTableViewCell.xib in Resources */,
 				A0DA71921BF074E10012490E /* 2.png in Resources */,
 				A0DA71A31BF074E10012490E /* my_orders.png in Resources */,
 				A0DA71B01BF074E10012490E /* user-icon.png in Resources */,
@@ -784,6 +793,7 @@
 				A052530E1BE9F271007EF74F /* AppDelegate.m in Sources */,
 				A0DDA06A1BFB0E57000D9580 /* CartViewController.m in Sources */,
 				0C2F07221BEF369400F6B7DB /* BaseModel.m in Sources */,
+				A0D5E32B1BFF043600650E58 /* DeliveryAddressTableViewCell.m in Sources */,
 				A052530B1BE9F271007EF74F /* main.m in Sources */,
 				A0DDA05B1BF89126000D9580 /* DummyViewController.m in Sources */,
 				0C8BCF921BFF3D14009051F1 /* OrderedProduct.m in Sources */,
