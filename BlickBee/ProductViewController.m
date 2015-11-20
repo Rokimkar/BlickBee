@@ -24,8 +24,10 @@
     [super viewDidLoad];
     productTableView = [[BaseTableView alloc]initWithFrame:CGRectMake(0, 0, getScreenWidth(), getScreenHeight()) andProductsArray:self.productArray];
     productTableView.separatorColor=[UIColor clearColor];
+    productTableView.backgroundColor=RGBA(225, 225, 225, 1);
     [self.view addSubview:productTableView];
     [self.view bringSubviewToFront:self.floatingBtn];
+    
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{

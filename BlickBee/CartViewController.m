@@ -38,16 +38,21 @@
         [self.view bringSubviewToFront:cartTableView];
         cartTableView.backgroundColor=RGBA(225, 225, 225, 1);
     }
-    NSMutableAttributedString *subtotal = [[NSMutableAttributedString alloc]initWithString:@"Subtotal\n ₹ 732.0"];
-    NSMutableAttributedString *delivery =[[NSMutableAttributedString alloc]initWithString:@"Delivery\n Free"];
-    NSMutableAttributedString *total =[[NSMutableAttributedString alloc]initWithString:@"Total\n ₹ 732.0"];
-    [subtotal addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:12] range:NSMakeRange(8,7)];
-    [subtotal addAttribute:NSForegroundColorAttributeName value:RGBA(223, 65, 16, 1) range:NSMakeRange(8, 7)];
-    [self.labelForSubtotal setAttributedText:subtotal];
-    
-    [delivery addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:15] range:NSMakeRange(8,4)];
-    [delivery addAttribute:NSForegroundColorAttributeName value:RGBA(223, 65, 16, 1) range:NSMakeRange(8, 4)];
+//    NSMutableAttributedString *subtotal = [[NSMutableAttributedString alloc]initWithString:@"Subtotal\n ₹ 732.0"];
+//    NSMutableAttributedString *delivery =[[NSMutableAttributedString alloc]initWithString:@"Delivery\n Free"];
+//    NSMutableAttributedString *total =[[NSMutableAttributedString alloc]initWithString:@"Total\n ₹ 732.0"];
+//    NSDictionary *attribute1 = @{NSForegroundColorAttributeName: RGBA(223, 65, 16, 1),
+//                                 NSFontAttributeName: [UIFont  systemFontOfSize:12],
+//                                 };
 
+//    [subtotal addAttributes:attribute1 range:NSMakeRange(8,7)];
+//    
+//    [self.labelForSubtotal setAttributedText:subtotal];
+//    [delivery addAttributes:attribute1 range:NSMakeRange(8,4)];
+    //[self.labelForDelivery setAttributedText:delivery];
+    self.labelForSubtotal.text=@"₹ 732.0";
+    self.labelForDelivery.text=@"Free";
+    self.labelForTotal.text=@"₹ 732.0";
 }
 
 - (void)didReceiveMemoryWarning {

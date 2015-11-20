@@ -21,6 +21,7 @@
     [super viewDidLoad];
     deliveryDetailTableView = [[DeliveryDetailTableView alloc]initWithFrames :CGRectMake(0,0, getScreenWidth(), getScreenHeight())];
     deliveryDetailTableView.separatorColor=[UIColor clearColor];
+    deliveryDetailTableView.backgroundColor=RGBA(225, 225, 225, 1);
     [self.view addSubview:deliveryDetailTableView];
 }
 
