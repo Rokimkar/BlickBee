@@ -9,6 +9,7 @@
 #import "DeliveryDetailTableView.h"
 #import "DeliveryDetailTableViewCell.h"
 #import "DeliveryTimeTableViewCell.h"
+#import "DeliveryAddressTableViewCell.h"
 
 @implementation DeliveryDetailTableView
 
@@ -23,10 +24,13 @@
 }
 
 - (NSInteger) numberOfSectionsInTableView : (UITableView *)tableView{
-    return 1;
+    return 2;
 }
 
 -(NSInteger) tableView :(UITableView *)tableView numberOfRowsInSection:(NSInteger) section{
+    if(section==1){
+        return 1;
+    }
     return 2;
 }
 
@@ -36,9 +40,7 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DeliveryDetailTableViewCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
-    if(indexPath.row==0){
-    }
-    else if(indexPath.row==1){
+    else if(indexPath.row==1 && indexPath.section==0){
         DeliveryTimeTableViewCell *cell = (DeliveryTimeTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"DeliveryTimeTableViewCell"];
         if(cell==nil){
             NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DeliveryTimeTableViewCell" owner:self options:nil];
@@ -46,19 +48,39 @@
         }
         return cell;
     }
+    if (indexPath.section==1 && indexPath.row==0){
+        DeliveryAddressTableViewCell *cell = (DeliveryAddressTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"DeliveryAddressTableViewCell"];
+        if(cell==nil){
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DeliveryAddressTableViewCell" owner:self options:nil];
+            cell = [nib objectAtIndex:0];
+        }
+        return cell;
+    }
     return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    NSString *header=@"Select delivery address :";
+    return header;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 }
 
 -(CGFloat) tableView:(UITableView *) tableView heightForHeaderInSection :(NSInteger) section{
+    if(section==1){
+        return 35;
+    }
     return 0;
 }
 
 -(CGFloat) tableView:(UITableView *) tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if(indexPath.row==1){
+    if(indexPath.row==1&&indexPath.section==0){
         return 110;
+    }
+    if(indexPath.row==0&&indexPath.section==1){
+        return 150;
     }
     return 90;
 }

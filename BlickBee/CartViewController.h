@@ -15,5 +15,9 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewForCartViewController;
 @property (weak, nonatomic) IBOutlet UIButton *proceedButtonClicked;
 - (IBAction)proceedButtonClicked:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *labelForSubtotal;
+@property (weak, nonatomic) IBOutlet UILabel *labelForDelivery;
+@property (weak, nonatomic) IBOutlet UILabel *labelForTotal;
+
 @property (strong, nonatomic) NSMutableArray *productArray;
 @end

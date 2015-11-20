@@ -445,7 +445,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="thr-Yf-wQs"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -539,6 +539,9 @@
                     <navigationItem key="navigationItem" id="yRy-Eh-xhn"/>
                     <connections>
                         <outlet property="imageViewForCartViewController" destination="FYf-w6-fge" id="hPf-Mf-mHQ"/>
+                        <outlet property="labelForDelivery" destination="LEP-Z8-g0X" id="A1O-fe-nU9"/>
+                        <outlet property="labelForSubtotal" destination="FDJ-oQ-CIA" id="E3O-PL-vUf"/>
+                        <outlet property="labelForTotal" destination="JoU-BF-VpG" id="0AA-WH-ko4"/>
                         <outlet property="proceedButtonClicked" destination="63K-fw-LHn" id="jVj-kn-KhP"/>
                         <outlet property="startShoppingButtonClicked" destination="ggU-oO-ooH" id="EUw-98-KHS"/>
                     </connections>

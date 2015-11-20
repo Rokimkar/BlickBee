@@ -11,7 +11,7 @@
 @implementation DeliveryAddressTableViewCell
 
 - (void)awakeFromNib {
-    // Initialization code
+    self.backgroundColor=RGBA(225, 225, 225, 1);
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -19,4 +19,9 @@
 
 }
 
+- (IBAction)editButtonClicked:(id)sender {
+}
+
+- (IBAction)removeButtonClicked:(id)sender {
+}
 @end
