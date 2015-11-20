@@ -22,6 +22,10 @@
 		0C8183451BF9003400882A65 /* LoginServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8183441BF9003400882A65 /* LoginServiceClient.m */; };
 		0C8183481BF903D200882A65 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8183471BF903D200882A65 /* User.m */; };
 		0C81834C1BF914A000882A65 /* BlickbeeAppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C81834B1BF914A000882A65 /* BlickbeeAppManager.m */; };
+		0C8BCF891BFF2CC0009051F1 /* OrderServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BCF881BFF2CC0009051F1 /* OrderServiceClient.m */; settings = {ASSET_TAGS = (); }; };
+		0C8BCF8C1BFF2D68009051F1 /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BCF8B1BFF2D68009051F1 /* Address.m */; settings = {ASSET_TAGS = (); }; };
+		0C8BCF8F1BFF3AA5009051F1 /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BCF8E1BFF3AA5009051F1 /* Order.m */; settings = {ASSET_TAGS = (); }; };
+		0C8BCF921BFF3D14009051F1 /* OrderedProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BCF911BFF3D14009051F1 /* OrderedProduct.m */; settings = {ASSET_TAGS = (); }; };
 		A052530B1BE9F271007EF74F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A052530A1BE9F271007EF74F /* main.m */; };
 		A052530E1BE9F271007EF74F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A052530D1BE9F271007EF74F /* AppDelegate.m */; };
 		A05253111BE9F271007EF74F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05253101BE9F271007EF74F /* ViewController.m */; };
@@ -140,6 +144,14 @@
 		0C8183471BF903D200882A65 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		0C81834A1BF914A000882A65 /* BlickbeeAppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlickbeeAppManager.h; sourceTree = "<group>"; };
 		0C81834B1BF914A000882A65 /* BlickbeeAppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlickbeeAppManager.m; sourceTree = "<group>"; };
+		0C8BCF871BFF2CC0009051F1 /* OrderServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderServiceClient.h; sourceTree = "<group>"; };
+		0C8BCF881BFF2CC0009051F1 /* OrderServiceClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderServiceClient.m; sourceTree = "<group>"; };
+		0C8BCF8A1BFF2D68009051F1 /* Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
+		0C8BCF8B1BFF2D68009051F1 /* Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Address.m; sourceTree = "<group>"; };
+		0C8BCF8D1BFF3AA5009051F1 /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
+		0C8BCF8E1BFF3AA5009051F1 /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
+		0C8BCF901BFF3D14009051F1 /* OrderedProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderedProduct.h; sourceTree = "<group>"; };
+		0C8BCF911BFF3D14009051F1 /* OrderedProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderedProduct.m; sourceTree = "<group>"; };
 		2E87C8E839077887CCA402AB /* Pods-BlickBee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlickBee.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlickBee/Pods-BlickBee.release.xcconfig"; sourceTree = "<group>"; };
 		8FB0F40B769FAB5BC701EF2B /* libPods-BlickBee.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BlickBee.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A05253061BE9F271007EF74F /* BlickBee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlickBee.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -271,6 +283,8 @@
 				0C2F06FE1BEE45C000F6B7DB /* BaseServiceClient.m */,
 				0C8183431BF9003400882A65 /* LoginServiceClient.h */,
 				0C8183441BF9003400882A65 /* LoginServiceClient.m */,
+				0C8BCF871BFF2CC0009051F1 /* OrderServiceClient.h */,
+				0C8BCF881BFF2CC0009051F1 /* OrderServiceClient.m */,
 			);
 			name = ServiceClients;
 			sourceTree = "<group>";
@@ -290,6 +304,12 @@
 				0C2F07181BEE6B4A00F6B7DB /* DeliverySlot.m */,
 				0C2F071D1BEE781B00F6B7DB /* ProductRepo.h */,
 				0C2F071E1BEE781B00F6B7DB /* ProductRepo.m */,
+				0C8BCF8A1BFF2D68009051F1 /* Address.h */,
+				0C8BCF8B1BFF2D68009051F1 /* Address.m */,
+				0C8BCF8D1BFF3AA5009051F1 /* Order.h */,
+				0C8BCF8E1BFF3AA5009051F1 /* Order.m */,
+				0C8BCF901BFF3D14009051F1 /* OrderedProduct.h */,
+				0C8BCF911BFF3D14009051F1 /* OrderedProduct.m */,
 			);
 			name = ModalClasses;
 			sourceTree = "<group>";
@@ -756,6 +776,9 @@
 				A0D5E3221BFE049100650E58 /* DeliveryDetailTableView.m in Sources */,
 				0C2F06FC1BEE458000F6B7DB /* ProductsServiceClient.m in Sources */,
 				0C81834C1BF914A000882A65 /* BlickbeeAppManager.m in Sources */,
+				0C8BCF891BFF2CC0009051F1 /* OrderServiceClient.m in Sources */,
+				0C8BCF8F1BFF3AA5009051F1 /* Order.m in Sources */,
+				0C8BCF8C1BFF2D68009051F1 /* Address.m in Sources */,
 				0C8183481BF903D200882A65 /* User.m in Sources */,
 				A0DA715D1BF072860012490E /* BaseTableView.m in Sources */,
 				A052530E1BE9F271007EF74F /* AppDelegate.m in Sources */,
@@ -763,6 +786,7 @@
 				0C2F07221BEF369400F6B7DB /* BaseModel.m in Sources */,
 				A052530B1BE9F271007EF74F /* main.m in Sources */,
 				A0DDA05B1BF89126000D9580 /* DummyViewController.m in Sources */,
+				0C8BCF921BFF3D14009051F1 /* OrderedProduct.m in Sources */,
 				0C2F07131BEE6B1200F6B7DB /* Offer.m in Sources */,
 				A05253421BEA0B59007EF74F /* HomeViewController.m in Sources */,
 				A0D777E51BF4A0C500776479 /* ProductViewController.m in Sources */,
@@ -920,13 +944,13 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Alok Ranjan (H686S25ZPL)";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/Rokimkar/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
+				GCC_PREFIX_HEADER = /Users/kunal/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
 				INFOPLIST_FILE = BlickBee/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.til.gaana;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "402d4562-fb0c-406a-82ec-890b132a0619";
+				PROVISIONING_PROFILE = "1e5f1c03-68fd-43c4-8915-bb92b6ea9690";
 			};
 			name = Debug;
 		};
@@ -938,13 +962,13 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Alok Ranjan (H686S25ZPL)";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/Rokimkar/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
+				GCC_PREFIX_HEADER = /Users/kunal/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
 				INFOPLIST_FILE = BlickBee/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.til.gaana;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "402d4562-fb0c-406a-82ec-890b132a0619";
+				PROVISIONING_PROFILE = "1e5f1c03-68fd-43c4-8915-bb92b6ea9690";
 			};
 			name = Release;
 		};
