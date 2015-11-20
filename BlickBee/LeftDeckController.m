@@ -33,8 +33,6 @@
     self.view.backgroundColor=RGBA(232, 233, 232, 1);
     self.itemListingTableView.backgroundView=nil;
     self.itemListingTableView.backgroundColor=RGBA(232, 233, 232, 1);
-//    self.itemListingTableView.backgroundColor=RGBA(202, 186, 186, 1);
-  //  self.view.backgroundColor=RGBA(202, 186, 186, 1);
 }
 
 - (NSInteger) numberOfSectionsInTableView : (UITableView *)tableView{
