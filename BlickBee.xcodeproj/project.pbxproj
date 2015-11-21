@@ -22,10 +22,10 @@
 		0C8183451BF9003400882A65 /* LoginServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8183441BF9003400882A65 /* LoginServiceClient.m */; };
 		0C8183481BF903D200882A65 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8183471BF903D200882A65 /* User.m */; };
 		0C81834C1BF914A000882A65 /* BlickbeeAppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C81834B1BF914A000882A65 /* BlickbeeAppManager.m */; };
-		0C8BCF891BFF2CC0009051F1 /* OrderServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BCF881BFF2CC0009051F1 /* OrderServiceClient.m */; settings = {ASSET_TAGS = (); }; };
-		0C8BCF8C1BFF2D68009051F1 /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BCF8B1BFF2D68009051F1 /* Address.m */; settings = {ASSET_TAGS = (); }; };
-		0C8BCF8F1BFF3AA5009051F1 /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BCF8E1BFF3AA5009051F1 /* Order.m */; settings = {ASSET_TAGS = (); }; };
-		0C8BCF921BFF3D14009051F1 /* OrderedProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BCF911BFF3D14009051F1 /* OrderedProduct.m */; settings = {ASSET_TAGS = (); }; };
+		0C8BCF891BFF2CC0009051F1 /* OrderServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BCF881BFF2CC0009051F1 /* OrderServiceClient.m */; };
+		0C8BCF8C1BFF2D68009051F1 /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BCF8B1BFF2D68009051F1 /* Address.m */; };
+		0C8BCF8F1BFF3AA5009051F1 /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BCF8E1BFF3AA5009051F1 /* Order.m */; };
+		0C8BCF921BFF3D14009051F1 /* OrderedProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BCF911BFF3D14009051F1 /* OrderedProduct.m */; };
 		A052530B1BE9F271007EF74F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A052530A1BE9F271007EF74F /* main.m */; };
 		A052530E1BE9F271007EF74F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A052530D1BE9F271007EF74F /* AppDelegate.m */; };
 		A05253111BE9F271007EF74F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05253101BE9F271007EF74F /* ViewController.m */; };
@@ -954,7 +954,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Alok Ranjan (H686S25ZPL)";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/kunal/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
+				GCC_PREFIX_HEADER = /Users/Rokimkar/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
 				INFOPLIST_FILE = BlickBee/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -972,7 +972,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Alok Ranjan (H686S25ZPL)";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/kunal/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
+				GCC_PREFIX_HEADER = /Users/Rokimkar/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
 				INFOPLIST_FILE = BlickBee/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

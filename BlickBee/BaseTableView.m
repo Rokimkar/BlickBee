@@ -37,7 +37,7 @@
     NSInteger row = [self.productArray indexOfObject:product];
     if (row>=0 && row<self.productArray.count) {
         product.selectedProductQuantity=@"1";
-        [self reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:row inSection:0]] withRowAnimation:NO];
+        [self reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:row inSection:0]] withRowAnimation:YES];
     }
 //    self.indexpth = [NSIndexPath indexPathForRow:row inSection:0];
 //    [indexPathArray addObject:self.indexpth];
@@ -47,14 +47,14 @@
     NSInteger row = [self.productArray indexOfObject:product];
     if (row>=0 && row<self.productArray.count) {
         product.selectedProductQuantity=[NSString stringWithFormat:@"%ld",(long)([product.selectedProductQuantity integerValue]+1)];
-        [self reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:row inSection:0]] withRowAnimation:NO];
+        [self reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:row inSection:0]] withRowAnimation:YES];
     }
 }
 -(void) subtractClicked:(Product *) product{
     NSInteger row = [self.productArray indexOfObject:product];
     if (row>=0 && row<self.productArray.count) {
         product.selectedProductQuantity=[NSString stringWithFormat:@"%ld",(long)([product.selectedProductQuantity integerValue]-1)];
-        [self reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:row inSection:0]] withRowAnimation:NO];
+        [self reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:row inSection:0]] withRowAnimation:YES];
     }
 }
 

@@ -21,6 +21,10 @@
     return [self initWithFrame:frame];
 }
 
+-(void) reloadCellWithProduct : (Product *) product{
+    [self reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:[self.productArray indexOfObject:product] inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
+}
+
 - (NSInteger) numberOfSectionsInTableView : (UITableView *)tableView{
     return 1;
 }
@@ -37,6 +41,7 @@
     }
     [cell bindData:[self.productArray objectAtIndex:indexPath.row]];
     cell.selectionStyle=UITableViewCellSelectionStyleNone;
+    cell.reloadCellDelegate=self;
     return cell;
 }
 

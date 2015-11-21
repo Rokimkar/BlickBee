@@ -22,6 +22,7 @@
 }
 
 -(void) bindData : (Product *) product{
+    self.item=product;
     self.labelForProductTitle.text=product.productName;
     self.labelForPrice.text=product.productPrice;
     self.labelForUnitQuantity.text=product.productQuantity;
@@ -49,12 +50,21 @@
 }
 
 - (IBAction)addButtonClicked:(id)sender {
+    if (![self.item.selectedProductQuantity isEqualToString:@"10"] ) {
+    self.item.selectedProductQuantity = [NSString stringWithFormat:@"%ld",(long)([self.item.selectedProductQuantity integerValue]+1)];
+        [self.reloadCellDelegate reloadCellWithProduct:self.item];
+    }
 }
 - (IBAction)subtractButtonClicked:(id)sender {
     if([self.item.selectedProductQuantity isEqualToString:@"0"]){
         if([[[BlickbeeAppManager sharedInstance] selectedProducts] containsObject:self.item]){
                 [[[BlickbeeAppManager sharedInstance] selectedProducts] removeObject:self.item];
+            //[self.reloadCellDelegate reloadCellWithProduct:self.item];
         }
+    }
+    else{
+        self.item.selectedProductQuantity = [NSString stringWithFormat:@"%ld",(long)([self.item.selectedProductQuantity integerValue]-1)];
+        [self.reloadCellDelegate reloadCellWithProduct:self.item];
     }
 }
 @end
