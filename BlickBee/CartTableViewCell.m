@@ -64,6 +64,11 @@
     }
     else{
         self.item.selectedProductQuantity = [NSString stringWithFormat:@"%ld",(long)([self.item.selectedProductQuantity integerValue]-1)];
+        if([self.item.selectedProductQuantity isEqualToString:@"0"]){
+            if([[[BlickbeeAppManager sharedInstance] selectedProducts] containsObject:self.item]){
+                [[[BlickbeeAppManager sharedInstance] selectedProducts] removeObject:self.item];
+            }
+        }
         [self.reloadCellDelegate reloadCellWithProduct:self.item];
     }
 }

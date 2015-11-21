@@ -100,6 +100,7 @@
                             <constraint firstAttribute="height" constant="23" id="efr-MS-trb"/>
                             <constraint firstAttribute="width" constant="23" id="zch-De-xT4"/>
                         </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
                         <state key="normal" title="+"/>
                         <connections>
                             <action selector="addButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="BH6-id-JOn"/>
@@ -111,6 +112,7 @@
                             <constraint firstAttribute="width" constant="23" id="6mi-28-vnB"/>
                             <constraint firstAttribute="height" constant="23" id="Ygf-L5-Jza"/>
                         </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
                         <state key="normal" title="-"/>
                         <connections>
                             <action selector="subtractButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="uDv-Qq-Vgt"/>

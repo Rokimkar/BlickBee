@@ -23,6 +23,10 @@
 
 -(void) reloadCellWithProduct : (Product *) product{
     [self reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:[self.productArray indexOfObject:product] inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
+    if([product.selectedProductQuantity isEqualToString:@"0"]){
+        [self.productArray removeObject:product];
+        [self reloadData];
+    }
 }
 
 - (NSInteger) numberOfSectionsInTableView : (UITableView *)tableView{

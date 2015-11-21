@@ -9,6 +9,7 @@
 #import "CartViewController.h"
 #import "CartTableView.h"
 #import "Product.h"
+#import "BlickbeeAppManager.h"
 
 @interface CartViewController (){
     CartTableView *cartTableView;
@@ -32,7 +33,7 @@
         }
     }
     if(addCartTable==YES){
-        cartTableView = [[CartTableView alloc]initWithFrame:CGRectMake(0,109, getScreenWidth(), getScreenHeight()-176) andProductsArray:selectedProductArray];
+        cartTableView = [[CartTableView alloc]initWithFrame:CGRectMake(0,109, getScreenWidth(), getScreenHeight()-176) andProductsArray:[[BlickbeeAppManager sharedInstance] selectedProducts]];
         cartTableView.separatorColor=[UIColor clearColor];
         [self.view addSubview:cartTableView];
         [self.view bringSubviewToFront:cartTableView];
