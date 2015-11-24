@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '67CE1CF125CFEBD4D1EC0CA1'
+               BlueprintIdentifier = '0855E6277E633960CF571380'
                BlueprintName = 'Pods-BlickBee'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-BlickBee.a'>
