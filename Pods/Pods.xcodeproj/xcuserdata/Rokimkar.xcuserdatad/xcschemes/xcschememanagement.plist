@@ -24,9 +24,24 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>iRate.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>02BB0DBB4DC9C0CE81C9CDC137B7EA1D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>120A4F167A4E0B518AC274BE24E721D1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>2602F3D0DAC534568B6AD7EEA0DD1959</key>
 		<dict>
 			<key>primary</key>
@@ -37,12 +52,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3F876498BBDB1A98987E5D41F25CAE87</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>70878A03A689FA4E8618A749522D55A5</key>
+		<key>8B090755233C44E8E118A8DA48015C08</key>
 		<dict>
 			<key>primary</key>
 			<true/>

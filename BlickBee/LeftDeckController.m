@@ -9,6 +9,7 @@
 #import "LeftDeckController.h"
 #import "LeftDeckTableViewCell.h"
 #import "BlickbeePrefix.pch"
+#import "iRate.h"
 @interface LeftDeckController (){
     NSArray *itemsArray;
     NSArray *imageArray;
@@ -62,6 +63,12 @@
     UIView *headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 15)];
     [headerView setBackgroundColor:RGBA(255, 255, 255, 1)];
     return headerView;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(indexPath.row==5){
+        [[iRate sharedInstance]promptForRating];
+    }
 }
 
 - (CGFloat) tableView: (UITableView *)
