@@ -39,6 +39,9 @@
 
 -(void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    if(productTableView){
+        [productTableView reloadData];
+    }
 }
 
 -(void) awakeFromNib{

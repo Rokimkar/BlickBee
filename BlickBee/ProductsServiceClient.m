@@ -10,7 +10,7 @@
 #import "Offer.h"
 #import "Product.h"
 #import "DeliverySlot.h"
-
+#import "BlickbeeAppManager.h"
 @implementation ProductsServiceClient
 
 
@@ -38,8 +38,6 @@
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSDictionary *params = @{@"request": @"allCategories()",
-                             @"user_id": @"1056",
-                             @"auth_key": @"8d60d0527437a5ce4ba257fc8876dfaf",
                              @"user_id": user.userId,
                              @"auth_key": user.authKey};
 

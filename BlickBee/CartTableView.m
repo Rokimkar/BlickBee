@@ -8,6 +8,7 @@
 
 #import "CartTableView.h"
 #import "CartTableViewCell.h"
+#import "BlickbeeAppManager.h"
 
 @implementation CartTableView
 
@@ -26,6 +27,9 @@
     if([product.selectedProductQuantity isEqualToString:@"0"]){
         [self.productArray removeObject:product];
         [self reloadData];
+    }
+    if([[BlickbeeAppManager sharedInstance]selectedProducts].count==0){
+        self.backgroundColor=[UIColor clearColor];
     }
 }
 
