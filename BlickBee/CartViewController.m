@@ -9,6 +9,7 @@
 #import "CartViewController.h"
 #import "CartTableView.h"
 #import "Product.h"
+#import "BlickbeeAppManager.h"
 
 @interface CartViewController (){
     CartTableView *cartTableView;
@@ -32,22 +33,19 @@
         }
     }
     if(addCartTable==YES){
-        cartTableView = [[CartTableView alloc]initWithFrame:CGRectMake(0,109, getScreenWidth(), getScreenHeight()-176) andProductsArray:selectedProductArray];
+        cartTableView = [[CartTableView alloc]initWithFrame:CGRectMake(0,109, getScreenWidth(), getScreenHeight()-176) andProductsArray:[[BlickbeeAppManager sharedInstance] selectedProducts]];
         cartTableView.separatorColor=[UIColor clearColor];
         [self.view addSubview:cartTableView];
         [self.view bringSubviewToFront:cartTableView];
         cartTableView.backgroundColor=RGBA(225, 225, 225, 1);
     }
-    NSMutableAttributedString *subtotal = [[NSMutableAttributedString alloc]initWithString:@"Subtotal\n ₹ 732.0"];
-    NSMutableAttributedString *delivery =[[NSMutableAttributedString alloc]initWithString:@"Delivery\n Free"];
-    NSMutableAttributedString *total =[[NSMutableAttributedString alloc]initWithString:@"Total\n ₹ 732.0"];
-    [subtotal addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:12] range:NSMakeRange(8,7)];
-    [subtotal addAttribute:NSForegroundColorAttributeName value:RGBA(223, 65, 16, 1) range:NSMakeRange(8, 7)];
-    [self.labelForSubtotal setAttributedText:subtotal];
-    
-    [delivery addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:15] range:NSMakeRange(8,4)];
-    [delivery addAttribute:NSForegroundColorAttributeName value:RGBA(223, 65, 16, 1) range:NSMakeRange(8, 4)];
-
+    self.labelForSubtotal.text=@"₹ 732.0";
+    self.labelForDelivery.text=@"Free";
+    self.labelForTotal.text=@"₹ 732.0";
+    if([[BlickbeeAppManager sharedInstance]selectedProducts].count==0){
+        [self.view bringSubviewToFront:self.imageViewForCartViewController];
+        [self.view bringSubviewToFront:self.startShoppingButtonClicked];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

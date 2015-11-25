@@ -8,6 +8,7 @@
 
 #import "CartTableView.h"
 #import "CartTableViewCell.h"
+#import "BlickbeeAppManager.h"
 
 @implementation CartTableView
 
@@ -19,6 +20,17 @@
     [self registerNib:[UINib nibWithNibName:@"CartTableViewCell" bundle:nil] forCellReuseIdentifier:@"CartTableViewCell"];
     self.backgroundColor=RGBA(225, 225, 225, 1);
     return [self initWithFrame:frame];
+}
+
+-(void) reloadCellWithProduct : (Product *) product{
+    [self reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:[self.productArray indexOfObject:product] inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
+    if([product.selectedProductQuantity isEqualToString:@"0"]){
+        [self.productArray removeObject:product];
+        [self reloadData];
+    }
+    if([[BlickbeeAppManager sharedInstance]selectedProducts].count==0){
+        self.backgroundColor=[UIColor clearColor];
+    }
 }
 
 - (NSInteger) numberOfSectionsInTableView : (UITableView *)tableView{
@@ -37,6 +49,7 @@
     }
     [cell bindData:[self.productArray objectAtIndex:indexPath.row]];
     cell.selectionStyle=UITableViewCellSelectionStyleNone;
+    cell.reloadCellDelegate=self;
     return cell;
 }
 

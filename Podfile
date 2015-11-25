@@ -7,6 +7,7 @@ target 'BlickBee' do
 pod 'AFNetworking', '2.5.4'
 pod 'SVProgressHUD', '1.1.3'
 pod 'NSObject-NSCoding'
+pod 'iRate', '1.11.4'
 
 end
 

@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Product.h"
-
+@protocol reloadTableViewCell <NSObject>
+-(void) reloadCellWithProduct : (Product *) product;
+@end
 @interface CartTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewForProduct;
 @property (weak, nonatomic) IBOutlet UILabel *labelForProductTitle;
@@ -23,5 +25,5 @@
 -(void) bindData : (Product *) product;
 @property (weak, nonatomic) IBOutlet UILabel *labelForQuantity;
 @property (nonatomic,strong) Product *item;
-
+@property (weak,nonatomic) id <reloadTableViewCell> reloadCellDelegate;
 @end

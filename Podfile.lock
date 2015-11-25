@@ -20,16 +20,19 @@ PODS:
   - AFNetworking/UIKit (2.5.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - iRate (1.11.4)
   - NSObject-NSCoding (1.0)
   - SVProgressHUD (1.1.3)
 
 DEPENDENCIES:
   - AFNetworking (= 2.5.4)
+  - iRate (= 1.11.4)
   - NSObject-NSCoding
   - SVProgressHUD (= 1.1.3)
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  iRate: 599ed07c854e0695f3c605d1b2a64c67d912acb7
   NSObject-NSCoding: d05f937cc1ea1560294be261ee41d5438ddc7b1b
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
 

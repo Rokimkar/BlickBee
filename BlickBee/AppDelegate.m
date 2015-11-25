@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ProductsServiceClient.h"
+#import "iRate.h"
 @interface AppDelegate ()
 
 @end
@@ -24,7 +25,6 @@
 //    } failure:^(NSError *error) {
 //        
 //    }];
-    
     return YES;
 }
 
