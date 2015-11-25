@@ -9,7 +9,9 @@
 #import "LeftDeckController.h"
 #import "LeftDeckTableViewCell.h"
 #import "BlickbeePrefix.pch"
+#import "MyOrdersViewController.h"
 #import "iRate.h"
+#import "SWRevealViewController.h"
 @interface LeftDeckController (){
     NSArray *itemsArray;
     NSArray *imageArray;
