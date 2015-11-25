@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vmK-Ox-Yy8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vmK-Ox-Yy8">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -347,7 +347,6 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C0J-uz-iOW">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="MLm-WG-oGD" id="Vdd-gg-9sp"/>
                                     <outlet property="delegate" destination="MLm-WG-oGD" id="grS-Ij-sxl"/>
@@ -501,7 +500,7 @@
                                 <rect key="frame" x="0.0" y="507" width="320" height="61"/>
                                 <color key="backgroundColor" red="0.87450980392156863" green="0.25490196078431371" blue="0.062745098039215685" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="61" id="e0m-x5-0G9"/>
+                                    <constraint firstAttribute="height" constant="61" id="e0m-x5-0G9"/>
                                     <constraint firstAttribute="width" constant="320" id="tfz-L8-7db"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -590,7 +589,30 @@
                     <view key="view" contentMode="scaleToFill" id="PKh-VA-fEJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orP-p3-u88">
+                                <rect key="frame" x="0.0" y="508" width="320" height="61"/>
+                                <color key="backgroundColor" red="0.87450980389999999" green="0.25490196079999999" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="Iee-z1-q3h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Proceed to payment">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="proceedButtonClicked:" destination="uej-bX-zHJ" eventType="touchUpInside" id="pXv-ad-HrP"/>
+                                    <action selector="proceedToPaymentBtnPressed:" destination="Nlg-zg-BPt" eventType="touchUpInside" id="JvV-F5-iUE"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="orP-p3-u88" firstAttribute="leading" secondItem="PKh-VA-fEJ" secondAttribute="leadingMargin" constant="-20" id="Rkk-Xb-6wZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="orP-p3-u88" secondAttribute="trailing" constant="-20" id="gEm-ZV-l5i"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="orP-p3-u88" secondAttribute="bottom" constant="-1" id="hBz-oH-6DM"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="x6n-sC-l5I"/>
                 </viewController>

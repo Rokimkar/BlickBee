@@ -29,6 +29,9 @@
 
 -(NSInteger) tableView :(UITableView *)tableView numberOfRowsInSection:(NSInteger) section{
     if(section==1){
+        if ([BlickbeeAppManager sharedInstance].userAddresses.count>1) {
+            return [BlickbeeAppManager sharedInstance].userAddresses.count;
+        }
         return 1;
     }
     return 2;
@@ -48,7 +51,7 @@
         }
         return cell;
     }
-    if (indexPath.section==1 && indexPath.row==0){
+    if (indexPath.section==1){
         DeliveryAddressTableViewCell *cell = (DeliveryAddressTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"DeliveryAddressTableViewCell"];
         if(cell==nil){
             NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DeliveryAddressTableViewCell" owner:self options:nil];

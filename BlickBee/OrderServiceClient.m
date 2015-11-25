@@ -42,11 +42,13 @@
     NSString *productQty=@"";
     NSString *productAmt=@"";
     NSString *productUnitQty=@"";
+    double totalAmt=0.0f;
     for (Product *product in productsArray) {
         productId=[NSString stringWithFormat:@"%@,%@",productId,product.productId];
-        productQty=[NSString stringWithFormat:@"%@,%@",productQty,product.productQuantity];
+        productQty=[NSString stringWithFormat:@"%@,%@",productQty,product.selectedProductQuantity];
         productAmt=[NSString stringWithFormat:@"%@,%@",productAmt,product.productPrice];
         productUnitQty=[NSString stringWithFormat:@"%@,%@",productUnitQty,product.productUnitQty];
+        totalAmt += [product.selectedProductQuantity doubleValue]*[product.productPrice doubleValue];
     }
     
     productId = [productId substringFromIndex:1];
@@ -64,13 +66,14 @@
                              @"billing_id": address.addressId,
                              @"shipping_id": address.addressId,
                              @"product_unit_qnt": productAmt,
-                             @"total_amount": @"708.0"};
+                             @"total_amount": [NSString stringWithFormat:@"%f",totalAmt]};
     
     manager.responseSerializer.acceptableContentTypes= [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     [manager POST:BASE_URL_STRING parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
-        if ([[responseObject objectForKey:@"response"] isEqualToString:@"success"]) {
-            success([self getOrderFor:[responseObject objectForKey:@"response_data"]]);
+        if ([[responseObject objectForKey:@"response"] isEqualToString:@"success"] && [[responseObject objectForKey:@"response_data"] isKindOfClass:[NSArray class]]) {
+            NSDictionary *orderDict = [[responseObject objectForKey:@"response_data"] objectAtIndex:0];
+            success([self getOrderFor:orderDict]);
         }
         else{
             failure(nil);

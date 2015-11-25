@@ -55,5 +55,7 @@
 - (IBAction)startShoppingButtonClicked:(id)sender {
 }
 - (IBAction)proceedButtonClicked:(id)sender {
+    
+    
 }
 @end

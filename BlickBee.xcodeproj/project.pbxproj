@@ -17,6 +17,7 @@
 		0C2F07281BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F07241BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.m */; };
 		0C2F07291BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C2F07251BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.xib */; };
 		0C2F072A1BEF3A9A00F6B7DB /* TopZoneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F07271BEF3A9A00F6B7DB /* TopZoneView.m */; };
+		0C2FBC491C0603AD00A374E1 /* UserInfoServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC481C0603AD00A374E1 /* UserInfoServiceClient.m */; settings = {ASSET_TAGS = (); }; };
 		0C81833D1BF8DEC100882A65 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C81833C1BF8DEC100882A65 /* SignInViewController.m */; };
 		0C8183401BF8DECE00882A65 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C81833F1BF8DECE00882A65 /* SignUpViewController.m */; };
 		0C8183451BF9003400882A65 /* LoginServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8183441BF9003400882A65 /* LoginServiceClient.m */; };
@@ -140,6 +141,8 @@
 		0C2F07261BEF3A9A00F6B7DB /* TopZoneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopZoneView.h; sourceTree = "<group>"; };
 		0C2F07271BEF3A9A00F6B7DB /* TopZoneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopZoneView.m; sourceTree = "<group>"; };
 		0C2F072B1BEF3D6200F6B7DB /* BlickbeePrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlickbeePrefix.pch; sourceTree = "<group>"; };
+		0C2FBC471C0603AD00A374E1 /* UserInfoServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoServiceClient.h; sourceTree = "<group>"; };
+		0C2FBC481C0603AD00A374E1 /* UserInfoServiceClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoServiceClient.m; sourceTree = "<group>"; };
 		0C81833B1BF8DEC100882A65 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		0C81833C1BF8DEC100882A65 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		0C81833E1BF8DECE00882A65 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
@@ -301,6 +304,8 @@
 				0C8183441BF9003400882A65 /* LoginServiceClient.m */,
 				0C8BCF871BFF2CC0009051F1 /* OrderServiceClient.h */,
 				0C8BCF881BFF2CC0009051F1 /* OrderServiceClient.m */,
+				0C2FBC471C0603AD00A374E1 /* UserInfoServiceClient.h */,
+				0C2FBC481C0603AD00A374E1 /* UserInfoServiceClient.m */,
 			);
 			name = ServiceClients;
 			sourceTree = "<group>";
@@ -832,6 +837,7 @@
 				A0D777E51BF4A0C500776479 /* ProductViewController.m in Sources */,
 				A0DA71B51BF08D510012490E /* LeftDeckTableViewCell.m in Sources */,
 				A0DDA0611BF8E1AC000D9580 /* AddToCartTableViewCell.m in Sources */,
+				0C2FBC491C0603AD00A374E1 /* UserInfoServiceClient.m in Sources */,
 				A052533F1BE9F35A007EF74F /* SWRevealViewController.m in Sources */,
 				A0D5E3261BFE6AE800650E58 /* DeliveryTimeTableViewCell.m in Sources */,
 				0C2F07191BEE6B4A00F6B7DB /* DeliverySlot.m in Sources */,
@@ -984,7 +990,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Alok Ranjan (H686S25ZPL)";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/Rokimkar/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
+				GCC_PREFIX_HEADER = /Users/kunal/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
 				INFOPLIST_FILE = BlickBee/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1002,7 +1008,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Alok Ranjan (H686S25ZPL)";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/Rokimkar/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
+				GCC_PREFIX_HEADER = /Users/kunal/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
 				INFOPLIST_FILE = BlickBee/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -13,6 +13,7 @@
 #import "TopZoneCollectionViewCell.h"
 #import "ProductViewController.h"
 #import "BlickbeePrefix.pch"
+#import "UserInfoServiceClient.h"
 @interface HomeViewController ()
 
 @end
@@ -45,6 +46,14 @@
         } failure:^(NSError *error) {
             
         }];
+        
+        UserInfoServiceClient *userClient = [[UserInfoServiceClient alloc] init];
+        [userClient updateCustomerInfo:^{
+            
+        } failure:^(NSError *error) {
+            
+        }];
+        
     }
     self.title = @"BlickBee";
 }
@@ -77,17 +86,17 @@
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
 
     if (indexPath.section==0) {
-        TopZoneView *topZoneView = [[TopZoneView alloc] initWithFrame:CGRectMake(0, 0, getScreenWidth(), getScreenWidth()*288.0/720.0) andItems:self.productRepo.offersArray];
+        TopZoneView *topZoneView = [[TopZoneView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, getScreenWidth()*288.0/720.0) andItems:self.productRepo.offersArray];
         [cell addSubview:topZoneView];
     }
     else if(indexPath.section==1){
-        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, getScreenWidth(), getScreenWidth()*192/320)];
+        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, getScreenWidth()*192/320)];
         [imgView setContentMode:UIViewContentModeScaleAspectFit];
         imgView.image = [UIImage imageNamed:@"fruits_vector"];
         [cell addSubview:imgView];
     }
     else if(indexPath.section==2){
-        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, getScreenWidth(), getScreenWidth()*192/320)];
+        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, getScreenWidth()*192/320)];
         [imgView setContentMode:UIViewContentModeScaleAspectFit];
         imgView.image = [UIImage imageNamed:@"veg_vector"];
         [cell addSubview:imgView];
