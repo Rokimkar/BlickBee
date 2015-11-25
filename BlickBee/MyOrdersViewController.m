@@ -10,8 +10,11 @@
 #import "MyOrdersTableViewCell.h"
 #import "SWRevealViewController.h"
 #import "OrderServiceClient.h"
+#import "MyOrdersTableView.h"
 
-@interface MyOrdersViewController ()
+@interface MyOrdersViewController (){
+    MyOrdersTableView *myOrdersTableView;
+}
 
 @end
 
@@ -19,7 +22,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.MyOrdersTableView registerNib:[UINib nibWithNibName:@"MyOrdersTableViewCell" bundle:nil] forCellReuseIdentifier:@"MyOrdersTableViewCell"];
     SWRevealViewController *swRevealVC = self.revealViewController;
     if(swRevealVC){
         UIImage *image =[UIImage imageNamed:@"menu.png"];
@@ -39,10 +41,16 @@
     }
     OrderServiceClient *client = [[OrderServiceClient alloc] init];
     [client getAllOrdersWithSuccess:^(NSMutableArray *orderaArray) {
-        
+        self.myOrdersArray=orderaArray;
+        myOrdersTableView.myOrdersArray=orderaArray;
+        [myOrdersTableView reloadData];
     } failure:^(NSError *error) {
         
     }];
+    myOrdersTableView = [[MyOrdersTableView alloc]initWithFrame:CGRectMake(0, 0, getScreenWidth(), getScreenHeight()) andOrdersArray:self.myOrdersArray];
+    myOrdersTableView.separatorColor=[UIColor clearColor];
+    myOrdersTableView.backgroundColor=RGBA(225, 225, 225, 1);
+    [self.view addSubview:myOrdersTableView];
     
     self.title=@"My Orders";
 }

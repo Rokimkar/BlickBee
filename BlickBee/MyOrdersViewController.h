@@ -9,6 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MyOrdersViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITableView *MyOrdersTableView;
-
+@property (weak,nonatomic) NSMutableArray *myOrdersArray;
 @end
