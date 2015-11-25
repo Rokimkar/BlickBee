@@ -32,7 +32,7 @@
         self.payuItemPrice=@"";
         self.payuItemCurrency=@"";
         self.shippingAddressId=@"";
-        self.uniqueAddressId=@"";
+        self.uniqueOrderId=@"";
         self.orderCreatedDate=@"";
         self.orderUpdatedDate=@"";
         self.orderedProducts=[[NSMutableArray alloc] init];
