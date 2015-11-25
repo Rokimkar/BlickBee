@@ -180,8 +180,8 @@
  */
 
 
-- (void) getAllOrdersWithSuccess:(void (^) (Order* order))success failure:(void (^) (NSError *error)) failure{
-    
+- (void) getAllOrdersWithSuccess:(void (^) (NSMutableArray* orderaArray))success failure:(void (^) (NSError *error)) failure{
+
     NSURL *url = [self getBaseURL];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
@@ -210,7 +210,7 @@
     manager.responseSerializer.acceptableContentTypes= [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     [manager POST:BASE_URL_STRING parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
-        if ([[responseObject objectForKey:@"response"] isEqualToString:@"success"]) {
+        if ([[responseObject objectForKey:@"response"] isEqualToString:@"success"] && [[responseObject objectForKey:@"response_data"] isKindOfClass:[NSArray class]]) {
             success([self getFullOrderFor:[responseObject objectForKey:@"response_data"]]);
         }
         else{
@@ -233,42 +233,46 @@
         
     }];
 }
--(Order*) getFullOrderFor:(NSDictionary*)dict{
-    Order *order = [[Order alloc] init];
-    order.orderId = [dict objectForKey:@"id"];
-    order.customerId = [dict objectForKey:@"customer_id"];
-    order.zoneCode = [dict objectForKey:@"zone_code"];
-    
-    order.cartId = [dict objectForKey:@"cart_id"];
-    order.orderStatus = [dict objectForKey:@"order_status"];
-    order.orderProcessingBy = [dict objectForKey:@"order_processing_by"];
-    order.bikeNo = [dict objectForKey:@"bike_no"];
-    order.orderAmount = [dict objectForKey:@"order_ammount"];
-    order.currency = [dict objectForKey:@"currency"];
-    order.paymentMethod = [dict objectForKey:@"payment_method"];
-    order.paymentStatus = [dict objectForKey:@"payment_status"];
-    order.billingAddressId = [dict objectForKey:@"billing_address_id"];
-    order.payuJson = [dict objectForKey:@"payu_json"];
-    order.payuItemTransaction = [dict objectForKey:@"payu_item_transaction"];
-    order.payuItemPrice = [dict objectForKey:@"payu_item_price"];
-    order.payuItemCurrency = [dict objectForKey:@"payu_item_currency"];
-    order.shippingAddressId = [dict objectForKey:@"shipping_address_id"];
-    order.uniqueOrderId = [dict objectForKey:@"unique_order_id"];
-    order.orderCreatedDate = [dict objectForKey:@"order_created_date"];
-    order.orderUpdatedDate = [dict objectForKey:@"order_updated_date"];
-    NSMutableArray *products = [[NSMutableArray alloc] init];
-    for (NSDictionary* prodDict in [dict objectForKey:@"products"]) {
-        OrderedProduct *product = [[OrderedProduct alloc] init];
-        product.productId = [prodDict objectForKey:@"order_product_id"];
-        product.productQty = [prodDict objectForKey:@"product_quantities"];
-        product.productAmount = [prodDict objectForKey:@"product_ammount"];
-        product.productUnitQty = [prodDict objectForKey:@"product_unit_quantity"];
-        product.productName = [prodDict objectForKey:@"product_name"];
-        product.productImage = [prodDict objectForKey:@"product_image"];
-        [products addObject:product];
+-(NSMutableArray*) getFullOrderFor:(NSArray*)responseArray{
+    NSMutableArray *ordersArray= [[NSMutableArray alloc] init];
+    for (NSDictionary *dict in responseArray) {
+        Order *order = [[Order alloc] init];
+        order.orderId = [dict objectForKey:@"id"];
+        order.customerId = [dict objectForKey:@"customer_id"];
+        order.zoneCode = [dict objectForKey:@"zone_code"];
+        
+        order.cartId = [dict objectForKey:@"cart_id"];
+        order.orderStatus = [dict objectForKey:@"order_status"];
+        order.orderProcessingBy = [dict objectForKey:@"order_processing_by"];
+        order.bikeNo = [dict objectForKey:@"bike_no"];
+        order.orderAmount = [dict objectForKey:@"order_ammount"];
+        order.currency = [dict objectForKey:@"currency"];
+        order.paymentMethod = [dict objectForKey:@"payment_method"];
+        order.paymentStatus = [dict objectForKey:@"payment_status"];
+        order.billingAddressId = [dict objectForKey:@"billing_address_id"];
+        order.payuJson = [dict objectForKey:@"payu_json"];
+        order.payuItemTransaction = [dict objectForKey:@"payu_item_transaction"];
+        order.payuItemPrice = [dict objectForKey:@"payu_item_price"];
+        order.payuItemCurrency = [dict objectForKey:@"payu_item_currency"];
+        order.shippingAddressId = [dict objectForKey:@"shipping_address_id"];
+        order.uniqueOrderId = [dict objectForKey:@"unique_order_id"];
+        order.orderCreatedDate = [dict objectForKey:@"order_created_date"];
+        order.orderUpdatedDate = [dict objectForKey:@"order_updated_date"];
+        NSMutableArray *products = [[NSMutableArray alloc] init];
+        for (NSDictionary* prodDict in [dict objectForKey:@"products"]) {
+            OrderedProduct *product = [[OrderedProduct alloc] init];
+            product.productId = [prodDict objectForKey:@"order_product_id"];
+            product.productQty = [prodDict objectForKey:@"product_quantities"];
+            product.productAmount = [prodDict objectForKey:@"product_ammount"];
+            product.productUnitQty = [prodDict objectForKey:@"product_unit_quantity"];
+            product.productName = [prodDict objectForKey:@"product_name"];
+            product.productImage = [prodDict objectForKey:@"product_image"];
+            [products addObject:product];
+        }
+        order.orderedProducts=products;
+        [ordersArray addObject:order];
     }
-    order.orderedProducts=products;
-    return order;
+    return ordersArray;
 }
 
 

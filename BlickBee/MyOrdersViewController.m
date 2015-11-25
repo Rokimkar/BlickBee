@@ -37,7 +37,12 @@
         self.navigationController.navigationBar.barTintColor=RGBA(246, 71, 17, 1);
         swRevealVC.rearViewRevealWidth=270.0f;
     }
-    
+    OrderServiceClient *client = [[OrderServiceClient alloc] init];
+    [client getAllOrdersWithSuccess:^(NSMutableArray *orderaArray) {
+        
+    } failure:^(NSError *error) {
+        
+    }];
     
     self.title=@"My Orders";
 }
