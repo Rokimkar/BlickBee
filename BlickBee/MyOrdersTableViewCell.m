@@ -16,8 +16,16 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
 
+-(void) bindData : (Order *)myOrder{
+    self.labelForOrderDate.text=myOrder.orderCreatedDate;
+    self.labelForOrderID.text=myOrder.uniqueOrderId;
+    self.labelForPrice.text=myOrder.orderAmount;
+    self.imageViewForStatus.image=[UIImage imageNamed:@"2_a.png"];
+    [self.imageViewForStatus sizeToFit];
+}
+
+- (IBAction)buttonPressedViewOrder:(id)sender {
+}
 @end

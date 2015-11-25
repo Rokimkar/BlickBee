@@ -11,8 +11,8 @@
 
 @implementation MyOrdersTableView
 
--(id) initWithFrame:(CGRect)frame andProductsArray:(NSMutableArray*) prodsArray{
-    
+-(id) initWithFrame:(CGRect)frame andOrdersArray:(NSMutableArray*) ordersArray{
+    self.myOrdersArray=ordersArray;
     self.dataSource=self;
     self.delegate=self;
     [self registerNib:[UINib nibWithNibName:@"MyOrdersTableViewCell" bundle:nil] forCellReuseIdentifier:@"MyOrdersTableViewCell"];
@@ -25,11 +25,17 @@
 }
 
 -(NSInteger) tableView :(UITableView *)tableView numberOfRowsInSection:(NSInteger) section{
-    return 1;
+    return self.myOrdersArray.count;
 }
 
 -(UITableViewCell *)tableView : (UITableView *)tableView cellForRowAtIndexPath : (NSIndexPath *) indexPath{
-    MyOrdersTableViewCell *cell;
+    MyOrdersTableViewCell *cell = (MyOrdersTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"MyOrdersTableViewCell"];
+    if(cell==nil){
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MyOrdersTableViewCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+    }
+    [cell setBackgroundColor:RGBA(225, 225, 225, 1)];
+    [cell bindData:[self.myOrdersArray objectAtIndex:indexPath.row]];
     return cell;
 }
 
@@ -38,7 +44,7 @@
 }
 
 -(CGFloat) tableView:(UITableView *) tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 300;
+    return 150;
 }
 
 

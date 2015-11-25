@@ -10,4 +10,8 @@
 
 @interface MyOrdersTableView : UITableView
 
+-(id) initWithFrame:(CGRect)frame andOrdersArray:(NSMutableArray*) ordersArray;
+
+@property (nonatomic,strong) NSMutableArray *myOrdersArray;
+
 @end
