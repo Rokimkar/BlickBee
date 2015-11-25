@@ -16,7 +16,8 @@
 
 - (void) makeOrderWithProductArray:(NSMutableArray*)productsArray andAddress:(Address*)address WithSuccess:(void (^) (Order* order))success failure:(void (^) (NSError *error)) failure;
 
-    
+- (void) getAllOrdersWithSuccess:(void (^) (Order* order))success failure:(void (^) (NSError *error)) failure;
+
     
 
 
