@@ -336,7 +336,7 @@
         <!--Home View Controller-->
         <scene sceneID="vd3-NO-bDw">
             <objects>
-                <viewController id="MLm-WG-oGD" customClass="HomeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MLm-WG-oGD" customClass="HomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1dH-1e-XUp"/>
                         <viewControllerLayoutGuide type="bottom" id="48c-rK-0J0"/>
@@ -632,7 +632,7 @@
         <!--My Orders View Controller-->
         <scene sceneID="JQp-Pm-nBj">
             <objects>
-                <viewController id="GeT-2V-HLL" customClass="MyOrdersViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyOrdersViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GeT-2V-HLL" customClass="MyOrdersViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="efs-an-szd"/>
                         <viewControllerLayoutGuide type="bottom" id="7uP-wT-8mN"/>

@@ -12,6 +12,7 @@
 #import "MyOrdersViewController.h"
 #import "iRate.h"
 #import "SWRevealViewController.h"
+#import "HomeViewController.h"
 @interface LeftDeckController (){
     NSArray *itemsArray;
     NSArray *imageArray;
@@ -68,9 +69,22 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    SWRevealViewController *revealVC = self.revealViewController;
     if(indexPath.row==5){
         [[iRate sharedInstance]promptForRating];
     }
+    else if(indexPath.row==1){
+        
+            MyOrdersViewController *myOrderVC = [storyboard instantiateViewControllerWithIdentifier:@"MyOrdersViewController"];
+            UINavigationController *NVC = [[UINavigationController alloc]initWithRootViewController:myOrderVC];
+            [revealVC setFrontViewController:NVC];
+    }
+    else if (indexPath.row==0){
+        HomeViewController *homeVC = [storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
+        UINavigationController *NVC = [[UINavigationController alloc]initWithRootViewController:homeVC];
+        [revealVC setFrontViewController:NVC];
+        }
 }
 
 - (CGFloat) tableView: (UITableView *)
