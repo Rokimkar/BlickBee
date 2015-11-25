@@ -10,10 +10,11 @@
 #import "User.h"
 #import "Product.h"
 #import "Address.h"
+#import "Order.h"
 
 @interface OrderServiceClient : BaseServiceClient
 
-- (void) makeOrderWithProductArray:(NSMutableArray*)productsArray andAddress:(Address*)address WithSuccess:(void (^) (id responseData))success failure:(void (^) (NSError *error)) failure;
+- (void) makeOrderWithProductArray:(NSMutableArray*)productsArray andAddress:(Address*)address WithSuccess:(void (^) (Order* order))success failure:(void (^) (NSError *error)) failure;
 
     
     
