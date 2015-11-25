@@ -8,6 +8,7 @@
 
 #import "MyOrdersViewController.h"
 #import "MyOrdersTableViewCell.h"
+#import "SWRevealViewController.h"
 
 @interface MyOrdersViewController ()
 
