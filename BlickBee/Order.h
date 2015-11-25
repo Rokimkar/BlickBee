@@ -12,6 +12,7 @@
 
 @property (nonatomic,strong) NSString *orderId;
 @property (nonatomic,strong) NSString *customerId;
+@property (nonatomic,strong) NSString *zoneCode;
 @property (nonatomic,strong) NSString *deliverySlot;
 @property (nonatomic,strong) NSString *cartId;
 @property (nonatomic,strong) NSString *orderStatus;

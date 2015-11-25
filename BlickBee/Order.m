@@ -17,6 +17,7 @@
     {
         self.orderId=@"";
         self.customerId=@"";
+        self.zoneCode=@"";
         self.deliverySlot=@"";
         self.cartId=@"";
         self.orderStatus=@"";
