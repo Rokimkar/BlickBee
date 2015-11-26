@@ -858,6 +858,7 @@
 			files = (
 				0C81833D1BF8DEC100882A65 /* SignInViewController.m in Sources */,
 				0C2FBC5C1C06EF2F00A374E1 /* NearByArea.m in Sources */,
+				A0D4140A1C0646FD0077BA42 /* OrdersDetailViewController.m in Sources */,
 				A0D5E31E1BFE02BD00650E58 /* DeliveryDetailTableViewCell.m in Sources */,
 				A0D060EA1C03441C001E70B9 /* MyOrdersTableViewCell.m in Sources */,
 				0C2F07281BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.m in Sources */,
@@ -890,6 +891,8 @@
 				0C2F07221BEF369400F6B7DB /* BaseModel.m in Sources */,
 				A0D5E32B1BFF043600650E58 /* DeliveryAddressTableViewCell.m in Sources */,
 				A052530B1BE9F271007EF74F /* main.m in Sources */,
+				A0D4140D1C0647A10077BA42 /* OrdersDetailTableView.m in Sources */,
+				A0D414111C0648840077BA42 /* OrdersDetailTableViewCell.m in Sources */,
 				0C2FBC551C06494C00A374E1 /* AddAddressViewController.m in Sources */,
 				A0DDA05B1BF89126000D9580 /* DummyViewController.m in Sources */,
 				0C8BCF921BFF3D14009051F1 /* OrderedProduct.m in Sources */,
@@ -1051,7 +1054,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Alok Ranjan (H686S25ZPL)";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/Rokimkar/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
+				GCC_PREFIX_HEADER = /Users/kunal/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
 				INFOPLIST_FILE = BlickBee/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1069,7 +1072,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Alok Ranjan (H686S25ZPL)";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/Rokimkar/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
+				GCC_PREFIX_HEADER = /Users/kunal/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
 				INFOPLIST_FILE = BlickBee/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

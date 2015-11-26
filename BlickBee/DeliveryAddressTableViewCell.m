@@ -26,6 +26,10 @@
 }
 
 -(void) bindData:(Address*)address{
+    self.nameLabel.text = address.name;
+    self.phoneLabel.text = address.phone;
+    self.address1Label.text = address.street;
+    self.address2Label.text = address.landmark;
 }
 
 @end
