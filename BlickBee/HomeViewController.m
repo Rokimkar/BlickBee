@@ -14,6 +14,7 @@
 #import "ProductViewController.h"
 #import "BlickbeePrefix.pch"
 #import "UserInfoServiceClient.h"
+#import "AddAddressServiceClient.h"
 @interface HomeViewController ()
 
 @end
@@ -55,6 +56,14 @@
         } failure:^(NSError *error) {
             
         }];
+
+        AddAddressServiceClient *addressClient = [[AddAddressServiceClient alloc] init];
+        [addressClient getNearestAreasWithSuccess:^(NSMutableArray *areasArray) {
+            
+        } failure:^(NSError *error) {
+            
+        }];
+
         
     }
     self.title = @"BlickBee";

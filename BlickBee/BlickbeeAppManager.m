@@ -33,6 +33,7 @@
     self.user = [[User alloc] init];
     self.selectedProducts = [[NSMutableArray alloc]init];
     self.userAddresses = [[NSMutableArray alloc] init];
+    self.regionsArray = [[NSMutableArray alloc] init];
     return self;
     
 }

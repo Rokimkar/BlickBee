@@ -82,8 +82,8 @@
         address.city = [adddict objectForKey:@"city"];
         address.state = [adddict objectForKey:@"state"];
         address.country = [adddict objectForKey:@"country"];
-        address.postalCode = [adddict objectForKey:@"postalCode"];
-        address.defaultAddress = [adddict objectForKey:@"defaultAddress"];
+        address.postalCode = [adddict objectForKey:@"postal_code"];
+        address.defaultAddress = [adddict objectForKey:@"default_address"];
         address.status = [adddict objectForKey:@"status"];
         address.createdDate = [adddict objectForKey:@"created_date"];
         address.updatedDate = [adddict objectForKey:@"updated_date"];

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DeliveryDetailTableView.h"
 
-@interface DeliveryDetailViewController : UIViewController
+@interface DeliveryDetailViewController : UIViewController <openNewAddress>
 
 @end
