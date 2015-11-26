@@ -18,6 +18,12 @@
 		0C2F07291BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C2F07251BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.xib */; };
 		0C2F072A1BEF3A9A00F6B7DB /* TopZoneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F07271BEF3A9A00F6B7DB /* TopZoneView.m */; };
 		0C2FBC491C0603AD00A374E1 /* UserInfoServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC481C0603AD00A374E1 /* UserInfoServiceClient.m */; settings = {ASSET_TAGS = (); }; };
+		0C2FBC4D1C061F1B00A374E1 /* AddAddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC4B1C061F1B00A374E1 /* AddAddressTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		0C2FBC4E1C061F1B00A374E1 /* AddAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C2FBC4C1C061F1B00A374E1 /* AddAddressTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		0C2FBC551C06494C00A374E1 /* AddAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC531C06494C00A374E1 /* AddAddressViewController.m */; settings = {ASSET_TAGS = (); }; };
+		0C2FBC561C06494C00A374E1 /* AddAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C2FBC541C06494C00A374E1 /* AddAddressViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		0C2FBC591C06EDD000A374E1 /* AddAddressServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC581C06EDD000A374E1 /* AddAddressServiceClient.m */; settings = {ASSET_TAGS = (); }; };
+		0C2FBC5C1C06EF2F00A374E1 /* NearByArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC5B1C06EF2F00A374E1 /* NearByArea.m */; settings = {ASSET_TAGS = (); }; };
 		0C81833D1BF8DEC100882A65 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C81833C1BF8DEC100882A65 /* SignInViewController.m */; };
 		0C8183401BF8DECE00882A65 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C81833F1BF8DECE00882A65 /* SignUpViewController.m */; };
 		0C8183451BF9003400882A65 /* LoginServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8183441BF9003400882A65 /* LoginServiceClient.m */; };
@@ -143,6 +149,16 @@
 		0C2F072B1BEF3D6200F6B7DB /* BlickbeePrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlickbeePrefix.pch; sourceTree = "<group>"; };
 		0C2FBC471C0603AD00A374E1 /* UserInfoServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoServiceClient.h; sourceTree = "<group>"; };
 		0C2FBC481C0603AD00A374E1 /* UserInfoServiceClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoServiceClient.m; sourceTree = "<group>"; };
+		0C2FBC4A1C061F1B00A374E1 /* AddAddressTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAddressTableViewCell.h; sourceTree = "<group>"; };
+		0C2FBC4B1C061F1B00A374E1 /* AddAddressTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAddressTableViewCell.m; sourceTree = "<group>"; };
+		0C2FBC4C1C061F1B00A374E1 /* AddAddressTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddAddressTableViewCell.xib; sourceTree = "<group>"; };
+		0C2FBC521C06494C00A374E1 /* AddAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAddressViewController.h; sourceTree = "<group>"; };
+		0C2FBC531C06494C00A374E1 /* AddAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAddressViewController.m; sourceTree = "<group>"; };
+		0C2FBC541C06494C00A374E1 /* AddAddressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddAddressViewController.xib; sourceTree = "<group>"; };
+		0C2FBC571C06EDD000A374E1 /* AddAddressServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAddressServiceClient.h; sourceTree = "<group>"; };
+		0C2FBC581C06EDD000A374E1 /* AddAddressServiceClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAddressServiceClient.m; sourceTree = "<group>"; };
+		0C2FBC5A1C06EF2F00A374E1 /* NearByArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearByArea.h; sourceTree = "<group>"; };
+		0C2FBC5B1C06EF2F00A374E1 /* NearByArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearByArea.m; sourceTree = "<group>"; };
 		0C81833B1BF8DEC100882A65 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		0C81833C1BF8DEC100882A65 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		0C81833E1BF8DECE00882A65 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
@@ -306,6 +322,8 @@
 				0C8BCF881BFF2CC0009051F1 /* OrderServiceClient.m */,
 				0C2FBC471C0603AD00A374E1 /* UserInfoServiceClient.h */,
 				0C2FBC481C0603AD00A374E1 /* UserInfoServiceClient.m */,
+				0C2FBC571C06EDD000A374E1 /* AddAddressServiceClient.h */,
+				0C2FBC581C06EDD000A374E1 /* AddAddressServiceClient.m */,
 			);
 			name = ServiceClients;
 			sourceTree = "<group>";
@@ -331,6 +349,8 @@
 				0C8BCF8E1BFF3AA5009051F1 /* Order.m */,
 				0C8BCF901BFF3D14009051F1 /* OrderedProduct.h */,
 				0C8BCF911BFF3D14009051F1 /* OrderedProduct.m */,
+				0C2FBC5A1C06EF2F00A374E1 /* NearByArea.h */,
+				0C2FBC5B1C06EF2F00A374E1 /* NearByArea.m */,
 			);
 			name = ModalClasses;
 			sourceTree = "<group>";
@@ -477,6 +497,12 @@
 				A0D5E3281BFF043600650E58 /* DeliveryAddressTableViewCell.h */,
 				A0D5E3291BFF043600650E58 /* DeliveryAddressTableViewCell.m */,
 				A0D5E32A1BFF043600650E58 /* DeliveryAddressTableViewCell.xib */,
+				0C2FBC4A1C061F1B00A374E1 /* AddAddressTableViewCell.h */,
+				0C2FBC4B1C061F1B00A374E1 /* AddAddressTableViewCell.m */,
+				0C2FBC4C1C061F1B00A374E1 /* AddAddressTableViewCell.xib */,
+				0C2FBC521C06494C00A374E1 /* AddAddressViewController.h */,
+				0C2FBC531C06494C00A374E1 /* AddAddressViewController.m */,
+				0C2FBC541C06494C00A374E1 /* AddAddressViewController.xib */,
 			);
 			name = DeliveryDetailsViewController;
 			sourceTree = "<group>";
@@ -688,9 +714,11 @@
 				A0DA719D1BF074E10012490E /* home.png in Resources */,
 				A0DA71AF1BF074E10012490E /* user icon.png in Resources */,
 				A0DA71A91BF074E10012490E /* rateus.png in Resources */,
+				0C2FBC561C06494C00A374E1 /* AddAddressViewController.xib in Resources */,
 				A0DA71A41BF074E10012490E /* notifications_grey.png in Resources */,
 				A0D5E32C1BFF043600650E58 /* DeliveryAddressTableViewCell.xib in Resources */,
 				A0DA71921BF074E10012490E /* 2.png in Resources */,
+				0C2FBC4E1C061F1B00A374E1 /* AddAddressTableViewCell.xib in Resources */,
 				A0DA71A31BF074E10012490E /* my_orders.png in Resources */,
 				A0DA71B01BF074E10012490E /* user-icon.png in Resources */,
 				A0DA71951BF074E10012490E /* cart_white_64x.png in Resources */,
@@ -801,6 +829,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C81833D1BF8DEC100882A65 /* SignInViewController.m in Sources */,
+				0C2FBC5C1C06EF2F00A374E1 /* NearByArea.m in Sources */,
 				A0D5E31E1BFE02BD00650E58 /* DeliveryDetailTableViewCell.m in Sources */,
 				A0D060EA1C03441C001E70B9 /* MyOrdersTableViewCell.m in Sources */,
 				0C2F07281BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.m in Sources */,
@@ -816,6 +845,7 @@
 				0C2F06FF1BEE45C000F6B7DB /* BaseServiceClient.m in Sources */,
 				0C2F072A1BEF3A9A00F6B7DB /* TopZoneView.m in Sources */,
 				A05253451BEA0EC9007EF74F /* LeftDeckController.m in Sources */,
+				0C2FBC4D1C061F1B00A374E1 /* AddAddressTableViewCell.m in Sources */,
 				A0D5E3221BFE049100650E58 /* DeliveryDetailTableView.m in Sources */,
 				A0D060E61C034268001E70B9 /* MyOrdersViewController.m in Sources */,
 				0C2F06FC1BEE458000F6B7DB /* ProductsServiceClient.m in Sources */,
@@ -823,6 +853,7 @@
 				0C8BCF891BFF2CC0009051F1 /* OrderServiceClient.m in Sources */,
 				0C8BCF8F1BFF3AA5009051F1 /* Order.m in Sources */,
 				0C8BCF8C1BFF2D68009051F1 /* Address.m in Sources */,
+				0C2FBC591C06EDD000A374E1 /* AddAddressServiceClient.m in Sources */,
 				0C8183481BF903D200882A65 /* User.m in Sources */,
 				A0DA715D1BF072860012490E /* BaseTableView.m in Sources */,
 				A052530E1BE9F271007EF74F /* AppDelegate.m in Sources */,
@@ -830,6 +861,7 @@
 				0C2F07221BEF369400F6B7DB /* BaseModel.m in Sources */,
 				A0D5E32B1BFF043600650E58 /* DeliveryAddressTableViewCell.m in Sources */,
 				A052530B1BE9F271007EF74F /* main.m in Sources */,
+				0C2FBC551C06494C00A374E1 /* AddAddressViewController.m in Sources */,
 				A0DDA05B1BF89126000D9580 /* DummyViewController.m in Sources */,
 				0C8BCF921BFF3D14009051F1 /* OrderedProduct.m in Sources */,
 				0C2F07131BEE6B1200F6B7DB /* Offer.m in Sources */,

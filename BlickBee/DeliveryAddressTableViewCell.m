@@ -24,4 +24,8 @@
 
 - (IBAction)removeButtonClicked:(id)sender {
 }
+
+-(void) bindData:(Address*)address{
+}
+
 @end

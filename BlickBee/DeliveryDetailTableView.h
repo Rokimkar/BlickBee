@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddAddressTableViewCell.h"
 
-@interface DeliveryDetailTableView : UITableView
+@protocol openNewAddress <NSObject>
+
+-(void) openNewAddress;
+
+@end
+
+@interface DeliveryDetailTableView : UITableView<openAddressPopUp>
 -(id) initWithFrames:(CGRect)frame;
+@property (nonatomic,strong) id<openNewAddress> addressDelegate;
+
 @end

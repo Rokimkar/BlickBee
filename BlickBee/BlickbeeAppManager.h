@@ -14,5 +14,6 @@
 @property (nonatomic,strong) User *user;
 @property (nonatomic,strong) NSMutableArray *selectedProducts;
 @property (nonatomic,strong) NSMutableArray *userAddresses;
+@property (nonatomic,strong) NSMutableArray *regionsArray;
 
 @end
