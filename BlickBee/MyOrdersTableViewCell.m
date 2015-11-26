@@ -19,6 +19,7 @@
 }
 
 -(void) bindData : (Order *)myOrder{
+    self.item=myOrder;
     self.labelForOrderDate.text=myOrder.orderCreatedDate;
     self.labelForOrderID.text=myOrder.uniqueOrderId;
     self.labelForPrice.text=myOrder.orderAmount;
@@ -26,6 +27,7 @@
     [self.imageViewForStatus sizeToFit];
 }
 
-- (IBAction)buttonPressedViewOrder:(id)sender {
+- (IBAction)buttonPressedViewOrder:(id)sender{
+    [self.launchOrderDetailVCDelegate launchOrderDetailVC : self.item];
 }
 @end

@@ -36,6 +36,7 @@
     }
     [cell setBackgroundColor:RGBA(225, 225, 225, 1)];
     [cell bindData:[self.myOrdersArray objectAtIndex:indexPath.row]];
+    cell.launchOrderDetailVCDelegate=self.parentVC;
     return cell;
 }
 

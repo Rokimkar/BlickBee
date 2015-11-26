@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "Order.h"
 
+@protocol launchOrderDetailVC <NSObject>
+-(void) launchOrderDetailVC : (Order *)order;
+
+@end
 @interface MyOrdersTableViewCell : UITableViewCell
 
 -(void) bindData : (Order *) myOrder;
@@ -19,5 +23,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *buttonPressedViewOrder;
 - (IBAction)buttonPressedViewOrder:(id)sender;
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewForStatus;
-
+@property (weak,nonatomic) id <launchOrderDetailVC> launchOrderDetailVCDelegate;
+@property (weak,nonatomic) Order *item;
 @end

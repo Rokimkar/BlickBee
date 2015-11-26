@@ -99,7 +99,7 @@
                         </variation>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hn2-VY-R7x">
-                        <rect key="frame" x="113" y="59" width="245" height="53"/>
+                        <rect key="frame" x="113" y="59" width="245" height="47"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="168" id="Ke8-2S-P3N"/>
                         </constraints>
@@ -125,7 +125,7 @@
                     <constraint firstItem="1p6-JF-Ca9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="1" id="Doo-gx-8lr"/>
                     <constraint firstAttribute="trailingMargin" secondItem="hn2-VY-R7x" secondAttribute="trailing" constant="-5" id="HT7-hX-SfH"/>
                     <constraint firstAttribute="bottomMargin" secondItem="eiu-F2-2og" secondAttribute="bottom" constant="6" id="IXr-gh-yjU"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="hn2-VY-R7x" secondAttribute="bottom" constant="25" id="JYR-cB-TEG"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="hn2-VY-R7x" secondAttribute="bottom" constant="31" id="JYR-cB-TEG"/>
                     <constraint firstItem="KCr-nq-pru" firstAttribute="top" secondItem="FT3-OL-nIw" secondAttribute="bottom" constant="6" id="Nqc-4b-GPc"/>
                     <constraint firstItem="hn2-VY-R7x" firstAttribute="leading" secondItem="eiu-F2-2og" secondAttribute="trailing" constant="8" id="ORA-k2-mYG"/>
                     <constraint firstItem="lSD-s9-FqA" firstAttribute="top" secondItem="IS3-xs-JL7" secondAttribute="bottom" constant="1" id="PS4-Mz-9En"/>
