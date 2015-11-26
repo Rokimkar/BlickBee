@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MyOrdersViewController.h"
 
 @interface MyOrdersTableView : UITableView
 
 -(id) initWithFrame:(CGRect)frame andOrdersArray:(NSMutableArray*) ordersArray;
 
 @property (nonatomic,strong) NSMutableArray *myOrdersArray;
-
+@property (nonatomic,strong) MyOrdersViewController *parentVC;
 @end

@@ -42,6 +42,12 @@
 		A0D060EA1C03441C001E70B9 /* MyOrdersTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D060E81C03441C001E70B9 /* MyOrdersTableViewCell.m */; };
 		A0D060EB1C03441C001E70B9 /* MyOrdersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0D060E91C03441C001E70B9 /* MyOrdersTableViewCell.xib */; };
 		A0D060EE1C0348A2001E70B9 /* MyOrdersTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D060ED1C0348A2001E70B9 /* MyOrdersTableView.m */; };
+		A0D4140A1C0646FD0077BA42 /* OrdersDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D414091C0646FD0077BA42 /* OrdersDetailViewController.m */; };
+		A0D4140D1C0647A10077BA42 /* OrdersDetailTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D4140C1C0647A10077BA42 /* OrdersDetailTableView.m */; };
+		A0D414111C0648840077BA42 /* OrdersDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D4140F1C0648840077BA42 /* OrdersDetailTableViewCell.m */; };
+		A0D414121C0648840077BA42 /* OrdersDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0D414101C0648840077BA42 /* OrdersDetailTableViewCell.xib */; };
+		A0D414161C0709BD0077BA42 /* FirstOrderDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D414141C0709BD0077BA42 /* FirstOrderDetailCell.m */; };
+		A0D414171C0709BD0077BA42 /* FirstOrderDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0D414151C0709BD0077BA42 /* FirstOrderDetailCell.xib */; };
 		A0D5E31A1BFDFE3C00650E58 /* DeliveryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D5E3191BFDFE3C00650E58 /* DeliveryDetailViewController.m */; };
 		A0D5E31E1BFE02BD00650E58 /* DeliveryDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D5E31C1BFE02BD00650E58 /* DeliveryDetailTableViewCell.m */; };
 		A0D5E31F1BFE02BD00650E58 /* DeliveryDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0D5E31D1BFE02BD00650E58 /* DeliveryDetailTableViewCell.xib */; };
@@ -192,6 +198,16 @@
 		A0D060E91C03441C001E70B9 /* MyOrdersTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyOrdersTableViewCell.xib; sourceTree = "<group>"; };
 		A0D060EC1C0348A2001E70B9 /* MyOrdersTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOrdersTableView.h; sourceTree = "<group>"; };
 		A0D060ED1C0348A2001E70B9 /* MyOrdersTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyOrdersTableView.m; sourceTree = "<group>"; };
+		A0D414081C0646FD0077BA42 /* OrdersDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrdersDetailViewController.h; sourceTree = "<group>"; };
+		A0D414091C0646FD0077BA42 /* OrdersDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrdersDetailViewController.m; sourceTree = "<group>"; };
+		A0D4140B1C0647A10077BA42 /* OrdersDetailTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrdersDetailTableView.h; sourceTree = "<group>"; };
+		A0D4140C1C0647A10077BA42 /* OrdersDetailTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrdersDetailTableView.m; sourceTree = "<group>"; };
+		A0D4140E1C0648840077BA42 /* OrdersDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrdersDetailTableViewCell.h; sourceTree = "<group>"; };
+		A0D4140F1C0648840077BA42 /* OrdersDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrdersDetailTableViewCell.m; sourceTree = "<group>"; };
+		A0D414101C0648840077BA42 /* OrdersDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrdersDetailTableViewCell.xib; sourceTree = "<group>"; };
+		A0D414131C0709BD0077BA42 /* FirstOrderDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstOrderDetailCell.h; sourceTree = "<group>"; };
+		A0D414141C0709BD0077BA42 /* FirstOrderDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstOrderDetailCell.m; sourceTree = "<group>"; };
+		A0D414151C0709BD0077BA42 /* FirstOrderDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstOrderDetailCell.xib; sourceTree = "<group>"; };
 		A0D5E3181BFDFE3C00650E58 /* DeliveryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliveryDetailViewController.h; sourceTree = "<group>"; };
 		A0D5E3191BFDFE3C00650E58 /* DeliveryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeliveryDetailViewController.m; sourceTree = "<group>"; };
 		A0D5E31B1BFE02BD00650E58 /* DeliveryDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliveryDetailTableViewCell.h; sourceTree = "<group>"; };
@@ -457,6 +473,16 @@
 				A0D060E71C03441C001E70B9 /* MyOrdersTableViewCell.h */,
 				A0D060E81C03441C001E70B9 /* MyOrdersTableViewCell.m */,
 				A0D060E91C03441C001E70B9 /* MyOrdersTableViewCell.xib */,
+				A0D414081C0646FD0077BA42 /* OrdersDetailViewController.h */,
+				A0D414091C0646FD0077BA42 /* OrdersDetailViewController.m */,
+				A0D4140B1C0647A10077BA42 /* OrdersDetailTableView.h */,
+				A0D4140C1C0647A10077BA42 /* OrdersDetailTableView.m */,
+				A0D4140E1C0648840077BA42 /* OrdersDetailTableViewCell.h */,
+				A0D4140F1C0648840077BA42 /* OrdersDetailTableViewCell.m */,
+				A0D414101C0648840077BA42 /* OrdersDetailTableViewCell.xib */,
+				A0D414131C0709BD0077BA42 /* FirstOrderDetailCell.h */,
+				A0D414141C0709BD0077BA42 /* FirstOrderDetailCell.m */,
+				A0D414151C0709BD0077BA42 /* FirstOrderDetailCell.xib */,
 			);
 			name = MyOrders;
 			sourceTree = "<group>";
@@ -686,6 +712,7 @@
 				0C2F07291BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.xib in Resources */,
 				A0DA71AA1BF074E10012490E /* search.png in Resources */,
 				A0DA719D1BF074E10012490E /* home.png in Resources */,
+				A0D414121C0648840077BA42 /* OrdersDetailTableViewCell.xib in Resources */,
 				A0DA71AF1BF074E10012490E /* user icon.png in Resources */,
 				A0DA71A91BF074E10012490E /* rateus.png in Resources */,
 				A0DA71A41BF074E10012490E /* notifications_grey.png in Resources */,
@@ -711,6 +738,7 @@
 				A0DA71961BF074E10012490E /* cartadd.png in Resources */,
 				A0DA71B61BF08D510012490E /* LeftDeckTableViewCell.xib in Resources */,
 				A0DA71AD1BF074E10012490E /* telephone46.png in Resources */,
+				A0D414171C0709BD0077BA42 /* FirstOrderDetailCell.xib in Resources */,
 				A0DA71A01BF074E10012490E /* logo+text 350x.png in Resources */,
 				A0DA71911BF074E10012490E /* 2_c.png in Resources */,
 				A0D5E3271BFE6AE800650E58 /* DeliveryTimeTableViewCell.xib in Resources */,
@@ -801,6 +829,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C81833D1BF8DEC100882A65 /* SignInViewController.m in Sources */,
+				A0D4140A1C0646FD0077BA42 /* OrdersDetailViewController.m in Sources */,
 				A0D5E31E1BFE02BD00650E58 /* DeliveryDetailTableViewCell.m in Sources */,
 				A0D060EA1C03441C001E70B9 /* MyOrdersTableViewCell.m in Sources */,
 				0C2F07281BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.m in Sources */,
@@ -815,6 +844,7 @@
 				A0DA71641BF0734B0012490E /* BaseTableViewCell.m in Sources */,
 				0C2F06FF1BEE45C000F6B7DB /* BaseServiceClient.m in Sources */,
 				0C2F072A1BEF3A9A00F6B7DB /* TopZoneView.m in Sources */,
+				A0D414161C0709BD0077BA42 /* FirstOrderDetailCell.m in Sources */,
 				A05253451BEA0EC9007EF74F /* LeftDeckController.m in Sources */,
 				A0D5E3221BFE049100650E58 /* DeliveryDetailTableView.m in Sources */,
 				A0D060E61C034268001E70B9 /* MyOrdersViewController.m in Sources */,
@@ -830,6 +860,8 @@
 				0C2F07221BEF369400F6B7DB /* BaseModel.m in Sources */,
 				A0D5E32B1BFF043600650E58 /* DeliveryAddressTableViewCell.m in Sources */,
 				A052530B1BE9F271007EF74F /* main.m in Sources */,
+				A0D4140D1C0647A10077BA42 /* OrdersDetailTableView.m in Sources */,
+				A0D414111C0648840077BA42 /* OrdersDetailTableViewCell.m in Sources */,
 				A0DDA05B1BF89126000D9580 /* DummyViewController.m in Sources */,
 				0C8BCF921BFF3D14009051F1 /* OrderedProduct.m in Sources */,
 				0C2F07131BEE6B1200F6B7DB /* Offer.m in Sources */,
