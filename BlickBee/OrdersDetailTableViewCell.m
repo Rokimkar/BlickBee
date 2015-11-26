@@ -23,6 +23,7 @@
 }
 
 -(void)bindDataWithProduct : (OrderedProduct *) product{
+    self.labelForProductName.text=product.productName;
     self.labelForCost.text=product.productAmount;
     self.labelForQty.text=product.productQty;
     //self.labelForTotalCost.text=

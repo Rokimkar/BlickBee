@@ -10,6 +10,7 @@
 #import "OrderedProduct.h"
 
 @interface OrdersDetailTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *labelForProductName;
 @property (weak, nonatomic) IBOutlet UILabel *labelForCost;
 @property (weak, nonatomic) IBOutlet UILabel *labelForQty;
 @property (weak, nonatomic) IBOutlet UILabel *labelForTotalCost;

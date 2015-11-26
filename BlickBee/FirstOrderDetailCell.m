@@ -24,7 +24,7 @@
 -(void)bindData : (Order *)order{
     self.imageViewForStatus.image = [UIImage imageNamed:@"2_a.png"];
     [self.imageViewForStatus sizeToFit];
-    self.labelForOrderID.text=order.orderId;
+    self.labelForOrderID.text=order.uniqueOrderId;
     self.labelForAmount.text=order.orderAmount;
     self.labelForDate.text=order.orderCreatedDate;
 }

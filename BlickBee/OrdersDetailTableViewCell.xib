@@ -78,6 +78,7 @@
             <connections>
                 <outlet property="imageViewForProduct" destination="ClQ-bd-bdb" id="7PU-vF-5gg"/>
                 <outlet property="labelForCost" destination="LGn-vz-xhg" id="gdM-KK-zWg"/>
+                <outlet property="labelForProductName" destination="UO7-e5-qNL" id="33Q-4i-8n4"/>
                 <outlet property="labelForQty" destination="xRC-Kp-Oi7" id="NHU-UI-eTk"/>
                 <outlet property="labelForTotalCost" destination="Eae-Yu-7dW" id="1I9-Rp-0Ri"/>
             </connections>
