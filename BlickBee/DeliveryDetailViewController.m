@@ -47,7 +47,15 @@
 }
 
 -(void) openNewAddress{
-    AddAddressViewController *cont = [[AddAddressViewController alloc] initWithNibName:@"AddAddressViewController" bundle:nil];
+    AddAddressViewController *cont = [[AddAddressViewController alloc] initWithNibName:@"AddAddressViewController" bundle:nil andPreviouslySelectedAddress:nil];
+    cont.addressDelegate=self;
+    UINavigationController *navcont = [[UINavigationController alloc] initWithRootViewController:cont];
+    [self.navigationController presentViewController:navcont animated:YES completion:^{
+        
+    }];
+}
+-(void) editAddressWithPrevAddress:(Address*)prevAddress{
+    AddAddressViewController *cont = [[AddAddressViewController alloc] initWithNibName:@"AddAddressViewController" bundle:nil andPreviouslySelectedAddress:prevAddress];
     cont.addressDelegate=self;
     UINavigationController *navcont = [[UINavigationController alloc] initWithRootViewController:cont];
     [self.navigationController presentViewController:navcont animated:YES completion:^{

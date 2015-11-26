@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "Address.h"
 @protocol addressUpdated <NSObject>
 
 -(void) addressUpdated;
@@ -22,5 +22,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumberTextField;
 @property (weak, nonatomic) IBOutlet UITextField *addressTextField;
 @property (strong,nonatomic) id<addressUpdated> addressDelegate;
+
+-(id) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andPreviouslySelectedAddress:(Address*)prevSelectedAddress;
 
 @end

@@ -17,5 +17,7 @@
 
 - (void) setAddressForName:(NSString*)name andNearByArea:(NearByArea*)landmark andPhone:(NSString*)phone andStreet:(NSString*)street andCity:(NSString*)city andState:(NSString*)state andPostalCode:(NSString*)postalCode WithSuccess:(void (^) (Address *newAddress))success failure:(void (^) (NSError *error)) failure;
 
+- (void) removeAddress:(Address*)address WithSuccess:(void (^) ())success failure:(void (^) (NSError *error)) failure;
+
 
 @end

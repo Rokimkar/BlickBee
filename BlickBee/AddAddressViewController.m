@@ -15,16 +15,26 @@
     NSString *headerStr;
     BOOL isDropDown;
     NearByArea *selectedArea;
+    Address *selectedAddress;
 }
 @end
 
 @implementation AddAddressViewController
 
+
+-(id) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andPreviouslySelectedAddress:(Address*)prevSelectedAddress{
+    
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        selectedAddress=prevSelectedAddress;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     headerStr = @"Select Nearest Area";
     isDropDown=NO;
-    
     
     UIBarButtonItem *leftBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel)];
     self.navigationItem.leftBarButtonItem =leftBtn;
@@ -32,6 +42,7 @@
     UIBarButtonItem *rightBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(save)];
     self.navigationItem.rightBarButtonItem =rightBtn;
     
+    self.title=@"Add New Address";
     
     // Do any additional setup after loading the view from its nib.
 }
@@ -39,13 +50,33 @@
 -(void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
+    if (selectedAddress) {
+        self.nameTextField.text = selectedAddress.name;
+        self.phoneNumberTextField.text = selectedAddress.phone;
+        self.addressTextField.text = selectedAddress.street;
+    }
+    
+    
     if ([BlickbeeAppManager sharedInstance].regionsArray.count>0) {
         regionsArray=[BlickbeeAppManager sharedInstance].regionsArray;
+        NSPredicate *predicate  = [NSPredicate predicateWithFormat:@"region == %@",selectedAddress.landmark];
+        NSArray *array = [regionsArray filteredArrayUsingPredicate:predicate];
+        if (array && array.count>0) {
+            selectedArea=[array objectAtIndex:0];
+        }
+        [self.areasTableView reloadData];
     }
     else{
         AddAddressServiceClient *client = [[AddAddressServiceClient alloc] init];
         [client getNearestAreasWithSuccess:^(NSMutableArray *areasArray) {
             regionsArray=areasArray;
+            if (selectedAddress) {
+                NSPredicate *predicate  = [NSPredicate predicateWithFormat:@"region == %@",selectedAddress.landmark];
+                NSArray *array = [regionsArray filteredArrayUsingPredicate:predicate];
+                if (array && array.count>0) {
+                    selectedArea=[array objectAtIndex:0];
+                }
+            }
             [self.areasTableView reloadData];
         } failure:^(NSError *error) {
             
@@ -152,18 +183,27 @@
         return;
     }
 
-    //call for add address
-    AddAddressServiceClient *client = [[AddAddressServiceClient alloc] init];
-    [client setAddressForName:self.nameTextField.text andNearByArea:selectedArea andPhone:self.phoneNumberTextField.text andStreet:self.addressTextField.text andCity:@"Jodhpur" andState:@"Rajasthan" andPostalCode:@"342001" WithSuccess:^(Address *newAddress) {
-        [self.addressDelegate addressUpdated];
-        [self dismissViewControllerAnimated:YES completion:^{
+    
+    if (!selectedAddress) {
+        //call for add address
+        AddAddressServiceClient *client = [[AddAddressServiceClient alloc] init];
+        [client setAddressForName:self.nameTextField.text andNearByArea:selectedArea andPhone:self.phoneNumberTextField.text andStreet:self.addressTextField.text andCity:@"Jodhpur" andState:@"Rajasthan" andPostalCode:@"342001" WithSuccess:^(Address *newAddress) {
             
+            [[BlickbeeAppManager sharedInstance].userAddresses addObject:newAddress];
+            [self.addressDelegate addressUpdated];
+            [self dismissViewControllerAnimated:YES completion:^{
+                
+            }];
+        } failure:^(NSError *error) {
+            [self dismissViewControllerAnimated:YES completion:^{
+                [[[UIAlertView alloc] initWithTitle:@"" message:@"Failed to update the address." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil] show];
+            }];
         }];
-    } failure:^(NSError *error) {
-        [self dismissViewControllerAnimated:YES completion:^{
-            [[[UIAlertView alloc] initWithTitle:@"" message:@"Failed to update the address." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil] show];
-        }];
-    }];
+    }
+    else{
+        //call for edit address
+    }
+
     
 }
 /*

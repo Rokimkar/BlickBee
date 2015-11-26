@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "Address.h"
+
+@protocol editBtnClicked <NSObject>
+
+-(void) editBtnClickedWith:(Address*)address;
+-(void) removeBtnClicked;
+
+@end
+
 @interface DeliveryAddressTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
@@ -15,6 +23,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *address2Label;
 @property (weak, nonatomic) IBOutlet UIButton *editButtonClicked;
 @property (weak, nonatomic) IBOutlet UIButton *removeButtonClicked;
+@property (strong,nonatomic) id<editBtnClicked> editBtnDelegate;
+@property (strong,nonatomic) Address* itemAddress;
+
 - (IBAction)editButtonClicked:(id)sender;
 - (IBAction)removeButtonClicked:(id)sender;
 -(void) bindData:(Address*)address;

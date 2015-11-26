@@ -7,7 +7,7 @@
 //
 
 #import "DeliveryAddressTableViewCell.h"
-
+#import "AddAddressServiceClient.h"
 @implementation DeliveryAddressTableViewCell
 
 - (void)awakeFromNib {
@@ -20,12 +20,34 @@
 }
 
 - (IBAction)editButtonClicked:(id)sender {
+    [self.editBtnDelegate editBtnClickedWith:self.itemAddress];
 }
 
 - (IBAction)removeButtonClicked:(id)sender {
+    
+    AddAddressServiceClient *client = [[AddAddressServiceClient alloc] init];
+    [client removeAddress:self.itemAddress WithSuccess:^{
+        NSInteger idx=-1;
+        for (int i=0; i<[BlickbeeAppManager sharedInstance].userAddresses.count; i++) {
+            Address *address = [[BlickbeeAppManager sharedInstance].userAddresses objectAtIndex:i];
+            if ([address.addressId isEqualToString:self.itemAddress.addressId]) {
+                idx=i;
+                break;
+            }
+        }
+        if (idx>=0) {
+            [[BlickbeeAppManager sharedInstance].userAddresses removeObjectAtIndex:idx];
+        }
+        
+        [self.editBtnDelegate removeBtnClicked];
+    } failure:^(NSError *error) {
+        
+    }];
+    
 }
 
 -(void) bindData:(Address*)address{
+    self.itemAddress=address;
     self.nameLabel.text = address.name;
     self.phoneLabel.text = address.phone;
     self.address1Label.text = address.street;

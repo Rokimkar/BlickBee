@@ -8,14 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "AddAddressTableViewCell.h"
-
+#import "DeliveryDetailTableViewCell.h"
+#import "DeliveryTimeTableViewCell.h"
+#import "DeliveryAddressTableViewCell.h"
+#import "Address.h"
 @protocol openNewAddress <NSObject>
 
 -(void) openNewAddress;
+-(void) editAddressWithPrevAddress:(Address*)prevAddress;
 
 @end
 
-@interface DeliveryDetailTableView : UITableView<openAddressPopUp>
+@interface DeliveryDetailTableView : UITableView<openAddressPopUp,editBtnClicked>
 -(id) initWithFrames:(CGRect)frame;
 @property (nonatomic,strong) id<openNewAddress> addressDelegate;
 

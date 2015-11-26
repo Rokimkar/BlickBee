@@ -7,9 +7,6 @@
 //
 
 #import "DeliveryDetailTableView.h"
-#import "DeliveryDetailTableViewCell.h"
-#import "DeliveryTimeTableViewCell.h"
-#import "DeliveryAddressTableViewCell.h"
 
 @implementation DeliveryDetailTableView
 
@@ -75,6 +72,8 @@
                     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DeliveryAddressTableViewCell" owner:self options:nil];
                     cell = [nib objectAtIndex:0];
                 }
+                ((DeliveryAddressTableViewCell *)cell).editBtnDelegate=self;
+
                 [((DeliveryAddressTableViewCell*)cell) bindData:[[BlickbeeAppManager sharedInstance].userAddresses objectAtIndex:indexPath.row]];
             }
             else{
@@ -92,6 +91,7 @@
                 NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DeliveryAddressTableViewCell" owner:self options:nil];
                 cell = [nib objectAtIndex:0];
             }
+            ((DeliveryAddressTableViewCell *)cell).editBtnDelegate=self;
             [((DeliveryAddressTableViewCell*)cell) bindData:[[BlickbeeAppManager sharedInstance].userAddresses objectAtIndex:indexPath.row]];
         }
     }
@@ -139,5 +139,12 @@
 -(void) openAddressPopUp{
     [self.addressDelegate openNewAddress];
 }
+-(void) editBtnClickedWith:(Address*)address{
+    [self.addressDelegate editAddressWithPrevAddress:address];
+}
+-(void) removeBtnClicked{
+    [self reloadData];
+}
+
 
 @end
