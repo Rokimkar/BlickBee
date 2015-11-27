@@ -186,6 +186,64 @@
     address.updatedDate = [adddict objectForKey:@"updated_date"];
     return address;
 }
+
+/*
+ {"request":"setAddress()", "user_id":"22", "auth_key":"c8b0b46d5318d968fecf11a8146e80c9", "street":"23­34FCC, Basni, Near Ola Office", "city":"Jodhpur", "state":"Rajasthan", "postal_code":"342001","name":"phone","city":"232323", "type":"Edit", }
+ */
+
+- (void) editAddressForAddressId:(NSString*)addressId ForName:(NSString*)name andNearByArea:(NearByArea*)landmark andPhone:(NSString*)phone andStreet:(NSString*)street andCity:(NSString*)city andState:(NSString*)state andPostalCode:(NSString*)postalCode WithSuccess:(void (^) (Address *newAddress))success failure:(void (^) (NSError *error)) failure{
+    
+    NSURL *url = [self getBaseURL];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    [self printApi:url];
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    NSDictionary *params = @{@"request": @"setAddress()",
+                             @"address_id": addressId,
+                             @"user_id": [BlickbeeAppManager sharedInstance].user.userId,
+                             @"auth_key": [BlickbeeAppManager sharedInstance].user.authKey,
+                             @"name": name,
+                             @"landmark": landmark.region,
+                             @"phone": phone,
+                             @"street": street,
+                             @"city": city,
+                             @"state": state,
+                             @"postal_code": postalCode,
+                             @"type": @"Edit"
+                             };
+    
+    manager.responseSerializer.acceptableContentTypes= [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    [manager POST:BASE_URL_STRING parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        if ([[responseObject objectForKey:@"response"] isEqualToString:@"success"] && [[responseObject objectForKey:@"response_data"] isKindOfClass:[NSDictionary class]]) {
+            Address *address = [self getAddressesWith:[responseObject objectForKey:@"response_data"]];
+            success(address);
+        }
+        else{
+            failure(nil);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+        if (error.code==-1009) {
+            [self showNoNetworkAlert];
+            return;
+        }
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                            message:@"Error in retrieving information."
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"Ok"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+        failure(error);
+        
+    }];
+}
+
+
 /*
 {"request":"deleteAddress()", "user_id":"22","auth_key":"c8b0b46d5318d968fecf11a8146e80c9", "type":"Delete","address_id":"2"}
  */
