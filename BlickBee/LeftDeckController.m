@@ -13,6 +13,7 @@
 #import "iRate.h"
 #import "SWRevealViewController.h"
 #import "HomeViewController.h"
+#import "BlickbeeAppManager.h"
 @interface LeftDeckController (){
     NSArray *itemsArray;
     NSArray *imageArray;
@@ -81,8 +82,10 @@
             [revealVC setFrontViewController:NVC];
     }
     else if (indexPath.row==0){
-        HomeViewController *homeVC = [storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
+        HomeViewController *homeVC = [BlickbeeAppManager sharedInstance].homeViewController;
         UINavigationController *NVC = [[UINavigationController alloc]initWithRootViewController:homeVC];
+        NVC.navigationBar.barTintColor=RGBA(247, 71, 17, 1);
+        [revealVC revealToggle:homeVC];
         [revealVC setFrontViewController:NVC];
         }
 }

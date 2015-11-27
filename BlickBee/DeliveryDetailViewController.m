@@ -9,6 +9,8 @@
 #import "DeliveryDetailViewController.h"
 #import "OrderServiceClient.h"
 #import "AddAddressViewController.h"
+#import "OrderConfirmationViewController.h"
+
 @interface DeliveryDetailViewController ()<addressUpdated>{
     DeliveryDetailTableView *deliveryDetailTableView;
 }
@@ -19,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    deliveryDetailTableView = [[DeliveryDetailTableView alloc]initWithFrames :CGRectMake(0,0, getScreenWidth(), getScreenHeight()-100)];
+    deliveryDetailTableView = [[DeliveryDetailTableView alloc]initWithFrames :CGRectMake(0,64, getScreenWidth(), getScreenHeight()-61-64)];
     deliveryDetailTableView.addressDelegate=self;
     deliveryDetailTableView.separatorColor=[UIColor clearColor];
     deliveryDetailTableView.backgroundColor=RGBA(225, 225, 225, 1);
@@ -38,10 +40,16 @@
         Address *address = [[BlickbeeAppManager sharedInstance].userAddresses objectAtIndex:0];
         [client makeOrderWithProductArray:[BlickbeeAppManager sharedInstance].selectedProducts andAddress:address WithSuccess:^(Order *order) {
             
+            
         } failure:^(NSError *error) {
             
         }];
     }
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UINavigationController *NVC= self.navigationController;
+    OrderConfirmationViewController *orderConfirmationViewController = [storyBoard instantiateViewControllerWithIdentifier:@"OrderConfirmationViewController"];
+    //orderConfirmationViewController.labelForOrderID.text=order.orderId;
+    [NVC pushViewController:orderConfirmationViewController animated:YES];
     
     
 }

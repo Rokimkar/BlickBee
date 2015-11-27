@@ -9,6 +9,7 @@
 #import "AddToCartTableViewCell.h"
 #import "UIImageView+AFNetworking.h"
 #import "BlickbeeAppManager.h"
+#import "BlickbeePrefix.pch"
 
 @implementation AddToCartTableViewCell{
     NSInteger items;

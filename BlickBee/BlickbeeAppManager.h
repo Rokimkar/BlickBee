@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "User.h"
+#import "HomeViewController.h"
+#import "SWRevealViewController.h"
 @interface BlickbeeAppManager : NSObject
 
 + (BlickbeeAppManager*)sharedInstance;
@@ -15,5 +17,5 @@
 @property (nonatomic,strong) NSMutableArray *selectedProducts;
 @property (nonatomic,strong) NSMutableArray *userAddresses;
 @property (nonatomic,strong) NSMutableArray *regionsArray;
-
+@property (nonatomic,strong) HomeViewController *homeViewController;
 @end
