@@ -188,7 +188,6 @@
         //call for add address
         AddAddressServiceClient *client = [[AddAddressServiceClient alloc] init];
         [client setAddressForName:self.nameTextField.text andNearByArea:selectedArea andPhone:self.phoneNumberTextField.text andStreet:self.addressTextField.text andCity:@"Jodhpur" andState:@"Rajasthan" andPostalCode:@"342001" WithSuccess:^(Address *newAddress) {
-            
             [[BlickbeeAppManager sharedInstance].userAddresses addObject:newAddress];
             [self.addressDelegate addressUpdated];
             [self dismissViewControllerAnimated:YES completion:^{
@@ -202,6 +201,27 @@
     }
     else{
         //call for edit address
+        AddAddressServiceClient *client = [[AddAddressServiceClient alloc] init];
+        [client editAddressForAddressId:selectedAddress.addressId ForName:self.nameTextField.text andNearByArea:selectedArea andPhone:self.phoneNumberTextField.text andStreet:self.addressTextField.text andCity:@"Jodhpur" andState:@"Rajasthan" andPostalCode:@"342001" WithSuccess:^(Address *newAddress) {
+            NSInteger replaceAddressAtIndex=0;
+            for (int i=0; i<[BlickbeeAppManager sharedInstance].userAddresses.count; i++) {
+                Address *existingAddress = [[BlickbeeAppManager sharedInstance].userAddresses objectAtIndex:i];
+                if (existingAddress.addressId == selectedAddress.addressId) {
+                    replaceAddressAtIndex=i;
+                }
+            }
+            
+            ([BlickbeeAppManager sharedInstance].userAddresses)[replaceAddressAtIndex]=newAddress;
+            [self.addressDelegate addressUpdated];
+            [self dismissViewControllerAnimated:YES completion:^{
+                
+            }];
+
+        } failure:^(NSError *error) {
+            [self dismissViewControllerAnimated:YES completion:^{
+                [[[UIAlertView alloc] initWithTitle:@"" message:@"Failed to update the address." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil] show];
+            }];
+        }];
     }
 
     
