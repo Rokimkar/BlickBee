@@ -60,6 +60,7 @@
 		A0D414121C0648840077BA42 /* OrdersDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0D414101C0648840077BA42 /* OrdersDetailTableViewCell.xib */; };
 		A0D414161C0709BD0077BA42 /* FirstOrderDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D414141C0709BD0077BA42 /* FirstOrderDetailCell.m */; };
 		A0D414171C0709BD0077BA42 /* FirstOrderDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0D414151C0709BD0077BA42 /* FirstOrderDetailCell.xib */; };
+		A0D4145D1C084BBC0077BA42 /* OrderConfirmationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D4145C1C084BBC0077BA42 /* OrderConfirmationViewController.m */; };
 		A0D5E31A1BFDFE3C00650E58 /* DeliveryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D5E3191BFDFE3C00650E58 /* DeliveryDetailViewController.m */; };
 		A0D5E31E1BFE02BD00650E58 /* DeliveryDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D5E31C1BFE02BD00650E58 /* DeliveryDetailTableViewCell.m */; };
 		A0D5E31F1BFE02BD00650E58 /* DeliveryDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0D5E31D1BFE02BD00650E58 /* DeliveryDetailTableViewCell.xib */; };
@@ -239,6 +240,8 @@
 		A0D414131C0709BD0077BA42 /* FirstOrderDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstOrderDetailCell.h; sourceTree = "<group>"; };
 		A0D414141C0709BD0077BA42 /* FirstOrderDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstOrderDetailCell.m; sourceTree = "<group>"; };
 		A0D414151C0709BD0077BA42 /* FirstOrderDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstOrderDetailCell.xib; sourceTree = "<group>"; };
+		A0D4145B1C084BBC0077BA42 /* OrderConfirmationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderConfirmationViewController.h; sourceTree = "<group>"; };
+		A0D4145C1C084BBC0077BA42 /* OrderConfirmationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderConfirmationViewController.m; sourceTree = "<group>"; };
 		A0D5E3181BFDFE3C00650E58 /* DeliveryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliveryDetailViewController.h; sourceTree = "<group>"; };
 		A0D5E3191BFDFE3C00650E58 /* DeliveryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeliveryDetailViewController.m; sourceTree = "<group>"; };
 		A0D5E31B1BFE02BD00650E58 /* DeliveryDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliveryDetailTableViewCell.h; sourceTree = "<group>"; };
@@ -446,6 +449,7 @@
 				A0DDA06B1BFB2F86000D9580 /* Cart */,
 				A0D060E31C0341F1001E70B9 /* MyOrders */,
 				A0D5E3171BFDFD5C00650E58 /* DeliveryDetailsViewController */,
+				A0D4145A1C084B6A0077BA42 /* OrderConfirmation */,
 				A052530C1BE9F271007EF74F /* AppDelegate.h */,
 				A052530D1BE9F271007EF74F /* AppDelegate.m */,
 				0C2F072B1BEF3D6200F6B7DB /* BlickbeePrefix.pch */,
@@ -537,6 +541,15 @@
 				A0D414151C0709BD0077BA42 /* FirstOrderDetailCell.xib */,
 			);
 			name = MyOrders;
+			sourceTree = "<group>";
+		};
+		A0D4145A1C084B6A0077BA42 /* OrderConfirmation */ = {
+			isa = PBXGroup;
+			children = (
+				A0D4145B1C084BBC0077BA42 /* OrderConfirmationViewController.h */,
+				A0D4145C1C084BBC0077BA42 /* OrderConfirmationViewController.m */,
+			);
+			name = OrderConfirmation;
 			sourceTree = "<group>";
 		};
 		A0D5E3171BFDFD5C00650E58 /* DeliveryDetailsViewController */ = {
@@ -923,6 +936,7 @@
 				0C8183481BF903D200882A65 /* User.m in Sources */,
 				A0DA715D1BF072860012490E /* BaseTableView.m in Sources */,
 				A052530E1BE9F271007EF74F /* AppDelegate.m in Sources */,
+				A0D4145D1C084BBC0077BA42 /* OrderConfirmationViewController.m in Sources */,
 				A0DDA06A1BFB0E57000D9580 /* CartViewController.m in Sources */,
 				0C2FBC6E1C09164800A374E1 /* ShareItem.m in Sources */,
 				0C2F07221BEF369400F6B7DB /* BaseModel.m in Sources */,
@@ -1092,7 +1106,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: PAT RAM BISHNOI (CGFN49HM94)";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/kunal/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
+				GCC_PREFIX_HEADER = /Users/Rokimkar/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
 				INFOPLIST_FILE = BlickBee/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1110,7 +1124,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: PAT RAM BISHNOI (CGFN49HM94)";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/kunal/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
+				GCC_PREFIX_HEADER = /Users/Rokimkar/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
 				INFOPLIST_FILE = BlickBee/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

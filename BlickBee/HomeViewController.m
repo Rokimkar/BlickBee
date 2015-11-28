@@ -15,6 +15,7 @@
 #import "BlickbeePrefix.pch"
 #import "UserInfoServiceClient.h"
 #import "AddAddressServiceClient.h"
+#import "BlickbeeAppManager.h"
 @interface HomeViewController ()
 
 @end
@@ -39,8 +40,6 @@
         self.revealViewController.panGestureRecognizer.delegate=self;
         self.navigationController.navigationBar.barTintColor=RGBA(246, 71, 17, 1);
         swRevealVC.rearViewRevealWidth=270.0f;
-        //[swRevealVC revealToggle:self];
-        [swRevealVC revealToggle:self];
         [self.homeTableView registerNib:[UINib nibWithNibName:@"TopZoneCollectionViewCell" bundle:nil] forCellReuseIdentifier:@"TopZoneCollectionViewCell"];
         ProductsServiceClient *client = [[ProductsServiceClient alloc] init];
         [client fetchProdctRepoWithSuccess:^(ProductRepo *repo) {
@@ -66,6 +65,7 @@
 
         
     }
+    [BlickbeeAppManager sharedInstance].homeViewController=self;
     self.title = @"BlickBee";
 }
 

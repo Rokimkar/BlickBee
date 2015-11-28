@@ -590,6 +590,101 @@
             </objects>
             <point key="canvasLocation" x="2477" y="719"/>
         </scene>
+        <!--Order Confirmation View Controller-->
+        <scene sceneID="JAv-Gc-kAg">
+            <objects>
+                <viewController storyboardIdentifier="OrderConfirmationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="R2i-Ag-37l" customClass="OrderConfirmationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d6E-66-V06"/>
+                        <viewControllerLayoutGuide type="bottom" id="0bQ-n9-GSP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="obA-Kb-cq7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="truck.png" translatesAutoresizingMaskIntoConstraints="NO" id="6RB-rF-i0B">
+                                <rect key="frame" x="52" y="232" width="215" height="104"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="104" id="FP1-WW-sLP"/>
+                                    <constraint firstAttribute="width" constant="215" id="JXi-zr-BPa"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cardLayout.png" translatesAutoresizingMaskIntoConstraints="NO" id="vES-E1-bt0">
+                                <rect key="frame" x="8" y="46" width="307" height="132"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="132" id="eCU-mS-fBh"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order ID :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VmS-58-ldb">
+                                <rect key="frame" x="17" y="55" width="81" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="81" id="aqc-UG-2iW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you for shopping." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8KN-B2-BTa">
+                                <rect key="frame" x="21" y="83" width="276" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your order will be delivered shortly." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lr8-c6-0WF">
+                                <rect key="frame" x="21" y="112" width="276" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1F-jK-sO9">
+                                <rect key="frame" x="106" y="55" width="198" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boU-Sw-OXQ">
+                                <rect key="frame" x="82" y="141" width="160" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="gLu-9q-ACy"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="shopMoreButtonPressed:" destination="R2i-Ag-37l" eventType="touchUpInside" id="4PE-3W-l5s"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="o1F-jK-sO9" firstAttribute="leading" secondItem="VmS-58-ldb" secondAttribute="trailing" constant="8" id="1gz-ih-qZU"/>
+                            <constraint firstItem="vES-E1-bt0" firstAttribute="top" secondItem="d6E-66-V06" secondAttribute="bottom" constant="26" id="2lb-bp-ho4"/>
+                            <constraint firstItem="o1F-jK-sO9" firstAttribute="trailing" secondItem="obA-Kb-cq7" secondAttribute="trailingMargin" id="Mqd-NW-5uR"/>
+                            <constraint firstItem="o1F-jK-sO9" firstAttribute="top" secondItem="d6E-66-V06" secondAttribute="bottom" constant="35" id="Nyv-Rj-NEz"/>
+                            <constraint firstItem="boU-Sw-OXQ" firstAttribute="top" secondItem="lr8-c6-0WF" secondAttribute="bottom" constant="8" symbolic="YES" id="Ofh-ul-ROy"/>
+                            <constraint firstItem="boU-Sw-OXQ" firstAttribute="leading" secondItem="obA-Kb-cq7" secondAttribute="leadingMargin" constant="66" id="Qpq-Bv-wtl"/>
+                            <constraint firstItem="8KN-B2-BTa" firstAttribute="centerX" secondItem="6RB-rF-i0B" secondAttribute="centerX" id="Syz-pi-f1M"/>
+                            <constraint firstItem="8KN-B2-BTa" firstAttribute="leading" secondItem="lr8-c6-0WF" secondAttribute="leading" id="WId-iA-Agu"/>
+                            <constraint firstItem="boU-Sw-OXQ" firstAttribute="centerX" secondItem="vES-E1-bt0" secondAttribute="centerX" id="Y5V-oT-nR4"/>
+                            <constraint firstItem="lr8-c6-0WF" firstAttribute="top" secondItem="8KN-B2-BTa" secondAttribute="bottom" constant="8" symbolic="YES" id="a9P-cD-uM5"/>
+                            <constraint firstItem="VmS-58-ldb" firstAttribute="leading" secondItem="obA-Kb-cq7" secondAttribute="leadingMargin" constant="1" id="dwQ-Pv-HLH"/>
+                            <constraint firstItem="6RB-rF-i0B" firstAttribute="centerX" secondItem="obA-Kb-cq7" secondAttribute="centerX" id="fHF-1U-Khr"/>
+                            <constraint firstItem="vES-E1-bt0" firstAttribute="leading" secondItem="obA-Kb-cq7" secondAttribute="leadingMargin" constant="-8" id="kzz-BC-qUb"/>
+                            <constraint firstItem="6RB-rF-i0B" firstAttribute="top" secondItem="vES-E1-bt0" secondAttribute="bottom" constant="54" id="lHA-Cv-PfC"/>
+                            <constraint firstItem="8KN-B2-BTa" firstAttribute="top" secondItem="VmS-58-ldb" secondAttribute="bottom" constant="7" id="lwf-GW-vRT"/>
+                            <constraint firstItem="8KN-B2-BTa" firstAttribute="leading" secondItem="obA-Kb-cq7" secondAttribute="leadingMargin" constant="5" id="mCt-aS-EkU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vES-E1-bt0" secondAttribute="trailing" constant="-11" id="nGh-AE-Yu7"/>
+                            <constraint firstItem="VmS-58-ldb" firstAttribute="top" secondItem="d6E-66-V06" secondAttribute="bottom" constant="35" id="qUO-IA-rHL"/>
+                            <constraint firstItem="8KN-B2-BTa" firstAttribute="trailing" secondItem="lr8-c6-0WF" secondAttribute="trailing" id="u05-ar-mvG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="labelForOrderID" destination="o1F-jK-sO9" id="Vdf-xN-OGQ"/>
+                        <outlet property="shopMoreButtonPressed" destination="boU-Sw-OXQ" id="7zi-H0-01v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tTT-yu-D24" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2833" y="719"/>
+        </scene>
         <!--Left Deck Controller-->
         <scene sceneID="5HQ-FD-hPK">
             <objects>
@@ -659,12 +754,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cardLayout.png" width="715" height="206"/>
         <image name="email5.png" width="64" height="64"/>
         <image name="eyesclosed.png" width="64" height="64"/>
         <image name="floatingCart" width="39" height="39"/>
         <image name="logo+text 350x.png" width="350" height="350"/>
         <image name="password.png" width="64" height="64"/>
         <image name="telephone46.png" width="64" height="64"/>
+        <image name="truck.png" width="372" height="209"/>
         <image name="user icon.png" width="64" height="64"/>
     </resources>
 </document>

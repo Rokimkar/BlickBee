@@ -8,7 +8,9 @@
 
 #import "BlickbeeAppManager.h"
 
+
 @implementation BlickbeeAppManager
+
 
 
 + (BlickbeeAppManager*)sharedInstance {
