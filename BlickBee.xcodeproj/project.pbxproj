@@ -24,6 +24,12 @@
 		0C2FBC561C06494C00A374E1 /* AddAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C2FBC541C06494C00A374E1 /* AddAddressViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		0C2FBC591C06EDD000A374E1 /* AddAddressServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC581C06EDD000A374E1 /* AddAddressServiceClient.m */; settings = {ASSET_TAGS = (); }; };
 		0C2FBC5C1C06EF2F00A374E1 /* NearByArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC5B1C06EF2F00A374E1 /* NearByArea.m */; settings = {ASSET_TAGS = (); }; };
+		0C2FBC611C08F2C300A374E1 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2FBC601C08F2C300A374E1 /* Social.framework */; };
+		0C2FBC631C08F2C900A374E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2FBC621C08F2C900A374E1 /* UIKit.framework */; };
+		0C2FBC651C08F2D700A374E1 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2FBC641C08F2D700A374E1 /* CoreFoundation.framework */; };
+		0C2FBC6D1C09164800A374E1 /* GaanaFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC681C09164800A374E1 /* GaanaFacebook.m */; settings = {ASSET_TAGS = (); }; };
+		0C2FBC6E1C09164800A374E1 /* ShareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC6A1C09164800A374E1 /* ShareItem.m */; settings = {ASSET_TAGS = (); }; };
+		0C2FBC6F1C09164800A374E1 /* SocialShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC6C1C09164800A374E1 /* SocialShareManager.m */; settings = {ASSET_TAGS = (); }; };
 		0C81833D1BF8DEC100882A65 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C81833C1BF8DEC100882A65 /* SignInViewController.m */; };
 		0C8183401BF8DECE00882A65 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C81833F1BF8DECE00882A65 /* SignUpViewController.m */; };
 		0C8183451BF9003400882A65 /* LoginServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8183441BF9003400882A65 /* LoginServiceClient.m */; };
@@ -165,6 +171,15 @@
 		0C2FBC581C06EDD000A374E1 /* AddAddressServiceClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAddressServiceClient.m; sourceTree = "<group>"; };
 		0C2FBC5A1C06EF2F00A374E1 /* NearByArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearByArea.h; sourceTree = "<group>"; };
 		0C2FBC5B1C06EF2F00A374E1 /* NearByArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearByArea.m; sourceTree = "<group>"; };
+		0C2FBC601C08F2C300A374E1 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		0C2FBC621C08F2C900A374E1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0C2FBC641C08F2D700A374E1 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		0C2FBC671C09164800A374E1 /* GaanaFacebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GaanaFacebook.h; sourceTree = "<group>"; };
+		0C2FBC681C09164800A374E1 /* GaanaFacebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GaanaFacebook.m; sourceTree = "<group>"; };
+		0C2FBC691C09164800A374E1 /* ShareItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareItem.h; sourceTree = "<group>"; };
+		0C2FBC6A1C09164800A374E1 /* ShareItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareItem.m; sourceTree = "<group>"; };
+		0C2FBC6B1C09164800A374E1 /* SocialShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialShareManager.h; sourceTree = "<group>"; };
+		0C2FBC6C1C09164800A374E1 /* SocialShareManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialShareManager.m; sourceTree = "<group>"; };
 		0C81833B1BF8DEC100882A65 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		0C81833C1BF8DEC100882A65 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		0C81833E1BF8DECE00882A65 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
@@ -304,6 +319,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C2FBC651C08F2D700A374E1 /* CoreFoundation.framework in Frameworks */,
+				0C2FBC631C08F2C900A374E1 /* UIKit.framework in Frameworks */,
+				0C2FBC611C08F2C300A374E1 /* Social.framework in Frameworks */,
 				C66BD62B4F6C18DF05937993 /* libPods-BlickBee.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,6 +389,19 @@
 			name = ModalClasses;
 			sourceTree = "<group>";
 		};
+		0C2FBC661C0915EC00A374E1 /* ShareClasses */ = {
+			isa = PBXGroup;
+			children = (
+				0C2FBC671C09164800A374E1 /* GaanaFacebook.h */,
+				0C2FBC681C09164800A374E1 /* GaanaFacebook.m */,
+				0C2FBC691C09164800A374E1 /* ShareItem.h */,
+				0C2FBC6A1C09164800A374E1 /* ShareItem.m */,
+				0C2FBC6B1C09164800A374E1 /* SocialShareManager.h */,
+				0C2FBC6C1C09164800A374E1 /* SocialShareManager.m */,
+			);
+			name = ShareClasses;
+			sourceTree = "<group>";
+		};
 		0C8183491BF9147E00882A65 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -405,6 +436,7 @@
 		A05253081BE9F271007EF74F /* BlickBee */ = {
 			isa = PBXGroup;
 			children = (
+				0C2FBC661C0915EC00A374E1 /* ShareClasses */,
 				0C8183491BF9147E00882A65 /* Managers */,
 				0C2F07101BEE6AF100F6B7DB /* ModalClasses */,
 				0C2F06F91BEE453C00F6B7DB /* ServiceClients */,
@@ -618,6 +650,9 @@
 		E7CD0ED7033819C94B36E6C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C2FBC641C08F2D700A374E1 /* CoreFoundation.framework */,
+				0C2FBC621C08F2C900A374E1 /* UIKit.framework */,
+				0C2FBC601C08F2C300A374E1 /* Social.framework */,
 				8FB0F40B769FAB5BC701EF2B /* libPods-BlickBee.a */,
 			);
 			name = Frameworks;
@@ -863,6 +898,7 @@
 				A0D060EA1C03441C001E70B9 /* MyOrdersTableViewCell.m in Sources */,
 				0C2F07281BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.m in Sources */,
 				0C2F071F1BEE781B00F6B7DB /* ProductRepo.m in Sources */,
+				0C2FBC6F1C09164800A374E1 /* SocialShareManager.m in Sources */,
 				A0D5E31A1BFDFE3C00650E58 /* DeliveryDetailViewController.m in Sources */,
 				A05253111BE9F271007EF74F /* ViewController.m in Sources */,
 				0C2F07161BEE6B2B00F6B7DB /* Product.m in Sources */,
@@ -888,11 +924,13 @@
 				A0DA715D1BF072860012490E /* BaseTableView.m in Sources */,
 				A052530E1BE9F271007EF74F /* AppDelegate.m in Sources */,
 				A0DDA06A1BFB0E57000D9580 /* CartViewController.m in Sources */,
+				0C2FBC6E1C09164800A374E1 /* ShareItem.m in Sources */,
 				0C2F07221BEF369400F6B7DB /* BaseModel.m in Sources */,
 				A0D5E32B1BFF043600650E58 /* DeliveryAddressTableViewCell.m in Sources */,
 				A052530B1BE9F271007EF74F /* main.m in Sources */,
 				A0D4140D1C0647A10077BA42 /* OrdersDetailTableView.m in Sources */,
 				A0D414111C0648840077BA42 /* OrdersDetailTableViewCell.m in Sources */,
+				0C2FBC6D1C09164800A374E1 /* GaanaFacebook.m in Sources */,
 				0C2FBC551C06494C00A374E1 /* AddAddressViewController.m in Sources */,
 				A0DDA05B1BF89126000D9580 /* DummyViewController.m in Sources */,
 				0C8BCF921BFF3D14009051F1 /* OrderedProduct.m in Sources */,
@@ -977,8 +1015,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Alok Ranjan (H686S25ZPL)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Alok Ranjan (H686S25ZPL)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: PAT RAM BISHNOI (CGFN49HM94)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: PAT RAM BISHNOI (CGFN49HM94)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1000,7 +1038,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "402d4562-fb0c-406a-82ec-890b132a0619";
+				PROVISIONING_PROFILE = "cf4549c9-f57b-4260-bcac-bcb17a2e19b0";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1023,8 +1061,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Alok Ranjan (H686S25ZPL)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Alok Ranjan (H686S25ZPL)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: PAT RAM BISHNOI (CGFN49HM94)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: PAT RAM BISHNOI (CGFN49HM94)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1039,7 +1077,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "402d4562-fb0c-406a-82ec-890b132a0619";
+				PROVISIONING_PROFILE = "cf4549c9-f57b-4260-bcac-bcb17a2e19b0";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1051,16 +1089,16 @@
 			baseConfigurationReference = F4F9204652D14D4F60EC1A69 /* Pods-BlickBee.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Alok Ranjan (H686S25ZPL)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: PAT RAM BISHNOI (CGFN49HM94)";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/kunal/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
 				INFOPLIST_FILE = BlickBee/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.til.gaana;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ram.blickbee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "402d4562-fb0c-406a-82ec-890b132a0619";
+				PROVISIONING_PROFILE = "cf4549c9-f57b-4260-bcac-bcb17a2e19b0";
 			};
 			name = Debug;
 		};
@@ -1069,16 +1107,16 @@
 			baseConfigurationReference = 2E87C8E839077887CCA402AB /* Pods-BlickBee.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Alok Ranjan (H686S25ZPL)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: PAT RAM BISHNOI (CGFN49HM94)";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/kunal/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
 				INFOPLIST_FILE = BlickBee/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.til.gaana;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ram.blickbee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "402d4562-fb0c-406a-82ec-890b132a0619";
+				PROVISIONING_PROFILE = "cf4549c9-f57b-4260-bcac-bcb17a2e19b0";
 			};
 			name = Release;
 		};

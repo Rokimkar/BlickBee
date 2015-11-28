@@ -59,10 +59,12 @@ install_resource()
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
+  install_resource "google-plus-ios-sdk/google-plus-ios-sdk-1.7.1/GooglePlus.bundle"
   install_resource "iRate/iRate/iRate.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
+  install_resource "google-plus-ios-sdk/google-plus-ios-sdk-1.7.1/GooglePlus.bundle"
   install_resource "iRate/iRate/iRate.bundle"
 fi
 

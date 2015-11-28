@@ -31,19 +31,13 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)proceedToPaymentBtnPressed:(id)sender {
-    
     OrderServiceClient *client = [[OrderServiceClient alloc] init];
-    
     if ([BlickbeeAppManager sharedInstance].userAddresses.count>0) {
         Address *address = [[BlickbeeAppManager sharedInstance].userAddresses objectAtIndex:0];
         [client makeOrderWithProductArray:[BlickbeeAppManager sharedInstance].selectedProducts andAddress:address WithSuccess:^(Order *order) {
-            
         } failure:^(NSError *error) {
-            
         }];
     }
-    
-    
 }
 
 -(void) openNewAddress{

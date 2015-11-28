@@ -40,3 +40,11 @@ CG_INLINE CGFloat getScreenHeight() {return [UIScreen mainScreen].bounds.size.he
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 #define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
 #define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
+#define GAANA_APP_MANAGER_SMS_NOTCONFIGURED @"SMS services are not configured."
+#define GAANA_APP_MANAGER_SENDMESSAGE_COMPOSEFAILED @"Something went wrong, please try after sometime."
+#define GAANA_APP_MANAGER_SENDMESSAGE_UNKNOWN_ERROR @"Sending failed, please try later."
+#define GAANA_APP_MANAGER_SENDMESSAGE_NOTCONFIGURED @"Mail account is not configured."
+#define GAANA_APP_MANAGER_SENDMESSAGE_NOTCONFIGURED @"Mail account is not configured."
+
+
+
