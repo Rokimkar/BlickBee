@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vmK-Ox-Yy8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vmK-Ox-Yy8">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -751,6 +751,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bre-EB-q3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="616" y="719"/>
+        </scene>
+        <!--Account Settings View Controller-->
+        <scene sceneID="pRh-rj-wXY">
+            <objects>
+                <viewController storyboardIdentifier="AccountSettingsViewController" id="2WW-5y-jQF" customClass="AccountSettingsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g5a-OC-MRE"/>
+                        <viewControllerLayoutGuide type="bottom" id="x8Q-3z-k6C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p41-1f-hN3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Naw-hm-sVT">
+                                <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="2WW-5y-jQF" id="aVY-Ky-Ddh"/>
+                                    <outlet property="delegate" destination="2WW-5y-jQF" id="H44-E7-SLX"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Naw-hm-sVT" secondAttribute="trailing" constant="-20" id="1fO-fZ-nWg"/>
+                            <constraint firstItem="Naw-hm-sVT" firstAttribute="leading" secondItem="p41-1f-hN3" secondAttribute="leadingMargin" constant="-20" id="7BW-58-EX3"/>
+                            <constraint firstItem="x8Q-3z-k6C" firstAttribute="top" secondItem="Naw-hm-sVT" secondAttribute="bottom" id="FQQ-dw-TVX"/>
+                            <constraint firstItem="Naw-hm-sVT" firstAttribute="top" secondItem="g5a-OC-MRE" secondAttribute="bottom" constant="-20" id="Ukj-Fk-i74"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="accountSettingsTableView" destination="Naw-hm-sVT" id="KQd-p0-8sA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FHJ-bI-T9I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="575" y="1705"/>
         </scene>
     </scenes>
     <resources>
