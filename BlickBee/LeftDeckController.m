@@ -16,6 +16,7 @@
 #import "BlickbeeAppManager.h"
 #import "AccountSettingsViewController.h"
 #import "ShareViewController.h"
+#import "AboutUsViewController.h"
 @interface LeftDeckController (){
     NSArray *itemsArray;
     NSArray *imageArray;
@@ -132,9 +133,13 @@
         //                             completion:nil];
     }
 
-    
-    
-    
+    else if(indexPath.row==7){
+        AboutUsViewController *abtUsVC = [storyboard instantiateViewControllerWithIdentifier:@"AboutUsViewController"];
+        UINavigationController *NVC = [[UINavigationController alloc]initWithRootViewController:abtUsVC];
+        NVC.navigationBar.barTintColor=RGBA(247, 71, 17, 1);
+        //[revealVC revealToggle:abtUsVC];
+        [revealVC setFrontViewController:NVC animated:YES];
+    }
 }
 
 - (CGFloat) tableView: (UITableView *)

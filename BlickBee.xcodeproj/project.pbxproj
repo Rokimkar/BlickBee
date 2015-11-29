@@ -17,21 +17,21 @@
 		0C2F07281BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F07241BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.m */; };
 		0C2F07291BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C2F07251BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.xib */; };
 		0C2F072A1BEF3A9A00F6B7DB /* TopZoneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F07271BEF3A9A00F6B7DB /* TopZoneView.m */; };
-		0C2FBC491C0603AD00A374E1 /* UserInfoServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC481C0603AD00A374E1 /* UserInfoServiceClient.m */; settings = {ASSET_TAGS = (); }; };
-		0C2FBC4D1C061F1B00A374E1 /* AddAddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC4B1C061F1B00A374E1 /* AddAddressTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		0C2FBC4E1C061F1B00A374E1 /* AddAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C2FBC4C1C061F1B00A374E1 /* AddAddressTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		0C2FBC551C06494C00A374E1 /* AddAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC531C06494C00A374E1 /* AddAddressViewController.m */; settings = {ASSET_TAGS = (); }; };
-		0C2FBC561C06494C00A374E1 /* AddAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C2FBC541C06494C00A374E1 /* AddAddressViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		0C2FBC591C06EDD000A374E1 /* AddAddressServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC581C06EDD000A374E1 /* AddAddressServiceClient.m */; settings = {ASSET_TAGS = (); }; };
-		0C2FBC5C1C06EF2F00A374E1 /* NearByArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC5B1C06EF2F00A374E1 /* NearByArea.m */; settings = {ASSET_TAGS = (); }; };
+		0C2FBC491C0603AD00A374E1 /* UserInfoServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC481C0603AD00A374E1 /* UserInfoServiceClient.m */; };
+		0C2FBC4D1C061F1B00A374E1 /* AddAddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC4B1C061F1B00A374E1 /* AddAddressTableViewCell.m */; };
+		0C2FBC4E1C061F1B00A374E1 /* AddAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C2FBC4C1C061F1B00A374E1 /* AddAddressTableViewCell.xib */; };
+		0C2FBC551C06494C00A374E1 /* AddAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC531C06494C00A374E1 /* AddAddressViewController.m */; };
+		0C2FBC561C06494C00A374E1 /* AddAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C2FBC541C06494C00A374E1 /* AddAddressViewController.xib */; };
+		0C2FBC591C06EDD000A374E1 /* AddAddressServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC581C06EDD000A374E1 /* AddAddressServiceClient.m */; };
+		0C2FBC5C1C06EF2F00A374E1 /* NearByArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC5B1C06EF2F00A374E1 /* NearByArea.m */; };
 		0C2FBC611C08F2C300A374E1 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2FBC601C08F2C300A374E1 /* Social.framework */; };
 		0C2FBC631C08F2C900A374E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2FBC621C08F2C900A374E1 /* UIKit.framework */; };
 		0C2FBC651C08F2D700A374E1 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2FBC641C08F2D700A374E1 /* CoreFoundation.framework */; };
-		0C2FBC6D1C09164800A374E1 /* GaanaFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC681C09164800A374E1 /* GaanaFacebook.m */; settings = {ASSET_TAGS = (); }; };
-		0C2FBC6E1C09164800A374E1 /* ShareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC6A1C09164800A374E1 /* ShareItem.m */; settings = {ASSET_TAGS = (); }; };
-		0C2FBC6F1C09164800A374E1 /* SocialShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC6C1C09164800A374E1 /* SocialShareManager.m */; settings = {ASSET_TAGS = (); }; };
-		0C2FBC741C09C58500A374E1 /* AccountSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC731C09C58500A374E1 /* AccountSettingsViewController.m */; settings = {ASSET_TAGS = (); }; };
-		0C2FBC771C0AE56400A374E1 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC761C0AE56400A374E1 /* ShareViewController.m */; settings = {ASSET_TAGS = (); }; };
+		0C2FBC6D1C09164800A374E1 /* GaanaFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC681C09164800A374E1 /* GaanaFacebook.m */; };
+		0C2FBC6E1C09164800A374E1 /* ShareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC6A1C09164800A374E1 /* ShareItem.m */; };
+		0C2FBC6F1C09164800A374E1 /* SocialShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC6C1C09164800A374E1 /* SocialShareManager.m */; };
+		0C2FBC741C09C58500A374E1 /* AccountSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC731C09C58500A374E1 /* AccountSettingsViewController.m */; };
+		0C2FBC771C0AE56400A374E1 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC761C0AE56400A374E1 /* ShareViewController.m */; };
 		0C2FBC791C0B112100A374E1 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2FBC781C0B112100A374E1 /* AddressBook.framework */; };
 		0C2FBC7B1C0B112900A374E1 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2FBC7A1C0B112800A374E1 /* AssetsLibrary.framework */; };
 		0C2FBC7D1C0B113900A374E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2FBC7C1C0B113900A374E1 /* Foundation.framework */; };
@@ -122,6 +122,8 @@
 		A0DA71B11BF074E10012490E /* veg_vector.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0DA718D1BF074E10012490E /* veg_vector.jpg */; };
 		A0DA71B51BF08D510012490E /* LeftDeckTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DA71B31BF08D500012490E /* LeftDeckTableViewCell.m */; };
 		A0DA71B61BF08D510012490E /* LeftDeckTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0DA71B41BF08D500012490E /* LeftDeckTableViewCell.xib */; };
+		A0DB843B1C0B5B0E004BFD03 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DB843A1C0B5B0E004BFD03 /* AboutUsViewController.m */; };
+		A0DB843E1C0B7650004BFD03 /* PrivacyPolicyandTermsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DB843D1C0B7650004BFD03 /* PrivacyPolicyandTermsViewController.m */; };
 		A0DDA05B1BF89126000D9580 /* DummyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DDA05A1BF89126000D9580 /* DummyViewController.m */; };
 		A0DDA05D1BF8DA5C000D9580 /* cardLayout.png in Resources */ = {isa = PBXBuildFile; fileRef = A0DDA05C1BF8DA5C000D9580 /* cardLayout.png */; };
 		A0DDA0611BF8E1AC000D9580 /* AddToCartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DDA05F1BF8E1AC000D9580 /* AddToCartTableViewCell.m */; };
@@ -326,6 +328,10 @@
 		A0DA71B21BF08D500012490E /* LeftDeckTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftDeckTableViewCell.h; sourceTree = "<group>"; };
 		A0DA71B31BF08D500012490E /* LeftDeckTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftDeckTableViewCell.m; sourceTree = "<group>"; };
 		A0DA71B41BF08D500012490E /* LeftDeckTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftDeckTableViewCell.xib; sourceTree = "<group>"; };
+		A0DB84391C0B5B0E004BFD03 /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
+		A0DB843A1C0B5B0E004BFD03 /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
+		A0DB843C1C0B7650004BFD03 /* PrivacyPolicyandTermsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivacyPolicyandTermsViewController.h; sourceTree = "<group>"; };
+		A0DB843D1C0B7650004BFD03 /* PrivacyPolicyandTermsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivacyPolicyandTermsViewController.m; sourceTree = "<group>"; };
 		A0DDA0591BF89126000D9580 /* DummyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyViewController.h; sourceTree = "<group>"; };
 		A0DDA05A1BF89126000D9580 /* DummyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyViewController.m; sourceTree = "<group>"; };
 		A0DDA05C1BF8DA5C000D9580 /* cardLayout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardLayout.png; sourceTree = "<group>"; };
@@ -496,6 +502,7 @@
 				A0D5E3171BFDFD5C00650E58 /* DeliveryDetailsViewController */,
 				0C2FBC711C09C38500A374E1 /* AccountSettings */,
 				A0D4145A1C084B6A0077BA42 /* OrderConfirmation */,
+				A0DB843F1C0B7A8A004BFD03 /* AboutUs */,
 				A052530C1BE9F271007EF74F /* AppDelegate.h */,
 				A052530D1BE9F271007EF74F /* AppDelegate.m */,
 				0C2F072B1BEF3D6200F6B7DB /* BlickbeePrefix.pch */,
@@ -683,6 +690,17 @@
 				A0DA718D1BF074E10012490E /* veg_vector.jpg */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		A0DB843F1C0B7A8A004BFD03 /* AboutUs */ = {
+			isa = PBXGroup;
+			children = (
+				A0DB84391C0B5B0E004BFD03 /* AboutUsViewController.h */,
+				A0DB843A1C0B5B0E004BFD03 /* AboutUsViewController.m */,
+				A0DB843C1C0B7650004BFD03 /* PrivacyPolicyandTermsViewController.h */,
+				A0DB843D1C0B7650004BFD03 /* PrivacyPolicyandTermsViewController.m */,
+			);
+			name = AboutUs;
 			sourceTree = "<group>";
 		};
 		A0DDA06B1BFB2F86000D9580 /* Cart */ = {
@@ -979,6 +997,7 @@
 				A0DDA0721BFB3DE2000D9580 /* CartTableViewCell.m in Sources */,
 				A0DA71641BF0734B0012490E /* BaseTableViewCell.m in Sources */,
 				0C2F06FF1BEE45C000F6B7DB /* BaseServiceClient.m in Sources */,
+				A0DB843E1C0B7650004BFD03 /* PrivacyPolicyandTermsViewController.m in Sources */,
 				0C2F072A1BEF3A9A00F6B7DB /* TopZoneView.m in Sources */,
 				0C2FBC771C0AE56400A374E1 /* ShareViewController.m in Sources */,
 				A0D414161C0709BD0077BA42 /* FirstOrderDetailCell.m in Sources */,
@@ -988,6 +1007,7 @@
 				A0D060E61C034268001E70B9 /* MyOrdersViewController.m in Sources */,
 				0C2FBC741C09C58500A374E1 /* AccountSettingsViewController.m in Sources */,
 				0C2F06FC1BEE458000F6B7DB /* ProductsServiceClient.m in Sources */,
+				A0DB843B1C0B5B0E004BFD03 /* AboutUsViewController.m in Sources */,
 				0C81834C1BF914A000882A65 /* BlickbeeAppManager.m in Sources */,
 				0C8BCF891BFF2CC0009051F1 /* OrderServiceClient.m in Sources */,
 				0C8BCF8F1BFF3AA5009051F1 /* Order.m in Sources */,
@@ -1167,7 +1187,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: PAT RAM BISHNOI (CGFN49HM94)";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/kunal/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
+				GCC_PREFIX_HEADER = /Users/Rokimkar/Desktop/BlickBee/BlickBee/BlickbeePrefix.pch;
 				INFOPLIST_FILE = BlickBee/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1186,7 +1206,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: PAT RAM BISHNOI (CGFN49HM94)";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/kunal/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
+				GCC_PREFIX_HEADER = /Users/Rokimkar/Desktop/BlickBee/BlickBee/BlickbeePrefix.pch;
 				INFOPLIST_FILE = BlickBee/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
