@@ -62,6 +62,7 @@
             UIStoryboard *storyBoard  = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
 //            SWRevealViewController *cont = [storyBoard instantiateViewControllerWithIdentifier:@"SWRevealViewController"];
             OTPViewController *cont = [storyBoard instantiateViewControllerWithIdentifier:@"OTPViewController"];
+            cont.isFromSignUp=YES;
             [self presentViewController:cont animated:YES completion:^{
                 
             }];

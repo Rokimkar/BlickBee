@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *verifyOTPBtn;
 @property (weak, nonatomic) IBOutlet UIButton *resendOTPBtn;
 @property (strong,nonatomic) NSTimer *progressUpdateTimer;
+@property (assign,nonatomic) BOOL isFromSignUp;
 
 @end

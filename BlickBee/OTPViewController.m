@@ -9,6 +9,7 @@
 #import "OTPViewController.h"
 #import "LoginServiceClient.h"
 #import "SWRevealViewController.h"
+#import "ChangePasswordViewController.h"
 @interface OTPViewController ()
 {
     NSInteger count;
@@ -47,22 +48,27 @@
 }
 
 - (IBAction)verifyBtnPressed:(id)sender {
-    
     if ([self.otpTextField.text isEqualToString:@""]) {
         [[[UIAlertView alloc] initWithTitle:@"" message:@"Please enter the otp." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+        return;
     }
-    
     LoginServiceClient *client = [[LoginServiceClient alloc] init];
     [client verifyOTPWithOTP:self.otpTextField.text WithSuccess:^(User *user) {
         UIStoryboard *storyBoard  = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        SWRevealViewController *cont = [storyBoard instantiateViewControllerWithIdentifier:@"SWRevealViewController"];
-        [self presentViewController:cont animated:YES completion:^{
-            
-        }];
+        if(self.isFromSignUp){
+            SWRevealViewController *cont = [storyBoard instantiateViewControllerWithIdentifier:@"SWRevealViewController"];
+            [self presentViewController:cont animated:YES completion:^{
+                
+            }];
+        }
+        else{
+            ChangePasswordViewController *cont = [storyBoard instantiateViewControllerWithIdentifier:@"ChangePasswordViewController"];
+            [self presentViewController:cont animated:YES completion:^{
+            }];
+        }
     } failure:^(NSError *error) {
         
     }];
-    
 }
 -(void) updateProgress:(NSTimer *)updatedTimer{
     if (count>0) {

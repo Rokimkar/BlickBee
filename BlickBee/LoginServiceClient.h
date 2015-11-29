@@ -14,6 +14,7 @@
 - (void) signUpWithDictionary:(NSMutableDictionary*)inputDict WithSuccess:(void (^) (User* user))success failure:(void (^) (NSError *error)) failure;
 - (void) verifyOTPWithOTP:(NSString*)otpStr WithSuccess:(void (^) (User* user))success failure:(void (^) (NSError *error)) failure;
 - (void) resendOTPWithSuccess:(void (^) ())success failure:(void (^) (NSError *error)) failure;
+- (void) changePasswordWithNewPassword:(NSString*)newPassword withSuccess:(void (^) ())success failure:(void (^) (NSError *error)) failure;
 
 
 @end
