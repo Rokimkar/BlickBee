@@ -42,6 +42,7 @@
 		0C2FBC871C0B116B00A374E1 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2FBC861C0B116B00A374E1 /* MediaPlayer.framework */; };
 		0C2FBC891C0B117900A374E1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2FBC881C0B117900A374E1 /* Security.framework */; };
 		0C2FBC8B1C0B117F00A374E1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2FBC8A1C0B117F00A374E1 /* SystemConfiguration.framework */; };
+		0C2FBC8E1C0B2C5700A374E1 /* OTPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC8D1C0B2C5700A374E1 /* OTPViewController.m */; settings = {ASSET_TAGS = (); }; };
 		0C81833D1BF8DEC100882A65 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C81833C1BF8DEC100882A65 /* SignInViewController.m */; };
 		0C8183401BF8DECE00882A65 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C81833F1BF8DECE00882A65 /* SignUpViewController.m */; };
 		0C8183451BF9003400882A65 /* LoginServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8183441BF9003400882A65 /* LoginServiceClient.m */; };
@@ -207,6 +208,8 @@
 		0C2FBC861C0B116B00A374E1 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		0C2FBC881C0B117900A374E1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		0C2FBC8A1C0B117F00A374E1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0C2FBC8C1C0B2C5700A374E1 /* OTPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTPViewController.h; sourceTree = "<group>"; };
+		0C2FBC8D1C0B2C5700A374E1 /* OTPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTPViewController.m; sourceTree = "<group>"; };
 		0C81833B1BF8DEC100882A65 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		0C81833C1BF8DEC100882A65 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		0C81833E1BF8DECE00882A65 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
@@ -506,6 +509,8 @@
 				0C81833C1BF8DEC100882A65 /* SignInViewController.m */,
 				0C81833E1BF8DECE00882A65 /* SignUpViewController.h */,
 				0C81833F1BF8DECE00882A65 /* SignUpViewController.m */,
+				0C2FBC8C1C0B2C5700A374E1 /* OTPViewController.h */,
+				0C2FBC8D1C0B2C5700A374E1 /* OTPViewController.m */,
 				A0D777E31BF4A0C500776479 /* ProductViewController.h */,
 				A0D777E41BF4A0C500776479 /* ProductViewController.m */,
 				A05253431BEA0EC9007EF74F /* LeftDeckController.h */,
@@ -1009,6 +1014,7 @@
 				A0DDA05B1BF89126000D9580 /* DummyViewController.m in Sources */,
 				0C8BCF921BFF3D14009051F1 /* OrderedProduct.m in Sources */,
 				0C2F07131BEE6B1200F6B7DB /* Offer.m in Sources */,
+				0C2FBC8E1C0B2C5700A374E1 /* OTPViewController.m in Sources */,
 				A05253421BEA0B59007EF74F /* HomeViewController.m in Sources */,
 				A0D777E51BF4A0C500776479 /* ProductViewController.m in Sources */,
 				A0DA71B51BF08D510012490E /* LeftDeckTableViewCell.m in Sources */,
