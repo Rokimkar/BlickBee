@@ -33,8 +33,6 @@
         [btn addTarget:self.revealViewController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
         [btn setImage:image forState:UIControlStateNormal];
         UIBarButtonItem *menuButton = [[UIBarButtonItem alloc]initWithCustomView:btn];
-        //        [self.navigationItem.leftBarButtonItem setTarget: self.revealViewController];
-        //        [self.navigationItem.leftBarButtonItem setAction: @selector( revealToggle: )];
         self.navigationItem.leftBarButtonItem = menuButton;
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
         self.revealViewController.panGestureRecognizer.delegate=self;
@@ -42,7 +40,6 @@
         [self.navigationItem.leftBarButtonItem setAction:@selector(revealToggle:)];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
         swRevealVC.rearViewRevealWidth=270.0f;
-        //[swRevealVC revealToggle:self];
         [swRevealVC revealToggleAnimated:YES];
     }
     OrderServiceClient *client = [[OrderServiceClient alloc] init];
