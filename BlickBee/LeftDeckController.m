@@ -74,13 +74,24 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
      UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     SWRevealViewController *revealVC = self.revealViewController;
+    
     if (indexPath.row==0){
         HomeViewController *homeVC = [BlickbeeAppManager sharedInstance].homeViewController;
         UINavigationController *NVC = [[UINavigationController alloc]initWithRootViewController:homeVC];
         NVC.navigationBar.barTintColor=RGBA(247, 71, 17, 1);
         [revealVC revealToggle:homeVC];
         [revealVC setFrontViewController:NVC];
-        }
+    }
+    else if(indexPath.row==1){
+        MyOrdersViewController *myOrderVC = [storyboard instantiateViewControllerWithIdentifier:@"MyOrdersViewController"];
+        UINavigationController *NVC = [[UINavigationController alloc]initWithRootViewController:myOrderVC];
+        [revealVC setFrontViewController:NVC];
+    }
+    else if(indexPath.row==2){
+        AccountSettingsViewController *myOrderVC = [storyboard instantiateViewControllerWithIdentifier:@"AccountSettingsViewController"];
+        UINavigationController *NVC = [[UINavigationController alloc]initWithRootViewController:myOrderVC];
+        [revealVC setFrontViewController:NVC];
+    }
     else if(indexPath.row==4){
         NSString *string = @"8386068784";
         NSURL *phoneUrl = [NSURL URLWithString:[NSString stringWithFormat:@"telprompt:%@",string]];
@@ -88,10 +99,42 @@
             [[UIApplication sharedApplication] openURL:phoneUrl];
         } else
         {
-           UIAlertView *calert = [[UIAlertView alloc]initWithTitle:@"Alert" message:@"Call facility is not available!!!" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
+            UIAlertView *calert = [[UIAlertView alloc]initWithTitle:@"Alert" message:@"Call facility is not available!!!" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
             [calert show];
         }
     }
+    else if(indexPath.row==5){
+        [[iRate sharedInstance]promptForRating];
+    }
+    else if (indexPath.row==6){
+        //            UIViewController *topController = [UIApplication sharedApplication].keyWindow.rootViewController;
+        //            while (topController.presentedViewController) {
+        //                topController = topController.presentedViewController;
+        //            }
+        //            if ([topController isKindOfClass:[UINavigationController class]]) {
+        //                UINavigationController *nav = (UINavigationController*)topController;
+        //                topController = nav.visibleViewController;
+        //            }
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        ShareViewController *shareCont = [storyboard instantiateViewControllerWithIdentifier:@"ShareViewController"];
+        UINavigationController *NVC = [[UINavigationController alloc]initWithRootViewController:shareCont];
+        [revealVC setFrontViewController:NVC];
+        //            UIView *rootView = shareCont.view;
+        //            rootView.alpha=0.0f;
+        //            [[[UIApplication sharedApplication] keyWindow] addSubview:rootView];
+        //            [[[UIApplication sharedApplication] keyWindow] bringSubviewToFront:rootView];
+        //            [UIView animateWithDuration:0.5
+        //                                  delay:0
+        //                                options:UIViewAnimationOptionCurveEaseIn
+        //                             animations:^{
+        //                                 rootView.alpha=1.0f;
+        //                             }
+        //                             completion:nil];
+    }
+
+    
+    
+    
 }
 
 - (CGFloat) tableView: (UITableView *)
