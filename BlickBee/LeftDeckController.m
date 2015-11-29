@@ -14,6 +14,8 @@
 #import "SWRevealViewController.h"
 #import "HomeViewController.h"
 #import "BlickbeeAppManager.h"
+#import "AccountSettingsViewController.h"
+#import "ShareViewController.h"
 @interface LeftDeckController (){
     NSArray *itemsArray;
     NSArray *imageArray;
@@ -72,16 +74,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
      UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     SWRevealViewController *revealVC = self.revealViewController;
-    if(indexPath.row==5){
-        [[iRate sharedInstance]promptForRating];
-    }
-    else if(indexPath.row==1){
-        
-            MyOrdersViewController *myOrderVC = [storyboard instantiateViewControllerWithIdentifier:@"MyOrdersViewController"];
-            UINavigationController *NVC = [[UINavigationController alloc]initWithRootViewController:myOrderVC];
-            [revealVC setFrontViewController:NVC];
-    }
-    else if (indexPath.row==0){
+    if (indexPath.row==0){
         HomeViewController *homeVC = [BlickbeeAppManager sharedInstance].homeViewController;
         UINavigationController *NVC = [[UINavigationController alloc]initWithRootViewController:homeVC];
         NVC.navigationBar.barTintColor=RGBA(247, 71, 17, 1);

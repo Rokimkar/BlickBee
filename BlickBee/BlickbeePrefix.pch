@@ -29,6 +29,8 @@ CG_INLINE CGFloat getScreenWidth() {return [UIScreen mainScreen].bounds.size.wid
 
 CG_INLINE CGFloat getScreenHeight() {return [UIScreen mainScreen].bounds.size.height; }
 
+static NSString * const kClientId = @"402270419823-pfrm3hqi4o90s795vf5aeds1kkn9mmqb.apps.googleusercontent.com";
+
 
 #define IS_IPHONE4 (([[UIScreen mainScreen] bounds].size.height-480)?NO:YES)
 #define IS_IPHONE5 (([[UIScreen mainScreen] bounds].size.height-568)?NO:YES)

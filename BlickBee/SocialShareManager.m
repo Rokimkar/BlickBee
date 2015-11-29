@@ -398,7 +398,10 @@
     NSString *itemTitle = title;
 
     NSURL *artworkUrl;
-    
+    GPPSignIn *signIn = [GPPSignIn sharedInstance];
+    // You previously set kClientId in the "Initialize the Google+ client" step
+    signIn.clientID = kClientId;
+
     id<GPPShareBuilder> shareBuilder = [[GPPShare sharedInstance] shareDialog];
 //    [GPPShare sharedInstance].delegate = self;
     
