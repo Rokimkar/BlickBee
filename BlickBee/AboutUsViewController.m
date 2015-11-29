@@ -60,7 +60,8 @@
 - (IBAction)privacyPolicyButtonClicked:(id)sender {
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     PrivacyPolicyandTermsViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"PrivacyPolicyandTermsViewController"];
-    vc.url=[NSURL URLWithString:@"https://www.google.co.in/"];
+    vc.url=[NSURL URLWithString:@"http://www.blickbee.com/privacy/"];
+    vc.title=@"Privacy Policy";
     [self.navigationController pushViewController:vc animated:YES];
     
     
@@ -68,7 +69,8 @@
 - (IBAction)termsAndConditionButtonClicked:(id)sender {
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     PrivacyPolicyandTermsViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"PrivacyPolicyandTermsViewController"];
-    vc.url=[NSURL URLWithString:@"https://www.google.co.in/"];
+    vc.url=[NSURL URLWithString:@"http://www.blickbee.com/terms/"];
+    vc.title=@"Terms And Condition";
     [self.navigationController pushViewController:vc animated:YES];
     
 }

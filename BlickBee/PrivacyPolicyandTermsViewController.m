@@ -18,6 +18,10 @@
     [super viewDidLoad];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:self.url];
     [self.webViewForPrivacyPolicy loadRequest:request];
+    self.webViewForPrivacyPolicy.scalesPageToFit=YES;
+    self.webViewForPrivacyPolicy.backgroundColor=[UIColor clearColor];
+    self.webViewForPrivacyPolicy.opaque=NO;
+    self.title=self.name;
 }
 
 - (void)didReceiveMemoryWarning {

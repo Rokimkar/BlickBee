@@ -11,4 +11,5 @@
 @interface PrivacyPolicyandTermsViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIWebView *webViewForPrivacyPolicy;
 @property (strong,nonatomic) NSURL *url;
+@property (strong,nonatomic) NSString *name;
 @end
