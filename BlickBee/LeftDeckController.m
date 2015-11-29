@@ -88,6 +88,17 @@
         [revealVC revealToggle:homeVC];
         [revealVC setFrontViewController:NVC];
         }
+    else if(indexPath.row==4){
+        NSString *string = @"8386068784";
+        NSURL *phoneUrl = [NSURL URLWithString:[NSString stringWithFormat:@"telprompt:%@",string]];
+        if ([[UIApplication sharedApplication] canOpenURL:phoneUrl]) {
+            [[UIApplication sharedApplication] openURL:phoneUrl];
+        } else
+        {
+           UIAlertView *calert = [[UIAlertView alloc]initWithTitle:@"Alert" message:@"Call facility is not available!!!" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
+            [calert show];
+        }
+    }
 }
 
 - (CGFloat) tableView: (UITableView *)
