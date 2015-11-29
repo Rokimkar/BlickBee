@@ -87,7 +87,7 @@
     }
     else if (indexPath.row==1) {
         //Facebook
-        [[GaanaFacebook sharedInstance] shareToFacebookonParentViewController:self withTitle:shareItem.itemTitle descriptionText:shareItem.itemDescriptionText artwork:shareItem.itemArtwork withShareUrl:shareItem.itemShareUrl withCaption:@"" completionBlock:^(bool postSucessful, NSError *error) {
+        [[GaanaFacebook sharedInstance] shareToFacebookonParentViewController:self withTitle:shareItem.itemTitle descriptionText:shareItem.itemDescriptionText artwork:shareItem.itemArtwork withShareUrl:shareItem.itemShareUrl withCaption:shareItem.itemTitle completionBlock:^(bool postSucessful, NSError *error) {
             
         }];
     }
