@@ -9,7 +9,8 @@
 #import "CartTableView.h"
 #import "CartTableViewCell.h"
 #import "BlickbeeAppManager.h"
-
+#import "SWRevealViewController.h"
+#import "HomeViewController.h"
 @implementation CartTableView
 
 -(id) initWithFrame:(CGRect)frame andProductsArray:(NSMutableArray*) prodsArray{
@@ -23,13 +24,14 @@
 }
 
 -(void) reloadCellWithProduct : (Product *) product{
-    [self reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:[self.productArray indexOfObject:product] inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
+    [self reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:[self.productArray indexOfObject:product] inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
     if([product.selectedProductQuantity isEqualToString:@"0"]){
         [self.productArray removeObject:product];
         [self reloadData];
     }
     if([[BlickbeeAppManager sharedInstance]selectedProducts].count==0){
         self.backgroundColor=[UIColor clearColor];
+        [self.openHomeVCDelegate openHomeVC];
     }
 }
 

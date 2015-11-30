@@ -39,18 +39,34 @@
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if(![self.floatingBtn.titleLabel.text isEqualToString:@"0"]){
     if([segue.identifier isEqualToString:@"cartViewControllerSegue"]){
         CartViewController *cartViewController = [segue destinationViewController];
         cartViewController.productArray=[[BlickbeeAppManager sharedInstance] selectedProducts];
+    }
     }
 }
 
 -(void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
     if(productTableView){
         [productTableView reloadData];
     }
 }
+
+-(void) viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:YES];
+    int flotingBtnCount=0;
+    for(int i=0;i<[BlickbeeAppManager sharedInstance].selectedProducts.count;i++){
+        Product *product=[[Product alloc]init];
+        product = [[BlickbeeAppManager sharedInstance].selectedProducts objectAtIndex:i];
+        flotingBtnCount+=product.selectedProductQuantity.integerValue;
+    }
+    [self.floatingBtn setTitle:[NSString stringWithFormat:@"%d",flotingBtnCount] forState:UIControlStateNormal];
+}
+
+
 -(void)changeValOfFloatingBtn : (NSInteger) val{
     NSInteger prevVal = [self.floatingBtn.titleLabel.text integerValue];
     [self.floatingBtn setTitle:[NSString stringWithFormat:@"%ld",(long)(prevVal+val)] forState:UIControlStateNormal];
