@@ -9,7 +9,6 @@
 #import "CartTableView.h"
 #import "CartTableViewCell.h"
 #import "BlickbeeAppManager.h"
-
 @implementation CartTableView
 
 -(id) initWithFrame:(CGRect)frame andProductsArray:(NSMutableArray*) prodsArray{
@@ -63,4 +62,24 @@
 -(CGFloat) tableView:(UITableView *) tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return CELL_HEIGHT;
 }
+
+//- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+//{
+//    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, getScreenWidth(), 50)];
+//    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake((getScreenWidth()-100)*0.5, 0, 100, 50)];
+//    [button setTitle:@"Shop more" forState:UIControlStateNormal];
+//    [button setTitle:@"Shop more" forState:UIControlStateHighlighted];
+//    [button addTarget:self action:@selector(shopMorePressed) forControlEvents:UIControlEventTouchUpInside];
+//    return view;
+//}
+//
+//- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+//    return 50;
+//}
+
+-(void) shopMorePressed{
+    
+}
+
+
 @end
