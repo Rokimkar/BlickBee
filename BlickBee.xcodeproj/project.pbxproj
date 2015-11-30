@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C296DEC1C0CC6D5001AE0FC /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE21C0CC6D5001AE0FC /* ProximaNova-Bold.otf */; };
-		0C296DED1C0CC6D5001AE0FC /* ProximaNova-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE31C0CC6D5001AE0FC /* ProximaNova-Light.otf */; };
-		0C296DEE1C0CC6D5001AE0FC /* ProximaNova-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE41C0CC6D5001AE0FC /* ProximaNova-Semibold.otf */; };
-		0C296DEF1C0CC6D5001AE0FC /* ProximaNovaCond-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE51C0CC6D5001AE0FC /* ProximaNovaCond-Regular.otf */; };
-		0C296DF01C0CC6D5001AE0FC /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE61C0CC6D5001AE0FC /* Roboto-Bold.ttf */; };
-		0C296DF11C0CC6D5001AE0FC /* Roboto-Condensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE71C0CC6D5001AE0FC /* Roboto-Condensed.ttf */; };
-		0C296DF21C0CC6D5001AE0FC /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE81C0CC6D5001AE0FC /* Roboto-Light.ttf */; };
-		0C296DF31C0CC6D5001AE0FC /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE91C0CC6D5001AE0FC /* Roboto-Medium.ttf */; };
-		0C296DF41C0CC6D5001AE0FC /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DEA1C0CC6D5001AE0FC /* Roboto-Regular.ttf */; };
-		0C296DF51C0CC6D5001AE0FC /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DEB1C0CC6D5001AE0FC /* Roboto-Thin.ttf */; };
-		0C296DFB1C0CCA9D001AE0FC /* UIFont+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C296DFA1C0CCA9D001AE0FC /* UIFont+Custom.m */; };
+		0C296DEC1C0CC6D5001AE0FC /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE21C0CC6D5001AE0FC /* ProximaNova-Bold.otf */; settings = {ASSET_TAGS = (); }; };
+		0C296DED1C0CC6D5001AE0FC /* ProximaNova-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE31C0CC6D5001AE0FC /* ProximaNova-Light.otf */; settings = {ASSET_TAGS = (); }; };
+		0C296DEE1C0CC6D5001AE0FC /* ProximaNova-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE41C0CC6D5001AE0FC /* ProximaNova-Semibold.otf */; settings = {ASSET_TAGS = (); }; };
+		0C296DEF1C0CC6D5001AE0FC /* ProximaNovaCond-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE51C0CC6D5001AE0FC /* ProximaNovaCond-Regular.otf */; settings = {ASSET_TAGS = (); }; };
+		0C296DF01C0CC6D5001AE0FC /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE61C0CC6D5001AE0FC /* Roboto-Bold.ttf */; settings = {ASSET_TAGS = (); }; };
+		0C296DF11C0CC6D5001AE0FC /* Roboto-Condensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE71C0CC6D5001AE0FC /* Roboto-Condensed.ttf */; settings = {ASSET_TAGS = (); }; };
+		0C296DF21C0CC6D5001AE0FC /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE81C0CC6D5001AE0FC /* Roboto-Light.ttf */; settings = {ASSET_TAGS = (); }; };
+		0C296DF31C0CC6D5001AE0FC /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE91C0CC6D5001AE0FC /* Roboto-Medium.ttf */; settings = {ASSET_TAGS = (); }; };
+		0C296DF41C0CC6D5001AE0FC /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DEA1C0CC6D5001AE0FC /* Roboto-Regular.ttf */; settings = {ASSET_TAGS = (); }; };
+		0C296DF51C0CC6D5001AE0FC /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DEB1C0CC6D5001AE0FC /* Roboto-Thin.ttf */; settings = {ASSET_TAGS = (); }; };
+		0C296DFB1C0CCA9D001AE0FC /* UIFont+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C296DFA1C0CCA9D001AE0FC /* UIFont+Custom.m */; settings = {ASSET_TAGS = (); }; };
+		0C296DFE1C0CDCDD001AE0FC /* CartFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C296DFD1C0CDCDD001AE0FC /* CartFooterView.m */; settings = {ASSET_TAGS = (); }; };
+		0C296E001C0CDD02001AE0FC /* CartFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DFF1C0CDD02001AE0FC /* CartFooterView.xib */; settings = {ASSET_TAGS = (); }; };
 		0C2F06FC1BEE458000F6B7DB /* ProductsServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F06FB1BEE458000F6B7DB /* ProductsServiceClient.m */; };
 		0C2F06FF1BEE45C000F6B7DB /* BaseServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F06FE1BEE45C000F6B7DB /* BaseServiceClient.m */; };
 		0C2F07131BEE6B1200F6B7DB /* Offer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F07121BEE6B1200F6B7DB /* Offer.m */; };
