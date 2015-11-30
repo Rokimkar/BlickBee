@@ -12,7 +12,7 @@
 #import "BlickbeeAppManager.h"
 #import "CartFooterView.h"
 
-@interface CartViewController (){
+@interface CartViewController ()<openHomeVC>{
     CartTableView *cartTableView;
     NSMutableArray *selectedProductArray;
 }
@@ -38,6 +38,7 @@
     }
     if(addCartTable==YES){
         cartTableView = [[CartTableView alloc]initWithFrame:CGRectMake(0,109, getScreenWidth(), getScreenHeight()-176) andProductsArray:[[BlickbeeAppManager sharedInstance] selectedProducts]];
+        cartTableView.openHomeVCDelegate=self;
         cartTableView.separatorColor=[UIColor clearColor];
         [self.view addSubview:cartTableView];
         [self.view bringSubviewToFront:cartTableView];
@@ -59,6 +60,10 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+-(void)openHomeVC{
+    [self.navigationController popToRootViewControllerAnimated:[BlickbeeAppManager sharedInstance].homeViewController];
 }
 
 - (IBAction)startShoppingButtonClicked:(id)sender {

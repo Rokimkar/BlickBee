@@ -55,8 +55,8 @@
 		0C2FBC871C0B116B00A374E1 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2FBC861C0B116B00A374E1 /* MediaPlayer.framework */; };
 		0C2FBC891C0B117900A374E1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2FBC881C0B117900A374E1 /* Security.framework */; };
 		0C2FBC8B1C0B117F00A374E1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2FBC8A1C0B117F00A374E1 /* SystemConfiguration.framework */; };
-		0C2FBC8E1C0B2C5700A374E1 /* OTPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC8D1C0B2C5700A374E1 /* OTPViewController.m */; settings = {ASSET_TAGS = (); }; };
-		0C2FBC911C0B8E7F00A374E1 /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC901C0B8E7F00A374E1 /* ChangePasswordViewController.m */; settings = {ASSET_TAGS = (); }; };
+		0C2FBC8E1C0B2C5700A374E1 /* OTPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC8D1C0B2C5700A374E1 /* OTPViewController.m */; };
+		0C2FBC911C0B8E7F00A374E1 /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2FBC901C0B8E7F00A374E1 /* ChangePasswordViewController.m */; };
 		0C81833D1BF8DEC100882A65 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C81833C1BF8DEC100882A65 /* SignInViewController.m */; };
 		0C8183401BF8DECE00882A65 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C81833F1BF8DECE00882A65 /* SignUpViewController.m */; };
 		0C8183451BF9003400882A65 /* LoginServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8183441BF9003400882A65 /* LoginServiceClient.m */; };
@@ -1287,7 +1287,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: PAT RAM BISHNOI (CGFN49HM94)";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/kunal/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
+				GCC_PREFIX_HEADER = /Users/Rokimkar/Desktop/BlickBee/BlickBee/BlickbeePrefix.pch;
 				INFOPLIST_FILE = BlickBee/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1306,7 +1306,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: PAT RAM BISHNOI (CGFN49HM94)";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/kunal/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
+				GCC_PREFIX_HEADER = /Users/Rokimkar/Desktop/BlickBee/BlickBee/BlickbeePrefix.pch;
 				INFOPLIST_FILE = BlickBee/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

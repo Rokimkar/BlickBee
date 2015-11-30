@@ -9,10 +9,17 @@
 #import <UIKit/UIKit.h>
 #define CELL_HEIGHT 95
 
+@protocol openHomeVC <NSObject>
+
+-(void) openHomeVC;
+
+@end
 
 @interface CartTableView : UITableView
 
 -(id) initWithFrame:(CGRect)frame andProductsArray:(NSMutableArray*) prodsArray;
 @property (weak,nonatomic) NSMutableArray *productArray;
+
+@property (weak,nonatomic) id<openHomeVC> openHomeVCDelegate;
 
 @end
