@@ -10,6 +10,7 @@
 #import "LoginServiceClient.h"
 #import "BlickbeeAppManager.h"
 #import "SWRevealViewController.h"
+#import "OTPViewController.h"
 @interface SignUpViewController ()
 
 @end
@@ -59,7 +60,9 @@
             
             [[BlickbeeAppManager sharedInstance] setUser:user];
             UIStoryboard *storyBoard  = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-            SWRevealViewController *cont = [storyBoard instantiateViewControllerWithIdentifier:@"SWRevealViewController"];
+//            SWRevealViewController *cont = [storyBoard instantiateViewControllerWithIdentifier:@"SWRevealViewController"];
+            OTPViewController *cont = [storyBoard instantiateViewControllerWithIdentifier:@"OTPViewController"];
+            cont.isFromSignUp=YES;
             [self presentViewController:cont animated:YES completion:^{
                 
             }];

@@ -9,6 +9,8 @@
 #import "AccountSettingsViewController.h"
 #import "AddAddressTableViewCell.h"
 #import "DeliveryAddressTableViewCell.h"
+#import "OTPViewController.h"
+#import "LoginServiceClient.h"
 @interface AccountSettingsViewController ()
 
 @end
@@ -152,6 +154,17 @@
 
 -(void) changePasswordPressed{
     
+    LoginServiceClient *client = [[LoginServiceClient alloc] init];
+    [client resendOTPWithSuccess:^{
+        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        OTPViewController *cont = [storyBoard instantiateViewControllerWithIdentifier:@"OTPViewController"];
+        cont.isFromSignUp=NO;
+        [self presentViewController:cont animated:YES completion:^{
+            
+        }];
+    } failure:^(NSError *error) {
+        
+    }];
 }
 /*
 #pragma mark - Navigation
