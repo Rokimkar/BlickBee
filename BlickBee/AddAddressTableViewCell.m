@@ -12,6 +12,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    [self prepareView];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -22,5 +23,9 @@
 - (IBAction)addAddressBtn:(id)sender {
     [self.addressDelegate openAddressPopUp];
 }
-
+-(void) prepareView{
+    self.addBtn.layer.cornerRadius = 0.0;
+    self.addBtn.layer.borderWidth = 1.0;
+    self.addBtn.layer.borderColor = [UIColor blackColor].CGColor;
+}
 @end

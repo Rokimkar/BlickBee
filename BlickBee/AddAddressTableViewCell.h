@@ -18,5 +18,6 @@
 @interface AddAddressTableViewCell : UITableViewCell
 
 @property (nonatomic,strong) id<openAddressPopUp> addressDelegate;
+@property (weak, nonatomic) IBOutlet UIButton *addBtn;
 
 @end
