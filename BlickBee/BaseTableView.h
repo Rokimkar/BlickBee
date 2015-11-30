@@ -7,11 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
-#define CELL_HEIGHT 105
+#define CELL_HEIGHT 85
+
+@protocol chngValForFlotingBtn <NSObject>
+
+-(void)changeValOfFloatingBtn : (NSInteger) val;
+
+@end
 
 @interface BaseTableView : UITableView
 -(id) initWithFrame:(CGRect)frame andProductsArray:(NSMutableArray*) prodsArray;
 
 @property (strong,nonatomic) NSMutableArray *productArray;
 @property (strong,nonatomic) NSIndexPath *indexpth;
+@property (strong,nonatomic) id <chngValForFlotingBtn> changeFlotingBtnDelegate;
 @end

@@ -12,7 +12,8 @@
 #import "BlickBeePrefix.pch"
 #import "BlickbeeAppManager.h"
 
-@interface ProductViewController (){
+
+@interface ProductViewController ()<chngValForFlotingBtn>{
     BaseTableView *productTableView;
 }
 
@@ -25,9 +26,16 @@
     productTableView = [[BaseTableView alloc]initWithFrame:CGRectMake(0, 0, getScreenWidth(), getScreenHeight()) andProductsArray:self.productArray];
     productTableView.separatorColor=[UIColor clearColor];
     productTableView.backgroundColor=RGBA(225, 225, 225, 1);
+    productTableView.changeFlotingBtnDelegate=self;
     [self.view addSubview:productTableView];
     [self.view bringSubviewToFront:self.floatingBtn];
-    
+    int flotingBtnCount=0;
+    for(int i=0;i<[BlickbeeAppManager sharedInstance].selectedProducts.count;i++){
+        Product *product=[[Product alloc]init];
+       product = [[BlickbeeAppManager sharedInstance].selectedProducts objectAtIndex:i];
+        flotingBtnCount+=product.selectedProductQuantity.integerValue;
+    }
+    [self.floatingBtn setTitle:[NSString stringWithFormat:@"%d",flotingBtnCount] forState:UIControlStateNormal];
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
@@ -42,6 +50,10 @@
     if(productTableView){
         [productTableView reloadData];
     }
+}
+-(void)changeValOfFloatingBtn : (NSInteger) val{
+    NSInteger prevVal = [self.floatingBtn.titleLabel.text integerValue];
+    [self.floatingBtn setTitle:[NSString stringWithFormat:@"%ld",(long)(prevVal+val)] forState:UIControlStateNormal];
 }
 
 -(void) awakeFromNib{

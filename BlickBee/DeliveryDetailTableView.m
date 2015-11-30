@@ -40,11 +40,13 @@
 -(UITableViewCell *)tableView : (UITableView *)tableView cellForRowAtIndexPath : (NSIndexPath *) indexPath{
     UITableViewCell *cell;
     if(indexPath.row==0 && indexPath.section==0){
-        cell = (DeliveryDetailTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"DeliveryDetailTableViewCell"];
-        if(cell==nil){
+      DeliveryDetailTableViewCell  *cellOne = (DeliveryDetailTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"DeliveryDetailTableViewCell"];
+        if(cellOne==nil){
             NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DeliveryDetailTableViewCell" owner:self options:nil];
-            cell = [nib objectAtIndex:0];
+            cellOne = [nib objectAtIndex:0];
         }
+        cellOne.imageViewFordeliveryDetail.image=[UIImage imageNamed:@"2_a.png"];
+        return  cellOne;
     }
     else if(indexPath.row==1 && indexPath.section==0){
         cell = (DeliveryTimeTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"DeliveryTimeTableViewCell"];

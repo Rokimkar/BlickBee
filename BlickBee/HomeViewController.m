@@ -16,6 +16,7 @@
 #import "UserInfoServiceClient.h"
 #import "AddAddressServiceClient.h"
 #import "BlickbeeAppManager.h"
+#import "Product.h"
 @interface HomeViewController ()
 
 @end
@@ -65,12 +66,21 @@
 
         
     }
+    
     [BlickbeeAppManager sharedInstance].homeViewController=self;
     self.title = @"BlickBee";
 }
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    [self.view bringSubviewToFront:self.floatingBtn];
+    int flotingBtnCount=0;
+    for(int i=0;i<[BlickbeeAppManager sharedInstance].selectedProducts.count;i++){
+        Product *product=[[Product alloc]init];
+        product = [[BlickbeeAppManager sharedInstance].selectedProducts objectAtIndex:i];
+        flotingBtnCount+=product.selectedProductQuantity.integerValue;
+    }
+    [self.floatingBtn setTitle:[NSString stringWithFormat:@"%d",flotingBtnCount] forState:UIControlStateNormal];
     //self.navigationItem.leftBarButtonItem=[UIBarButtonItem alloc]init
 }
 
