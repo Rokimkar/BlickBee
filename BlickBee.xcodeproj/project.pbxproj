@@ -124,6 +124,9 @@
 		A0DA71B61BF08D510012490E /* LeftDeckTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0DA71B41BF08D500012490E /* LeftDeckTableViewCell.xib */; };
 		A0DB843B1C0B5B0E004BFD03 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DB843A1C0B5B0E004BFD03 /* AboutUsViewController.m */; };
 		A0DB843E1C0B7650004BFD03 /* PrivacyPolicyandTermsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DB843D1C0B7650004BFD03 /* PrivacyPolicyandTermsViewController.m */; };
+		A0DB84421C0B86AF004BFD03 /* AddressConfirmationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DB84411C0B86AF004BFD03 /* AddressConfirmationViewController.m */; };
+		A0DB84471C0B8D2B004BFD03 /* AddressConfirmationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DB84451C0B8D2B004BFD03 /* AddressConfirmationTableViewCell.m */; };
+		A0DB84481C0B8D2B004BFD03 /* AddressConfirmationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0DB84461C0B8D2B004BFD03 /* AddressConfirmationTableViewCell.xib */; };
 		A0DDA05B1BF89126000D9580 /* DummyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DDA05A1BF89126000D9580 /* DummyViewController.m */; };
 		A0DDA05D1BF8DA5C000D9580 /* cardLayout.png in Resources */ = {isa = PBXBuildFile; fileRef = A0DDA05C1BF8DA5C000D9580 /* cardLayout.png */; };
 		A0DDA0611BF8E1AC000D9580 /* AddToCartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DDA05F1BF8E1AC000D9580 /* AddToCartTableViewCell.m */; };
@@ -332,6 +335,11 @@
 		A0DB843A1C0B5B0E004BFD03 /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
 		A0DB843C1C0B7650004BFD03 /* PrivacyPolicyandTermsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivacyPolicyandTermsViewController.h; sourceTree = "<group>"; };
 		A0DB843D1C0B7650004BFD03 /* PrivacyPolicyandTermsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivacyPolicyandTermsViewController.m; sourceTree = "<group>"; };
+		A0DB84401C0B86AF004BFD03 /* AddressConfirmationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressConfirmationViewController.h; sourceTree = "<group>"; };
+		A0DB84411C0B86AF004BFD03 /* AddressConfirmationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressConfirmationViewController.m; sourceTree = "<group>"; };
+		A0DB84441C0B8D2B004BFD03 /* AddressConfirmationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressConfirmationTableViewCell.h; sourceTree = "<group>"; };
+		A0DB84451C0B8D2B004BFD03 /* AddressConfirmationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressConfirmationTableViewCell.m; sourceTree = "<group>"; };
+		A0DB84461C0B8D2B004BFD03 /* AddressConfirmationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressConfirmationTableViewCell.xib; sourceTree = "<group>"; };
 		A0DDA0591BF89126000D9580 /* DummyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyViewController.h; sourceTree = "<group>"; };
 		A0DDA05A1BF89126000D9580 /* DummyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyViewController.m; sourceTree = "<group>"; };
 		A0DDA05C1BF8DA5C000D9580 /* cardLayout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardLayout.png; sourceTree = "<group>"; };
@@ -503,6 +511,7 @@
 				0C2FBC711C09C38500A374E1 /* AccountSettings */,
 				A0D4145A1C084B6A0077BA42 /* OrderConfirmation */,
 				A0DB843F1C0B7A8A004BFD03 /* AboutUs */,
+				A0DB84431C0B879A004BFD03 /* AdressConfirmation */,
 				A052530C1BE9F271007EF74F /* AppDelegate.h */,
 				A052530D1BE9F271007EF74F /* AppDelegate.m */,
 				0C2F072B1BEF3D6200F6B7DB /* BlickbeePrefix.pch */,
@@ -703,6 +712,18 @@
 			name = AboutUs;
 			sourceTree = "<group>";
 		};
+		A0DB84431C0B879A004BFD03 /* AdressConfirmation */ = {
+			isa = PBXGroup;
+			children = (
+				A0DB84401C0B86AF004BFD03 /* AddressConfirmationViewController.h */,
+				A0DB84411C0B86AF004BFD03 /* AddressConfirmationViewController.m */,
+				A0DB84441C0B8D2B004BFD03 /* AddressConfirmationTableViewCell.h */,
+				A0DB84451C0B8D2B004BFD03 /* AddressConfirmationTableViewCell.m */,
+				A0DB84461C0B8D2B004BFD03 /* AddressConfirmationTableViewCell.xib */,
+			);
+			name = AdressConfirmation;
+			sourceTree = "<group>";
+		};
 		A0DDA06B1BFB2F86000D9580 /* Cart */ = {
 			isa = PBXGroup;
 			children = (
@@ -896,6 +917,7 @@
 				A0D5E3271BFE6AE800650E58 /* DeliveryTimeTableViewCell.xib in Resources */,
 				A0DDA0641BF9B716000D9580 /* BaseTableViewCell.xib in Resources */,
 				A0DA71991BF074E10012490E /* email5.png in Resources */,
+				A0DB84481C0B8D2B004BFD03 /* AddressConfirmationTableViewCell.xib in Resources */,
 				A0DA719A1BF074E10012490E /* eyesclosed.png in Resources */,
 				A0DA71981BF074E10012490E /* dropdown.png in Resources */,
 				A05253141BE9F271007EF74F /* Main.storyboard in Resources */,
@@ -980,6 +1002,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0DB84421C0B86AF004BFD03 /* AddressConfirmationViewController.m in Sources */,
 				0C81833D1BF8DEC100882A65 /* SignInViewController.m in Sources */,
 				0C2FBC5C1C06EF2F00A374E1 /* NearByArea.m in Sources */,
 				A0D4140A1C0646FD0077BA42 /* OrdersDetailViewController.m in Sources */,
@@ -1026,6 +1049,7 @@
 				A0D414111C0648840077BA42 /* OrdersDetailTableViewCell.m in Sources */,
 				0C2FBC6D1C09164800A374E1 /* GaanaFacebook.m in Sources */,
 				0C2FBC551C06494C00A374E1 /* AddAddressViewController.m in Sources */,
+				A0DB84471C0B8D2B004BFD03 /* AddressConfirmationTableViewCell.m in Sources */,
 				A0DDA05B1BF89126000D9580 /* DummyViewController.m in Sources */,
 				0C8BCF921BFF3D14009051F1 /* OrderedProduct.m in Sources */,
 				0C2F07131BEE6B1200F6B7DB /* Offer.m in Sources */,

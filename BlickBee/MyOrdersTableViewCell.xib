@@ -50,10 +50,17 @@
                         <constraints>
                             <constraint firstAttribute="width" constant="47" id="2JT-MA-T5Y"/>
                             <constraint firstAttribute="height" constant="16" id="8DD-eH-ngX"/>
+                            <constraint firstAttribute="height" constant="16" id="UI1-g3-SOq"/>
                         </constraints>
+                        <edgeInsets key="layoutMargins" top="8" left="10" bottom="8" right="8"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8DD-eH-ngX"/>
+                            </mask>
+                        </variation>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wqwrerereree" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCr-nq-pru">
                         <rect key="frame" x="10" y="66" width="95" height="16"/>

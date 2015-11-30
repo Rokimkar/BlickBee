@@ -24,6 +24,9 @@
     [super viewDidLoad];
     Product *product = [[Product alloc]init];
     selectedProductArray = [[NSMutableArray alloc]init];
+    if(self.productArray == nil){
+        self.productArray=[[BlickbeeAppManager sharedInstance]selectedProducts];
+    }
     BOOL addCartTable = NO;
     for(int i=0;i<self.productArray.count;i++){
         product=self.productArray[i];

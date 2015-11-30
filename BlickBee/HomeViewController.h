@@ -12,5 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *homeTableView;
 @property (strong, nonatomic) ProductRepo *productRepo;
+@property (weak, nonatomic) IBOutlet UIButton *floatingBtn;
+
 
 @end

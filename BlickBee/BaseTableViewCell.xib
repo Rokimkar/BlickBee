@@ -19,7 +19,7 @@
                         <rect key="frame" x="8" y="6" width="348" height="72"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djf-74-clf">
-                        <rect key="frame" x="91" y="17" width="199" height="12"/>
+                        <rect key="frame" x="91" y="17" width="194" height="12"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="12" id="A91-RD-dRP"/>
                         </constraints>
@@ -28,7 +28,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Se3-fY-zOK">
-                        <rect key="frame" x="91" y="37" width="199" height="12"/>
+                        <rect key="frame" x="91" y="37" width="194" height="12"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -58,10 +58,10 @@
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNB-f0-zx0">
-                        <rect key="frame" x="306" y="24" width="35" height="35"/>
+                        <rect key="frame" x="301" y="22" width="40" height="40"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="35" id="DJz-Oj-Mmn"/>
-                            <constraint firstAttribute="height" constant="35" id="uGU-qH-7Af"/>
+                            <constraint firstAttribute="width" constant="40" id="DJz-Oj-Mmn"/>
+                            <constraint firstAttribute="height" constant="40" id="uGU-qH-7Af"/>
                         </constraints>
                         <connections>
                             <action selector="addToCartClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="I5c-D5-H0L"/>

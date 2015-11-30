@@ -19,8 +19,9 @@
 - (IBAction)addButtonClicked:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *addButtonClicked;
 @property (weak, nonatomic) IBOutlet UIButton *subtractButtonClicked;
-@property (weak, nonatomic) IBOutlet UIImageView *imageViewForAddToCart;
-@property (weak, nonatomic) IBOutlet UILabel *labelForItemCount;
+
+@property (weak, nonatomic) IBOutlet UIButton *addToCartPressed;
+
 @property (weak, nonatomic) IBOutlet UILabel *labelForProductName;
 @property (weak, nonatomic) IBOutlet UILabel *labelForPrice;
 @property (weak, nonatomic) IBOutlet UILabel *labelForQuantity;

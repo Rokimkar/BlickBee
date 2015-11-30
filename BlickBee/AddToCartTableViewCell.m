@@ -54,11 +54,10 @@
     [self.labelForProductName setNumberOfLines:0];
     self.labelForProductName.text=product.productName;
     [self.labelForProductName sizeToFit];
-    self.labelForItemCount.text=[NSString stringWithFormat:@"%ld",(long)items];
     self.labelForPrice.text=product.productPrice;
     self.labelForQuantity.text=product.productQuantity;
-    self.imageViewForAddToCart.image = [UIImage imageNamed:@"cart_green.png"];
-    self.labelForItemCount.text=quantity;
+    //self.labelForItemCount.text=quantity;
+    [self.addToCartPressed setTitle:quantity forState:UIControlStateNormal];
     self.backgroundColor=RGBA(225, 225, 225, 1);
 }
 
@@ -67,7 +66,6 @@
     items+=1;
     }
     [self.reloadTableCellDelegate addClicked:self.itemData];
-    
     
 }
 - (IBAction)subtractButtonClicked:(id)sender {
