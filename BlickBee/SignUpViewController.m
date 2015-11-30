@@ -12,13 +12,17 @@
 #import "SWRevealViewController.h"
 #import "OTPViewController.h"
 @interface SignUpViewController ()
-
+{
+    BOOL securityEntry;
+}
 @end
 
 @implementation SignUpViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    securityEntry=YES;
+    self.passwordTextField.secureTextEntry = securityEntry;
     // Do any additional setup after loading the view.
 }
 
@@ -74,7 +78,51 @@
     }];
     
 }
+- (IBAction)showPasswordPressed:(id)sender {
+    securityEntry=!securityEntry;
+    self.passwordTextField.secureTextEntry = securityEntry;
+}
 
+-(void)viewWillLayoutSubviews{
+    [super viewWillLayoutSubviews];
+    [self prepareView];
+    // Your layout logic here
+}
+-(void) prepareView{
+    CALayer *border = [CALayer layer];
+    CGFloat borderWidth = 1;
+    border.borderColor = [UIColor whiteColor].CGColor;
+    border.frame = CGRectMake(0, self.nameTextField.frame.size.height - borderWidth, self.nameTextField.frame.size.width, self.nameTextField.frame.size.height);
+    border.borderWidth = borderWidth;
+    [self.nameTextField.layer addSublayer:border];
+    self.nameTextField.layer.masksToBounds = YES;
+    
+    
+    CALayer *border2 = [CALayer layer];
+    border2.borderColor = [UIColor whiteColor].CGColor;
+    border2.frame = CGRectMake(0, self.emailTextField.frame.size.height - borderWidth, self.emailTextField.frame.size.width, self.emailTextField.frame.size.height);
+    border2.borderWidth = borderWidth;
+    [self.emailTextField.layer addSublayer:border2];
+    self.emailTextField.layer.masksToBounds = YES;
+
+    CALayer *border3 = [CALayer layer];
+    border3.borderColor = [UIColor whiteColor].CGColor;
+    border3.frame = CGRectMake(0, self.passwordTextField.frame.size.height - borderWidth, self.passwordTextField.frame.size.width, self.passwordTextField.frame.size.height);
+    border3.borderWidth = borderWidth;
+    [self.passwordTextField.layer addSublayer:border3];
+    self.passwordTextField.layer.masksToBounds = YES;
+    
+    CALayer *border4 = [CALayer layer];
+    border4.borderColor = [UIColor whiteColor].CGColor;
+    border4.frame = CGRectMake(0, self.phoneTextField.frame.size.height - borderWidth, self.phoneTextField.frame.size.width, self.phoneTextField.frame.size.height);
+    border4.borderWidth = borderWidth;
+    [self.phoneTextField.layer addSublayer:border4];
+    self.phoneTextField.layer.masksToBounds = YES;
+    
+    self.signUpBtn.layer.cornerRadius = 17.0;
+    self.signUpBtn.layer.borderWidth = 2.0;
+    self.signUpBtn.layer.borderColor = [UIColor whiteColor].CGColor;
+}
 /*
 #pragma mark - Navigation
 
