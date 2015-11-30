@@ -10,6 +10,7 @@
 #import "LoginServiceClient.h"
 #import "SWRevealViewController.h"
 #import "BlickbeeAppManager.h"
+#import "UIFont+Custom.h"
 @interface SignInViewController ()
 {
     BOOL securityEntry;
@@ -86,6 +87,7 @@
     self.passTextField.secureTextEntry = securityEntry;
 }
 - (IBAction)forgotPassword:(id)sender {
+
 }
 
 -(void) prepareView{

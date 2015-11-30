@@ -33,7 +33,7 @@
         failure(nil);
         return;
     }
-    
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
@@ -44,6 +44,7 @@
     manager.responseSerializer.acceptableContentTypes= [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     [manager POST:BASE_URL_STRING parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         success([self getRepoFrom:[responseObject objectForKey:@"response_data"]]);
+        [SVProgressHUD dismiss];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
         if (error.code==-1009) {
@@ -58,7 +59,7 @@
                                                   otherButtonTitles:nil];
         [alertView show];
         failure(error);
-
+        [SVProgressHUD dismiss];
     }];
 }
 

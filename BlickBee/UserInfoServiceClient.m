@@ -35,7 +35,7 @@
                              @"user_id": [BlickbeeAppManager sharedInstance].user.userId,
                              @"auth_key": [BlickbeeAppManager sharedInstance].user.authKey
                              };
-    
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
     manager.responseSerializer.acceptableContentTypes= [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     [manager POST:BASE_URL_STRING parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
@@ -51,6 +51,7 @@
         else{
             failure(nil);
         }
+        [SVProgressHUD dismiss];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
         if (error.code==-1009) {
@@ -65,7 +66,7 @@
                                                   otherButtonTitles:nil];
         [alertView show];
         failure(error);
-        
+        [SVProgressHUD dismiss];
     }];
 }
 

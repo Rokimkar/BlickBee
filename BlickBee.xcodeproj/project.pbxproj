@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C296DEC1C0CC6D5001AE0FC /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE21C0CC6D5001AE0FC /* ProximaNova-Bold.otf */; settings = {ASSET_TAGS = (); }; };
+		0C296DED1C0CC6D5001AE0FC /* ProximaNova-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE31C0CC6D5001AE0FC /* ProximaNova-Light.otf */; settings = {ASSET_TAGS = (); }; };
+		0C296DEE1C0CC6D5001AE0FC /* ProximaNova-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE41C0CC6D5001AE0FC /* ProximaNova-Semibold.otf */; settings = {ASSET_TAGS = (); }; };
+		0C296DEF1C0CC6D5001AE0FC /* ProximaNovaCond-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE51C0CC6D5001AE0FC /* ProximaNovaCond-Regular.otf */; settings = {ASSET_TAGS = (); }; };
+		0C296DF01C0CC6D5001AE0FC /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE61C0CC6D5001AE0FC /* Roboto-Bold.ttf */; settings = {ASSET_TAGS = (); }; };
+		0C296DF11C0CC6D5001AE0FC /* Roboto-Condensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE71C0CC6D5001AE0FC /* Roboto-Condensed.ttf */; settings = {ASSET_TAGS = (); }; };
+		0C296DF21C0CC6D5001AE0FC /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE81C0CC6D5001AE0FC /* Roboto-Light.ttf */; settings = {ASSET_TAGS = (); }; };
+		0C296DF31C0CC6D5001AE0FC /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE91C0CC6D5001AE0FC /* Roboto-Medium.ttf */; settings = {ASSET_TAGS = (); }; };
+		0C296DF41C0CC6D5001AE0FC /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DEA1C0CC6D5001AE0FC /* Roboto-Regular.ttf */; settings = {ASSET_TAGS = (); }; };
+		0C296DF51C0CC6D5001AE0FC /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DEB1C0CC6D5001AE0FC /* Roboto-Thin.ttf */; settings = {ASSET_TAGS = (); }; };
+		0C296DFB1C0CCA9D001AE0FC /* UIFont+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C296DFA1C0CCA9D001AE0FC /* UIFont+Custom.m */; settings = {ASSET_TAGS = (); }; };
 		0C2F06FC1BEE458000F6B7DB /* ProductsServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F06FB1BEE458000F6B7DB /* ProductsServiceClient.m */; };
 		0C2F06FF1BEE45C000F6B7DB /* BaseServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F06FE1BEE45C000F6B7DB /* BaseServiceClient.m */; };
 		0C2F07131BEE6B1200F6B7DB /* Offer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F07121BEE6B1200F6B7DB /* Offer.m */; };
@@ -156,6 +167,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C296DE21C0CC6D5001AE0FC /* ProximaNova-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Bold.otf"; sourceTree = "<group>"; };
+		0C296DE31C0CC6D5001AE0FC /* ProximaNova-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Light.otf"; sourceTree = "<group>"; };
+		0C296DE41C0CC6D5001AE0FC /* ProximaNova-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Semibold.otf"; sourceTree = "<group>"; };
+		0C296DE51C0CC6D5001AE0FC /* ProximaNovaCond-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaCond-Regular.otf"; sourceTree = "<group>"; };
+		0C296DE61C0CC6D5001AE0FC /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		0C296DE71C0CC6D5001AE0FC /* Roboto-Condensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Condensed.ttf"; sourceTree = "<group>"; };
+		0C296DE81C0CC6D5001AE0FC /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		0C296DE91C0CC6D5001AE0FC /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		0C296DEA1C0CC6D5001AE0FC /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		0C296DEB1C0CC6D5001AE0FC /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		0C296DF91C0CCA9D001AE0FC /* UIFont+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Custom.h"; sourceTree = "<group>"; };
+		0C296DFA1C0CCA9D001AE0FC /* UIFont+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Custom.m"; sourceTree = "<group>"; };
 		0C2F06FA1BEE458000F6B7DB /* ProductsServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductsServiceClient.h; sourceTree = "<group>"; };
 		0C2F06FB1BEE458000F6B7DB /* ProductsServiceClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductsServiceClient.m; sourceTree = "<group>"; };
 		0C2F06FD1BEE45C000F6B7DB /* BaseServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseServiceClient.h; sourceTree = "<group>"; };
@@ -394,6 +417,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C296DE11C0CC6BC001AE0FC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0C296DE21C0CC6D5001AE0FC /* ProximaNova-Bold.otf */,
+				0C296DE31C0CC6D5001AE0FC /* ProximaNova-Light.otf */,
+				0C296DE41C0CC6D5001AE0FC /* ProximaNova-Semibold.otf */,
+				0C296DE51C0CC6D5001AE0FC /* ProximaNovaCond-Regular.otf */,
+				0C296DE61C0CC6D5001AE0FC /* Roboto-Bold.ttf */,
+				0C296DE71C0CC6D5001AE0FC /* Roboto-Condensed.ttf */,
+				0C296DE81C0CC6D5001AE0FC /* Roboto-Light.ttf */,
+				0C296DE91C0CC6D5001AE0FC /* Roboto-Medium.ttf */,
+				0C296DEA1C0CC6D5001AE0FC /* Roboto-Regular.ttf */,
+				0C296DEB1C0CC6D5001AE0FC /* Roboto-Thin.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		0C2F06F91BEE453C00F6B7DB /* ServiceClients */ = {
 			isa = PBXGroup;
 			children = (
@@ -511,6 +551,8 @@
 				A0DB843F1C0B7A8A004BFD03 /* AboutUs */,
 				A052530C1BE9F271007EF74F /* AppDelegate.h */,
 				A052530D1BE9F271007EF74F /* AppDelegate.m */,
+				0C296DF91C0CCA9D001AE0FC /* UIFont+Custom.h */,
+				0C296DFA1C0CCA9D001AE0FC /* UIFont+Custom.m */,
 				0C2F072B1BEF3D6200F6B7DB /* BlickbeePrefix.pch */,
 				A052530F1BE9F271007EF74F /* ViewController.h */,
 				A05253101BE9F271007EF74F /* ViewController.m */,
@@ -553,6 +595,7 @@
 			isa = PBXGroup;
 			children = (
 				A052530A1BE9F271007EF74F /* main.m */,
+				0C296DE11C0CC6BC001AE0FC /* Fonts */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -865,6 +908,7 @@
 			files = (
 				A0DDA0731BFB3DE2000D9580 /* CartTableViewCell.xib in Resources */,
 				A0DA71A21BF074E10012490E /* my orders empty.png in Resources */,
+				0C296DF21C0CC6D5001AE0FC /* Roboto-Light.ttf in Resources */,
 				A0D5E31F1BFE02BD00650E58 /* DeliveryDetailTableViewCell.xib in Resources */,
 				A0DA71AB1BF074E10012490E /* settings.png in Resources */,
 				A0DA719B1BF074E10012490E /* eyesopen.png in Resources */,
@@ -872,8 +916,11 @@
 				0C2F07291BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.xib in Resources */,
 				A0DA71AA1BF074E10012490E /* search.png in Resources */,
 				A0DA719D1BF074E10012490E /* home.png in Resources */,
+				0C296DEC1C0CC6D5001AE0FC /* ProximaNova-Bold.otf in Resources */,
+				0C296DEF1C0CC6D5001AE0FC /* ProximaNovaCond-Regular.otf in Resources */,
 				A0D414121C0648840077BA42 /* OrdersDetailTableViewCell.xib in Resources */,
 				A0DA71AF1BF074E10012490E /* user icon.png in Resources */,
+				0C296DF41C0CC6D5001AE0FC /* Roboto-Regular.ttf in Resources */,
 				A0DA71A91BF074E10012490E /* rateus.png in Resources */,
 				0C2FBC561C06494C00A374E1 /* AddAddressViewController.xib in Resources */,
 				A0DA71A41BF074E10012490E /* notifications_grey.png in Resources */,
@@ -883,6 +930,7 @@
 				A0DA71A31BF074E10012490E /* my_orders.png in Resources */,
 				A0DA71B01BF074E10012490E /* user-icon.png in Resources */,
 				A0DA71951BF074E10012490E /* cart_white_64x.png in Resources */,
+				0C296DF01C0CC6D5001AE0FC /* Roboto-Bold.ttf in Resources */,
 				A0DA71A81BF074E10012490E /* Profile and Account Details.png in Resources */,
 				A0DA71A51BF074E10012490E /* notifications.png in Resources */,
 				A0DA71971BF074E10012490E /* customerservice.png in Resources */,
@@ -893,8 +941,10 @@
 				A0DDA05D1BF8DA5C000D9580 /* cardLayout.png in Resources */,
 				A0D060EB1C03441C001E70B9 /* MyOrdersTableViewCell.xib in Resources */,
 				A0DA719E1BF074E10012490E /* logo+text 250x.png in Resources */,
+				0C296DF51C0CC6D5001AE0FC /* Roboto-Thin.ttf in Resources */,
 				A0DA71AC1BF074E10012490E /* share.png in Resources */,
 				A05253161BE9F271007EF74F /* Assets.xcassets in Resources */,
+				0C296DF31C0CC6D5001AE0FC /* Roboto-Medium.ttf in Resources */,
 				A0DA71901BF074E10012490E /* 2_b.png in Resources */,
 				A0DA71931BF074E10012490E /* back.png in Resources */,
 				A0DA71961BF074E10012490E /* cartadd.png in Resources */,
@@ -904,6 +954,7 @@
 				A0DA71A01BF074E10012490E /* logo+text 350x.png in Resources */,
 				A0DA71911BF074E10012490E /* 2_c.png in Resources */,
 				A0D5E3271BFE6AE800650E58 /* DeliveryTimeTableViewCell.xib in Resources */,
+				0C296DF11C0CC6D5001AE0FC /* Roboto-Condensed.ttf in Resources */,
 				A0DDA0641BF9B716000D9580 /* BaseTableViewCell.xib in Resources */,
 				A0DA71991BF074E10012490E /* email5.png in Resources */,
 				A0DA719A1BF074E10012490E /* eyesclosed.png in Resources */,
@@ -912,10 +963,12 @@
 				A0DA71B11BF074E10012490E /* veg_vector.jpg in Resources */,
 				A0DA719F1BF074E10012490E /* logo+text 300x.png in Resources */,
 				A0DA71A11BF074E10012490E /* menu.png in Resources */,
+				0C296DED1C0CC6D5001AE0FC /* ProximaNova-Light.otf in Resources */,
 				A0DA718F1BF074E10012490E /* 2_a.png in Resources */,
 				A0DA71941BF074E10012490E /* cart_green.png in Resources */,
 				A0DA719C1BF074E10012490E /* fruits_vector.jpg in Resources */,
 				A0DA71A71BF074E10012490E /* power17.png in Resources */,
+				0C296DEE1C0CC6D5001AE0FC /* ProximaNova-Semibold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -996,6 +1049,7 @@
 				A0D5E31E1BFE02BD00650E58 /* DeliveryDetailTableViewCell.m in Sources */,
 				A0D060EA1C03441C001E70B9 /* MyOrdersTableViewCell.m in Sources */,
 				0C2F07281BEF3A9A00F6B7DB /* TopZoneCollectionViewCell.m in Sources */,
+				0C296DFB1C0CCA9D001AE0FC /* UIFont+Custom.m in Sources */,
 				0C2F071F1BEE781B00F6B7DB /* ProductRepo.m in Sources */,
 				0C2FBC6F1C09164800A374E1 /* SocialShareManager.m in Sources */,
 				A0D5E31A1BFDFE3C00650E58 /* DeliveryDetailViewController.m in Sources */,

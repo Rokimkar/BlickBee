@@ -27,7 +27,7 @@
                              @"password": [inputDict objectForKey:@"password"],
                              @"email": [inputDict objectForKey:@"email"],
                              @"access_token": [inputDict objectForKey:@"access_token"]};
-    
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
     manager.responseSerializer.acceptableContentTypes= [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     [manager POST:BASE_URL_STRING parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
@@ -37,6 +37,7 @@
         else{
             failure(nil);
         }
+        [SVProgressHUD dismiss];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
         if (error.code==-1009) {
@@ -51,7 +52,7 @@
                                                   otherButtonTitles:nil];
         [alertView show];
         failure(error);
-        
+        [SVProgressHUD dismiss];
     }];
 
 }
@@ -74,7 +75,7 @@
                              @"phone": [inputDict objectForKey:@"phone"],
                              @"name": [inputDict objectForKey:@"name"],
                              @"device_id": [inputDict objectForKey:@"device_id"]};
-    
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
     manager.responseSerializer.acceptableContentTypes= [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     [manager POST:BASE_URL_STRING parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
@@ -84,6 +85,7 @@
         else{
             failure(nil);
         }
+        [SVProgressHUD dismiss];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
         if (error.code==-1009) {
@@ -98,7 +100,7 @@
                                                   otherButtonTitles:nil];
         [alertView show];
         failure(error);
-        
+        [SVProgressHUD dismiss];
     }];
     
 }
@@ -122,7 +124,7 @@
                              @"user_id": [BlickbeeAppManager sharedInstance].user.userId,
                              @"OTP": otpStr
                              };
-    
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
     manager.responseSerializer.acceptableContentTypes= [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     [manager POST:BASE_URL_STRING parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
@@ -132,6 +134,7 @@
         else{
             failure(nil);
         }
+        [SVProgressHUD dismiss];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
         if (error.code==-1009) {
@@ -146,7 +149,7 @@
                                                   otherButtonTitles:nil];
         [alertView show];
         failure(error);
-        
+        [SVProgressHUD dismiss];
     }];
     
 }
@@ -164,6 +167,7 @@
                              @"phone": [BlickbeeAppManager sharedInstance].user.phone
                              };
     manager.responseSerializer.acceptableContentTypes= [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
     [manager POST:BASE_URL_STRING parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if ([[responseObject objectForKey:@"response"] isEqualToString:@"success"]) {
             success();
@@ -171,6 +175,7 @@
         else{
             failure(nil);
         }
+        [SVProgressHUD dismiss];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
         if (error.code==-1009) {
@@ -184,6 +189,7 @@
                                                   otherButtonTitles:nil];
         [alertView show];
         failure(error);
+        [SVProgressHUD dismiss];
     }];
 }
 
@@ -204,6 +210,7 @@
                              @"password": newPassword
                              };
     manager.responseSerializer.acceptableContentTypes= [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
     [manager POST:BASE_URL_STRING parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if ([[responseObject objectForKey:@"response"] isEqualToString:@"success"]) {
             success();
@@ -211,6 +218,7 @@
         else{
             failure(nil);
         }
+        [SVProgressHUD dismiss];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
         if (error.code==-1009) {
@@ -224,6 +232,7 @@
                                                   otherButtonTitles:nil];
         [alertView show];
         failure(error);
+        [SVProgressHUD dismiss];
     }];
 }
 

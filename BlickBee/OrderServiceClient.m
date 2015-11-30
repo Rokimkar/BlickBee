@@ -67,7 +67,7 @@
                              @"shipping_id": address.addressId,
                              @"product_unit_qnt": productAmt,
                              @"total_amount": [NSString stringWithFormat:@"%f",totalAmt]};
-    
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
     manager.responseSerializer.acceptableContentTypes= [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     [manager POST:BASE_URL_STRING parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
@@ -78,6 +78,7 @@
         else{
             failure(nil);
         }
+        [SVProgressHUD dismiss];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
         if (error.code==-1009) {
@@ -92,7 +93,7 @@
                                                   otherButtonTitles:nil];
         [alertView show];
         failure(error);
-        
+        [SVProgressHUD dismiss];
     }];
 }
 
@@ -209,7 +210,7 @@
                              @"auth_key": [BlickbeeAppManager sharedInstance].user.authKey,
                              @"cart_id": [BlickbeeAppManager sharedInstance].user.cartId
                              };
-    
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
     manager.responseSerializer.acceptableContentTypes= [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     [manager POST:BASE_URL_STRING parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
@@ -219,6 +220,7 @@
         else{
             failure(nil);
         }
+        [SVProgressHUD dismiss];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
         if (error.code==-1009) {
@@ -233,7 +235,7 @@
                                                   otherButtonTitles:nil];
         [alertView show];
         failure(error);
-        
+        [SVProgressHUD dismiss];
     }];
 }
 -(NSMutableArray*) getFullOrderFor:(NSArray*)responseArray{
