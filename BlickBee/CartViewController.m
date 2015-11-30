@@ -10,6 +10,7 @@
 #import "CartTableView.h"
 #import "Product.h"
 #import "BlickbeeAppManager.h"
+#import "CartFooterView.h"
 
 @interface CartViewController ()<openHomeVC>{
     CartTableView *cartTableView;
@@ -42,6 +43,11 @@
         [self.view addSubview:cartTableView];
         [self.view bringSubviewToFront:cartTableView];
         cartTableView.backgroundColor=RGBA(225, 225, 225, 1);
+//        CartFooterView* footerView = [[CartFooterView alloc] initWithFrame:CGRectMake(0, 0, getScreenWidth(), 100)];
+        CartFooterView *footerView = [[[NSBundle mainBundle] loadNibNamed:@"CartFooterView" owner:self options:nil] objectAtIndex:0];
+        [footerView prepareView];
+        cartTableView.tableFooterView = footerView;
+
     }
     self.labelForSubtotal.text=@"₹ 732.0";
     self.labelForDelivery.text=@"Free";
@@ -64,6 +70,9 @@
 }
 - (IBAction)proceedButtonClicked:(id)sender {
     
-    
+}
+
+-(void) presentHome{
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 @end

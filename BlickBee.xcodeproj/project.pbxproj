@@ -182,6 +182,9 @@
 		0C296DEB1C0CC6D5001AE0FC /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		0C296DF91C0CCA9D001AE0FC /* UIFont+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Custom.h"; sourceTree = "<group>"; };
 		0C296DFA1C0CCA9D001AE0FC /* UIFont+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Custom.m"; sourceTree = "<group>"; };
+		0C296DFC1C0CDCDD001AE0FC /* CartFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartFooterView.h; sourceTree = "<group>"; };
+		0C296DFD1C0CDCDD001AE0FC /* CartFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartFooterView.m; sourceTree = "<group>"; };
+		0C296DFF1C0CDD02001AE0FC /* CartFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CartFooterView.xib; sourceTree = "<group>"; };
 		0C2F06FA1BEE458000F6B7DB /* ProductsServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductsServiceClient.h; sourceTree = "<group>"; };
 		0C2F06FB1BEE458000F6B7DB /* ProductsServiceClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductsServiceClient.m; sourceTree = "<group>"; };
 		0C2F06FD1BEE45C000F6B7DB /* BaseServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseServiceClient.h; sourceTree = "<group>"; };
@@ -787,6 +790,9 @@
 				A0DDA06F1BFB3DE2000D9580 /* CartTableViewCell.h */,
 				A0DDA0701BFB3DE2000D9580 /* CartTableViewCell.m */,
 				A0DDA0711BFB3DE2000D9580 /* CartTableViewCell.xib */,
+				0C296DFC1C0CDCDD001AE0FC /* CartFooterView.h */,
+				0C296DFD1C0CDCDD001AE0FC /* CartFooterView.m */,
+				0C296DFF1C0CDD02001AE0FC /* CartFooterView.xib */,
 			);
 			name = Cart;
 			sourceTree = "<group>";
@@ -988,6 +994,7 @@
 				0C296DED1C0CC6D5001AE0FC /* ProximaNova-Light.otf in Resources */,
 				A0DA718F1BF074E10012490E /* 2_a.png in Resources */,
 				A0DA71941BF074E10012490E /* cart_green.png in Resources */,
+				0C296E001C0CDD02001AE0FC /* CartFooterView.xib in Resources */,
 				A0DA719C1BF074E10012490E /* fruits_vector.jpg in Resources */,
 				A0DA71A71BF074E10012490E /* power17.png in Resources */,
 				0C296DEE1C0CC6D5001AE0FC /* ProximaNova-Semibold.otf in Resources */,
@@ -1128,6 +1135,7 @@
 				A0D5E3261BFE6AE800650E58 /* DeliveryTimeTableViewCell.m in Sources */,
 				0C2F07191BEE6B4A00F6B7DB /* DeliverySlot.m in Sources */,
 				A0DDA06E1BFB3D9B000D9580 /* CartTableView.m in Sources */,
+				0C296DFE1C0CDCDD001AE0FC /* CartFooterView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
