@@ -97,10 +97,26 @@
     return cell;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+//{
+//    NSString *header=@"Select Delivery Address :";
+//    return header;
+//}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    NSString *header=@"Select delivery address :";
-    return header;
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 35)];
+    /* Create custom view to display section header... */
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, tableView.frame.size.width, 35)];
+    [label setText:@"Select Delivery Address :"];
+    [view addSubview:label];
+    [view setBackgroundColor:[UIColor whiteColor]]; //your background color...
+    
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(10, view.frame.size.height-3, tableView.frame.size.width-20, 1)];
+    [imgView setBackgroundColor:[UIColor lightGrayColor]];
+    [view addSubview:imgView];
+    
+    return view;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -123,14 +139,14 @@
             }
             else if ([BlickbeeAppManager sharedInstance].userAddresses.count==1) {
                 if (indexPath.row==0){
-                    return 150;
+                    return 130;
                 }
                 else{
                     return 70;
                 }
             }
             else if ([BlickbeeAppManager sharedInstance].userAddresses.count==2) {
-                return 150;
+                return 130;
             }
     }
     return 90;
