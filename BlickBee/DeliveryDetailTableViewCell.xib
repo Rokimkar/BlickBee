@@ -17,6 +17,7 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cardLayout.png" translatesAutoresizingMaskIntoConstraints="NO" id="xQF-AM-srl">
                         <rect key="frame" x="8" y="8" width="356" height="68"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S2c-J3-peN">
                         <rect key="frame" x="18" y="18" width="336" height="48"/>
@@ -33,7 +34,6 @@
                     <constraint firstAttribute="bottomMargin" secondItem="S2c-J3-peN" secondAttribute="bottom" constant="10" id="lIO-HI-PoT"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="imageViewFordeliveryDetail" destination="xQF-AM-srl" id="xpP-EM-NJJ"/>
             </connections>

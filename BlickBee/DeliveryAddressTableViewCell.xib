@@ -27,7 +27,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="392" height="128"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9RA-zZ-fcw">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cardLayout.png" translatesAutoresizingMaskIntoConstraints="NO" id="9RA-zZ-fcw">
                         <rect key="frame" x="8" y="8" width="376" height="112"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LcS-3t-jlt" userLabel="name">
@@ -103,9 +103,13 @@
                     </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="9RA-zZ-fcw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="66u-hb-Up8"/>
                     <constraint firstAttribute="bottomMargin" secondItem="NSE-bt-H3h" secondAttribute="bottom" constant="25" id="76n-o1-3d8"/>
                     <constraint firstItem="LcS-3t-jlt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="15" id="879-2V-U58"/>
+                    <constraint firstItem="9RA-zZ-fcw" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="947-xi-Ygs"/>
+                    <constraint firstItem="9RA-zZ-fcw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="94m-P8-8wY"/>
                     <constraint firstItem="x58-Wd-hMt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="9" id="AQe-or-kRp"/>
+                    <constraint firstItem="Cfi-le-RNg" firstAttribute="top" secondItem="9RA-zZ-fcw" secondAttribute="bottom" constant="5" id="LBI-AY-F9W"/>
                     <constraint firstItem="78x-Dg-zTE" firstAttribute="top" secondItem="LcS-3t-jlt" secondAttribute="bottom" constant="1" id="Nc0-3i-1lX"/>
                     <constraint firstItem="7Iz-ao-0eK" firstAttribute="top" secondItem="78x-Dg-zTE" secondAttribute="bottom" constant="1" id="RHg-LN-JFv"/>
                     <constraint firstItem="0tQ-mz-d9y" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="18" id="Z7l-VR-w9c"/>
@@ -136,4 +140,7 @@
             <point key="canvasLocation" x="272" y="236.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="cardLayout.png" width="715" height="206"/>
+    </resources>
 </document>

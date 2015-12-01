@@ -28,7 +28,8 @@
     
         [self.addressConfirmationTableView registerNib:[UINib nibWithNibName:@"DeliveryAddressTableViewCell" bundle:nil] forCellReuseIdentifier:@"DeliveryAddressTableViewCell"];
     [self.addressConfirmationTableView registerNib:[UINib nibWithNibName:@"AddressConfirmationTableViewCell" bundle:nil] forCellReuseIdentifier:@"AddressConfirmationTableViewCell"];
-        
+    [self.view setBackgroundColor:RGBA(225, 225, 225, 1)];
+    [self.addressConfirmationTableView setBackgroundColor:RGBA(225, 225, 225, 1)];
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
@@ -83,6 +84,8 @@
         cellTwo.itemAddress=self.address;
         [cellTwo bindData:self.address];
         cellTwo.backgroundColor=RGBA(225, 225, 225, 1);
+        [cellTwo.editButtonClicked setHidden:YES];
+        [cellTwo.removeButtonClicked setHidden:YES];
         return cellTwo;
     }
     return cell;
@@ -127,7 +130,7 @@
     if(indexPath.section==1){
         return 125;
     }
-    return 150;
+    return 130;
 }
 
 - (IBAction)confirmOrderClicked:(id)sender {

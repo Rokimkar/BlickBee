@@ -972,7 +972,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LgA-69-ekL">
-                                <rect key="frame" x="-4" y="20" width="328" height="487"/>
+                                <rect key="frame" x="3" y="0.0" width="314" height="507"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="6y2-fD-glr" id="EXp-F8-19n"/>
@@ -1000,13 +1000,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="LgA-69-ekL" firstAttribute="top" secondItem="sQ4-Gj-N2j" secondAttribute="bottom" id="8zb-el-is7"/>
-                            <constraint firstItem="LgA-69-ekL" firstAttribute="leading" secondItem="etP-a6-k2d" secondAttribute="leadingMargin" constant="-20" id="ApS-Pj-hw6"/>
+                            <constraint firstItem="NZE-VS-BLX" firstAttribute="top" secondItem="LgA-69-ekL" secondAttribute="bottom" id="A1L-rT-WOk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LgA-69-ekL" secondAttribute="trailing" constant="-13" id="NW5-Dd-Tfu"/>
                             <constraint firstItem="NZE-VS-BLX" firstAttribute="leading" secondItem="etP-a6-k2d" secondAttribute="leadingMargin" constant="-24" id="P8i-BX-14H"/>
-                            <constraint firstItem="NZE-VS-BLX" firstAttribute="top" secondItem="LgA-69-ekL" secondAttribute="bottom" id="XNW-pH-8FT"/>
+                            <constraint firstItem="LgA-69-ekL" firstAttribute="top" secondItem="etP-a6-k2d" secondAttribute="topMargin" id="YkS-K8-g47"/>
                             <constraint firstItem="hiz-yH-C8b" firstAttribute="top" secondItem="NZE-VS-BLX" secondAttribute="bottom" id="aEW-kr-yvR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NZE-VS-BLX" secondAttribute="trailing" constant="-24" id="lTf-8t-lQc"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="LgA-69-ekL" secondAttribute="trailing" constant="-20" id="xFI-cZ-CQe"/>
+                            <constraint firstItem="LgA-69-ekL" firstAttribute="leading" secondItem="etP-a6-k2d" secondAttribute="leadingMargin" constant="-13" id="r3a-SX-0LL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Yos-nQ-86h"/>
