@@ -63,7 +63,7 @@
         cell = [nib objectAtIndex:0];
     }
     cell.backgroundColor=RGBA(225, 225, 225, 1);
-    cell.imageViewFordeliveryDetail.image=[UIImage imageNamed:@"2_b.png"];
+    cell.imageViewFordeliveryDetail.image=[UIImage imageNamed:@"2.png"];
     [cell.imageViewFordeliveryDetail sizeToFit];
     if(indexPath.section==1){
         AddressConfirmationTableViewCell *cellOne = (AddressConfirmationTableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"AddressConfirmationTableViewCell"];
