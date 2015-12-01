@@ -12,6 +12,7 @@
 #import "BlickbeePrefix.pch"
 #import "Product.h"
 #import "AddToCartTableViewCell.h"
+#import "BlickbeeAppManager.h"
 
 @interface BaseTableView() <reloadTable,productProtocolDelegate>{
     
@@ -36,8 +37,7 @@
 -(void) productRecievedFromCell: (Product*) product{
     NSInteger row = [self.productArray indexOfObject:product];
     if (row>=0 && row<self.productArray.count) {
-        product.selectedProductQuantity=@"1";
-        [self.changeFlotingBtnDelegate changeValOfFloatingBtn:1];
+        [self.changeFlotingBtnDelegate changeValOfFloatingBtn];
         [self reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:row inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
     }
 //    self.indexpth = [NSIndexPath indexPathForRow:row inSection:0];
@@ -48,7 +48,7 @@
     NSInteger row = [self.productArray indexOfObject:product];
     if (row>=0 && row<self.productArray.count) {
         product.selectedProductQuantity=[NSString stringWithFormat:@"%ld",(long)([product.selectedProductQuantity integerValue]+1)];
-        [self.changeFlotingBtnDelegate changeValOfFloatingBtn:1];
+        [self.changeFlotingBtnDelegate changeValOfFloatingBtn];
         [self reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:row inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
     }
 }
@@ -58,8 +58,11 @@
     if (row>=0 && row<self.productArray.count) {
         if(![product.selectedProductQuantity isEqualToString:@"0"]){
         product.selectedProductQuantity=[NSString stringWithFormat:@"%ld",(long)([product.selectedProductQuantity integerValue]-1)];
-            [self.changeFlotingBtnDelegate changeValOfFloatingBtn:-1];
+            [self.changeFlotingBtnDelegate changeValOfFloatingBtn];
         [self reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:row inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
+            if([product.selectedProductQuantity isEqualToString:@"0"]){
+                [[BlickbeeAppManager sharedInstance].selectedProducts removeObject:product];
+            }
         }
     }
 }

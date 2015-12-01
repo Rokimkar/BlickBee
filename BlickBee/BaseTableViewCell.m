@@ -25,10 +25,11 @@
 - (IBAction)addToCartClicked:(id)sender {
     
     //delegate - product
-    [self.productDelegate productRecievedFromCell:self.item];
+    self.item.selectedProductQuantity = @"1";
     if(![[[BlickbeeAppManager sharedInstance] selectedProducts] containsObject:self.item]){
     [[[BlickbeeAppManager sharedInstance] selectedProducts] addObject:self.item];
     }
+    [self.productDelegate productRecievedFromCell:self.item];
 }
 
 
