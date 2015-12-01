@@ -11,6 +11,12 @@
 @protocol reloadTableViewCell <NSObject>
 -(void) reloadCellWithProduct : (Product *) product;
 @end
+
+@protocol productQuantityChanged <NSObject>
+
+-(void) productQuantityChanged;
+
+@end
 @interface CartTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewForProduct;
 @property (weak, nonatomic) IBOutlet UILabel *labelForProductTitle;
@@ -26,4 +32,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelForQuantity;
 @property (nonatomic,strong) Product *item;
 @property (weak,nonatomic) id <reloadTableViewCell> reloadCellDelegate;
+@property (weak,nonatomic) id<productQuantityChanged> productQuantityChangedDelegate;
 @end

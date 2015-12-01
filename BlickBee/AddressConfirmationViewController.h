@@ -11,6 +11,9 @@
 #import "Order.h"
 @interface AddressConfirmationViewController : UIViewController
 @property (strong, nonatomic) Address *address;
-@property (strong, nonatomic) Order *orderItem;
 @property (weak, nonatomic) IBOutlet UITableView *addressConfirmationTableView;
+
+@property (weak, nonatomic) IBOutlet UIButton *confirmOrderClicked;
+- (IBAction)confirmOrderClicked:(id)sender;
+
 @end

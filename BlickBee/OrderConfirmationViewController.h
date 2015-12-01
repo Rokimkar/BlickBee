@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Order.h"
 
 @interface OrderConfirmationViewController : UIViewController
 - (IBAction)shopMoreButtonPressed:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *shopMoreButtonPressed;
 @property (weak, nonatomic) IBOutlet UILabel *labelForOrderID;
+@property (strong,nonatomic) Order *orderItem;
 @end

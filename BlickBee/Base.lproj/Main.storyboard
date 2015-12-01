@@ -853,7 +853,7 @@
                                 </state>
                                 <connections>
                                     <action selector="proceedButtonClicked:" destination="uej-bX-zHJ" eventType="touchUpInside" id="CVT-fE-6vw"/>
-                                    <segue destination="Nlg-zg-BPt" kind="push" id="DoE-pz-5xS"/>
+                                    <segue destination="Nlg-zg-BPt" kind="push" identifier="DeliveryDetailSegue" id="DoE-pz-5xS"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FYf-w6-fge">
@@ -929,8 +929,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orP-p3-u88">
-                                <rect key="frame" x="-4" y="508" width="320" height="61"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orP-p3-u88">
+                                <rect key="frame" x="-4" y="508" width="328" height="61"/>
                                 <color key="backgroundColor" red="0.87450980389999999" green="0.25490196079999999" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="Iee-z1-q3h"/>
@@ -962,7 +962,7 @@
         <!--Address Confirmation View Controller-->
         <scene sceneID="xmT-I7-BLy">
             <objects>
-                <viewController storyboardIdentifier="AddressConfirmationViewController" id="6y2-fD-glr" customClass="AddressConfirmationViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddressConfirmationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6y2-fD-glr" customClass="AddressConfirmationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sQ4-Gj-N2j"/>
                         <viewControllerLayoutGuide type="bottom" id="hiz-yH-C8b"/>
@@ -971,19 +971,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LgA-69-ekL">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LgA-69-ekL">
+                                <rect key="frame" x="-4" y="20" width="328" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="6y2-fD-glr" id="EXp-F8-19n"/>
                                     <outlet property="delegate" destination="6y2-fD-glr" id="eRK-LG-anx"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZE-VS-BLX">
+                                <rect key="frame" x="-8" y="507" width="336" height="61"/>
+                                <color key="backgroundColor" red="0.87450980389999999" green="0.25490196079999999" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="YXU-8t-aeB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Confirm Order">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmOrderClicked:" destination="6y2-fD-glr" eventType="touchUpInside" id="ZhD-Q6-4y1"/>
+                                    <action selector="proceedButtonClicked:" destination="uej-bX-zHJ" eventType="touchUpInside" id="aXY-1N-12P"/>
+                                    <action selector="proceedToPaymentBtnPressed:" destination="Nlg-zg-BPt" eventType="touchUpInside" id="jMU-Tl-oJU"/>
+                                    <segue destination="R2i-Ag-37l" kind="push" identifier="orderConfirmationViewControllerSegue" id="cdo-im-ZMl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LgA-69-ekL" firstAttribute="top" secondItem="sQ4-Gj-N2j" secondAttribute="bottom" id="8zb-el-is7"/>
+                            <constraint firstItem="LgA-69-ekL" firstAttribute="leading" secondItem="etP-a6-k2d" secondAttribute="leadingMargin" constant="-20" id="ApS-Pj-hw6"/>
+                            <constraint firstItem="NZE-VS-BLX" firstAttribute="leading" secondItem="etP-a6-k2d" secondAttribute="leadingMargin" constant="-24" id="P8i-BX-14H"/>
+                            <constraint firstItem="NZE-VS-BLX" firstAttribute="top" secondItem="LgA-69-ekL" secondAttribute="bottom" id="XNW-pH-8FT"/>
+                            <constraint firstItem="hiz-yH-C8b" firstAttribute="top" secondItem="NZE-VS-BLX" secondAttribute="bottom" id="aEW-kr-yvR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NZE-VS-BLX" secondAttribute="trailing" constant="-24" id="lTf-8t-lQc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LgA-69-ekL" secondAttribute="trailing" constant="-20" id="xFI-cZ-CQe"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Yos-nQ-86h"/>
                     <connections>
                         <outlet property="addressConfirmationTableView" destination="LgA-69-ekL" id="atm-W1-d4X"/>
+                        <outlet property="confirmOrderClicked" destination="NZE-VS-BLX" id="JCl-b6-tyO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GXE-og-nfa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1002,21 +1031,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="truck.png" translatesAutoresizingMaskIntoConstraints="NO" id="6RB-rF-i0B">
-                                <rect key="frame" x="52" y="232" width="215" height="104"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="truck.png" translatesAutoresizingMaskIntoConstraints="NO" id="6RB-rF-i0B">
+                                <rect key="frame" x="52" y="276" width="215" height="104"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="104" id="FP1-WW-sLP"/>
                                     <constraint firstAttribute="width" constant="215" id="JXi-zr-BPa"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cardLayout.png" translatesAutoresizingMaskIntoConstraints="NO" id="vES-E1-bt0">
-                                <rect key="frame" x="8" y="46" width="307" height="132"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cardLayout.png" translatesAutoresizingMaskIntoConstraints="NO" id="vES-E1-bt0">
+                                <rect key="frame" x="8" y="90" width="307" height="132"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="132" id="eCU-mS-fBh"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order ID :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VmS-58-ldb">
-                                <rect key="frame" x="17" y="55" width="81" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Order ID :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VmS-58-ldb">
+                                <rect key="frame" x="17" y="99" width="81" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="81" id="aqc-UG-2iW"/>
                                 </constraints>
@@ -1024,26 +1053,26 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you for shopping." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8KN-B2-BTa">
-                                <rect key="frame" x="21" y="83" width="276" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Thank you for shopping." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8KN-B2-BTa">
+                                <rect key="frame" x="21" y="127" width="276" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your order will be delivered shortly." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lr8-c6-0WF">
-                                <rect key="frame" x="21" y="112" width="276" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Your order will be delivered shortly." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lr8-c6-0WF">
+                                <rect key="frame" x="21" y="156" width="276" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1F-jK-sO9">
-                                <rect key="frame" x="106" y="55" width="198" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1F-jK-sO9">
+                                <rect key="frame" x="106" y="99" width="198" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boU-Sw-OXQ">
-                                <rect key="frame" x="82" y="141" width="160" height="29"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boU-Sw-OXQ">
+                                <rect key="frame" x="82" y="185" width="160" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="gLu-9q-ACy"/>
                                 </constraints>
@@ -1076,6 +1105,7 @@
                             <constraint firstItem="8KN-B2-BTa" firstAttribute="trailing" secondItem="lr8-c6-0WF" secondAttribute="trailing" id="u05-ar-mvG"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="fSD-vd-9aR"/>
                     <connections>
                         <outlet property="labelForOrderID" destination="o1F-jK-sO9" id="Vdf-xN-OGQ"/>
                         <outlet property="shopMoreButtonPressed" destination="boU-Sw-OXQ" id="7zi-H0-01v"/>

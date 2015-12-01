@@ -15,11 +15,18 @@
 
 @end
 
+@protocol changePriceLabelInCartViewController <NSObject>
+
+-(void)changePriceLabel;
+
+@end
+
 @interface CartTableView : UITableView
 
 -(id) initWithFrame:(CGRect)frame andProductsArray:(NSMutableArray*) prodsArray;
 @property (weak,nonatomic) NSMutableArray *productArray;
 
 @property (weak,nonatomic) id<openHomeVC> openHomeVCDelegate;
+@property (weak,nonatomic) id<changePriceLabelInCartViewController> changePriceLabelInCartViewControllerDelegate;
 
 @end

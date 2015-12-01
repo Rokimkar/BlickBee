@@ -30,6 +30,7 @@
     [[[BlickbeeAppManager sharedInstance] selectedProducts] addObject:self.item];
     }
     [self.productDelegate productRecievedFromCell:self.item];
+    
 }
 
 

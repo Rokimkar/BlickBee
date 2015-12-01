@@ -14,7 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *labelForTotalQuantity;
 @property (weak, nonatomic) IBOutlet UILabel *labelForPaymentMode;
-
-
--(void) bindDataForOrder : (Order *) order;
+@property (strong,nonatomic) NSString *totalQuantity;
+@property (strong,nonatomic) NSString *totalAmount;
+-(void) bindDataForOrder;
 @end
