@@ -108,29 +108,10 @@
         [[iRate sharedInstance]promptForRating];
     }
     else if (indexPath.row==6){
-        //            UIViewController *topController = [UIApplication sharedApplication].keyWindow.rootViewController;
-        //            while (topController.presentedViewController) {
-        //                topController = topController.presentedViewController;
-        //            }
-        //            if ([topController isKindOfClass:[UINavigationController class]]) {
-        //                UINavigationController *nav = (UINavigationController*)topController;
-        //                topController = nav.visibleViewController;
-        //            }
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         ShareViewController *shareCont = [storyboard instantiateViewControllerWithIdentifier:@"ShareViewController"];
         UINavigationController *NVC = [[UINavigationController alloc]initWithRootViewController:shareCont];
         [revealVC setFrontViewController:NVC];
-        //            UIView *rootView = shareCont.view;
-        //            rootView.alpha=0.0f;
-        //            [[[UIApplication sharedApplication] keyWindow] addSubview:rootView];
-        //            [[[UIApplication sharedApplication] keyWindow] bringSubviewToFront:rootView];
-        //            [UIView animateWithDuration:0.5
-        //                                  delay:0
-        //                                options:UIViewAnimationOptionCurveEaseIn
-        //                             animations:^{
-        //                                 rootView.alpha=1.0f;
-        //                             }
-        //                             completion:nil];
     }
 
     else if(indexPath.row==7){

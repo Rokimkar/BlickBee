@@ -24,5 +24,7 @@
 @property (strong,nonatomic) id<addressUpdated> addressDelegate;
 
 -(id) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andPreviouslySelectedAddress:(Address*)prevSelectedAddress;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewBottomConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewHeightConstraint;
 
 @end

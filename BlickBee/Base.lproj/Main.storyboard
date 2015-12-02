@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vmK-Ox-Yy8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vmK-Ox-Yy8">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -1201,25 +1201,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5cB-dD-HgG">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="76I-wN-toz">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="Y79-Tt-Bo2" id="GBB-3q-aBh"/>
-                                    <outlet property="delegate" destination="Y79-Tt-Bo2" id="Dso-b1-Anf"/>
+                                    <outlet property="dataSource" destination="Y79-Tt-Bo2" id="i4Q-UC-evx"/>
+                                    <outlet property="delegate" destination="Y79-Tt-Bo2" id="IS4-f0-RcJ"/>
                                 </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="EJ8-yN-gJS" firstAttribute="top" secondItem="5cB-dD-HgG" secondAttribute="bottom" id="gHW-7x-Miy"/>
-                            <constraint firstItem="5cB-dD-HgG" firstAttribute="top" secondItem="pgj-46-9rk" secondAttribute="topMargin" id="hbS-BO-otB"/>
-                            <constraint firstItem="5cB-dD-HgG" firstAttribute="leading" secondItem="pgj-46-9rk" secondAttribute="leadingMargin" constant="-20" id="nkx-lu-mT3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="5cB-dD-HgG" secondAttribute="trailing" constant="-20" id="q8e-3I-ChG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="76I-wN-toz" secondAttribute="trailing" constant="-20" id="FaW-6Q-Ygy"/>
+                            <constraint firstItem="76I-wN-toz" firstAttribute="top" secondItem="pgj-46-9rk" secondAttribute="topMargin" id="VzJ-6D-CEs"/>
+                            <constraint firstItem="76I-wN-toz" firstAttribute="leading" secondItem="pgj-46-9rk" secondAttribute="leadingMargin" constant="-20" id="fPT-tq-woL"/>
+                            <constraint firstItem="EJ8-yN-gJS" firstAttribute="top" secondItem="76I-wN-toz" secondAttribute="bottom" id="zLj-bo-RcO"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="shareTableView" destination="5cB-dD-HgG" id="YQH-Eq-8um"/>
+                        <outlet property="shareTableView" destination="76I-wN-toz" id="eEd-DU-AvQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xH5-rN-6nt" userLabel="First Responder" sceneMemberID="firstResponder"/>

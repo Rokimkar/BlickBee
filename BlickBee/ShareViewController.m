@@ -13,6 +13,7 @@
 @interface ShareViewController ()
 {
     NSMutableArray *shareArray;
+    NSMutableArray *imagesArray;
     ShareItem *shareItem;
 }
 @end
@@ -22,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     shareArray= [[NSMutableArray alloc] initWithObjects:@"Whatsapp",@"Facebook",@"Message",@"Copy Link",@"Mail",@"Twitter",@"Google Plus",nil];
-    [self.view setBackgroundColor:[[UIColor blackColor] colorWithAlphaComponent:0.7]];
+    imagesArray= [[NSMutableArray alloc] initWithObjects:@"whatsapp",@"facebook",@"messages_icon",@"copy_link",@"email",@"twittericon",@"googleplus",nil];
     self.title=@"Share";
     SWRevealViewController *swRevealVC = self.revealViewController;
     if(swRevealVC){
@@ -45,7 +46,6 @@
         //[swRevealVC revealToggle:self];
         [swRevealVC revealToggleAnimated:YES];
     }
-    
     shareItem = [[ShareItem alloc] init];
     shareItem.itemTitle=@"Blickbee";
     shareItem.itemDescriptionText=@"Hey there, Check this app out and get fresh fruits and vegetables right at your doorstep, at the most reasonable prices in town. http://bit.ly/blickbee";
@@ -69,6 +69,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     cell.textLabel.text=[shareArray objectAtIndex:indexPath.row];
+    cell.imageView.image = [UIImage imageNamed:[imagesArray objectAtIndex:indexPath.row]];
     return cell;
 }
 
