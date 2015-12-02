@@ -11,7 +11,7 @@
 
 @protocol chngValForFlotingBtn <NSObject>
 
--(void)changeValOfFloatingBtn : (NSInteger) val;
+-(void)changeValOfFloatingBtn;
 
 @end
 

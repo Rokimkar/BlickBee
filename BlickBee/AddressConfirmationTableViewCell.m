@@ -7,6 +7,8 @@
 //
 
 #import "AddressConfirmationTableViewCell.h"
+#import "BlickbeeAppManager.h"
+#import "Product.h"
 
 @implementation AddressConfirmationTableViewCell
 
@@ -18,10 +20,20 @@
     [super setSelected:selected animated:animated];
 }
 
--(void) bindDataForOrder : (Order *) order{
-    self.labelForTotalAmount.text=[NSString stringWithFormat:@"%@ %@",order.payuItemCurrency,order.orderAmount];
-    self.labelForPaymentMode.text=order.paymentMethod;
-    self.labelForTotalQuantity.text=[NSString  stringWithFormat:@"%ld",(long)order.orderedProducts.count];
+-(void) bindDataForOrder{
+    self.labelForPaymentMode.text=@"COD";
+    NSInteger totalAmount=0;
+    NSInteger totalQuantity=0;
+    for(int i=0;i<[BlickbeeAppManager sharedInstance].selectedProducts.count;i++){
+        NSInteger productCost=0;
+        Product *product=[[Product alloc]init];
+        product = [[BlickbeeAppManager sharedInstance].selectedProducts objectAtIndex:i];
+        productCost=[product.productPrice integerValue];
+        totalQuantity+=[product.productPrice integerValue];
+        totalAmount+=([product.selectedProductQuantity integerValue]*[product.productPrice integerValue]);
+    }
+    self.labelForTotalAmount.text=[NSString stringWithFormat:@"%@ %ld",@"₹",(long)totalAmount];
+    self.labelForTotalQuantity.text=[NSString stringWithFormat:@"%ld",totalQuantity];
 }
 
 @end

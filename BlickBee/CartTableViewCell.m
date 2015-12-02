@@ -54,6 +54,8 @@
     self.item.selectedProductQuantity = [NSString stringWithFormat:@"%ld",(long)([self.item.selectedProductQuantity integerValue]+1)];
         [self.reloadCellDelegate reloadCellWithProduct:self.item];
     }
+    [self.productQuantityChangedDelegate productQuantityChanged];
+
 }
 - (IBAction)subtractButtonClicked:(id)sender {
     if([self.item.selectedProductQuantity isEqualToString:@"0"]){
@@ -71,5 +73,6 @@
         }
         [self.reloadCellDelegate reloadCellWithProduct:self.item];
     }
+    [self.productQuantityChangedDelegate productQuantityChanged];
 }
 @end

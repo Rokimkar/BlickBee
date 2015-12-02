@@ -11,6 +11,11 @@
 #import "BlickbeeAppManager.h"
 #import "SWRevealViewController.h"
 #import "HomeViewController.h"
+@interface CartTableView()<productQuantityChanged,reloadTableViewCell>{
+}
+@end
+
+
 @implementation CartTableView
 
 -(id) initWithFrame:(CGRect)frame andProductsArray:(NSMutableArray*) prodsArray{
@@ -35,6 +40,11 @@
     }
 }
 
+
+-(void) productQuantityChanged{
+    [self.changePriceLabelInCartViewControllerDelegate changePriceLabel];
+}
+
 - (NSInteger) numberOfSectionsInTableView : (UITableView *)tableView{
     return 1;
 }
@@ -52,6 +62,7 @@
     [cell bindData:[self.productArray objectAtIndex:indexPath.row]];
     cell.selectionStyle=UITableViewCellSelectionStyleNone;
     cell.reloadCellDelegate=self;
+    cell.productQuantityChangedDelegate=self;
     return cell;
 }
 

@@ -120,6 +120,21 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(indexPath.section==1){
+        if(indexPath.row==0){
+            if([BlickbeeAppManager sharedInstance].userAddresses.count){
+            if([[BlickbeeAppManager sharedInstance].userAddresses objectAtIndex:indexPath.row])
+            [self.addressrecievedDelegate addressRecived:[[BlickbeeAppManager sharedInstance].userAddresses objectAtIndex:indexPath.row]];
+        }
+        }
+        else if(indexPath.row==1){
+            if([BlickbeeAppManager sharedInstance].userAddresses.count==2){
+            if([[BlickbeeAppManager sharedInstance].userAddresses objectAtIndex:indexPath.row]){
+                [self.addressrecievedDelegate addressRecived:[[BlickbeeAppManager sharedInstance].userAddresses objectAtIndex:indexPath.row]];
+            }
+            }
+        }
+    }
 }
 
 -(CGFloat) tableView:(UITableView *) tableView heightForHeaderInSection :(NSInteger) section{

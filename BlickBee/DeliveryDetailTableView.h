@@ -18,9 +18,14 @@
 -(void) editAddressWithPrevAddress:(Address*)prevAddress;
 
 @end
+@protocol addressRecived <NSObject>
+
+-(void)addressRecived:(Address *)addressItem;
+
+@end
 
 @interface DeliveryDetailTableView : UITableView<openAddressPopUp,editBtnClicked>
 -(id) initWithFrames:(CGRect)frame;
 @property (nonatomic,strong) id<openNewAddress> addressDelegate;
-
+@property (nonatomic,strong) id<addressRecived> addressrecievedDelegate;
 @end

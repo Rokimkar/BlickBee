@@ -11,8 +11,10 @@
 #import "Product.h"
 #import "BlickbeeAppManager.h"
 #import "CartFooterView.h"
+#import "CartTableViewCell.h"
+#import "DeliveryDetailViewController.h"
 
-@interface CartViewController ()<openHomeVC>{
+@interface CartViewController ()<openHomeVC,changePriceLabelInCartViewController>{
     CartTableView *cartTableView;
     NSMutableArray *selectedProductArray;
 }
@@ -39,6 +41,7 @@
     if(addCartTable==YES){
         cartTableView = [[CartTableView alloc]initWithFrame:CGRectMake(0,109, getScreenWidth(), getScreenHeight()-176) andProductsArray:[[BlickbeeAppManager sharedInstance] selectedProducts]];
         cartTableView.openHomeVCDelegate=self;
+        cartTableView.changePriceLabelInCartViewControllerDelegate=self;
         cartTableView.separatorColor=[UIColor clearColor];
         [self.view addSubview:cartTableView];
         [self.view bringSubviewToFront:cartTableView];
@@ -49,17 +52,31 @@
         cartTableView.tableFooterView = footerView;
 
     }
-    self.labelForSubtotal.text=@"₹ 732.0";
-    self.labelForDelivery.text=@"Free";
-    self.labelForTotal.text=@"₹ 732.0";
     if([[BlickbeeAppManager sharedInstance]selectedProducts].count==0){
         [self.view bringSubviewToFront:self.imageViewForCartViewController];
         [self.view bringSubviewToFront:self.startShoppingButtonClicked];
     }
+    [self setTotalPriceLabel];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+-(void)changePriceLabel{
+    [self setTotalPriceLabel];
+}
+
+-(void)setTotalPriceLabel{
+    NSInteger totalAmount=0;
+    for(int i=0;i<[BlickbeeAppManager sharedInstance].selectedProducts.count;i++){
+        Product *product=[[Product alloc]init];
+        product = [[BlickbeeAppManager sharedInstance].selectedProducts objectAtIndex:i];
+        totalAmount+=([product.selectedProductQuantity integerValue]*[product.productPrice integerValue]);
+    }
+    self.labelForSubtotal.text=[NSString stringWithFormat:@"%@ %ld",@"₹",(long)totalAmount];
+    self.labelForDelivery.text=@"Free";
+    self.labelForTotal.text=[NSString stringWithFormat:@"%@ %ld",@"₹",(long)totalAmount];
 }
 
 -(void)openHomeVC{
