@@ -17,6 +17,7 @@
 #import "AccountSettingsViewController.h"
 #import "ShareViewController.h"
 #import "AboutUsViewController.h"
+#import "SignInViewController.h"
 @interface LeftDeckController (){
     NSArray *itemsArray;
     NSArray *imageArray;
@@ -120,6 +121,19 @@
         NVC.navigationBar.barTintColor=RGBA(247, 71, 17, 1);
         //[revealVC revealToggle:abtUsVC];
         [revealVC setFrontViewController:NVC animated:YES];
+    }
+    else if(indexPath.row==8){
+        [BlickbeeAppManager sharedInstance].user = [[User alloc] init];
+        if (revealVC) {
+            [revealVC.navigationController popToRootViewControllerAnimated:YES];
+        }
+        else{
+            UIStoryboard *storyBoard  = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            SignInViewController *cont = [storyBoard instantiateViewControllerWithIdentifier:@"SignInViewController"];
+            [self presentViewController:cont animated:YES completion:^{
+                
+            }];
+        }
     }
 }
 

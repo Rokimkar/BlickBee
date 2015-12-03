@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vmK-Ox-Yy8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="JIQ-t1-wPJ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -17,6 +17,22 @@
         </mutableArray>
     </customFonts>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="u86-ej-iRM">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="JIQ-t1-wPJ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mFn-pG-rUR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vmK-Ox-Yy8" kind="relationship" relationship="rootViewController" id="6MQ-TM-XwE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d4d-6Q-cu8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1018" y="22"/>
+        </scene>
         <!--Sign In View Controller-->
         <scene sceneID="ne5-K3-8nc">
             <objects>
@@ -29,13 +45,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo+text 350x.png" translatesAutoresizingMaskIntoConstraints="NO" id="uVO-X0-NTF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo+text 350x.png" translatesAutoresizingMaskIntoConstraints="NO" id="uVO-X0-NTF">
                                 <rect key="frame" x="100" y="51" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="uVO-X0-NTF" secondAttribute="height" multiplier="1:1" id="Ftx-Lo-4v1"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email or Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="10T-oD-IJ6">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email or Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="10T-oD-IJ6">
                                 <rect key="frame" x="42" y="239" width="262" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="COe-Ne-c1v"/>
@@ -47,7 +63,7 @@
                                     <outlet property="delegate" destination="vmK-Ox-Yy8" id="UMz-ay-y22"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l1g-hz-G8N">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l1g-hz-G8N">
                                 <rect key="frame" x="42" y="285" width="258" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="m6r-Fr-lvR"/>
@@ -59,7 +75,7 @@
                                     <outlet property="delegate" destination="vmK-Ox-Yy8" id="ZjM-Rd-Hlq"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7an-OS-Jve">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7an-OS-Jve">
                                 <rect key="frame" x="98" y="335" width="124" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="124" id="5s4-qP-HSV"/>
@@ -73,7 +89,7 @@
                                     <action selector="loginBtn:" destination="vmK-Ox-Yy8" eventType="touchUpInside" id="zFV-62-vD9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdj-F1-xwh">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdj-F1-xwh">
                                 <rect key="frame" x="80" y="383" width="160" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="etz-4L-uK6"/>
@@ -97,17 +113,17 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Rda-0K-9l0" kind="modal" id="O5w-c2-g2u"/>
+                                    <segue destination="Rda-0K-9l0" kind="push" id="O5w-c2-g2u"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="M5Y-Fg-YqM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="user icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="M5Y-Fg-YqM">
                                 <rect key="frame" x="16" y="244" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="T0X-aD-Ewa"/>
                                     <constraint firstAttribute="height" constant="20" id="T65-5l-GfN"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="password.png" translatesAutoresizingMaskIntoConstraints="NO" id="k8l-m1-q2K">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="password.png" translatesAutoresizingMaskIntoConstraints="NO" id="k8l-m1-q2K">
                                 <rect key="frame" x="16" y="290" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="E7K-FN-R27"/>
@@ -151,6 +167,7 @@
                             <constraint firstItem="RGO-Tz-861" firstAttribute="centerY" secondItem="l1g-hz-G8N" secondAttribute="centerY" id="ywj-xT-XVH"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ybc-Fd-qeR"/>
                     <connections>
                         <outlet property="emailTxtField" destination="10T-oD-IJ6" id="B3K-En-it9"/>
                         <outlet property="loginBtn" destination="7an-OS-Jve" id="qqc-Ml-hFa"/>
@@ -174,13 +191,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo+text 350x.png" translatesAutoresizingMaskIntoConstraints="NO" id="zt9-XH-2sf">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo+text 350x.png" translatesAutoresizingMaskIntoConstraints="NO" id="zt9-XH-2sf">
                                 <rect key="frame" x="100" y="40" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="zt9-XH-2sf" secondAttribute="height" multiplier="1:1" id="6kE-8Y-MMD"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email or Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hnE-hk-keg">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email or Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hnE-hk-keg">
                                 <rect key="frame" x="42" y="243" width="268" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="VPZ-H8-fPi"/>
@@ -192,7 +209,7 @@
                                     <outlet property="delegate" destination="Rda-0K-9l0" id="rGh-9F-gzm"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kLW-gl-tyc">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kLW-gl-tyc">
                                 <rect key="frame" x="42" y="289" width="270" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="o7T-0V-68P"/>
@@ -203,14 +220,14 @@
                                     <outlet property="delegate" destination="Rda-0K-9l0" id="oXa-sh-s3U"/>
                                 </connections>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email5.png" translatesAutoresizingMaskIntoConstraints="NO" id="wRC-I9-Zrm">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="email5.png" translatesAutoresizingMaskIntoConstraints="NO" id="wRC-I9-Zrm">
                                 <rect key="frame" x="16" y="248" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="XSV-G8-WQV"/>
                                     <constraint firstAttribute="width" constant="20" id="c8P-zG-g4U"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GA5-KN-jqB">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GA5-KN-jqB">
                                 <rect key="frame" x="42" y="197" width="270" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="UmI-l3-nwZ"/>
@@ -222,14 +239,14 @@
                                     <outlet property="delegate" destination="Rda-0K-9l0" id="Pal-3u-a9x"/>
                                 </connections>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="sKd-0r-9RT">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="user icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="sKd-0r-9RT">
                                 <rect key="frame" x="16" y="202" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="Opn-WW-dfa"/>
                                     <constraint firstAttribute="height" constant="20" id="qNc-oc-nwv"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="03m-jb-Ezc">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="03m-jb-Ezc">
                                 <rect key="frame" x="42" y="335" width="270" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Kmo-za-kXX"/>
@@ -241,21 +258,21 @@
                                     <outlet property="delegate" destination="Rda-0K-9l0" id="StU-ak-AUp"/>
                                 </connections>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="telephone46.png" translatesAutoresizingMaskIntoConstraints="NO" id="yfM-Pa-lLW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="telephone46.png" translatesAutoresizingMaskIntoConstraints="NO" id="yfM-Pa-lLW">
                                 <rect key="frame" x="16" y="340" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="CJv-vB-cC0"/>
                                     <constraint firstAttribute="width" constant="20" id="Rkm-R5-MLP"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="password.png" translatesAutoresizingMaskIntoConstraints="NO" id="H8i-b9-Fuf">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="password.png" translatesAutoresizingMaskIntoConstraints="NO" id="H8i-b9-Fuf">
                                 <rect key="frame" x="16" y="294" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="cxh-lz-6RW"/>
                                     <constraint firstAttribute="height" constant="20" id="fBr-6C-F74"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cip-yY-t3p">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cip-yY-t3p">
                                 <rect key="frame" x="293" y="295" width="17" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="17" id="gxC-Vd-FgD"/>
@@ -266,7 +283,7 @@
                                     <action selector="showPasswordPressed:" destination="Rda-0K-9l0" eventType="touchUpInside" id="WiR-hY-cfD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xov-pJ-uf1">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xov-pJ-uf1">
                                 <rect key="frame" x="98" y="394" width="124" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Lbc-f9-Mfw"/>
