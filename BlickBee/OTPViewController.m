@@ -57,14 +57,16 @@
         UIStoryboard *storyBoard  = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         if(self.isFromSignUp){
             SWRevealViewController *cont = [storyBoard instantiateViewControllerWithIdentifier:@"SWRevealViewController"];
-            [self presentViewController:cont animated:YES completion:^{
-                
-            }];
+//            [self presentViewController:cont animated:YES completion:^{
+//                
+//            }];
+            [self.navigationController pushViewController:cont animated:YES];
         }
         else{
             ChangePasswordViewController *cont = [storyBoard instantiateViewControllerWithIdentifier:@"ChangePasswordViewController"];
-            [self presentViewController:cont animated:YES completion:^{
-            }];
+//            [self presentViewController:cont animated:YES completion:^{
+//            }];
+            [self.navigationController pushViewController:cont animated:YES];
         }
     } failure:^(NSError *error) {
         

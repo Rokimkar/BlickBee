@@ -28,6 +28,8 @@
 
 -(void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    self.emailTxtField.text=@"";
+    self.passTextField.text=@"";
 }
 
 -(void)viewWillLayoutSubviews{
@@ -71,10 +73,10 @@
             [[BlickbeeAppManager sharedInstance] setUser:user];
             UIStoryboard *storyBoard  = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             SWRevealViewController *cont = [storyBoard instantiateViewControllerWithIdentifier:@"SWRevealViewController"];
-            [self presentViewController:cont animated:YES completion:^{
-
-            }];
-            
+//            [self presentViewController:cont animated:YES completion:^{
+//
+//            }];
+            [self.navigationController pushViewController:cont animated:YES];
         }
         
     } failure:^(NSError *error) {
