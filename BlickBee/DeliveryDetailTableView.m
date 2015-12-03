@@ -8,6 +8,13 @@
 
 #import "DeliveryDetailTableView.h"
 
+@interface DeliveryDetailTableView(){
+    BOOL addressCellOneColor;
+    BOOL addressCellTwoColor;
+}
+
+@end
+
 @implementation DeliveryDetailTableView
 
 -(id) initWithFrames:(CGRect)frame{
@@ -45,7 +52,7 @@
             NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DeliveryDetailTableViewCell" owner:self options:nil];
             cellOne = [nib objectAtIndex:0];
         }
-        cellOne.imageViewFordeliveryDetail.image=[UIImage imageNamed:@"2_a.png"];
+        cellOne.imageViewFordeliveryDetail.image=[UIImage imageNamed:@"1.png"];
         [cellOne setBackgroundColor:RGBA(225, 225, 225, 1)];
         return  cellOne;
     }
@@ -94,7 +101,24 @@
             ((DeliveryAddressTableViewCell *)cell).editBtnDelegate=self;
             [((DeliveryAddressTableViewCell*)cell) bindData:[[BlickbeeAppManager sharedInstance].userAddresses objectAtIndex:indexPath.row]];
         }
+        [((DeliveryAddressTableViewCell *)cell).nameLabel setTextColor:[UIColor blackColor]];
+        [((DeliveryAddressTableViewCell *)cell).phoneLabel setTextColor:[UIColor blackColor]];
+        [((DeliveryAddressTableViewCell *)cell).address1Label setTextColor:[UIColor blackColor]];
+        [((DeliveryAddressTableViewCell *)cell).address2Label setTextColor:[UIColor blackColor]];
+        if((indexPath.row==0 && addressCellOneColor==YES)||(indexPath.row==0 && [BlickbeeAppManager sharedInstance].userAddresses.count==1)){
+            [((DeliveryAddressTableViewCell *)cell).nameLabel setTextColor:RGBA(238, 77, 28, 1)];
+            [((DeliveryAddressTableViewCell *)cell).phoneLabel setTextColor:RGBA(238, 77, 28, 1)];
+            [((DeliveryAddressTableViewCell *)cell).address1Label setTextColor:RGBA(238, 77, 28, 1)];
+            [((DeliveryAddressTableViewCell *)cell).address2Label setTextColor:RGBA(238, 77, 28, 1)];
+        }
+        if(indexPath.row==1 && addressCellTwoColor==YES){
+            [((DeliveryAddressTableViewCell *)cell).nameLabel setTextColor:RGBA(238, 77, 28, 1)];
+            [((DeliveryAddressTableViewCell *)cell).phoneLabel setTextColor:RGBA(238, 77, 28, 1)];
+            [((DeliveryAddressTableViewCell *)cell).address1Label setTextColor:RGBA(238, 77, 28, 1)];
+            [((DeliveryAddressTableViewCell *)cell).address2Label setTextColor:RGBA(238, 77, 28, 1)];
+        }
     }
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     return cell;
 }
 
@@ -121,21 +145,27 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    addressCellOneColor=NO;
+    addressCellTwoColor=NO;
     if(indexPath.section==1){
         if(indexPath.row==0){
-            if([BlickbeeAppManager sharedInstance].userAddresses.count){
-            if([[BlickbeeAppManager sharedInstance].userAddresses objectAtIndex:indexPath.row])
+            if([[BlickbeeAppManager sharedInstance].userAddresses objectAtIndex:indexPath.row]){
             [self.addressrecievedDelegate addressRecived:[[BlickbeeAppManager sharedInstance].userAddresses objectAtIndex:indexPath.row]];
-        }
+                addressCellOneColor=YES;
+                [self reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:1]] withRowAnimation:UITableViewRowAnimationNone];
+                [self reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:1 inSection:1]] withRowAnimation:UITableViewRowAnimationNone];
+                }
         }
         else if(indexPath.row==1){
-            if([BlickbeeAppManager sharedInstance].userAddresses.count==2){
             if([[BlickbeeAppManager sharedInstance].userAddresses objectAtIndex:indexPath.row]){
                 [self.addressrecievedDelegate addressRecived:[[BlickbeeAppManager sharedInstance].userAddresses objectAtIndex:indexPath.row]];
             }
-            }
+                addressCellTwoColor=YES;
+                                [self reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:1]] withRowAnimation:UITableViewRowAnimationNone];
+                [self reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:1 inSection:1]] withRowAnimation:UITableViewRowAnimationNone];
         }
     }
+    [self reloadData];
 }
 
 -(CGFloat) tableView:(UITableView *) tableView heightForHeaderInSection :(NSInteger) section{
@@ -151,7 +181,7 @@
     }
     if(indexPath.section==1){
             if ([BlickbeeAppManager sharedInstance].userAddresses.count==0) {
-                return 70;
+                return 85;
             }
             else if ([BlickbeeAppManager sharedInstance].userAddresses.count==1) {
                 if (indexPath.row==0){
