@@ -27,7 +27,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="392" height="128"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cardLayout.png" translatesAutoresizingMaskIntoConstraints="NO" id="9RA-zZ-fcw">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9RA-zZ-fcw">
                         <rect key="frame" x="8" y="8" width="376" height="112"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LcS-3t-jlt" userLabel="name">
@@ -140,7 +140,4 @@
             <point key="canvasLocation" x="272" y="236.5"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="cardLayout.png" width="715" height="206"/>
-    </resources>
 </document>

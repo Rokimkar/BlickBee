@@ -46,6 +46,7 @@
             cellOne = [nib objectAtIndex:0];
         }
         cellOne.imageViewFordeliveryDetail.image=[UIImage imageNamed:@"2_a.png"];
+        [cellOne setBackgroundColor:RGBA(225, 225, 225, 1)];
         return  cellOne;
     }
     else if(indexPath.row==1 && indexPath.section==0){

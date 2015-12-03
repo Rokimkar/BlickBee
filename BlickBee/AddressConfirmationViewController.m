@@ -30,6 +30,7 @@
     [self.addressConfirmationTableView registerNib:[UINib nibWithNibName:@"AddressConfirmationTableViewCell" bundle:nil] forCellReuseIdentifier:@"AddressConfirmationTableViewCell"];
     [self.view setBackgroundColor:RGBA(225, 225, 225, 1)];
     [self.addressConfirmationTableView setBackgroundColor:RGBA(225, 225, 225, 1)];
+    [self.addressConfirmationTableView setSeparatorColor:[UIColor clearColor]];
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
@@ -65,6 +66,7 @@
     cell.backgroundColor=RGBA(225, 225, 225, 1);
     cell.imageViewFordeliveryDetail.image=[UIImage imageNamed:@"2.png"];
     [cell.imageViewFordeliveryDetail sizeToFit];
+    
     if(indexPath.section==1){
         AddressConfirmationTableViewCell *cellOne = (AddressConfirmationTableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"AddressConfirmationTableViewCell"];
         if(cellOne==nil){
@@ -116,6 +118,7 @@
     return sectionName;
 }
 
+
 -(CGFloat) tableView:(UITableView *) tableView heightForHeaderInSection :(NSInteger) section{
     if(section==1){
         return 35;
@@ -125,7 +128,7 @@
 
 -(CGFloat) tableView:(UITableView *) tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if(indexPath.section==0){
-        return 90;
+        return 80;
     }
     if(indexPath.section==1){
         return 125;
