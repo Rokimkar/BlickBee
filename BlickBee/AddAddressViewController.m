@@ -44,11 +44,37 @@
     
     self.title=@"Add New Address";
     
+    self.nameTextField.layer.cornerRadius = 5.0;
+    self.nameTextField.layer.borderWidth = 1.0;
+    self.nameTextField.layer.borderColor = [UIColor lightGrayColor].CGColor;
+
+    self.phoneNumberTextField.layer.cornerRadius = 5.0;
+    self.phoneNumberTextField.layer.borderWidth = 1.0;
+    self.phoneNumberTextField.layer.borderColor = [UIColor lightGrayColor].CGColor;
+
+    self.addressTextField.layer.cornerRadius = 5.0;
+    self.addressTextField.layer.borderWidth = 1.0;
+    self.addressTextField.layer.borderColor = [UIColor lightGrayColor].CGColor;
+
+    self.areasTableView.layer.cornerRadius = 5.0;
+    self.areasTableView.layer.borderWidth = 1.0;
+    self.areasTableView.layer.borderColor = [UIColor lightGrayColor].CGColor;
     // Do any additional setup after loading the view from its nib.
 }
 
 -(void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
+    if (isDropDown) {
+        self.tableViewBottomConstraint.priority=750;
+        self.tableViewHeightConstraint.priority=250;
+        [self.view updateConstraintsIfNeeded];
+    }
+    else{
+        self.tableViewBottomConstraint.priority=250;
+        self.tableViewHeightConstraint.priority=750;
+        [self.view updateConstraintsIfNeeded];
+    }
     
     if (selectedAddress) {
         self.nameTextField.text = selectedAddress.name;
@@ -113,6 +139,9 @@
         else{
             cell.textLabel.text=headerStr;
         }
+        UIImageView *accessoryView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+        accessoryView.image=[UIImage imageNamed:@"dropDown"];
+        cell.accessoryView = accessoryView;
     }
     else{
         NearByArea* area;
@@ -132,7 +161,7 @@
 
 
 -(CGFloat) tableView:(UITableView *) tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 44;
+    return 30;
 }
 
 
@@ -144,6 +173,16 @@
         selectedArea = [regionsArray objectAtIndex:indexPath.row-1];
     }
     isDropDown=!isDropDown;
+    if (isDropDown) {
+        self.tableViewBottomConstraint.priority=750;
+        self.tableViewHeightConstraint.priority=250;
+        [self.view updateConstraintsIfNeeded];
+    }
+    else{
+        self.tableViewBottomConstraint.priority=250;
+        self.tableViewHeightConstraint.priority=750;
+        [self.view updateConstraintsIfNeeded];
+    }
     [tableView reloadData];
 }
 

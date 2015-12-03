@@ -10,7 +10,7 @@
 #import "AFHTTPRequestOperation.h"
 #import "AFHTTPRequestOperationManager.h"
 #import "SVProgressHUD.h"
-
+#import "BlickbeeAppManager.h"
 //#define BASE_URL_STRING @"http://blickbee.com/ios_Testing/request.php"
 #define BASE_URL_STRING @"http://blickbee.com/APIS/request.php"
 @interface BaseServiceClient : NSObject

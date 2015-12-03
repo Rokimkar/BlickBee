@@ -7,19 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C296DEC1C0CC6D5001AE0FC /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE21C0CC6D5001AE0FC /* ProximaNova-Bold.otf */; };
-		0C296DED1C0CC6D5001AE0FC /* ProximaNova-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE31C0CC6D5001AE0FC /* ProximaNova-Light.otf */; };
-		0C296DEE1C0CC6D5001AE0FC /* ProximaNova-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE41C0CC6D5001AE0FC /* ProximaNova-Semibold.otf */; };
-		0C296DEF1C0CC6D5001AE0FC /* ProximaNovaCond-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE51C0CC6D5001AE0FC /* ProximaNovaCond-Regular.otf */; };
-		0C296DF01C0CC6D5001AE0FC /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE61C0CC6D5001AE0FC /* Roboto-Bold.ttf */; };
-		0C296DF11C0CC6D5001AE0FC /* Roboto-Condensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE71C0CC6D5001AE0FC /* Roboto-Condensed.ttf */; };
-		0C296DF21C0CC6D5001AE0FC /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE81C0CC6D5001AE0FC /* Roboto-Light.ttf */; };
-		0C296DF31C0CC6D5001AE0FC /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE91C0CC6D5001AE0FC /* Roboto-Medium.ttf */; };
-		0C296DF41C0CC6D5001AE0FC /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DEA1C0CC6D5001AE0FC /* Roboto-Regular.ttf */; };
-		0C296DF51C0CC6D5001AE0FC /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DEB1C0CC6D5001AE0FC /* Roboto-Thin.ttf */; };
-		0C296DFB1C0CCA9D001AE0FC /* UIFont+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C296DFA1C0CCA9D001AE0FC /* UIFont+Custom.m */; };
-		0C296DFE1C0CDCDD001AE0FC /* CartFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C296DFD1C0CDCDD001AE0FC /* CartFooterView.m */; };
-		0C296E001C0CDD02001AE0FC /* CartFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DFF1C0CDD02001AE0FC /* CartFooterView.xib */; };
+		0C296DEC1C0CC6D5001AE0FC /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE21C0CC6D5001AE0FC /* ProximaNova-Bold.otf */; settings = {ASSET_TAGS = (); }; };
+		0C296DED1C0CC6D5001AE0FC /* ProximaNova-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE31C0CC6D5001AE0FC /* ProximaNova-Light.otf */; settings = {ASSET_TAGS = (); }; };
+		0C296DEE1C0CC6D5001AE0FC /* ProximaNova-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE41C0CC6D5001AE0FC /* ProximaNova-Semibold.otf */; settings = {ASSET_TAGS = (); }; };
+		0C296DEF1C0CC6D5001AE0FC /* ProximaNovaCond-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE51C0CC6D5001AE0FC /* ProximaNovaCond-Regular.otf */; settings = {ASSET_TAGS = (); }; };
+		0C296DF01C0CC6D5001AE0FC /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE61C0CC6D5001AE0FC /* Roboto-Bold.ttf */; settings = {ASSET_TAGS = (); }; };
+		0C296DF11C0CC6D5001AE0FC /* Roboto-Condensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE71C0CC6D5001AE0FC /* Roboto-Condensed.ttf */; settings = {ASSET_TAGS = (); }; };
+		0C296DF21C0CC6D5001AE0FC /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE81C0CC6D5001AE0FC /* Roboto-Light.ttf */; settings = {ASSET_TAGS = (); }; };
+		0C296DF31C0CC6D5001AE0FC /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DE91C0CC6D5001AE0FC /* Roboto-Medium.ttf */; settings = {ASSET_TAGS = (); }; };
+		0C296DF41C0CC6D5001AE0FC /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DEA1C0CC6D5001AE0FC /* Roboto-Regular.ttf */; settings = {ASSET_TAGS = (); }; };
+		0C296DF51C0CC6D5001AE0FC /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DEB1C0CC6D5001AE0FC /* Roboto-Thin.ttf */; settings = {ASSET_TAGS = (); }; };
+		0C296DFB1C0CCA9D001AE0FC /* UIFont+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C296DFA1C0CCA9D001AE0FC /* UIFont+Custom.m */; settings = {ASSET_TAGS = (); }; };
+		0C296DFE1C0CDCDD001AE0FC /* CartFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C296DFD1C0CDCDD001AE0FC /* CartFooterView.m */; settings = {ASSET_TAGS = (); }; };
+		0C296E001C0CDD02001AE0FC /* CartFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C296DFF1C0CDD02001AE0FC /* CartFooterView.xib */; settings = {ASSET_TAGS = (); }; };
+		0C296E021C0F2887001AE0FC /* dropDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C296E011C0F2887001AE0FC /* dropDown.png */; settings = {ASSET_TAGS = (); }; };
 		0C2F06FC1BEE458000F6B7DB /* ProductsServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F06FB1BEE458000F6B7DB /* ProductsServiceClient.m */; };
 		0C2F06FF1BEE45C000F6B7DB /* BaseServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F06FE1BEE45C000F6B7DB /* BaseServiceClient.m */; };
 		0C2F07131BEE6B1200F6B7DB /* Offer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F07121BEE6B1200F6B7DB /* Offer.m */; };
@@ -187,6 +188,7 @@
 		0C296DFC1C0CDCDD001AE0FC /* CartFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartFooterView.h; sourceTree = "<group>"; };
 		0C296DFD1C0CDCDD001AE0FC /* CartFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartFooterView.m; sourceTree = "<group>"; };
 		0C296DFF1C0CDD02001AE0FC /* CartFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CartFooterView.xib; sourceTree = "<group>"; };
+		0C296E011C0F2887001AE0FC /* dropDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropDown.png; sourceTree = "<group>"; };
 		0C2F06FA1BEE458000F6B7DB /* ProductsServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductsServiceClient.h; sourceTree = "<group>"; };
 		0C2F06FB1BEE458000F6B7DB /* ProductsServiceClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductsServiceClient.m; sourceTree = "<group>"; };
 		0C2F06FD1BEE45C000F6B7DB /* BaseServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseServiceClient.h; sourceTree = "<group>"; };
@@ -755,6 +757,7 @@
 				A0DA718B1BF074E10012490E /* user icon.png */,
 				A0DA718C1BF074E10012490E /* user-icon.png */,
 				A0DA718D1BF074E10012490E /* veg_vector.jpg */,
+				0C296E011C0F2887001AE0FC /* dropDown.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -975,6 +978,7 @@
 				A05253161BE9F271007EF74F /* Assets.xcassets in Resources */,
 				0C296DF31C0CC6D5001AE0FC /* Roboto-Medium.ttf in Resources */,
 				A0DA71901BF074E10012490E /* 2_b.png in Resources */,
+				0C296E021C0F2887001AE0FC /* dropDown.png in Resources */,
 				A0DA71931BF074E10012490E /* back.png in Resources */,
 				A0DA71961BF074E10012490E /* cartadd.png in Resources */,
 				A0DA71B61BF08D510012490E /* LeftDeckTableViewCell.xib in Resources */,
@@ -1287,7 +1291,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Alok Ranjan (H686S25ZPL)";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/Rokimkar/Desktop/BlickBee/BlickBee/BlickbeePrefix.pch;
+				GCC_PREFIX_HEADER = /Users/Kunal/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
 				INFOPLIST_FILE = BlickBee/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1307,7 +1311,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Alok Ranjan (H686S25ZPL)";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/Rokimkar/Desktop/BlickBee/BlickBee/BlickbeePrefix.pch;
+				GCC_PREFIX_HEADER = /Users/Kunal/Desktop/BlickBeeProj/BlickBee/BlickbeePrefix.pch;
 				INFOPLIST_FILE = BlickBee/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
