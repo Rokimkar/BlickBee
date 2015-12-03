@@ -29,7 +29,7 @@
         Product *product=[[Product alloc]init];
         product = [[BlickbeeAppManager sharedInstance].selectedProducts objectAtIndex:i];
         productCost=[product.productPrice integerValue];
-        totalQuantity+=[product.productPrice integerValue];
+        totalQuantity+=[product.selectedProductQuantity integerValue];
         totalAmount+=([product.selectedProductQuantity integerValue]*[product.productPrice integerValue]);
     }
     self.labelForTotalAmount.text=[NSString stringWithFormat:@"%@ %ld",@"₹",(long)totalAmount];
