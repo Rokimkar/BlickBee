@@ -23,9 +23,38 @@
     [super viewDidLoad];
     securityEntry=YES;
     self.passwordTextField.secureTextEntry = securityEntry;
+}
     // Do any additional setup after loading the view.
+
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillShow)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHide)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+}
+-(void)keyboardWillShow {
+    // Animate the current view out of the way
+    self.topSpaceConstraint.constant=-160;
+    [self.view layoutSubviews];
+    [self.view layoutIfNeeded];
 }
 
+-(void)keyboardWillHide {
+    self.topSpaceConstraint.constant=20;
+    [self.view layoutSubviews];
+    [self.view layoutIfNeeded];
+}
+-(void) viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:UIKeyboardWillShowNotification];
+    [[NSNotificationCenter defaultCenter] removeObserver:UIKeyboardWillHideNotification];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

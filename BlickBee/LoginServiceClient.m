@@ -209,6 +209,8 @@
                              @"auth_key": [BlickbeeAppManager sharedInstance].user.authKey,
                              @"password": newPassword
                              };
+    
+    
     manager.responseSerializer.acceptableContentTypes= [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
     [manager POST:BASE_URL_STRING parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {

@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UITextField *confirmPasswordTextField;
 @property (weak, nonatomic) IBOutlet UIButton *proceedBtnPressed;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topSpaceConstraint;
 
 @end

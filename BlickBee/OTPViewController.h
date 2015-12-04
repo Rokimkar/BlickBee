@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *resendOTPBtn;
 @property (strong,nonatomic) NSTimer *progressUpdateTimer;
 @property (assign,nonatomic) BOOL isFromSignUp;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topSpaceConstraint;
 
 @end

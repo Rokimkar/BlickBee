@@ -30,10 +30,36 @@
     [super viewWillAppear:animated];
     self.emailTxtField.text=@"";
     self.passTextField.text=@"";
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillShow)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHide)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+}
+-(void) viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:UIKeyboardWillShowNotification];
+    [[NSNotificationCenter defaultCenter] removeObserver:UIKeyboardWillHideNotification];
+}
+-(void)keyboardWillShow {
+    // Animate the current view out of the way
+    self.topSpaceConstraint.constant=-155;
+    [self.view layoutSubviews];
+    [self.view layoutIfNeeded];
 }
 
+-(void)keyboardWillHide {
+    self.topSpaceConstraint.constant=31;
+    [self.view layoutSubviews];
+    [self.view layoutIfNeeded];
+}
 -(void)viewWillLayoutSubviews{
     [super viewWillLayoutSubviews];
+
     [self prepareView];
     // Your layout logic here
 }

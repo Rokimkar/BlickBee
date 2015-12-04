@@ -123,8 +123,10 @@
         [changePasswordBtn setTitle:@"Change Password" forState:UIControlStateNormal];
         [changePasswordBtn setTitle:@"Change Password" forState:UIControlStateHighlighted];
         [changePasswordBtn addTarget:self action:@selector(changePasswordPressed) forControlEvents:UIControlEventTouchUpInside];
+        [changePasswordBtn setTitleColor:RGBA(252, 95, 16, 1) forState:UIControlStateNormal];
+        [changePasswordBtn setTitleColor:RGBA(252, 95, 16, 1) forState:UIControlStateHighlighted];
+
         [cell addSubview:changePasswordBtn];
-        [cell setBackgroundColor:[UIColor blueColor]];
         return cell;
     }
     
@@ -159,9 +161,10 @@
         UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         OTPViewController *cont = [storyBoard instantiateViewControllerWithIdentifier:@"OTPViewController"];
         cont.isFromSignUp=NO;
-        [self presentViewController:cont animated:YES completion:^{
-            
-        }];
+        [self.navigationController pushViewController:cont animated:YES];
+//        [self presentViewController:cont animated:YES completion:^{
+//            
+//        }];
     } failure:^(NSError *error) {
         
     }];

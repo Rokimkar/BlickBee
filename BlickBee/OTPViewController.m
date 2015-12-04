@@ -23,7 +23,7 @@
     count=60;
     self.resendOTPBtn.userInteractionEnabled=NO;
     self.progressUpdateTimer =[NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateProgress:) userInfo:nil repeats:YES];
-
+    self.navigationController.navigationBar.hidden=YES;
     // Do any additional setup after loading the view.
 }
 
@@ -97,6 +97,31 @@
     }];
 }
 
+-(void)viewWillLayoutSubviews{
+    [super viewWillLayoutSubviews];
+    [self prepareView];
+    // Your layout logic here
+}
+-(void) prepareView{
+    CALayer *border = [CALayer layer];
+    CGFloat borderWidth = 1;
+    border.borderColor = [UIColor whiteColor].CGColor;
+    border.frame = CGRectMake(0, self.otpTextField.frame.size.height - borderWidth, self.otpTextField.frame.size.width, self.otpTextField.frame.size.height);
+    border.borderWidth = borderWidth;
+    [self.otpTextField.layer addSublayer:border];
+    self.otpTextField.layer.masksToBounds = YES;
+    
+    self.verifyOTPBtn.layer.cornerRadius = 17.0;
+    self.verifyOTPBtn.layer.borderWidth = 2.0;
+    self.verifyOTPBtn.layer.borderColor = [UIColor whiteColor].CGColor;
+    
+    self.resendOTPBtn.layer.cornerRadius = 17.0;
+    self.resendOTPBtn.layer.borderWidth = 2.0;
+    self.resendOTPBtn.layer.borderColor = [UIColor whiteColor].CGColor;
+
+    
+    [self.otpTextField becomeFirstResponder];
+}
 
 
 
