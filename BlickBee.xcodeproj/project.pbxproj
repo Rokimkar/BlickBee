@@ -73,7 +73,6 @@
 		A05253111BE9F271007EF74F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05253101BE9F271007EF74F /* ViewController.m */; };
 		A05253141BE9F271007EF74F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A05253121BE9F271007EF74F /* Main.storyboard */; };
 		A05253161BE9F271007EF74F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A05253151BE9F271007EF74F /* Assets.xcassets */; };
-		A05253191BE9F271007EF74F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A05253171BE9F271007EF74F /* LaunchScreen.storyboard */; };
 		A05253241BE9F271007EF74F /* BlickBeeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A05253231BE9F271007EF74F /* BlickBeeTests.m */; };
 		A052532F1BE9F271007EF74F /* BlickBeeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A052532E1BE9F271007EF74F /* BlickBeeUITests.m */; };
 		A052533F1BE9F35A007EF74F /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A052533E1BE9F35A007EF74F /* SWRevealViewController.m */; };
@@ -153,6 +152,7 @@
 		A0DDA0721BFB3DE2000D9580 /* CartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DDA0701BFB3DE2000D9580 /* CartTableViewCell.m */; };
 		A0DDA0731BFB3DE2000D9580 /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0DDA0711BFB3DE2000D9580 /* CartTableViewCell.xib */; };
 		C66BD62B4F6C18DF05937993 /* libPods-BlickBee.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB0F40B769FAB5BC701EF2B /* libPods-BlickBee.a */; };
+		D22648071C117DA000E44880 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D22648041C11798100E44880 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -277,7 +277,6 @@
 		A05253101BE9F271007EF74F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A05253131BE9F271007EF74F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A05253151BE9F271007EF74F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A05253181BE9F271007EF74F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A052531A1BE9F271007EF74F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A052531F1BE9F271007EF74F /* BlickBeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlickBeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A05253231BE9F271007EF74F /* BlickBeeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlickBeeTests.m; sourceTree = "<group>"; };
@@ -390,6 +389,7 @@
 		A0DDA06F1BFB3DE2000D9580 /* CartTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartTableViewCell.h; sourceTree = "<group>"; };
 		A0DDA0701BFB3DE2000D9580 /* CartTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartTableViewCell.m; sourceTree = "<group>"; };
 		A0DDA0711BFB3DE2000D9580 /* CartTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
+		D22648041C11798100E44880 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4F9204652D14D4F60EC1A69 /* Pods-BlickBee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlickBee.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlickBee/Pods-BlickBee.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -572,6 +572,7 @@
 				0C2F072B1BEF3D6200F6B7DB /* BlickbeePrefix.pch */,
 				A052530F1BE9F271007EF74F /* ViewController.h */,
 				A05253101BE9F271007EF74F /* ViewController.m */,
+				D22648041C11798100E44880 /* LaunchScreen.storyboard */,
 				A05253121BE9F271007EF74F /* Main.storyboard */,
 				0C81833B1BF8DEC100882A65 /* SignInViewController.h */,
 				0C81833C1BF8DEC100882A65 /* SignInViewController.m */,
@@ -600,7 +601,6 @@
 				0C2FBC751C0AE56400A374E1 /* ShareViewController.h */,
 				0C2FBC761C0AE56400A374E1 /* ShareViewController.m */,
 				A05253151BE9F271007EF74F /* Assets.xcassets */,
-				A05253171BE9F271007EF74F /* LaunchScreen.storyboard */,
 				A052531A1BE9F271007EF74F /* Info.plist */,
 				A05253091BE9F271007EF74F /* Supporting Files */,
 			);
@@ -938,6 +938,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D22648071C117DA000E44880 /* LaunchScreen.storyboard in Resources */,
 				A0385C2C1C0F07FD00220DB6 /* 2.png in Resources */,
 				A0DDA0731BFB3DE2000D9580 /* CartTableViewCell.xib in Resources */,
 				A0DA71A21BF074E10012490E /* my orders empty.png in Resources */,
@@ -966,7 +967,6 @@
 				A0DA71A81BF074E10012490E /* Profile and Account Details.png in Resources */,
 				A0DA71A51BF074E10012490E /* notifications.png in Resources */,
 				A0DA71971BF074E10012490E /* customerservice.png in Resources */,
-				A05253191BE9F271007EF74F /* LaunchScreen.storyboard in Resources */,
 				A0DA71A61BF074E10012490E /* password.png in Resources */,
 				A0DDA0621BF8E1AC000D9580 /* AddToCartTableViewCell.xib in Resources */,
 				A0DA718E1BF074E10012490E /* 1.png in Resources */,
@@ -1185,14 +1185,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		A05253171BE9F271007EF74F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A05253181BE9F271007EF74F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -1291,7 +1283,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: PAT RAM BISHNOI (CGFN49HM94)";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/Rokimkar/Desktop/BlickBee/BlickBee/BlickbeePrefix.pch;
+				GCC_PREFIX_HEADER = /Users/kunalchelani/Desktop/BlickBee/BlickBee/BlickbeePrefix.pch;
 				INFOPLIST_FILE = BlickBee/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1311,7 +1303,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: PAT RAM BISHNOI (CGFN49HM94)";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/Rokimkar/Desktop/BlickBee/BlickBee/BlickbeePrefix.pch;
+				GCC_PREFIX_HEADER = /Users/kunalchelani/Desktop/BlickBee/BlickBee/BlickbeePrefix.pch;
 				INFOPLIST_FILE = BlickBee/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

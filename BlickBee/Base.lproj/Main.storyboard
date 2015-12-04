@@ -918,7 +918,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63K-fw-LHn">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63K-fw-LHn">
                                 <rect key="frame" x="-4" y="503" width="328" height="65"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.87450980392156863" green="0.25490196078431371" blue="0.062745098039215685" alpha="1" colorSpace="calibratedRGB"/>
@@ -940,7 +940,7 @@
                                 <rect key="frame" x="-4" y="69" width="328" height="434"/>
                                 <animations/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggU-oO-ooH">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggU-oO-ooH">
                                 <rect key="frame" x="66" y="338" width="189" height="48"/>
                                 <animations/>
                                 <state key="normal" title="Start Shopping"/>
@@ -948,7 +948,7 @@
                                     <action selector="startShoppingButtonClicked:" destination="uej-bX-zHJ" eventType="touchUpInside" id="EkE-hb-PO3"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ul3-GL-947">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ul3-GL-947">
                                 <rect key="frame" x="64" y="293" width="191" height="51"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1168,16 +1168,9 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boU-Sw-OXQ">
-                                <rect key="frame" x="82" y="185" width="160" height="29"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="215" id="gMT-nZ-ahc"/>
-                                    <constraint firstAttribute="height" constant="104" id="npc-SQ-XeL"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boU-Sw-OXQ">
                                 <rect key="frame" x="80" y="150" width="150" height="44"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="4wz-MI-KKz"/>
                                     <constraint firstAttribute="height" constant="44" id="uhE-wr-WTF"/>
@@ -1194,6 +1187,7 @@
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cartadd.png" translatesAutoresizingMaskIntoConstraints="NO" id="pvQ-rY-2iF">
                                 <rect key="frame" x="94" y="157" width="30" height="30"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="4t5-6N-uYh"/>
                                     <constraint firstAttribute="width" constant="30" id="e23-lB-4jJ"/>
@@ -1390,7 +1384,6 @@
         <image name="eyesclosed.png" width="64" height="64"/>
         <image name="floatingCart" width="39" height="39"/>
         <image name="logo+text 350x.png" width="350" height="350"/>
-        <image name="my orders empty.png" width="366" height="350"/>
         <image name="password.png" width="64" height="64"/>
         <image name="telephone46.png" width="64" height="64"/>
         <image name="truck.png" width="372" height="209"/>
