@@ -25,6 +25,8 @@
     [[self.shopMoreButtonPressed layer]setBorderColor:[UIColor blackColor].CGColor];
     [[self.shopMoreButtonPressed layer]setBorderWidth:1.0f];
     self.shopMoreButtonPressed.layer.cornerRadius = 0.0;
+    [[BlickbeeAppManager sharedInstance].selectedProducts removeAllObjects];
+
 }
 
 - (void)didReceiveMemoryWarning {
