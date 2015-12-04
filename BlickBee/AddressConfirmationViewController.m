@@ -34,18 +34,6 @@
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-        if([segue.identifier isEqualToString:@"orderConfirmationViewControllerSegue"]){
-            OrderConfirmationViewController *OrderConfirmationViewController = [segue destinationViewController];
-            OrderServiceClient *client = [[OrderServiceClient alloc] init];
-            if ([BlickbeeAppManager sharedInstance].userAddresses.count>0) {
-                Address *address = [[BlickbeeAppManager sharedInstance].userAddresses objectAtIndex:0];
-                [client makeOrderWithProductArray:[BlickbeeAppManager sharedInstance].selectedProducts andAddress:address WithSuccess:^(Order *order) {
-                    OrderConfirmationViewController.orderItem=order;
-                    
-                } failure:^(NSError *error) {
-                }];
-            }
-        }
 }
 
 
@@ -128,7 +116,7 @@
 
 -(CGFloat) tableView:(UITableView *) tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if(indexPath.section==0){
-        return 80;
+        return 85;
     }
     if(indexPath.section==1){
         return 125;
@@ -137,6 +125,17 @@
 }
 
 - (IBAction)confirmOrderClicked:(id)sender {
+    OrderServiceClient *client = [[OrderServiceClient alloc] init];
+    if ([BlickbeeAppManager sharedInstance].userAddresses.count>0) {
+        Address *address = [[BlickbeeAppManager sharedInstance].userAddresses objectAtIndex:0];
+        [client makeOrderWithProductArray:[BlickbeeAppManager sharedInstance].selectedProducts andAddress:address WithSuccess:^(Order *order) {
+            UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            OrderConfirmationViewController *orderConfirmationVC = [storyBoard instantiateViewControllerWithIdentifier:@"OrderConfirmationViewController"];
+            orderConfirmationVC.orderItem=order;
+            [self.navigationController pushViewController:orderConfirmationVC animated:YES];
+        } failure:^(NSError *error) {
+        }];
+    }
 
 }
 @end

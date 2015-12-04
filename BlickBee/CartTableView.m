@@ -36,7 +36,7 @@
     }
     if([[BlickbeeAppManager sharedInstance]selectedProducts].count==0){
         self.backgroundColor=[UIColor clearColor];
-        [self.openHomeVCDelegate openHomeVC];
+        [self setFrame:CGRectMake(0, 0, 0, 0)];
     }
 }
 

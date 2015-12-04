@@ -39,7 +39,7 @@
         }
     }
     if(addCartTable==YES){
-        cartTableView = [[CartTableView alloc]initWithFrame:CGRectMake(0,109, getScreenWidth(), getScreenHeight()-176) andProductsArray:[[BlickbeeAppManager sharedInstance] selectedProducts]];
+        cartTableView = [[CartTableView alloc]initWithFrame:CGRectMake(0,109, getScreenWidth(), getScreenHeight()-166) andProductsArray:[[BlickbeeAppManager sharedInstance] selectedProducts]];
         cartTableView.openHomeVCDelegate=self;
         cartTableView.changePriceLabelInCartViewControllerDelegate=self;
         cartTableView.separatorColor=[UIColor clearColor];
@@ -57,6 +57,11 @@
         [self.view bringSubviewToFront:self.startShoppingButtonClicked];
     }
     [self setTotalPriceLabel];
+    [[self.startShoppingButtonClicked layer]setBorderColor:[UIColor blackColor].CGColor];
+    [[self.startShoppingButtonClicked layer]setBorderWidth:1.0f];
+    self.startShoppingButtonClicked.layer.cornerRadius = 0.0;
+    [self.startShoppingButtonClicked setBackgroundColor:[UIColor whiteColor]];
+    [self.view setBackgroundColor:RGBA(225, 225, 225, 1)];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -84,6 +89,7 @@
 }
 
 - (IBAction)startShoppingButtonClicked:(id)sender {
+    [self openHomeVC];
 }
 - (IBAction)proceedButtonClicked:(id)sender {
     

@@ -9,6 +9,7 @@
 #import "OrderConfirmationViewController.h"
 #import "SWRevealViewController.h"
 #import "BlickbeeAppManager.h"
+#import "OrderServiceClient.h"
 
 @interface OrderConfirmationViewController ()
 
@@ -18,11 +19,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.labelForOrderID.text=self.orderItem.uniqueOrderId;
     self.labelForOrderID.textColor=RGBA(213, 43, 16, 1);
     self.view.backgroundColor=RGBA(225, 225, 226, 1);
-    self.labelForOrderID.text=self.orderItem.orderId;
     [[self.shopMoreButtonPressed layer]setBorderColor:[UIColor blackColor].CGColor];
     [[self.shopMoreButtonPressed layer]setBorderWidth:1.0f];
+    self.shopMoreButtonPressed.layer.cornerRadius = 0.0;
 }
 
 - (void)didReceiveMemoryWarning {

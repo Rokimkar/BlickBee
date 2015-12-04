@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#define CELL_HEIGHT 95
+#define CELL_HEIGHT 85
 
 @protocol openHomeVC <NSObject>
 
