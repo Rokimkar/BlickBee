@@ -153,6 +153,9 @@
 		A0DDA0731BFB3DE2000D9580 /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0DDA0711BFB3DE2000D9580 /* CartTableViewCell.xib */; };
 		C66BD62B4F6C18DF05937993 /* libPods-BlickBee.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB0F40B769FAB5BC701EF2B /* libPods-BlickBee.a */; };
 		D22648071C117DA000E44880 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D22648041C11798100E44880 /* LaunchScreen.storyboard */; };
+		D22648131C11842D00E44880 /* WYPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22648101C11842D00E44880 /* WYPopoverController.m */; };
+		D22648141C11842D00E44880 /* WYStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D22648121C11842D00E44880 /* WYStoryboardPopoverSegue.m */; };
+		D22648171C11846300E44880 /* OptionsPopOverViewControllerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22648161C11846300E44880 /* OptionsPopOverViewControllerTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -390,6 +393,12 @@
 		A0DDA0701BFB3DE2000D9580 /* CartTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartTableViewCell.m; sourceTree = "<group>"; };
 		A0DDA0711BFB3DE2000D9580 /* CartTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
 		D22648041C11798100E44880 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D226480F1C11842D00E44880 /* WYPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYPopoverController.h; sourceTree = "<group>"; };
+		D22648101C11842D00E44880 /* WYPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYPopoverController.m; sourceTree = "<group>"; };
+		D22648111C11842D00E44880 /* WYStoryboardPopoverSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYStoryboardPopoverSegue.h; sourceTree = "<group>"; };
+		D22648121C11842D00E44880 /* WYStoryboardPopoverSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYStoryboardPopoverSegue.m; sourceTree = "<group>"; };
+		D22648151C11846300E44880 /* OptionsPopOverViewControllerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsPopOverViewControllerTableViewController.h; sourceTree = "<group>"; };
+		D22648161C11846300E44880 /* OptionsPopOverViewControllerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsPopOverViewControllerTableViewController.m; sourceTree = "<group>"; };
 		F4F9204652D14D4F60EC1A69 /* Pods-BlickBee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlickBee.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlickBee/Pods-BlickBee.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -551,6 +560,7 @@
 		A05253081BE9F271007EF74F /* BlickBee */ = {
 			isa = PBXGroup;
 			children = (
+				D22648081C1183CB00E44880 /* WYPopOver */,
 				0C2FBC661C0915EC00A374E1 /* ShareClasses */,
 				0C8183491BF9147E00882A65 /* Managers */,
 				0C2F07101BEE6AF100F6B7DB /* ModalClasses */,
@@ -809,6 +819,19 @@
 				2E87C8E839077887CCA402AB /* Pods-BlickBee.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D22648081C1183CB00E44880 /* WYPopOver */ = {
+			isa = PBXGroup;
+			children = (
+				D226480F1C11842D00E44880 /* WYPopoverController.h */,
+				D22648101C11842D00E44880 /* WYPopoverController.m */,
+				D22648111C11842D00E44880 /* WYStoryboardPopoverSegue.h */,
+				D22648121C11842D00E44880 /* WYStoryboardPopoverSegue.m */,
+				D22648151C11846300E44880 /* OptionsPopOverViewControllerTableViewController.h */,
+				D22648161C11846300E44880 /* OptionsPopOverViewControllerTableViewController.m */,
+			);
+			name = WYPopOver;
 			sourceTree = "<group>";
 		};
 		E7CD0ED7033819C94B36E6C4 /* Frameworks */ = {
@@ -1091,6 +1114,7 @@
 				A0D5E31A1BFDFE3C00650E58 /* DeliveryDetailViewController.m in Sources */,
 				A05253111BE9F271007EF74F /* ViewController.m in Sources */,
 				0C2F07161BEE6B2B00F6B7DB /* Product.m in Sources */,
+				D22648131C11842D00E44880 /* WYPopoverController.m in Sources */,
 				A0D060EE1C0348A2001E70B9 /* MyOrdersTableView.m in Sources */,
 				0C8183401BF8DECE00882A65 /* SignUpViewController.m in Sources */,
 				0C2FBC911C0B8E7F00A374E1 /* ChangePasswordViewController.m in Sources */,
@@ -1109,8 +1133,10 @@
 				0C2FBC741C09C58500A374E1 /* AccountSettingsViewController.m in Sources */,
 				0C2F06FC1BEE458000F6B7DB /* ProductsServiceClient.m in Sources */,
 				A0DB843B1C0B5B0E004BFD03 /* AboutUsViewController.m in Sources */,
+				D22648141C11842D00E44880 /* WYStoryboardPopoverSegue.m in Sources */,
 				0C81834C1BF914A000882A65 /* BlickbeeAppManager.m in Sources */,
 				0C8BCF891BFF2CC0009051F1 /* OrderServiceClient.m in Sources */,
+				D22648171C11846300E44880 /* OptionsPopOverViewControllerTableViewController.m in Sources */,
 				0C8BCF8F1BFF3AA5009051F1 /* Order.m in Sources */,
 				0C8BCF8C1BFF2D68009051F1 /* Address.m in Sources */,
 				0C2FBC591C06EDD000A374E1 /* AddAddressServiceClient.m in Sources */,

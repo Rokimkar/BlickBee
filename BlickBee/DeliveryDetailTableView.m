@@ -82,6 +82,10 @@
                 ((DeliveryAddressTableViewCell *)cell).editBtnDelegate=self;
 
                 [((DeliveryAddressTableViewCell*)cell) bindData:[[BlickbeeAppManager sharedInstance].userAddresses objectAtIndex:indexPath.row]];
+                [((DeliveryAddressTableViewCell *)cell).nameLabel setTextColor:RGBA(238, 77, 28, 1)];
+                [((DeliveryAddressTableViewCell *)cell).phoneLabel setTextColor:RGBA(238, 77, 28, 1)];
+                [((DeliveryAddressTableViewCell *)cell).address1Label setTextColor:RGBA(238, 77, 28, 1)];
+                [((DeliveryAddressTableViewCell *)cell).address2Label setTextColor:RGBA(238, 77, 28, 1)];
             }
             else{
                 cell = (AddAddressTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"AddAddressTableViewCell"];
@@ -100,23 +104,26 @@
             }
             ((DeliveryAddressTableViewCell *)cell).editBtnDelegate=self;
             [((DeliveryAddressTableViewCell*)cell) bindData:[[BlickbeeAppManager sharedInstance].userAddresses objectAtIndex:indexPath.row]];
+            [((DeliveryAddressTableViewCell *)cell).nameLabel setTextColor:[UIColor blackColor]];
+            [((DeliveryAddressTableViewCell *)cell).phoneLabel setTextColor:[UIColor blackColor]];
+            [((DeliveryAddressTableViewCell *)cell).address1Label setTextColor:[UIColor blackColor]];
+            [((DeliveryAddressTableViewCell *)cell).address2Label setTextColor:[UIColor blackColor]];
+            
+            if(addressCellOneColor==YES && indexPath.row==0){
+                [((DeliveryAddressTableViewCell *)cell).nameLabel setTextColor:RGBA(238, 77, 28, 1)];
+                [((DeliveryAddressTableViewCell *)cell).phoneLabel setTextColor:RGBA(238, 77, 28, 1)];
+                [((DeliveryAddressTableViewCell *)cell).address1Label setTextColor:RGBA(238, 77, 28, 1)];
+                [((DeliveryAddressTableViewCell *)cell).address2Label setTextColor:RGBA(238, 77, 28, 1)];
+            }
+            if(indexPath.row==1 && addressCellTwoColor==YES){
+                [((DeliveryAddressTableViewCell *)cell).nameLabel setTextColor:RGBA(238, 77, 28, 1)];
+                [((DeliveryAddressTableViewCell *)cell).phoneLabel setTextColor:RGBA(238, 77, 28, 1)];
+                [((DeliveryAddressTableViewCell *)cell).address1Label setTextColor:RGBA(238, 77, 28, 1)];
+                [((DeliveryAddressTableViewCell *)cell).address2Label setTextColor:RGBA(238, 77, 28, 1)];
+            }
+            
         }
-        [((DeliveryAddressTableViewCell *)cell).nameLabel setTextColor:[UIColor blackColor]];
-        [((DeliveryAddressTableViewCell *)cell).phoneLabel setTextColor:[UIColor blackColor]];
-        [((DeliveryAddressTableViewCell *)cell).address1Label setTextColor:[UIColor blackColor]];
-        [((DeliveryAddressTableViewCell *)cell).address2Label setTextColor:[UIColor blackColor]];
-        if((indexPath.row==0 && addressCellOneColor==YES)||(indexPath.row==0 && [BlickbeeAppManager sharedInstance].userAddresses.count==1)){
-            [((DeliveryAddressTableViewCell *)cell).nameLabel setTextColor:RGBA(238, 77, 28, 1)];
-            [((DeliveryAddressTableViewCell *)cell).phoneLabel setTextColor:RGBA(238, 77, 28, 1)];
-            [((DeliveryAddressTableViewCell *)cell).address1Label setTextColor:RGBA(238, 77, 28, 1)];
-            [((DeliveryAddressTableViewCell *)cell).address2Label setTextColor:RGBA(238, 77, 28, 1)];
-        }
-        if(indexPath.row==1 && addressCellTwoColor==YES){
-            [((DeliveryAddressTableViewCell *)cell).nameLabel setTextColor:RGBA(238, 77, 28, 1)];
-            [((DeliveryAddressTableViewCell *)cell).phoneLabel setTextColor:RGBA(238, 77, 28, 1)];
-            [((DeliveryAddressTableViewCell *)cell).address1Label setTextColor:RGBA(238, 77, 28, 1)];
-            [((DeliveryAddressTableViewCell *)cell).address2Label setTextColor:RGBA(238, 77, 28, 1)];
-        }
+
     }
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     return cell;
