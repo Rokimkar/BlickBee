@@ -28,9 +28,13 @@
     [super viewDidLoad];
     
     optionsBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    optionsBtn.bounds = CGRectMake(0, 0, 100, 44);
+    optionsBtn.bounds = CGRectMake(0, 0, 130, 44);
     [optionsBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [optionsBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+    optionsBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    [optionsBtn setImage:[UIImage imageNamed:@"downArrow"] forState:UIControlStateNormal];
+    [optionsBtn setImage:[UIImage imageNamed:@"downArrow"] forState:UIControlStateHighlighted];
+    [optionsBtn setImageEdgeInsets:UIEdgeInsetsMake(0, 110, 0, 0)];
     self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc]init];
     [optionsBtn addTarget:self action:@selector(optionsButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *optionsMenuButton = [[UIBarButtonItem alloc]initWithCustomView:optionsBtn];

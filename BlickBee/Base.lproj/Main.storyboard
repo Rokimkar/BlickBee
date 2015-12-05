@@ -211,7 +211,7 @@
                                     <constraint firstAttribute="width" secondItem="zt9-XH-2sf" secondAttribute="height" multiplier="1:1" id="6kE-8Y-MMD"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email or Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hnE-hk-keg">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hnE-hk-keg">
                                 <rect key="frame" x="42" y="243" width="268" height="30"/>
                                 <animations/>
                                 <constraints>
