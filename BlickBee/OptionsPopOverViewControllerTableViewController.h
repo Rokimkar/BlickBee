@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum{
+    kFruits,
+    kVegetables
+}DeliveryOptions;
+
+@protocol optionSelected <NSObject>
+
+-(void) optionSelected:(DeliveryOptions)optionSelected;
+
+@end
+
 @interface OptionsPopOverViewControllerTableViewController : UITableViewController
+
+@property (nonatomic,weak) id<optionSelected> optionSelectedDelegate;
 
 @end

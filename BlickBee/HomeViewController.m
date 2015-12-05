@@ -133,13 +133,17 @@
         UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         ProductViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"ProductViewController"];
 //        ProductViewController *vc = [[ProductViewController alloc]init];
-        vc.productArray=self.productRepo.fruitsArray;
+        vc.productRepo=self.productRepo;
+        vc.deliveryOptions=kFruits;
+//        vc.productArray=self.productRepo.fruitsArray;
         [self.navigationController pushViewController:vc animated:YES];
     }
     else if (indexPath.section==2){
         UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         ProductViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"ProductViewController"];
-        vc.productArray=self.productRepo.vegetablesArray;
+        vc.productRepo=self.productRepo;
+        vc.deliveryOptions=kVegetables;
+//        vc.productArray=self.productRepo.vegetablesArray;
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

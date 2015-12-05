@@ -7,16 +7,22 @@
 //
 
 #import "OptionsPopOverViewControllerTableViewController.h"
+#import "WYPopoverController.h"
 
-@interface OptionsPopOverViewControllerTableViewController ()
 
+@interface OptionsPopOverViewControllerTableViewController ()<WYPopoverControllerDelegate>
+{
+    NSArray *optionsArray;
+
+}
 @end
 
 @implementation OptionsPopOverViewControllerTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    optionsArray= [[NSArray alloc] initWithObjects:@"Fruits",@"Vegetables", nil];
+    self.navigationController.navigationBar.hidden=YES;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -33,23 +39,32 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 0;
+    return optionsArray.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    cell.textLabel.text=[optionsArray objectAtIndex:indexPath.row];
     // Configure the cell...
     
     return cell;
 }
-*/
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self.optionSelectedDelegate optionSelected:indexPath.row];
+
+}
+
 
 /*
 // Override to support conditional editing of the table view.

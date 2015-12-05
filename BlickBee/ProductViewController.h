@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ProductRepo.h"
+#import "OptionsPopOverViewControllerTableViewController.h"
 
 @interface ProductViewController : UIViewController
-@property (weak,nonatomic) NSMutableArray *productArray;
+@property (strong,nonatomic) NSMutableArray *productArray;
+@property (strong,nonatomic) ProductRepo *productRepo;
+@property (assign,nonatomic) DeliveryOptions deliveryOptions;
+
 @property (weak, nonatomic) IBOutlet UIButton *floatingBtn;
 
 @end
