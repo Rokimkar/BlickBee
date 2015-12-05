@@ -25,6 +25,10 @@
     [[self.shopMoreButtonPressed layer]setBorderColor:[UIColor blackColor].CGColor];
     [[self.shopMoreButtonPressed layer]setBorderWidth:1.0f];
     self.shopMoreButtonPressed.layer.cornerRadius = 0.0;
+    for(int i=0;i<[BlickbeeAppManager sharedInstance].selectedProducts.count;i++){
+       Product*product = [[BlickbeeAppManager sharedInstance].selectedProducts objectAtIndex:i];
+        product.selectedProductQuantity=@"0";
+    }
     [[BlickbeeAppManager sharedInstance].selectedProducts removeAllObjects];
     [[BlickbeeAppManager sharedInstance] archiveSelectedProducts];
     self.title=@"Confirm Order";
