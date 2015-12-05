@@ -17,6 +17,7 @@
 @interface CartViewController ()<openHomeVC,changePriceLabelInCartViewController>{
     CartTableView *cartTableView;
     NSMutableArray *selectedProductArray;
+    NSInteger totalAmount;
 }
 
 @end
@@ -73,7 +74,7 @@
 }
 
 -(void)setTotalPriceLabel{
-    NSInteger totalAmount=0;
+    totalAmount=0;
     for(int i=0;i<[BlickbeeAppManager sharedInstance].selectedProducts.count;i++){
         Product *product=[[Product alloc]init];
         product = [[BlickbeeAppManager sharedInstance].selectedProducts objectAtIndex:i];
@@ -100,7 +101,7 @@
     [self openHomeVC];
 }
 - (IBAction)proceedButtonClicked:(id)sender {
-    if([self.labelForTotal.text integerValue]<250 ){
+    if(totalAmount<250 ){
         [self addAlertView];
     }
     else{

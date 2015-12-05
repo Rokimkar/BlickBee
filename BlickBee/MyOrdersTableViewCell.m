@@ -19,6 +19,7 @@
 }
 
 -(void) bindData : (Order *)myOrder{
+    [self setBackgroundColor:RGBA(225, 225, 225, 1)];
     self.item=myOrder;
     self.labelForOrderDate.text=myOrder.orderCreatedDate;
     self.labelForOrderID.text=myOrder.uniqueOrderId;
