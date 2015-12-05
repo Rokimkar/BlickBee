@@ -7,8 +7,8 @@
 //
 
 #import "BlickbeeAppManager.h"
-
-
+#import "Archiver.h"
+#import "SelectedProductRepo.h"
 @implementation BlickbeeAppManager
 
 
@@ -33,9 +33,10 @@
 {
     self = [super init];
     self.user = [[User alloc] init];
-    self.selectedProducts = [[NSMutableArray alloc]init];
+//    self.selectedProducts = [[NSMutableArray alloc]init];
     self.userAddresses = [[NSMutableArray alloc] init];
     self.regionsArray = [[NSMutableArray alloc] init];
+    [self readDataFromArchiver];
     return self;
     
 }
@@ -67,5 +68,31 @@
 }
 #endif
 
+
+-(void) setSelectedProducts:(NSMutableArray *)selectedProducts{
+    _selectedProducts=selectedProducts;
+    [self archiveSelectedProducts];
+}
+
+-(void) archiveSelectedProducts{
+    SelectedProductRepo *selectedProductRepo = [[SelectedProductRepo alloc] init];
+    selectedProductRepo.selectedProdsArray=_selectedProducts;
+    BOOL fileSaved = [Archiver persist:selectedProductRepo key:@"SelectedProductRepo"];
+    if (fileSaved) {
+        NSLog(@"SelectedProductRepo saved");
+    }
+    else{
+        NSLog(@"SelectedProductRepo not saved");
+    }
+}
+
+-(void) readDataFromArchiver
+{
+    SelectedProductRepo *productRepo = [Archiver retrieve:@"SelectedProductRepo"];
+    _selectedProducts=productRepo.selectedProdsArray;
+    if (!_selectedProducts) {
+        _selectedProducts = [[NSMutableArray alloc] init];
+    }
+}
 
 @end

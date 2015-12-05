@@ -156,6 +156,7 @@
 		D22648131C11842D00E44880 /* WYPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22648101C11842D00E44880 /* WYPopoverController.m */; };
 		D22648141C11842D00E44880 /* WYStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D22648121C11842D00E44880 /* WYStoryboardPopoverSegue.m */; };
 		D22648171C11846300E44880 /* OptionsPopOverViewControllerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22648161C11846300E44880 /* OptionsPopOverViewControllerTableViewController.m */; };
+		D235035F1C13590400D11676 /* SelectedProductRepo.m in Sources */ = {isa = PBXBuildFile; fileRef = D235035E1C13590400D11676 /* SelectedProductRepo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -399,6 +400,8 @@
 		D22648121C11842D00E44880 /* WYStoryboardPopoverSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYStoryboardPopoverSegue.m; sourceTree = "<group>"; };
 		D22648151C11846300E44880 /* OptionsPopOverViewControllerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsPopOverViewControllerTableViewController.h; sourceTree = "<group>"; };
 		D22648161C11846300E44880 /* OptionsPopOverViewControllerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsPopOverViewControllerTableViewController.m; sourceTree = "<group>"; };
+		D235035D1C13590400D11676 /* SelectedProductRepo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectedProductRepo.h; sourceTree = "<group>"; };
+		D235035E1C13590400D11676 /* SelectedProductRepo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedProductRepo.m; sourceTree = "<group>"; };
 		F4F9204652D14D4F60EC1A69 /* Pods-BlickBee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlickBee.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlickBee/Pods-BlickBee.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -492,6 +495,8 @@
 				0C2F07181BEE6B4A00F6B7DB /* DeliverySlot.m */,
 				0C2F071D1BEE781B00F6B7DB /* ProductRepo.h */,
 				0C2F071E1BEE781B00F6B7DB /* ProductRepo.m */,
+				D235035D1C13590400D11676 /* SelectedProductRepo.h */,
+				D235035E1C13590400D11676 /* SelectedProductRepo.m */,
 				0C8BCF8A1BFF2D68009051F1 /* Address.h */,
 				0C8BCF8B1BFF2D68009051F1 /* Address.m */,
 				0C8BCF8D1BFF3AA5009051F1 /* Order.h */,
@@ -1129,6 +1134,7 @@
 				A05253451BEA0EC9007EF74F /* LeftDeckController.m in Sources */,
 				0C2FBC4D1C061F1B00A374E1 /* AddAddressTableViewCell.m in Sources */,
 				A0D5E3221BFE049100650E58 /* DeliveryDetailTableView.m in Sources */,
+				D235035F1C13590400D11676 /* SelectedProductRepo.m in Sources */,
 				A0D060E61C034268001E70B9 /* MyOrdersViewController.m in Sources */,
 				0C2FBC741C09C58500A374E1 /* AccountSettingsViewController.m in Sources */,
 				0C2F06FC1BEE458000F6B7DB /* ProductsServiceClient.m in Sources */,
@@ -1309,7 +1315,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Alok Ranjan (H686S25ZPL)";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/Rokimkar/Desktop/BlickBee/BlickBee/BlickbeePrefix.pch;
+				GCC_PREFIX_HEADER = /Users/kunalchelani/Desktop/BlickBee/BlickBee/BlickbeePrefix.pch;
 				INFOPLIST_FILE = BlickBee/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1329,7 +1335,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Alok Ranjan (H686S25ZPL)";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/Rokimkar/Desktop/BlickBee/BlickBee/BlickbeePrefix.pch;
+				GCC_PREFIX_HEADER = /Users/kunalchelani/Desktop/BlickBee/BlickBee/BlickbeePrefix.pch;
 				INFOPLIST_FILE = BlickBee/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
