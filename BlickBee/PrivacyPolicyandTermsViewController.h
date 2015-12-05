@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface PrivacyPolicyandTermsViewController : UIViewController
+#import "BaseViewController.h"
+@interface PrivacyPolicyandTermsViewController : BaseViewController
 @property (weak, nonatomic) IBOutlet UIWebView *webViewForPrivacyPolicy;
 @property (strong,nonatomic) NSURL *url;
 @property (strong,nonatomic) NSString *name;

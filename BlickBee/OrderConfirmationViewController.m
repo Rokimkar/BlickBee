@@ -27,6 +27,7 @@
     self.shopMoreButtonPressed.layer.cornerRadius = 0.0;
     [[BlickbeeAppManager sharedInstance].selectedProducts removeAllObjects];
     [[BlickbeeAppManager sharedInstance] archiveSelectedProducts];
+    self.title=@"Confirm Order";
 }
 
 - (void)didReceiveMemoryWarning {

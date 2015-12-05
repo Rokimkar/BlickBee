@@ -34,6 +34,7 @@
             self.addressItem=[[BlickbeeAppManager sharedInstance].userAddresses objectAtIndex:0];
         }
     }
+    self.title=@"Delivery Details";
 }
 
 -(void)viewWillAppear:(BOOL)animated{

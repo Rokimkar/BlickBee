@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface AboutUsViewController : UIViewController
+#import "BaseViewController.h"
+@interface AboutUsViewController : BaseViewController
 - (IBAction)privacyPolicyButtonClicked:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *privacyPolicyButtonClicked;
 @property (weak, nonatomic) IBOutlet UIButton *termsAndConditonButtonClicked;

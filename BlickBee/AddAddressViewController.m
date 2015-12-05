@@ -222,6 +222,10 @@
         [[[UIAlertView alloc] initWithTitle:@"" message:@"Please enter the address." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil] show];
         return;
     }
+    if (!selectedArea) {
+        [[[UIAlertView alloc] initWithTitle:@"" message:@"Please select a nearby area." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil] show];
+        return;
+    }
 
     
     if (!selectedAddress) {

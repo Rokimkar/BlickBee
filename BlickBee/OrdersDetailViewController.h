@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Order.h"
-
-@interface OrdersDetailViewController : UIViewController
+#import "BaseViewController.h"
+@interface OrdersDetailViewController : BaseViewController
 @property (strong,nonatomic) Order *order;
 @end

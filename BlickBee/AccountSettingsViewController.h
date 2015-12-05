@@ -7,8 +7,8 @@
 //
 
 #import "ViewController.h"
-
-@interface AccountSettingsViewController : ViewController <UITableViewDataSource,UITableViewDelegate>
+#import "BaseViewController.h"
+@interface AccountSettingsViewController : BaseViewController <UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *accountSettingsTableView;
 
 @end

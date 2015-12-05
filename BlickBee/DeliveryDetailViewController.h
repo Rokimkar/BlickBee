@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DeliveryDetailTableView.h"
 #import "Address.h"
-
-@interface DeliveryDetailViewController : UIViewController <openNewAddress,addressRecived>
+#import "BaseViewController.h"
+@interface DeliveryDetailViewController : BaseViewController <openNewAddress,addressRecived>
 @property (strong,nonatomic) Address *addressItem;
 @end

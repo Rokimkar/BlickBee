@@ -11,7 +11,8 @@
 #import "DeliveryAddressTableViewCell.h"
 #import "OTPViewController.h"
 #import "LoginServiceClient.h"
-@interface AccountSettingsViewController ()
+#import "AddAddressViewController.h"
+@interface AccountSettingsViewController ()<openAddressPopUp,addressUpdated,editBtnClicked>
 
 @end
 
@@ -43,6 +44,9 @@
         //[swRevealVC revealToggle:self];
         [swRevealVC revealToggleAnimated:YES];
     }
+    [self.view setBackgroundColor:RGBA(225, 225, 225, 1)];
+    [self.accountSettingsTableView setBackgroundColor:RGBA(225, 225, 225, 1)];
+
     // Do any additional setup after loading the view.
 }
 
@@ -127,9 +131,12 @@
         [changePasswordBtn setTitleColor:RGBA(252, 95, 16, 1) forState:UIControlStateHighlighted];
 
         [cell addSubview:changePasswordBtn];
+        [cell setBackgroundColor:RGBA(225, 225, 225, 1)];
+
         return cell;
     }
-    
+    [cell setBackgroundColor:RGBA(225, 225, 225, 1)];
+
     return cell;
 }
 
@@ -141,14 +148,14 @@
         }
         else if ([BlickbeeAppManager sharedInstance].userAddresses.count==1) {
             if (indexPath.row==0){
-                return 150;
+                return 130;
             }
             else{
                 return 70;
             }
         }
         else if ([BlickbeeAppManager sharedInstance].userAddresses.count==2) {
-            return 150;
+            return 130;
         }
     }
     return 44;
@@ -169,6 +176,31 @@
         
     }];
 }
+-(void) openAddressPopUp{
+    AddAddressViewController *cont = [[AddAddressViewController alloc] initWithNibName:@"AddAddressViewController" bundle:nil andPreviouslySelectedAddress:nil];
+    cont.addressDelegate=self;
+    UINavigationController *navcont = [[UINavigationController alloc] initWithRootViewController:cont];
+    [self.navigationController presentViewController:navcont animated:YES completion:^{
+        
+    }];
+}
+-(void) addressUpdated{
+    [self.accountSettingsTableView reloadData];
+}
+
+-(void) editBtnClickedWith:(Address*)prevAddress{
+    AddAddressViewController *cont = [[AddAddressViewController alloc] initWithNibName:@"AddAddressViewController" bundle:nil andPreviouslySelectedAddress:prevAddress];
+    cont.addressDelegate=self;
+    UINavigationController *navcont = [[UINavigationController alloc] initWithRootViewController:cont];
+    [self.navigationController presentViewController:navcont animated:YES completion:^{
+        
+    }];
+}
+
+-(void) removeBtnClicked{
+    [self.accountSettingsTableView reloadData];
+}
+
 /*
 #pragma mark - Navigation
 
