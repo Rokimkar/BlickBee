@@ -9,6 +9,7 @@
 #import "BlickbeeAppManager.h"
 #import "Archiver.h"
 #import "SelectedProductRepo.h"
+#import "Product.h"
 @implementation BlickbeeAppManager
 
 
@@ -68,11 +69,11 @@
 }
 #endif
 
-
--(void) setSelectedProducts:(NSMutableArray *)selectedProducts{
-    _selectedProducts=selectedProducts;
-    [self archiveSelectedProducts];
-}
+//
+//-(void) setSelectedProducts:(NSMutableArray *)selectedProducts{
+//    _selectedProducts=selectedProducts;
+//    [self archiveSelectedProducts];
+//}
 
 -(void) archiveSelectedProducts{
     SelectedProductRepo *selectedProductRepo = [[SelectedProductRepo alloc] init];
@@ -93,6 +94,37 @@
     if (!_selectedProducts) {
         _selectedProducts = [[NSMutableArray alloc] init];
     }
+}
+
+-(void) matchSelectedProductsWithNewProductRepo:(ProductRepo*)productRepo{
+    
+    if (self.selectedProducts && self.selectedProducts.count>0) {
+        
+        for (Product* selectedProduct in self.selectedProducts) {
+            
+            if ([selectedProduct.productCatId isEqualToString:@"1"]) {
+                //veg
+                NSPredicate *predicate = [NSPredicate predicateWithFormat:@"productId == %@",selectedProduct.productId];
+                NSArray* array = [productRepo.vegetablesArray filteredArrayUsingPredicate:predicate];
+                if (array && array.count>0) {
+                    [self updateProduct:[array objectAtIndex:0] withSelectedProduct:selectedProduct];
+                }
+            }
+            else if ([selectedProduct.productCatId isEqualToString:@"2"]) {
+                //fruits
+                NSPredicate *predicate = [NSPredicate predicateWithFormat:@"productId == %@",selectedProduct.productId];
+                NSArray* array = [productRepo.fruitsArray filteredArrayUsingPredicate:predicate];
+                if (array && array.count>0) {
+                    [self updateProduct:[array objectAtIndex:0] withSelectedProduct:selectedProduct];
+                }
+            }
+        }
+    }
+}
+
+-(void) updateProduct:(Product*)fetchedProduct withSelectedProduct:(Product*)selectedProduct{
+    fetchedProduct.selectedProductQuantity=selectedProduct.selectedProductQuantity;
+    selectedProduct=fetchedProduct;
 }
 
 @end

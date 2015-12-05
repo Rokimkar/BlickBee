@@ -52,6 +52,11 @@
     [self.floatingBtn setTitle:[NSString stringWithFormat:@"%d",flotingBtnCount] forState:UIControlStateNormal];
 }
 
+-(void) viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [[BlickbeeAppManager sharedInstance] archiveSelectedProducts];
+}
+
 -(void) prepareView{
     
     switch (self.deliveryOptions) {

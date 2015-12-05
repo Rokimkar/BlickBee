@@ -26,7 +26,7 @@
     [[self.shopMoreButtonPressed layer]setBorderWidth:1.0f];
     self.shopMoreButtonPressed.layer.cornerRadius = 0.0;
     [[BlickbeeAppManager sharedInstance].selectedProducts removeAllObjects];
-
+    [[BlickbeeAppManager sharedInstance] archiveSelectedProducts];
 }
 
 - (void)didReceiveMemoryWarning {

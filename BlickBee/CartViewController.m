@@ -64,6 +64,11 @@
     [self.view setBackgroundColor:RGBA(225, 225, 225, 1)];
 }
 
+-(void) viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [[BlickbeeAppManager sharedInstance] archiveSelectedProducts];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
@@ -100,7 +105,10 @@
     [self openHomeVC];
 }
 - (IBAction)proceedButtonClicked:(id)sender {
-    if([self.labelForTotal.text integerValue]<250 ){
+    NSArray*components = [self.labelForTotal.text componentsSeparatedByString:@" "];
+    float totalValue = [[components objectAtIndex:components.count-1] floatValue];
+    
+    if(totalValue<250 ){
         [self addAlertView];
     }
     else{

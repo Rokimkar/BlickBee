@@ -18,4 +18,9 @@
 @property (nonatomic,strong) NSMutableArray *userAddresses;
 @property (nonatomic,strong) NSMutableArray *regionsArray;
 @property (nonatomic,strong) HomeViewController *homeViewController;
+
+-(void) archiveSelectedProducts;
+-(void) matchSelectedProductsWithNewProductRepo:(ProductRepo*)productRepo;
+
+
 @end

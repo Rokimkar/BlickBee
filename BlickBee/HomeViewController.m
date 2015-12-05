@@ -45,6 +45,7 @@
         ProductsServiceClient *client = [[ProductsServiceClient alloc] init];
         [client fetchProdctRepoWithSuccess:^(ProductRepo *repo) {
             self.productRepo=repo;
+            [[BlickbeeAppManager sharedInstance] matchSelectedProductsWithNewProductRepo:repo];
             [self.homeTableView reloadData];
         } failure:^(NSError *error) {
             
