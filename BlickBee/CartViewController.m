@@ -106,10 +106,7 @@
     [self openHomeVC];
 }
 - (IBAction)proceedButtonClicked:(id)sender {
-    NSArray*components = [self.labelForTotal.text componentsSeparatedByString:@" "];
-    float totalValue = [[components objectAtIndex:components.count-1] floatValue];
-    
-    if(totalValue<250 ){
+    if(totalAmount<250 ){
         [self addAlertView];
     }
     else{

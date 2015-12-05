@@ -205,8 +205,7 @@
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSDictionary *params = @{@"request": @"resetPassword()",
-                             @"user_id": [BlickbeeAppManager sharedInstance].user.userId,
-                             @"auth_key": [BlickbeeAppManager sharedInstance].user.authKey,
+                             @"phone": [BlickbeeAppManager sharedInstance].user.phone,
                              @"password": newPassword
                              };
     
