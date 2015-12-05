@@ -79,9 +79,17 @@
         product = [[BlickbeeAppManager sharedInstance].selectedProducts objectAtIndex:i];
         totalAmount+=([product.selectedProductQuantity integerValue]*[product.productPrice integerValue]);
     }
+    if(totalAmount==0){
+        [self.proceedButtonClicked setHidden:YES];
+    }
     self.labelForSubtotal.text=[NSString stringWithFormat:@"%@ %ld",@"₹",(long)totalAmount];
     self.labelForDelivery.text=@"Free";
     self.labelForTotal.text=[NSString stringWithFormat:@"%@ %ld",@"₹",(long)totalAmount];
+}
+
+-(void)addAlertView{
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:nil message:@"Your order must be greater than ₹ 250" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+    [alertView show];
 }
 
 -(void)openHomeVC{
@@ -92,10 +100,18 @@
     [self openHomeVC];
 }
 - (IBAction)proceedButtonClicked:(id)sender {
-    
+    if([self.labelForTotal.text integerValue]<250 ){
+        [self addAlertView];
+    }
+    else{
+        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        DeliveryDetailViewController *deliveryDetailViewController = [storyBoard instantiateViewControllerWithIdentifier:@"DeliveryDetailViewController"];
+        [self.navigationController pushViewController:deliveryDetailViewController animated:YES];
+    }
 }
 
 -(void) presentHome{
+
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 @end
