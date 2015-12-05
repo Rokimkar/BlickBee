@@ -34,6 +34,14 @@
         if ([[responseObject objectForKey:@"response"] isEqualToString:@"success"]) {
             success([self getUserFromRespons:[responseObject objectForKey:@"response_data"]]);
         }
+        else if ([[responseObject objectForKey:@"response"] isEqualToString:@"failed"] && [responseObject objectForKey:@"error"]){
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                                message:[responseObject objectForKey:@"error"]
+                                                               delegate:nil
+                                                      cancelButtonTitle:@"Ok"
+                                                      otherButtonTitles:nil];
+            [alertView show];
+        }
         else{
             failure(nil);
         }
