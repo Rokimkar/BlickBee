@@ -23,6 +23,20 @@
                                                                          }
         ;
         
+        UIBarButtonItem *backButton = [[UIBarButtonItem alloc]
+                                       initWithTitle:@""
+                                       style:UIBarButtonItemStylePlain
+                                       target:nil
+                                       action:nil];
+        self.navigationItem.backBarButtonItem=backButton;
+        
+//        UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+//        UIImage *backBtnImage = [UIImage imageNamed:@"backArrow"]  ; // Here set the back button image
+//        [backBtn setBackgroundImage:backBtnImage forState:UIControlStateNormal];
+//        [backBtn addTarget:self action:@selector(handleBack:) forControlEvents:UIControlEventTouchUpInside];
+//        backBtn.frame = CGRectMake(0, 0, 24, 24);
+//        UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithCustomView:backBtn] ;
+//        self.navigationItem.backBarButtonItem = backButton;
     }
     // Do any additional setup after loading the view.
 }

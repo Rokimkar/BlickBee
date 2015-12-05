@@ -32,8 +32,17 @@
     [[BlickbeeAppManager sharedInstance].selectedProducts removeAllObjects];
     [[BlickbeeAppManager sharedInstance] archiveSelectedProducts];
     self.title=@"Confirm Order";
+
 }
 
+-(void) viewWillAppear:(BOOL)animated{
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc]
+                                   initWithTitle: @""
+                                   style:UIBarButtonItemStylePlain
+                                   target:self
+                                   action:@selector(shopMoreButtonPressed:)];
+    self.navigationItem.backBarButtonItem = backButton;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
