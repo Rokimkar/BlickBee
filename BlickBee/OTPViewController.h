@@ -7,8 +7,8 @@
 //
 
 #import "ViewController.h"
-
-@interface OTPViewController : ViewController <UITextFieldDelegate>
+#import "BaseViewController.h"
+@interface OTPViewController : BaseViewController <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *otpTextField;
 @property (weak, nonatomic) IBOutlet UIButton *verifyOTPBtn;
 @property (weak, nonatomic) IBOutlet UIButton *resendOTPBtn;

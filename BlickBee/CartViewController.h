@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Product.h"
-
-@interface CartViewController : UIViewController
+#import "BaseViewController.h"
+@interface CartViewController :BaseViewController
 - (IBAction)startShoppingButtonClicked:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *startShoppingButtonClicked;
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewForCartViewController;

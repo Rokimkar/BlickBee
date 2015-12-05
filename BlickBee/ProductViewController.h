@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "ProductRepo.h"
 #import "OptionsPopOverViewControllerTableViewController.h"
-
-@interface ProductViewController : UIViewController
+#import "BaseViewController.h"
+@interface ProductViewController : BaseViewController
 @property (strong,nonatomic) NSMutableArray *productArray;
 @property (strong,nonatomic) ProductRepo *productRepo;
 @property (assign,nonatomic) DeliveryOptions deliveryOptions;

@@ -7,8 +7,8 @@
 //
 
 #import "ViewController.h"
-
-@interface ChangePasswordViewController : ViewController <UITextFieldDelegate>
+#import "BaseViewController.h"
+@interface ChangePasswordViewController : BaseViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UITextField *confirmPasswordTextField;

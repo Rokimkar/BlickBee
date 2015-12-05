@@ -63,6 +63,7 @@
     self.startShoppingButtonClicked.layer.cornerRadius = 0.0;
     [self.startShoppingButtonClicked setBackgroundColor:[UIColor whiteColor]];
     [self.view setBackgroundColor:[UIColor whiteColor]];
+    self.title=@"Cart";
 }
 
 -(void) viewWillDisappear:(BOOL)animated{

@@ -7,8 +7,8 @@
 //
 
 #import "ViewController.h"
-
-@interface ShareViewController : ViewController
+#import "BaseViewController.h"
+@interface ShareViewController : BaseViewController
 @property (weak, nonatomic) IBOutlet UITableView *shareTableView;
 
 @end

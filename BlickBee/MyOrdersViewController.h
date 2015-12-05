@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MyOrdersViewController : UIViewController
+@interface MyOrdersViewController : BaseViewController
 @property (weak,nonatomic) NSMutableArray *myOrdersArray;
 @end
