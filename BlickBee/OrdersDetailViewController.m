@@ -21,6 +21,7 @@
     [super viewDidLoad];
     ordersDetailTableView =[[OrdersDetailTableView alloc]initWithFrame:CGRectMake(0, 0, getScreenWidth(), getScreenHeight()) andOrder: self.order];
     ordersDetailTableView.backgroundColor=RGBA(225, 225, 225, 1);
+    [ordersDetailTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     [self.view addSubview:ordersDetailTableView];
 }
 

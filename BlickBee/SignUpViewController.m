@@ -23,6 +23,7 @@
     [super viewDidLoad];
     securityEntry=YES;
     self.passwordTextField.secureTextEntry = securityEntry;
+    self.phoneTextField.keyboardType=UIKeyboardTypeNumberPad;
 }
     // Do any additional setup after loading the view.
 

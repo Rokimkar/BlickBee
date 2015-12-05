@@ -18,6 +18,7 @@
     self.delegate=self;
     [self registerNib:[UINib nibWithNibName:@"OrdersDetailTableViewCell" bundle:nil] forCellReuseIdentifier:@"OrdersDetailTableViewCell"];
     self.backgroundColor=RGBA(0, 0, 255, 1);
+    
     return [self initWithFrame:frame];
 }
 
@@ -58,7 +59,7 @@
 
 -(CGFloat) tableView:(UITableView *) tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if(indexPath.row==0){
-        return 150;
+        return 130;
     }
     return 110;
 }

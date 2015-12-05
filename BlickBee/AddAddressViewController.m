@@ -59,6 +59,7 @@
     self.areasTableView.layer.cornerRadius = 5.0;
     self.areasTableView.layer.borderWidth = 1.0;
     self.areasTableView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    self.phoneNumberTextField.keyboardType=UIKeyboardTypeNumberPad;
     // Do any additional setup after loading the view from its nib.
 }
 
