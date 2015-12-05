@@ -37,6 +37,13 @@
     self.title=@"Delivery Details";
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    if([BlickbeeAppManager sharedInstance].userAddresses.count!=0){
+        self.addressItem=[[BlickbeeAppManager sharedInstance].userAddresses objectAtIndex:0];
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
