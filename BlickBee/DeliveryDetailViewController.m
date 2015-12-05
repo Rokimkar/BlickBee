@@ -29,6 +29,11 @@
     deliveryDetailTableView.separatorColor=[UIColor clearColor];
     deliveryDetailTableView.backgroundColor=RGBA(225, 225, 225, 1);
     [self.view addSubview:deliveryDetailTableView];
+    if(self.addressItem==nil){
+        if([BlickbeeAppManager sharedInstance].userAddresses.count>0){
+            self.addressItem=[[BlickbeeAppManager sharedInstance].userAddresses objectAtIndex:0];
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning {
