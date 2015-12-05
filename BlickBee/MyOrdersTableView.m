@@ -16,7 +16,6 @@
     self.dataSource=self;
     self.delegate=self;
     [self registerNib:[UINib nibWithNibName:@"MyOrdersTableViewCell" bundle:nil] forCellReuseIdentifier:@"MyOrdersTableViewCell"];
-    self.backgroundColor=RGBA(0, 0, 255, 1);
     return [self initWithFrame:frame];
 }
 
@@ -34,7 +33,7 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MyOrdersTableViewCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
-    [cell setBackgroundColor:RGBA(225, 225, 225, 1)];
+    //[cell setBackgroundColor:RGBA(225, 225, 225, 1)];
     [cell bindData:[self.myOrdersArray objectAtIndex:indexPath.row]];
     cell.launchOrderDetailVCDelegate=self.parentVC;
     return cell;

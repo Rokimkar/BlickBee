@@ -18,7 +18,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelForSubtotal;
 @property (weak, nonatomic) IBOutlet UILabel *labelForDelivery;
 @property (weak, nonatomic) IBOutlet UILabel *labelForTotal;
-
 @property (strong, nonatomic) NSMutableArray *productArray;
 -(void) presentHome;
 @end

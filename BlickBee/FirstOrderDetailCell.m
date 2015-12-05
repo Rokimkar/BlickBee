@@ -25,7 +25,7 @@
     self.imageViewForStatus.image = [UIImage imageNamed:@"2_a.png"];
     [self.imageViewForStatus sizeToFit];
     self.labelForOrderID.text=order.uniqueOrderId;
-    self.labelForAmount.text=order.orderAmount;
+    self.labelForAmount.text=[NSString stringWithFormat:@"%@ %@",@"₹",order.orderAmount];
     self.labelForDate.text=order.orderCreatedDate;
 }
 

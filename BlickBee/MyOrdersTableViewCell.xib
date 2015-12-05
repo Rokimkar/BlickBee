@@ -25,14 +25,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="361" height="145"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1p6-JF-Ca9">
-                        <rect key="frame" x="0.0" y="9" width="361" height="128"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cardLayout.png" translatesAutoresizingMaskIntoConstraints="NO" id="1p6-JF-Ca9">
+                        <rect key="frame" x="4" y="9" width="353" height="128"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDo-S5-cqY">
                         <rect key="frame" x="8" y="13" width="212" height="23"/>
                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IS3-xs-JL7">
@@ -116,7 +115,7 @@
                         </variation>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hn2-VY-R7x">
-                        <rect key="frame" x="109" y="59" width="249" height="47"/>
+                        <rect key="frame" x="109" y="59" width="244" height="50"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="168" id="Ke8-2S-P3N"/>
                         </constraints>
@@ -137,14 +136,16 @@
                     <constraint firstItem="eiu-F2-2og" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="35" id="7hT-E8-rh5"/>
                     <constraint firstAttribute="bottomMargin" secondItem="hn2-VY-R7x" secondAttribute="bottom" constant="12" id="8xw-Ze-EsI"/>
                     <constraint firstAttribute="bottomMargin" secondItem="hn2-VY-R7x" secondAttribute="bottom" constant="6" id="A6H-BD-VdN"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="1p6-JF-Ca9" secondAttribute="trailing" constant="-4" id="AAe-Qv-tpo"/>
                     <constraint firstAttribute="trailingMargin" secondItem="lSD-s9-FqA" secondAttribute="trailing" constant="-5" id="BWm-uc-Q7p"/>
                     <constraint firstItem="hn2-VY-R7x" firstAttribute="leading" secondItem="eiu-F2-2og" secondAttribute="trailing" constant="8" id="Cih-7m-YBM"/>
                     <constraint firstItem="1p6-JF-Ca9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="1" id="Doo-gx-8lr"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="hn2-VY-R7x" secondAttribute="trailing" constant="-5" id="HT7-hX-SfH"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="hn2-VY-R7x" secondAttribute="trailing" id="HT7-hX-SfH"/>
                     <constraint firstAttribute="bottomMargin" secondItem="eiu-F2-2og" secondAttribute="bottom" constant="6" id="IXr-gh-yjU"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="hn2-VY-R7x" secondAttribute="bottom" constant="31" id="JYR-cB-TEG"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="hn2-VY-R7x" secondAttribute="bottom" constant="28" id="JYR-cB-TEG"/>
                     <constraint firstItem="KCr-nq-pru" firstAttribute="top" secondItem="FT3-OL-nIw" secondAttribute="bottom" constant="6" id="Nqc-4b-GPc"/>
                     <constraint firstItem="hn2-VY-R7x" firstAttribute="leading" secondItem="eiu-F2-2og" secondAttribute="trailing" constant="8" id="ORA-k2-mYG"/>
+                    <constraint firstItem="1p6-JF-Ca9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-4" id="OpN-VW-2sq"/>
                     <constraint firstItem="lSD-s9-FqA" firstAttribute="top" secondItem="IS3-xs-JL7" secondAttribute="bottom" constant="1" id="PS4-Mz-9En"/>
                     <constraint firstAttribute="bottomMargin" secondItem="eiu-F2-2og" secondAttribute="bottom" constant="6" id="QEk-jf-erO"/>
                     <constraint firstItem="lSD-s9-FqA" firstAttribute="top" secondItem="IS3-xs-JL7" secondAttribute="bottom" constant="7" id="TX7-mM-HF1"/>
@@ -163,7 +164,7 @@
                     <constraint firstItem="hHV-3K-2qf" firstAttribute="top" secondItem="KCr-nq-pru" secondAttribute="bottom" constant="8" id="eQc-v9-Nkj"/>
                     <constraint firstItem="eiu-F2-2og" firstAttribute="leading" secondItem="ezb-Wa-kAX" secondAttribute="trailing" constant="33" id="gdW-hB-Ree"/>
                     <constraint firstItem="hn2-VY-R7x" firstAttribute="leading" secondItem="eiu-F2-2og" secondAttribute="trailing" constant="2" id="gre-gd-fxI"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="1p6-JF-Ca9" secondAttribute="trailing" constant="-8" id="h0i-38-ss5"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="1p6-JF-Ca9" secondAttribute="trailing" constant="-4" id="h0i-38-ss5"/>
                     <constraint firstItem="hn2-VY-R7x" firstAttribute="top" secondItem="lSD-s9-FqA" secondAttribute="bottom" constant="5" id="kMC-io-lZA"/>
                     <constraint firstItem="FT3-OL-nIw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="l9R-O8-KDl"/>
                     <constraint firstAttribute="bottomMargin" secondItem="hn2-VY-R7x" secondAttribute="bottom" constant="19" id="o92-FT-5nO"/>
@@ -172,7 +173,7 @@
                     <constraint firstItem="hn2-VY-R7x" firstAttribute="top" secondItem="lSD-s9-FqA" secondAttribute="bottom" constant="21" id="reL-0s-Nnu"/>
                     <constraint firstItem="hHV-3K-2qf" firstAttribute="top" secondItem="KCr-nq-pru" secondAttribute="bottom" constant="8" id="tI4-Oq-uIN"/>
                     <constraint firstItem="IS3-xs-JL7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="toy-ir-oct"/>
-                    <constraint firstItem="1p6-JF-Ca9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="tzD-2s-3nM"/>
+                    <constraint firstItem="1p6-JF-Ca9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-4" id="tzD-2s-3nM"/>
                     <constraint firstItem="hn2-VY-R7x" firstAttribute="leading" secondItem="eiu-F2-2og" secondAttribute="trailing" constant="2" id="uvu-cW-cyr"/>
                     <constraint firstItem="ezb-Wa-kAX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="zGb-lM-a6L"/>
                 </constraints>
@@ -196,6 +197,7 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
+            <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="buttonPressedViewOrder" destination="IS3-xs-JL7" id="e17-ju-5aJ"/>
                 <outlet property="imageViewForStatus" destination="hn2-VY-R7x" id="fSn-6a-WIe"/>
@@ -206,4 +208,7 @@
             <point key="canvasLocation" x="288.5" y="239"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="cardLayout.png" width="715" height="206"/>
+    </resources>
 </document>
