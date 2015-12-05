@@ -123,7 +123,7 @@
             }
             
         }
-
+        [cell setBackgroundColor:RGBA(225, 225, 225, 1)];
     }
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     return cell;
@@ -142,7 +142,7 @@
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, tableView.frame.size.width, 35)];
     [label setText:@"Select Delivery Address :"];
     [view addSubview:label];
-    [view setBackgroundColor:[UIColor whiteColor]]; //your background color...
+//    [view setBackgroundColor:[UIColor whiteColor]]; //your background color...
     
     UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(10, view.frame.size.height-3, tableView.frame.size.width-20, 1)];
     [imgView setBackgroundColor:[UIColor lightGrayColor]];

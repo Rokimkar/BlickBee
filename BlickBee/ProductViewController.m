@@ -17,6 +17,7 @@
 @interface ProductViewController ()<chngValForFlotingBtn,optionSelected>{
     BaseTableView *productTableView;
     WYPopoverController *optionsPopoverController;
+    UIButton *optionsBtn;
 }
 
 @end
@@ -26,10 +27,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIButton *optionsBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    optionsBtn.bounds = CGRectMake(0, 0, 80, 44);
-    [optionsBtn setTitle:@"Fruits" forState:UIControlStateNormal];
-    [optionsBtn setTitle:@"Fruits" forState:UIControlStateHighlighted];
+    optionsBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    optionsBtn.bounds = CGRectMake(0, 0, 100, 44);
     [optionsBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [optionsBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
     self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc]init];
@@ -50,6 +49,21 @@
         flotingBtnCount+=product.selectedProductQuantity.integerValue;
     }
     [self.floatingBtn setTitle:[NSString stringWithFormat:@"%d",flotingBtnCount] forState:UIControlStateNormal];
+}
+
+-(void) setNavOptionButton{
+    switch (self.deliveryOptions) {
+        case kFruits:
+            [optionsBtn setTitle:@"Fruits" forState:UIControlStateNormal];
+            [optionsBtn setTitle:@"Fruits" forState:UIControlStateHighlighted];
+            break;
+        case kVegetables:
+            [optionsBtn setTitle:@"Vegetables" forState:UIControlStateNormal];
+            [optionsBtn setTitle:@"Vegetables" forState:UIControlStateHighlighted];
+            break;
+        default:
+            break;
+    }
 }
 
 -(void) viewWillDisappear:(BOOL)animated{
@@ -87,6 +101,8 @@
     if(productTableView){
         [self prepareView];
     }
+    [self setNavOptionButton];
+
 }
 
 -(void) viewDidAppear:(BOOL)animated{
@@ -183,6 +199,7 @@
     if (self.deliveryOptions!=optionSelected) {
         self.deliveryOptions=optionSelected;
         [self prepareView];
+        [self setNavOptionButton];
     }
     [optionsPopoverController dismissPopoverAnimated:YES completion:^{
         [self popoverControllerDidDismissPopover:optionsPopoverController];
