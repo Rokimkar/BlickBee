@@ -37,70 +37,70 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UO7-e5-qNL">
-                        <rect key="frame" x="120" y="14" width="184" height="13"/>
+                        <rect key="frame" x="120" y="14" width="184" height="17"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="13" id="ucu-7B-ZY2"/>
+                            <constraint firstAttribute="height" constant="17" id="ucu-7B-ZY2"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="16"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cost :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VcB-NJ-IH0">
-                        <rect key="frame" x="120" y="33" width="46" height="13"/>
+                        <rect key="frame" x="120" y="37" width="46" height="14"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="46" id="B6I-76-LZc"/>
-                            <constraint firstAttribute="height" constant="13" id="yEY-DS-tRN"/>
+                            <constraint firstAttribute="height" constant="14" id="yEY-DS-tRN"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="15"/>
+                        <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="14"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGn-vz-xhg">
-                        <rect key="frame" x="180" y="33" width="60" height="13"/>
+                        <rect key="frame" x="180" y="37" width="60" height="14"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="13" id="HaI-2u-Gko"/>
+                            <constraint firstAttribute="height" constant="14" id="HaI-2u-Gko"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="15"/>
+                        <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="14"/>
                         <color key="textColor" red="0.98823529409999999" green="0.37254901959999998" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRC-Kp-Oi7">
-                        <rect key="frame" x="174" y="52" width="46" height="13"/>
+                        <rect key="frame" x="174" y="57" width="46" height="14"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="46" id="E3B-5u-f3t"/>
-                            <constraint firstAttribute="height" constant="13" id="JEu-Mp-rX3"/>
+                            <constraint firstAttribute="height" constant="14" id="JEu-Mp-rX3"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="15"/>
+                        <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="14"/>
                         <color key="textColor" red="0.98823529409999999" green="0.37254901959999998" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eae-Yu-7dW">
-                        <rect key="frame" x="179" y="73" width="61" height="13"/>
+                        <rect key="frame" x="179" y="79" width="61" height="14"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="61" id="VPn-Bw-qJF"/>
-                            <constraint firstAttribute="height" constant="13" id="azK-OE-pLa"/>
+                            <constraint firstAttribute="height" constant="14" id="azK-OE-pLa"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="15"/>
+                        <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="14"/>
                         <color key="textColor" red="0.98823529409999999" green="0.37254901959999998" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qty :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lyg-3H-ahL">
-                        <rect key="frame" x="120" y="52" width="46" height="13"/>
+                        <rect key="frame" x="120" y="57" width="46" height="14"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="46" id="qgB-ob-gNN"/>
-                            <constraint firstAttribute="height" constant="13" id="yLY-6C-WfV"/>
+                            <constraint firstAttribute="height" constant="14" id="yLY-6C-WfV"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="15"/>
+                        <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="14"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ls-YY-fnd">
-                        <rect key="frame" x="120" y="73" width="47" height="12"/>
+                        <rect key="frame" x="120" y="79" width="47" height="14"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="47" id="fcA-fX-RDI"/>
-                            <constraint firstAttribute="height" constant="12" id="sLL-80-rR7"/>
+                            <constraint firstAttribute="height" constant="14" id="sLL-80-rR7"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="15"/>
+                        <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="14"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>

@@ -66,10 +66,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEj-2E-pG5">
-                        <rect key="frame" x="119" y="95" width="70" height="18"/>
+                        <rect key="frame" x="114" y="95" width="80" height="18"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="18" id="Okf-UM-naj"/>
-                            <constraint firstAttribute="width" constant="70" id="k5V-MJ-BHW"/>
+                            <constraint firstAttribute="width" constant="80" id="k5V-MJ-BHW"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" red="0.98823529409999999" green="0.37254901959999998" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
