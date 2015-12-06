@@ -31,8 +31,13 @@
     }
     [[BlickbeeAppManager sharedInstance].selectedProducts removeAllObjects];
     [[BlickbeeAppManager sharedInstance] archiveSelectedProducts];
+    [self.navigationItem.backBarButtonItem setAction:@selector(openHomeVC:)];
     self.title=@"Confirm Order";
 
+}
+
+-(void)openHomeVC:(id)sender{
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 -(void) viewWillAppear:(BOOL)animated{

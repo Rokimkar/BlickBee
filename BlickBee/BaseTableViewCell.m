@@ -57,7 +57,12 @@
         } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
         }];
     }
-    
+    NSMutableAttributedString *productChangedPrice= [[NSMutableAttributedString alloc] initWithString:product.productPrice];
+    NSMutableAttributedString *productPrice = [[NSMutableAttributedString alloc] initWithString:product.productPrice];
+    [productChangedPrice appendAttributedString:productPrice];
+    [productPrice addAttribute:NSStrikethroughStyleAttributeName
+                            value:@2
+                            range:NSMakeRange(0, [productPrice length])];
     [self.labelForProductName setNumberOfLines:0];
     self.labelForProductName.text=product.productName;
     [self.labelForProductName sizeToFit];
