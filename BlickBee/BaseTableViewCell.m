@@ -57,17 +57,20 @@
         } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
         }];
     }
-    NSMutableAttributedString *productChangedPrice= [[NSMutableAttributedString alloc] initWithString:product.productPrice];
-    NSMutableAttributedString *productPrice = [[NSMutableAttributedString alloc] initWithString:product.productPrice];
-    [productChangedPrice appendAttributedString:productPrice];
-    [productPrice addAttribute:NSStrikethroughStyleAttributeName
+    NSMutableAttributedString *productChangedPrice= [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@%@",@"₹",product.productPrice]];//₹
+    NSMutableAttributedString *productPrice = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@%@",@"₹",product.productPrice]];
+    [productChangedPrice addAttribute:NSStrikethroughStyleAttributeName
                             value:@2
-                            range:NSMakeRange(0, [productPrice length])];
+                            range:NSMakeRange(0, [productChangedPrice length])];
+    [productPrice addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0, [productChangedPrice length])];
+    NSAttributedString *space = [[NSAttributedString alloc]initWithString:@" "];
+    [productChangedPrice appendAttributedString:space];
+    [productChangedPrice appendAttributedString:productPrice];
     [self.labelForProductName setNumberOfLines:0];
     self.labelForProductName.text=product.productName;
     [self.labelForProductName sizeToFit];
     
-    self.labelForProductPrice.text=product.productPrice;
+    self.labelForProductPrice.attributedText=productChangedPrice;
     self.labelForProductQuantity.text=product.productQuantity;
     [self.addToCartClicked setBackgroundImage:[UIImage imageNamed:@"cartadd.png"] forState:UIControlStateNormal];
     

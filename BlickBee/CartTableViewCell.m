@@ -23,8 +23,20 @@
 
 -(void) bindData : (Product *) product{
     self.item=product;
+    
+    NSMutableAttributedString *productChangedPrice= [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@%@",@"₹",product.productPrice]];//₹
+    NSMutableAttributedString *productPrice = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@%@",@"₹",product.productPrice]];
+    [productChangedPrice addAttribute:NSStrikethroughStyleAttributeName
+                                value:@2
+                                range:NSMakeRange(0, [productChangedPrice length])];
+    [productPrice addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0, [productChangedPrice length])];
+    NSAttributedString *space = [[NSAttributedString alloc]initWithString:@" "];
+    [productChangedPrice appendAttributedString:space];
+    [productChangedPrice appendAttributedString:productPrice];
+
+    
     self.labelForProductTitle.text=product.productName;
-    self.labelForPrice.text=product.productPrice;
+    self.labelForPrice.attributedText=productChangedPrice;
     self.labelForUnitQuantity.text=product.productQuantity;
     self.labelForQuantity.text=product.selectedProductQuantity;
     if([product.productImages objectAtIndex:0]){
