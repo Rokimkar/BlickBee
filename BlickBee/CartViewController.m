@@ -64,7 +64,23 @@
     [self.startShoppingButtonClicked setBackgroundColor:[UIColor whiteColor]];
     [self.view setBackgroundColor:[UIColor whiteColor]];
     self.title=@"Cart";
+    
+    
+    UIImage *image =[UIImage imageNamed:@"back.png"];
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.bounds = CGRectMake(-30, 0, image.size.width-40, image.size.height-40);
+    self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc]init];
+    //[btn addTarget:self.revealViewController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
+    [btn addTarget:self action:@selector(moveBack) forControlEvents:UIControlEventTouchUpInside];
+    [btn setImage:image forState:UIControlStateNormal];
+    UIBarButtonItem *menuButton = [[UIBarButtonItem alloc]initWithCustomView:btn];
+    self.navigationItem.leftBarButtonItem = menuButton;
 }
+
+-(void) moveBack{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 
 -(void) viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];

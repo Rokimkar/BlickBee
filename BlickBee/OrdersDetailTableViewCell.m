@@ -24,7 +24,7 @@
 
 -(void)bindDataWithProduct : (OrderedProduct *) product{
     self.labelForProductName.text=product.productName;
-    self.labelForCost.text=product.productAmount;
+    self.labelForCost.text=[NSString stringWithFormat:@"₹%@",product.productAmount];
     self.labelForQty.text=product.productQty;
     //self.labelForTotalCost.text=
     if(product.productImage){
@@ -47,7 +47,7 @@
         } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
         }];
     }
-    self.labelForTotalCost.text=[NSString stringWithFormat:@"%ld",(long)([product.productQty integerValue])*([product.productAmount integerValue])];
+    self.labelForTotalCost.text=[NSString stringWithFormat:@"₹%ld",(long)([product.productQty integerValue])*([product.productAmount integerValue])];
 }
 
 

@@ -69,6 +69,7 @@
     }
     
     [BlickbeeAppManager sharedInstance].homeViewController=self;
+    [self.homeTableView setScrollEnabled:NO];
     self.title = @"BlickBee";
 }
 

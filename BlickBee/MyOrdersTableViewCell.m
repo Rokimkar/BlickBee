@@ -23,7 +23,7 @@
     self.item=myOrder;
     self.labelForOrderDate.text=myOrder.orderCreatedDate;
     self.labelForOrderID.text=myOrder.uniqueOrderId;
-    self.labelForPrice.text=myOrder.orderAmount;
+    self.labelForPrice.text=[NSString stringWithFormat:@"₹%@",myOrder.orderAmount];
     self.imageViewForStatus.image=[UIImage imageNamed:@"2_a.png"];
     [self.imageViewForStatus sizeToFit];
 }
