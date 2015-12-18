@@ -58,13 +58,13 @@
     if (row>=0 && row<self.productArray.count) {
         if(![product.selectedProductQuantity isEqualToString:@"0"]){
         product.selectedProductQuantity=[NSString stringWithFormat:@"%ld",(long)([product.selectedProductQuantity integerValue]-1)];
-            [self.changeFlotingBtnDelegate changeValOfFloatingBtn];
         [self reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:row inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
             if([product.selectedProductQuantity isEqualToString:@"0"]){
                 [[BlickbeeAppManager sharedInstance].selectedProducts removeObject:product];
             }
         }
     }
+    [self.changeFlotingBtnDelegate changeValOfFloatingBtn];
 }
 
 

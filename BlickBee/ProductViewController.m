@@ -46,13 +46,7 @@
     productTableView.changeFlotingBtnDelegate=self;
     [self.view addSubview:productTableView];
     [self.view bringSubviewToFront:self.floatingBtn];
-    int flotingBtnCount=0;
-    for(int i=0;i<[BlickbeeAppManager sharedInstance].selectedProducts.count;i++){
-        Product *product=[[Product alloc]init];
-       product = [[BlickbeeAppManager sharedInstance].selectedProducts objectAtIndex:i];
-        flotingBtnCount+=product.selectedProductQuantity.integerValue;
-    }
-    [self.floatingBtn setTitle:[NSString stringWithFormat:@"%d",flotingBtnCount] forState:UIControlStateNormal];
+    [self.floatingBtn setTitle:[NSString stringWithFormat:@"%ld",(long)[[BlickbeeAppManager sharedInstance]selectedProducts].count] forState:UIControlStateNormal];
 }
 
 -(void) setNavOptionButton{
@@ -111,27 +105,13 @@
 
 -(void) viewDidAppear:(BOOL)animated{
     [super viewDidAppear:YES];
-    int flotingBtnCount=0;
-    for(int i=0;i<[BlickbeeAppManager sharedInstance].selectedProducts.count;i++){
-        Product *product=[[Product alloc]init];
-        product = [[BlickbeeAppManager sharedInstance].selectedProducts objectAtIndex:i];
-        flotingBtnCount+=product.selectedProductQuantity.integerValue;
-    }
-    [self.floatingBtn setTitle:[NSString stringWithFormat:@"%d",flotingBtnCount] forState:UIControlStateNormal];
+    [self.floatingBtn setTitle:[NSString stringWithFormat:@"%ld",(long)[[BlickbeeAppManager sharedInstance]selectedProducts].count] forState:UIControlStateNormal];
 }
 
 
 -(void)changeValOfFloatingBtn{
-//    NSInteger prevVal = [self.floatingBtn.titleLabel.text integerValue];
-//    [self.floatingBtn setTitle:[NSString stringWithFormat:@"%ld",(long)(prevVal+val)] forState:UIControlStateNormal];
     
-    int flotingBtnCount=0;
-    for(int i=0;i<[BlickbeeAppManager sharedInstance].selectedProducts.count;i++){
-        Product *product=[[Product alloc]init];
-        product = [[BlickbeeAppManager sharedInstance].selectedProducts objectAtIndex:i];
-        flotingBtnCount+=product.selectedProductQuantity.integerValue;
-    }
-    [self.floatingBtn setTitle:[NSString stringWithFormat:@"%d",flotingBtnCount] forState:UIControlStateNormal];
+[self.floatingBtn setTitle:[NSString stringWithFormat:@"%ld",(long)[[BlickbeeAppManager sharedInstance]selectedProducts].count] forState:UIControlStateNormal];
 }
 
 -(void) awakeFromNib{
