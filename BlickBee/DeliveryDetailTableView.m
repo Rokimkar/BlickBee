@@ -82,10 +82,10 @@
                 ((DeliveryAddressTableViewCell *)cell).editBtnDelegate=self;
 
                 [((DeliveryAddressTableViewCell*)cell) bindData:[[BlickbeeAppManager sharedInstance].userAddresses objectAtIndex:indexPath.row]];
-                [((DeliveryAddressTableViewCell *)cell).nameLabel setTextColor:RGBA(238, 77, 28, 1)];
-                [((DeliveryAddressTableViewCell *)cell).phoneLabel setTextColor:RGBA(238, 77, 28, 1)];
-                [((DeliveryAddressTableViewCell *)cell).address1Label setTextColor:RGBA(238, 77, 28, 1)];
-                [((DeliveryAddressTableViewCell *)cell).address2Label setTextColor:RGBA(238, 77, 28, 1)];
+                [((DeliveryAddressTableViewCell *)cell).nameLabel setTextColor:RGBA(246, 71, 17, 1)];
+                [((DeliveryAddressTableViewCell *)cell).phoneLabel setTextColor:RGBA(246, 71, 17, 1)];
+                [((DeliveryAddressTableViewCell *)cell).address1Label setTextColor:RGBA(246, 71, 17, 1)];
+                [((DeliveryAddressTableViewCell *)cell).address2Label setTextColor:RGBA(246, 71, 17, 1)];
             }
             else{
                 cell = (AddAddressTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"AddAddressTableViewCell"];
