@@ -78,6 +78,23 @@
 
 
 - (IBAction)signUpBtn:(id)sender {
+
+    if ([self.nameTextField.text isEqualToString:@""]) {
+        [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter the name." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+        return;
+    }
+    if ([self.phoneTextField.text isEqualToString:@""] || self.phoneTextField.text.length>10) {
+        [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter a valid phone number." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+        return;
+    }
+    if ([self.emailTextField.text isEqualToString:@""] || ![self NSStringIsValidEmail:self.emailTextField.text]) {
+        [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter a valid email address." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+        return;
+    }
+    if ([self.passwordTextField.text isEqualToString:@""]) {
+        [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter the password." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+        return;
+    }
     
     LoginServiceClient *client = [[LoginServiceClient alloc] init];
     NSMutableDictionary *credentialsDict = [[NSMutableDictionary alloc] init];
@@ -111,9 +128,25 @@
     }];
     
 }
+
+
+-(BOOL) NSStringIsValidEmail:(NSString *)checkString
+{
+    BOOL stricterFilter = NO;
+    NSString *stricterFilterString = @"^[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}$";
+    NSString *laxString = @"^.+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*$";
+    NSString *emailRegex = stricterFilter ? stricterFilterString : laxString;
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:checkString];
+}
+
+
 - (IBAction)showPasswordPressed:(id)sender {
     securityEntry=!securityEntry;
     self.passwordTextField.secureTextEntry = securityEntry;
+}
+- (IBAction)dismiss:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void)viewWillLayoutSubviews{

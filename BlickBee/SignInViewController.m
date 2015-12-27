@@ -11,6 +11,7 @@
 #import "SWRevealViewController.h"
 #import "BlickbeeAppManager.h"
 #import "UIFont+Custom.h"
+#import "OTPViewController.h"
 @interface SignInViewController ()
 {
     BOOL securityEntry;
@@ -86,6 +87,16 @@
 }
 
 - (IBAction)loginBtn:(id)sender {
+    
+    if ([self.emailTxtField.text isEqualToString:@""]) {
+        [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter a valid email address." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+        return;
+    }
+    if ([self.passTextField.text isEqualToString:@""]) {
+        [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter the password." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+        return;        
+    }
+    
     LoginServiceClient *client = [[LoginServiceClient alloc] init];
     NSMutableDictionary *credentialsDict = [[NSMutableDictionary alloc] init];
     [credentialsDict setObject:self.emailTxtField.text forKey:@"email"];
@@ -110,12 +121,25 @@
     }];
 }
 
+
+-(BOOL) NSStringIsValidEmail:(NSString *)checkString
+{
+    BOOL stricterFilter = NO;
+    NSString *stricterFilterString = @"^[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}$";
+    NSString *laxString = @"^.+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*$";
+    NSString *emailRegex = stricterFilter ? stricterFilterString : laxString;
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:checkString];
+}
+
 - (IBAction)showPassword:(id)sender {
     securityEntry=!securityEntry;
     self.passTextField.secureTextEntry = securityEntry;
 }
 - (IBAction)forgotPassword:(id)sender {
-
+    
+    
+    
 }
 
 -(void) prepareView{
