@@ -18,6 +18,7 @@
 #import "BlickbeeAppManager.h"
 #import "Product.h"
 #import "UserInfoViewController.h"
+#import "SearchViewController.h"
 @interface HomeViewController ()
 
 @end
@@ -84,7 +85,7 @@
     btn.bounds = CGRectMake(0, 0, image.size.width-45, image.size.height-45);
     searchBtn.bounds = CGRectMake(0, 0, image.size.width-45, image.size.height-45);
     self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]init];
-    //[btn addTarget:self.revealViewController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
+    [searchBtn addTarget:self action:@selector(searchIconTapped:) forControlEvents:UIControlEventTouchUpInside];
     [btn setImage:image forState:UIControlStateNormal];
     [searchBtn setImage:searchBtnImage forState:UIControlStateNormal];
     UIBarButtonItem *userIconButton = [[UIBarButtonItem alloc]initWithCustomView:btn];
@@ -94,6 +95,19 @@
     [self.navigationController.navigationBar setTitleTextAttributes:
      @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
 }
+
+
+-(void)searchIconTapped:(id)responder{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    SearchViewController *cont = [storyboard instantiateViewControllerWithIdentifier:@"SearchViewController"];
+    [self.navigationController pushViewController:cont animated:YES];
+//    UINavigationController *navCont = [[UINavigationController alloc] initWithRootViewController:cont];
+//    [self.navigationController presentViewController:navCont animated:YES completion:^{
+//        
+//    }];
+    
+}
+
 
 -(void)userIconTapped:(id)responder{
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
