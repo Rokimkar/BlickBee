@@ -37,7 +37,7 @@
     
     self.labelForProductTitle.text=product.productName;
     self.labelForPrice.attributedText=productChangedPrice;
-    self.labelForUnitQuantity.text=product.productQuantity;
+    self.labelForUnitQuantity.text=product.productUnitQty;
     self.labelForQuantity.text=product.selectedProductQuantity;
     if([product.productImages objectAtIndex:0]){
         NSURLRequest *req = [NSURLRequest requestWithURL:[NSURL URLWithString:[product.productImages objectAtIndex:0]] cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:60];

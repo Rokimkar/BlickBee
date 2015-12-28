@@ -78,6 +78,7 @@
 		A052533F1BE9F35A007EF74F /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A052533E1BE9F35A007EF74F /* SWRevealViewController.m */; };
 		A05253421BEA0B59007EF74F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05253411BEA0B59007EF74F /* HomeViewController.m */; };
 		A05253451BEA0EC9007EF74F /* LeftDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05253441BEA0EC9007EF74F /* LeftDeckController.m */; };
+		A0AB9D001C306BF40058B144 /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0AB9CFF1C306BF40058B144 /* UserInfoViewController.m */; };
 		A0D060E61C034268001E70B9 /* MyOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D060E51C034268001E70B9 /* MyOrdersViewController.m */; };
 		A0D060EA1C03441C001E70B9 /* MyOrdersTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D060E81C03441C001E70B9 /* MyOrdersTableViewCell.m */; };
 		A0D060EB1C03441C001E70B9 /* MyOrdersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0D060E91C03441C001E70B9 /* MyOrdersTableViewCell.xib */; };
@@ -294,6 +295,8 @@
 		A05253411BEA0B59007EF74F /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		A05253431BEA0EC9007EF74F /* LeftDeckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftDeckController.h; sourceTree = "<group>"; };
 		A05253441BEA0EC9007EF74F /* LeftDeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftDeckController.m; sourceTree = "<group>"; };
+		A0AB9CFE1C306BF40058B144 /* UserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoViewController.h; sourceTree = "<group>"; };
+		A0AB9CFF1C306BF40058B144 /* UserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoViewController.m; sourceTree = "<group>"; };
 		A0D060E41C034268001E70B9 /* MyOrdersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOrdersViewController.h; sourceTree = "<group>"; };
 		A0D060E51C034268001E70B9 /* MyOrdersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyOrdersViewController.m; sourceTree = "<group>"; };
 		A0D060E71C03441C001E70B9 /* MyOrdersTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOrdersTableViewCell.h; sourceTree = "<group>"; };
@@ -593,6 +596,8 @@
 				A05253121BE9F271007EF74F /* Main.storyboard */,
 				0C81833B1BF8DEC100882A65 /* SignInViewController.h */,
 				0C81833C1BF8DEC100882A65 /* SignInViewController.m */,
+				A0AB9CFE1C306BF40058B144 /* UserInfoViewController.h */,
+				A0AB9CFF1C306BF40058B144 /* UserInfoViewController.m */,
 				0C81833E1BF8DECE00882A65 /* SignUpViewController.h */,
 				0C81833F1BF8DECE00882A65 /* SignUpViewController.m */,
 				0C2FBC8C1C0B2C5700A374E1 /* OTPViewController.h */,
@@ -1123,6 +1128,7 @@
 				A0D060EE1C0348A2001E70B9 /* MyOrdersTableView.m in Sources */,
 				0C8183401BF8DECE00882A65 /* SignUpViewController.m in Sources */,
 				0C2FBC911C0B8E7F00A374E1 /* ChangePasswordViewController.m in Sources */,
+				A0AB9D001C306BF40058B144 /* UserInfoViewController.m in Sources */,
 				0C8183451BF9003400882A65 /* LoginServiceClient.m in Sources */,
 				A0DDA0721BFB3DE2000D9580 /* CartTableViewCell.m in Sources */,
 				A0DA71641BF0734B0012490E /* BaseTableViewCell.m in Sources */,

@@ -28,9 +28,9 @@
                         <rect key="frame" x="8" y="6" width="348" height="72"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple - 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djf-74-clf">
-                        <rect key="frame" x="91" y="14" width="194" height="14"/>
+                        <rect key="frame" x="91" y="14" width="194" height="15"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="14" id="A91-RD-dRP"/>
+                            <constraint firstAttribute="height" constant="15" id="A91-RD-dRP"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="13"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -95,7 +95,7 @@
                     <constraint firstItem="HNB-f0-zx0" firstAttribute="leading" secondItem="Se3-fY-zOK" secondAttribute="trailing" constant="16" id="a2y-9X-ho8"/>
                     <constraint firstItem="zSh-m6-7H8" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="dva-2L-kCt"/>
                     <constraint firstItem="S0O-5S-dVs" firstAttribute="leading" secondItem="bAF-9H-Xfy" secondAttribute="trailing" constant="3" id="ihf-Gs-HpV"/>
-                    <constraint firstItem="Se3-fY-zOK" firstAttribute="top" secondItem="djf-74-clf" secondAttribute="bottom" constant="6" id="kKG-Ou-JSt"/>
+                    <constraint firstItem="Se3-fY-zOK" firstAttribute="top" secondItem="djf-74-clf" secondAttribute="bottom" constant="5" id="kKG-Ou-JSt"/>
                     <constraint firstItem="S0O-5S-dVs" firstAttribute="top" secondItem="bAF-9H-Xfy" secondAttribute="bottom" constant="-58" id="lOS-d3-qik"/>
                     <constraint firstItem="zSh-m6-7H8" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" constant="2" id="rLF-kz-bxW"/>
                     <constraint firstItem="bAF-9H-Xfy" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="sfT-Zh-4aL"/>
