@@ -95,7 +95,7 @@
         [revealVC setFrontViewController:NVC];
     }
     else if(indexPath.row==4){
-        NSString *string = @"8386068784";
+        NSString *string = @"02916500555";
         NSURL *phoneUrl = [NSURL URLWithString:[NSString stringWithFormat:@"telprompt:%@",string]];
         if ([[UIApplication sharedApplication] canOpenURL:phoneUrl]) {
             [[UIApplication sharedApplication] openURL:phoneUrl];

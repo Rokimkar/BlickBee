@@ -40,7 +40,7 @@
         self.navigationController.navigationBar.barTintColor=RGBA(246, 71, 17, 1);
         [self.navigationItem.leftBarButtonItem setAction:@selector(revealToggle:)];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-        swRevealVC.rearViewRevealWidth=270.0f;
+        //swRevealVC.rearViewRevealWidth=270.0f;
         //[swRevealVC revealToggle:self];
         [swRevealVC revealToggleAnimated:YES];
     }

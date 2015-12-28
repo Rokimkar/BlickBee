@@ -26,6 +26,7 @@
     self.labelForPrice.text=[NSString stringWithFormat:@"₹%@",myOrder.orderAmount];
     self.imageViewForStatus.image=[UIImage imageNamed:@"2_a.png"];
     [self.imageViewForStatus sizeToFit];
+    self.selectionStyle=UITableViewCellSelectionStyleNone;
 }
 
 - (IBAction)buttonPressedViewOrder:(id)sender{

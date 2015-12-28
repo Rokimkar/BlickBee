@@ -93,6 +93,21 @@
     }
 }
 
+-(void)setRightNavigationItem{
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.bounds = CGRectMake(0,0,55,12);
+    int totalAmount=0;
+    for(int i=0;i<[BlickbeeAppManager sharedInstance].selectedProducts.count;i++){
+        Product *product=[[Product alloc]init];
+        product = [[BlickbeeAppManager sharedInstance].selectedProducts objectAtIndex:i];
+        totalAmount+=([product.selectedProductQuantity integerValue]*[product.productPrice integerValue]);
+    }
+    [btn setTitle:[NSString stringWithFormat:@"₹%ld",(long)totalAmount] forState:UIControlStateNormal];
+    self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]init];
+    UIBarButtonItem *total = [[UIBarButtonItem alloc]initWithCustomView:btn];
+    [self.navigationItem setRightBarButtonItem:total animated:YES];
+}
+
 -(void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
@@ -100,7 +115,7 @@
         [self prepareView];
     }
     [self setNavOptionButton];
-
+    
 }
 
 -(void) viewDidAppear:(BOOL)animated{
@@ -112,6 +127,7 @@
 -(void)changeValOfFloatingBtn{
     
 [self.floatingBtn setTitle:[NSString stringWithFormat:@"%ld",(long)[[BlickbeeAppManager sharedInstance]selectedProducts].count] forState:UIControlStateNormal];
+    [self setRightNavigationItem];
 }
 
 -(void) awakeFromNib{

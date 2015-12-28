@@ -25,13 +25,9 @@
     [[self.shopMoreButtonPressed layer]setBorderColor:[UIColor blackColor].CGColor];
     [[self.shopMoreButtonPressed layer]setBorderWidth:1.0f];
     self.shopMoreButtonPressed.layer.cornerRadius = 0.0;
-    for(int i=0;i<[BlickbeeAppManager sharedInstance].selectedProducts.count;i++){
-       Product*product = [[BlickbeeAppManager sharedInstance].selectedProducts objectAtIndex:i];
-        product.selectedProductQuantity=@"0";
-    }
-    [[BlickbeeAppManager sharedInstance].selectedProducts removeAllObjects];
+
     [[BlickbeeAppManager sharedInstance] archiveSelectedProducts];
-    [self.navigationItem.backBarButtonItem setAction:@selector(openHomeVC:)];
+   // [self.navigationItem.backBarButtonItem setAction:@selector(openHomeVC:)];
     self.title=@"Confirm Order";
     
     UIImage *image =[UIImage imageNamed:@"back.png"];
@@ -46,12 +42,23 @@
 }
 
 -(void) moveBack{
+    [self emptySelectedProduct];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 
 -(void)openHomeVC:(id)sender{
+    [self emptySelectedProduct];
     [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+-(void) emptySelectedProduct{
+    for(int i=0;i<[BlickbeeAppManager sharedInstance].selectedProducts.count;i++){
+        Product*product = [[BlickbeeAppManager sharedInstance].selectedProducts lastObject];
+        product.selectedProductQuantity=@"0";
+        [[BlickbeeAppManager sharedInstance].selectedProducts removeLastObject];
+    }
+    
 }
 
 -(void) viewWillAppear:(BOOL)animated{
@@ -68,6 +75,7 @@
 }
 
 - (IBAction)shopMoreButtonPressed:(id)sender {
+    [self emptySelectedProduct];
     [self.navigationController popToViewController:[BlickbeeAppManager sharedInstance].homeViewController animated:YES];
 }
 @end

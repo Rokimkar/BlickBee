@@ -30,7 +30,7 @@
     if(swRevealVC){
         UIImage *image =[UIImage imageNamed:@"menu.png"];
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        btn.bounds = CGRectMake(0, 0, image.size.width-30, image.size.height-30);
+        btn.bounds = CGRectMake(0, 0, image.size.width-40, image.size.height-40);
         self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc]init];
         [btn addTarget:self.revealViewController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
         [btn setImage:image forState:UIControlStateNormal];
@@ -41,7 +41,6 @@
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
         self.revealViewController.panGestureRecognizer.delegate=self;
         self.navigationController.navigationBar.barTintColor=RGBA(246, 71, 17, 1);
-        swRevealVC.rearViewRevealWidth=270.0f;
         [self.homeTableView registerNib:[UINib nibWithNibName:@"TopZoneCollectionViewCell" bundle:nil] forCellReuseIdentifier:@"TopZoneCollectionViewCell"];
         ProductsServiceClient *client = [[ProductsServiceClient alloc] init];
         [client fetchProdctRepoWithSuccess:^(ProductRepo *repo) {
@@ -70,10 +69,10 @@
 
         
     }
-    [self setRightNavigationItem];
-    [BlickbeeAppManager sharedInstance].homeViewController=self;
     [self.homeTableView setScrollEnabled:NO];
     self.title = @"BlickBee";
+    
+    [BlickbeeAppManager sharedInstance].homeViewController=self;
 }
 
 -(void)setRightNavigationItem{
@@ -82,8 +81,8 @@
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn addTarget:self action:@selector(userIconTapped:) forControlEvents:UIControlEventTouchUpInside];
     UIButton *searchBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.bounds = CGRectMake(0, 0, image.size.width-40, image.size.height-40);
-    searchBtn.bounds = CGRectMake(0, 0, image.size.width-40, image.size.height-40);
+    btn.bounds = CGRectMake(0, 0, image.size.width-45, image.size.height-45);
+    searchBtn.bounds = CGRectMake(0, 0, image.size.width-45, image.size.height-45);
     self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]init];
     //[btn addTarget:self.revealViewController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
     [btn setImage:image forState:UIControlStateNormal];
@@ -92,6 +91,8 @@
     //UIBarButtonItem *userIconButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(share:)];
     UIBarButtonItem *searchButton = [[UIBarButtonItem alloc]initWithCustomView:searchBtn];
     [self.navigationItem setRightBarButtonItems:[NSArray arrayWithObjects:userIconButton,searchButton, nil] animated:YES];
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
 }
 
 -(void)userIconTapped:(id)responder{
@@ -104,8 +105,9 @@
     //[swRevealVC revealToggle:NVC];
 }
 
--(void)viewDidAppear:(BOOL)animated{
+-(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    [self setRightNavigationItem];
     [self.view bringSubviewToFront:self.floatingBtn];
     [self.floatingBtn setTitle:[NSString stringWithFormat:@"%ld",(long)[[BlickbeeAppManager sharedInstance]selectedProducts].count] forState:UIControlStateNormal];
     //self.navigationItem.leftBarButtonItem=[UIBarButtonItem alloc]init

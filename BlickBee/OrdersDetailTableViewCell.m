@@ -48,6 +48,8 @@
         }];
     }
     self.labelForTotalCost.text=[NSString stringWithFormat:@"₹%ld",(long)([product.productQty integerValue])*([product.productAmount integerValue])];
+    self.selectionStyle=UITableViewCellSelectionStyleNone;
+
 }
 
 
