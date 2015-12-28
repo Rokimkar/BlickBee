@@ -84,14 +84,25 @@
         [[[UIAlertView alloc] initWithTitle:@"" message:msg delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
         return;
     }
-    
     LoginServiceClient *client = [[LoginServiceClient alloc] init];
-    [client changePasswordWithNewPassword:self.passwordTextField.text withSuccess:^{
-        SWRevealViewController *swRevealVC = self.revealViewController;
-        [swRevealVC.navigationController popToRootViewControllerAnimated:YES];
-    } failure:^(NSError *error) {
-        
-    }];
+    if (self.isForgotPassword) {
+        if (![self.phone isEqualToString:@""]) {
+            [client changePasswordWithNewPassword:self.passwordTextField.text andPhone:self.phone withSuccess:^{
+                [self.navigationController popToRootViewControllerAnimated:YES];
+            } failure:^(NSError *error) {
+                
+            }];
+        }
+    }
+    else{
+        [client changePasswordWithNewPassword:self.passwordTextField.text withSuccess:^{
+            SWRevealViewController *swRevealVC = self.revealViewController;
+            [swRevealVC.navigationController popToRootViewControllerAnimated:YES];
+        } failure:^(NSError *error) {
+            
+        }];
+    }
+
 }
 -(void)viewWillLayoutSubviews{
     [super viewWillLayoutSubviews];
@@ -106,14 +117,18 @@
     border.borderWidth = borderWidth;
     [self.passwordTextField.layer addSublayer:border];
     self.passwordTextField.layer.masksToBounds = YES;
-    
+    [self.passwordTextField setValue:[UIColor whiteColor]
+                      forKeyPath:@"_placeholderLabel.textColor"];
+
     CALayer *border2 = [CALayer layer];
     border2.borderColor = [UIColor whiteColor].CGColor;
     border2.frame = CGRectMake(0, self.confirmPasswordTextField.frame.size.height - borderWidth, self.confirmPasswordTextField.frame.size.width, self.confirmPasswordTextField.frame.size.height);
     border2.borderWidth = borderWidth;
     [self.confirmPasswordTextField.layer addSublayer:border2];
     self.confirmPasswordTextField.layer.masksToBounds = YES;
-    
+    [self.confirmPasswordTextField setValue:[UIColor whiteColor]
+                      forKeyPath:@"_placeholderLabel.textColor"];
+
     self.proceedBtnPressed.layer.cornerRadius = 17.0;
     self.proceedBtnPressed.layer.borderWidth = 2.0;
     self.proceedBtnPressed.layer.borderColor = [UIColor whiteColor].CGColor;

@@ -150,7 +150,8 @@
     border.borderWidth = borderWidth;
     [self.emailTxtField.layer addSublayer:border];
     self.emailTxtField.layer.masksToBounds = YES;
-    
+    [self.emailTxtField setValue:[UIColor whiteColor]
+                    forKeyPath:@"_placeholderLabel.textColor"];
     
     CALayer *border2 = [CALayer layer];
     border2.borderColor = [UIColor whiteColor].CGColor;
@@ -158,7 +159,8 @@
     border2.borderWidth = borderWidth;
     [self.passTextField.layer addSublayer:border2];
     self.passTextField.layer.masksToBounds = YES;
-    
+    [self.passTextField setValue:[UIColor whiteColor]
+                      forKeyPath:@"_placeholderLabel.textColor"];
     
     self.loginBtn.layer.cornerRadius = 17.0;
     self.loginBtn.layer.borderWidth = 2.0;

@@ -54,18 +54,20 @@
     }
     
     if (self.isForgotPassword) {
-        if (![self.phoneNumber isEqualToString:@""]) {
-            LoginServiceClient *client = [[LoginServiceClient alloc] init];            
-            [client verifyOTPWithOTP:self.otpTextField.text ForPhone:self.phoneNumber WithSuccess:^(User *user) {
+        if (![self.clientSideOtp isEqualToString:@""]) {
+            if ([self.otpTextField.text isEqualToString:self.clientSideOtp]) {
                 UIStoryboard *storyBoard  = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
                 ChangePasswordViewController *cont = [storyBoard instantiateViewControllerWithIdentifier:@"ChangePasswordViewController"];
+                cont.phone=self.phone;
+                cont.isForgotPassword=YES;
                 //            [self presentViewController:cont animated:YES completion:^{
                 //            }];
                 [self.navigationController pushViewController:cont animated:YES];
-                
-            } failure:^(NSError *error) {
-                
-            }];
+            }
+            else{
+                [[[UIAlertView alloc] initWithTitle:@"Error" message:@"The one time password does not match." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+            }
+            
         }
     }
     else{
