@@ -17,5 +17,6 @@
 -(NSURL*) getBaseURL;
 -(void) printApi:(NSURL*)url;
 -(void) showNoNetworkAlert;
-
+- (NSError *) returnErrorWithString:(NSString *) aErrorMessage;
+- (NSError *) returnErrorWithString:(NSString *) aErrorMessage andCode:(NSInteger) code;
 @end

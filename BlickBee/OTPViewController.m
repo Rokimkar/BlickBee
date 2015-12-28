@@ -52,25 +52,44 @@
         [[[UIAlertView alloc] initWithTitle:@"" message:@"Please enter the otp." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
         return;
     }
-    LoginServiceClient *client = [[LoginServiceClient alloc] init];
-    [client verifyOTPWithOTP:self.otpTextField.text WithSuccess:^(User *user) {
-        UIStoryboard *storyBoard  = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        if(self.isFromSignUp){
-            SWRevealViewController *cont = [storyBoard instantiateViewControllerWithIdentifier:@"SWRevealViewController"];
-//            [self presentViewController:cont animated:YES completion:^{
-//                
-//            }];
-            [self.navigationController pushViewController:cont animated:YES];
+    
+    if (self.isForgotPassword) {
+        if (![self.phoneNumber isEqualToString:@""]) {
+            LoginServiceClient *client = [[LoginServiceClient alloc] init];            
+            [client verifyOTPWithOTP:self.otpTextField.text ForPhone:self.phoneNumber WithSuccess:^(User *user) {
+                UIStoryboard *storyBoard  = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+                ChangePasswordViewController *cont = [storyBoard instantiateViewControllerWithIdentifier:@"ChangePasswordViewController"];
+                //            [self presentViewController:cont animated:YES completion:^{
+                //            }];
+                [self.navigationController pushViewController:cont animated:YES];
+                
+            } failure:^(NSError *error) {
+                
+            }];
         }
-        else{
-            ChangePasswordViewController *cont = [storyBoard instantiateViewControllerWithIdentifier:@"ChangePasswordViewController"];
-//            [self presentViewController:cont animated:YES completion:^{
-//            }];
-            [self.navigationController pushViewController:cont animated:YES];
-        }
-    } failure:^(NSError *error) {
-        
-    }];
+    }
+    else{
+        LoginServiceClient *client = [[LoginServiceClient alloc] init];
+        [client verifyOTPWithOTP:self.otpTextField.text WithSuccess:^(User *user) {
+            UIStoryboard *storyBoard  = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+                if(self.isFromSignUp){
+                    SWRevealViewController *cont = [storyBoard instantiateViewControllerWithIdentifier:@"SWRevealViewController"];
+                    //            [self presentViewController:cont animated:YES completion:^{
+                    //
+                    //            }];
+                    [self.navigationController pushViewController:cont animated:YES];
+                }
+                else{
+                    ChangePasswordViewController *cont = [storyBoard instantiateViewControllerWithIdentifier:@"ChangePasswordViewController"];
+                    //            [self presentViewController:cont animated:YES completion:^{
+                    //            }];
+                    [self.navigationController pushViewController:cont animated:YES];
+                }
+        } failure:^(NSError *error) {
+            
+        }];
+
+    }
 }
 -(void) updateProgress:(NSTimer *)updatedTimer{
     if (count>0) {

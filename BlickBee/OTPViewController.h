@@ -13,7 +13,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *verifyOTPBtn;
 @property (weak, nonatomic) IBOutlet UIButton *resendOTPBtn;
 @property (strong,nonatomic) NSTimer *progressUpdateTimer;
+@property (strong,nonatomic) NSString *phoneNumber;
 @property (assign,nonatomic) BOOL isFromSignUp;
+@property (assign,nonatomic) BOOL isForgotPassword;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topSpaceConstraint;
 
 @end

@@ -158,6 +158,8 @@
 		D22648171C11846300E44880 /* OptionsPopOverViewControllerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22648161C11846300E44880 /* OptionsPopOverViewControllerTableViewController.m */; };
 		D235035F1C13590400D11676 /* SelectedProductRepo.m in Sources */ = {isa = PBXBuildFile; fileRef = D235035E1C13590400D11676 /* SelectedProductRepo.m */; };
 		D2BED7F71C13880F0090F3EC /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BED7F61C13880F0090F3EC /* BaseViewController.m */; };
+		D2BEF6541C30627600412D89 /* backIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BEF6531C30627600412D89 /* backIcon.png */; };
+		D2BEF6571C3070C600412D89 /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BEF6561C3070C600412D89 /* ForgotPasswordViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -405,6 +407,9 @@
 		D235035E1C13590400D11676 /* SelectedProductRepo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedProductRepo.m; sourceTree = "<group>"; };
 		D2BED7F51C13880F0090F3EC /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		D2BED7F61C13880F0090F3EC /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		D2BEF6531C30627600412D89 /* backIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backIcon.png; sourceTree = "<group>"; };
+		D2BEF6551C3070C600412D89 /* ForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPasswordViewController.h; sourceTree = "<group>"; };
+		D2BEF6561C3070C600412D89 /* ForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswordViewController.m; sourceTree = "<group>"; };
 		F4F9204652D14D4F60EC1A69 /* Pods-BlickBee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlickBee.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlickBee/Pods-BlickBee.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -594,6 +599,8 @@
 				D2BED7F61C13880F0090F3EC /* BaseViewController.m */,
 				D22648041C11798100E44880 /* LaunchScreen.storyboard */,
 				A05253121BE9F271007EF74F /* Main.storyboard */,
+				D2BEF6551C3070C600412D89 /* ForgotPasswordViewController.h */,
+				D2BEF6561C3070C600412D89 /* ForgotPasswordViewController.m */,
 				0C81833B1BF8DEC100882A65 /* SignInViewController.h */,
 				0C81833C1BF8DEC100882A65 /* SignInViewController.m */,
 				A0AB9CFE1C306BF40058B144 /* UserInfoViewController.h */,
@@ -740,6 +747,7 @@
 		A0DA71671BF074700012490E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D2BEF6531C30627600412D89 /* backIcon.png */,
 				A0DDA05C1BF8DA5C000D9580 /* cardLayout.png */,
 				A0DA716A1BF074E10012490E /* 1.png */,
 				A0DA716B1BF074E10012490E /* 2_a.png */,
@@ -1014,6 +1022,7 @@
 				0C296E021C0F2887001AE0FC /* dropDown.png in Resources */,
 				A0DA71931BF074E10012490E /* back.png in Resources */,
 				A0DA71961BF074E10012490E /* cartadd.png in Resources */,
+				D2BEF6541C30627600412D89 /* backIcon.png in Resources */,
 				A0DA71B61BF08D510012490E /* LeftDeckTableViewCell.xib in Resources */,
 				A0DA71AD1BF074E10012490E /* telephone46.png in Resources */,
 				A0D414171C0709BD0077BA42 /* FirstOrderDetailCell.xib in Resources */,
@@ -1130,6 +1139,7 @@
 				0C2FBC911C0B8E7F00A374E1 /* ChangePasswordViewController.m in Sources */,
 				A0AB9D001C306BF40058B144 /* UserInfoViewController.m in Sources */,
 				0C8183451BF9003400882A65 /* LoginServiceClient.m in Sources */,
+				D2BEF6571C3070C600412D89 /* ForgotPasswordViewController.m in Sources */,
 				A0DDA0721BFB3DE2000D9580 /* CartTableViewCell.m in Sources */,
 				A0DA71641BF0734B0012490E /* BaseTableViewCell.m in Sources */,
 				0C2F06FF1BEE45C000F6B7DB /* BaseServiceClient.m in Sources */,
@@ -1266,7 +1276,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "cf4549c9-f57b-4260-bcac-bcb17a2e19b0";
+				PROVISIONING_PROFILE = "ee1a9fe7-a84e-4b96-aeff-dd6a8f2ee09d";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1305,7 +1315,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "cf4549c9-f57b-4260-bcac-bcb17a2e19b0";
+				PROVISIONING_PROFILE = "ee1a9fe7-a84e-4b96-aeff-dd6a8f2ee09d";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1321,13 +1331,13 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: PAT RAM BISHNOI (CGFN49HM94)";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/Rokimkar/Desktop/BlickBee/BlickBee/BlickbeePrefix.pch;
+				GCC_PREFIX_HEADER = /Users/kunalchelani/Desktop/BlickBee/BlickBee/BlickbeePrefix.pch;
 				INFOPLIST_FILE = BlickBee/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ram.blickbee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "cf4549c9-f57b-4260-bcac-bcb17a2e19b0";
+				PROVISIONING_PROFILE = "ee1a9fe7-a84e-4b96-aeff-dd6a8f2ee09d";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1341,13 +1351,13 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: PAT RAM BISHNOI (CGFN49HM94)";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/Rokimkar/Desktop/BlickBee/BlickBee/BlickbeePrefix.pch;
+				GCC_PREFIX_HEADER = /Users/kunalchelani/Desktop/BlickBee/BlickBee/BlickbeePrefix.pch;
 				INFOPLIST_FILE = BlickBee/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ram.blickbee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "cf4549c9-f57b-4260-bcac-bcb17a2e19b0";
+				PROVISIONING_PROFILE = "ee1a9fe7-a84e-4b96-aeff-dd6a8f2ee09d";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
