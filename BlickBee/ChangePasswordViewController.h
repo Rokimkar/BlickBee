@@ -14,5 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *confirmPasswordTextField;
 @property (weak, nonatomic) IBOutlet UIButton *proceedBtnPressed;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topSpaceConstraint;
+@property (strong, nonatomic) NSString *phone;
+@property (assign,nonatomic) BOOL isForgotPassword;
 
 @end

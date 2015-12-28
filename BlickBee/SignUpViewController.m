@@ -87,7 +87,7 @@
         [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter a valid phone number." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
         return;
     }
-    if ([self.emailTextField.text isEqualToString:@""] || ![self NSStringIsValidEmail:self.emailTextField.text]) {
+    if (![self.emailTextField.text isEqualToString:@""] && ![self NSStringIsValidEmail:self.emailTextField.text]) {
         [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter a valid email address." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
         return;
     }
@@ -162,7 +162,8 @@
     border.borderWidth = borderWidth;
     [self.nameTextField.layer addSublayer:border];
     self.nameTextField.layer.masksToBounds = YES;
-    
+    [self.nameTextField setValue:[UIColor whiteColor]
+                      forKeyPath:@"_placeholderLabel.textColor"];
     
     CALayer *border2 = [CALayer layer];
     border2.borderColor = [UIColor whiteColor].CGColor;
@@ -170,13 +171,17 @@
     border2.borderWidth = borderWidth;
     [self.emailTextField.layer addSublayer:border2];
     self.emailTextField.layer.masksToBounds = YES;
-
+    [self.emailTextField setValue:[UIColor whiteColor]
+                      forKeyPath:@"_placeholderLabel.textColor"];
+    
     CALayer *border3 = [CALayer layer];
     border3.borderColor = [UIColor whiteColor].CGColor;
     border3.frame = CGRectMake(0, self.passwordTextField.frame.size.height - borderWidth, self.passwordTextField.frame.size.width, self.passwordTextField.frame.size.height);
     border3.borderWidth = borderWidth;
     [self.passwordTextField.layer addSublayer:border3];
     self.passwordTextField.layer.masksToBounds = YES;
+    [self.passwordTextField setValue:[UIColor whiteColor]
+                      forKeyPath:@"_placeholderLabel.textColor"];
     
     CALayer *border4 = [CALayer layer];
     border4.borderColor = [UIColor whiteColor].CGColor;
@@ -184,6 +189,8 @@
     border4.borderWidth = borderWidth;
     [self.phoneTextField.layer addSublayer:border4];
     self.phoneTextField.layer.masksToBounds = YES;
+    [self.phoneTextField setValue:[UIColor whiteColor]
+                      forKeyPath:@"_placeholderLabel.textColor"];
     
     self.signUpBtn.layer.cornerRadius = 17.0;
     self.signUpBtn.layer.borderWidth = 2.0;

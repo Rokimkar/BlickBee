@@ -257,7 +257,7 @@
 }
 
 
-- (void) resendOTPWithPhone:(NSString*)phone andSuccess:(void (^) ())success failure:(void (^) (NSError *error)) failure
+- (void) resendOTPWithPhone:(NSString*)phone andSuccess:(void (^) (NSString* otp))success failure:(void (^) (NSError *error)) failure
 {
     NSURL *url = [self getBaseURL];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -272,7 +272,12 @@
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
     [manager POST:BASE_URL_STRING parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if ([[responseObject objectForKey:@"response"] isEqualToString:@"success"]) {
-            success();
+            
+            if ([responseObject objectForKey:@"new_otp"]) {
+                success([responseObject objectForKey:@"new_otp"]);
+            }
+            else
+                failure(nil);
         }
         else{
             failure(nil);
@@ -338,7 +343,46 @@
         [SVProgressHUD dismiss];
     }];
 }
-
+- (void) changePasswordWithNewPassword:(NSString*)newPassword andPhone:(NSString*)phone withSuccess:(void (^) ())success failure:(void (^) (NSError *error)) failure
+{
+    NSURL *url = [self getBaseURL];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [self printApi:url];
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    NSDictionary *params = @{@"request": @"resetPassword()",
+                             @"phone": phone,
+                             @"password": newPassword
+                             };
+    
+    
+    manager.responseSerializer.acceptableContentTypes= [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
+    [manager POST:BASE_URL_STRING parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if ([[responseObject objectForKey:@"response"] isEqualToString:@"success"]) {
+            success();
+        }
+        else{
+            failure(nil);
+        }
+        [SVProgressHUD dismiss];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+        if (error.code==-1009) {
+            [self showNoNetworkAlert];
+            return;
+        }
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                            message:@"Error in retrieving information."
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"Ok"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+        failure(error);
+        [SVProgressHUD dismiss];
+    }];
+}
 -(User*) getUserFromRespons:(NSDictionary*)responseDict{
     User *user = [[User alloc] init];
     user.userId = [responseDict objectForKey:@"id"];

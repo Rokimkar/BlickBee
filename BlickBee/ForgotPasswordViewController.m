@@ -49,15 +49,17 @@
         return;
     }
     LoginServiceClient *client = [[LoginServiceClient alloc] init];
-    [client resendOTPWithPhone:self.phoneTextField.text andSuccess:^{
-            UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-            OTPViewController *cont = [storyBoard instantiateViewControllerWithIdentifier:@"OTPViewController"];
-            cont.phoneNumber=self.phoneTextField.text;
-            cont.isForgotPassword=YES;
-            [self.navigationController pushViewController:cont animated:YES];
+    [client resendOTPWithPhone:self.phoneTextField.text andSuccess:^(NSString *otp) {
+        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        OTPViewController *cont = [storyBoard instantiateViewControllerWithIdentifier:@"OTPViewController"];
+        cont.clientSideOtp=otp;
+        cont.isForgotPassword=YES;
+        cont.phone=self.phoneTextField.text;
+        [self.navigationController pushViewController:cont animated:YES];
     } failure:^(NSError *error) {
         
     }];
+    
 }
 
 
