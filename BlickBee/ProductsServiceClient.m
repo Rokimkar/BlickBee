@@ -63,6 +63,53 @@
     }];
 }
 
+
+
+- (void) fetchProductRepoForSearchedString:(NSString*)searchStr WithSuccess:(void (^) (NSMutableArray* repo))success failure:(void (^) (NSError *error)) failure
+{
+    
+    NSURL *url = [self getBaseURL];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    [self printApi:url];
+    
+    User *user = [BlickbeeAppManager sharedInstance].user;
+    if (!user || [user.userId isEqualToString:@""]) {
+        failure(nil);
+        return;
+    }
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    NSDictionary *params = @{@"request": @"searchProducts()",
+                             @"user_id": user.userId,
+                             @"auth_key": user.authKey,
+                             @"keyword": searchStr};
+    
+    manager.responseSerializer.acceptableContentTypes= [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    [manager POST:BASE_URL_STRING parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        success([self getProductsFrom:[responseObject objectForKey:@"response_data"]]);
+        [SVProgressHUD dismiss];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+        if (error.code==-1009) {
+            [self showNoNetworkAlert];
+            return;
+        }
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                            message:@"Error in retrieving information."
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"Ok"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+        failure(error);
+        [SVProgressHUD dismiss];
+    }];
+}
+
+
 -(ProductRepo*) getRepoFrom:(NSDictionary*) responsDict{
     ProductRepo *repo = [[ProductRepo alloc] init];
     for (NSMutableDictionary *dict in [responsDict objectForKey:@"offers"]) {
@@ -79,6 +126,15 @@
     }
     return repo;
 }
+
+-(NSMutableArray*) getProductsFrom:(NSArray*) responseArray{
+    NSMutableArray *repo = [[NSMutableArray alloc] init];
+    for (NSMutableDictionary *dict in responseArray) {
+        [repo addObject:[self getProductForDict:dict]];
+    }
+    return repo;
+}
+
 -(Offer*) getOfferForDict:(NSMutableDictionary*)dict{
     Offer *offer = [[Offer alloc] init];
     offer.offerId = [dict objectForKey:@"offer_id"];

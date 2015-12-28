@@ -15,5 +15,7 @@
 
 - (void) fetchProdctRepoWithSuccess:(void (^) (ProductRepo* repo))success failure:(void (^) (NSError *error)) failure;
 
+- (void) fetchProductRepoForSearchedString:(NSString*)searchStr WithSuccess:(void (^) (NSMutableArray* repo))success failure:(void (^) (NSError *error)) failure;
+
 
 @end
