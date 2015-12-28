@@ -8,6 +8,7 @@
 
 #import "UserInfoViewController.h"
 #import "SWRevealViewController.h"
+#import "BlickbeePrefix.pch"
 
 @interface UserInfoViewController ()
 
@@ -39,12 +40,22 @@
     self.labelForEmail.text=self.user.email;
     self.labelForMobNumb.text=self.user.phone;
     self.textForName.text=self.user.name;
+    [self prepareView];
     [self.view setBackgroundColor:RGBA(235, 235, 235, 1)];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+-(void) prepareView{
+    CALayer *border = [CALayer layer];
+    CGFloat borderWidth = 1;
+    border.borderColor = [UIColor whiteColor].CGColor;
+        border.frame = CGRectMake(0, self.textForName.frame.size.height - borderWidth, self.textForName.frame.size.width, self.textForName.frame.size.height);
+    border.borderWidth = borderWidth;
+    [self.textForName.layer addSublayer:border];
+    self.textForName.layer.masksToBounds = YES;
 }
 
 - (IBAction)updateButtonClicked:(id)sender {

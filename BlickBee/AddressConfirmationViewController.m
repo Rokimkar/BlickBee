@@ -69,7 +69,7 @@
     cell.imageViewFordeliveryDetail.image=[UIImage imageNamed:@"2.png"];
     [cell.imageViewFordeliveryDetail sizeToFit];
     
-    if(indexPath.section==1){
+    if(indexPath.section==2){
         AddressConfirmationTableViewCell *cellOne = (AddressConfirmationTableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"AddressConfirmationTableViewCell"];
         if(cellOne==nil){
             NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"AddressConfirmationTableViewCell" owner:self options:nil];
@@ -79,7 +79,7 @@
         [cellOne bindDataForOrder];
         return cellOne;
     }
-    else if (indexPath.section==2){
+    else if (indexPath.section==1){
         DeliveryAddressTableViewCell *cellTwo = (DeliveryAddressTableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"DeliveryAddressTableViewCell"];
         if(cellTwo==nil){
             NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DeliveryAddressTableViewCell" owner:self options:nil];

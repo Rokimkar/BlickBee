@@ -45,6 +45,8 @@
         [self.homeTableView registerNib:[UINib nibWithNibName:@"TopZoneCollectionViewCell" bundle:nil] forCellReuseIdentifier:@"TopZoneCollectionViewCell"];
         ProductsServiceClient *client = [[ProductsServiceClient alloc] init];
         [client fetchProdctRepoWithSuccess:^(ProductRepo *repo) {
+            //NSArray* reversedArray = [[startArray reverseObjectEnumerator] allObjects];
+            repo.offersArray = [NSMutableArray arrayWithArray:[[repo.offersArray reverseObjectEnumerator] allObjects]];
             self.productRepo=repo;
             [[BlickbeeAppManager sharedInstance] matchSelectedProductsWithNewProductRepo:repo];
             [self.homeTableView reloadData];
