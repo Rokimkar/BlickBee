@@ -71,7 +71,7 @@
     [self.labelForProductName sizeToFit];
     
     self.labelForProductPrice.attributedText=productChangedPrice;
-    self.labelForProductQuantity.text=product.productQuantity;
+    self.labelForProductQuantity.text=product.productUnitQty;
     [self.addToCartClicked setBackgroundImage:[UIImage imageNamed:@"cartadd.png"] forState:UIControlStateNormal];
     
     self.backgroundColor=RGBA(225, 225, 225, 1);

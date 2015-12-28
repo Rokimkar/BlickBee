@@ -17,6 +17,7 @@
 #import "AddAddressServiceClient.h"
 #import "BlickbeeAppManager.h"
 #import "Product.h"
+#import "UserInfoViewController.h"
 @interface HomeViewController ()
 
 @end
@@ -67,10 +68,38 @@
 
         
     }
-    
+    [self setRightNavigationItem];
     [BlickbeeAppManager sharedInstance].homeViewController=self;
     [self.homeTableView setScrollEnabled:NO];
     self.title = @"BlickBee";
+}
+
+-(void)setRightNavigationItem{
+    UIImage *image =[UIImage imageNamed:@"user icon.png"];
+    UIImage *searchBtnImage = [UIImage imageNamed:@"search.png"];
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn addTarget:self action:@selector(userIconTapped:) forControlEvents:UIControlEventTouchUpInside];
+    UIButton *searchBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.bounds = CGRectMake(0, 0, image.size.width-40, image.size.height-40);
+    searchBtn.bounds = CGRectMake(0, 0, image.size.width-40, image.size.height-40);
+    self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]init];
+    //[btn addTarget:self.revealViewController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
+    [btn setImage:image forState:UIControlStateNormal];
+    [searchBtn setImage:searchBtnImage forState:UIControlStateNormal];
+    UIBarButtonItem *userIconButton = [[UIBarButtonItem alloc]initWithCustomView:btn];
+    //UIBarButtonItem *userIconButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(share:)];
+    UIBarButtonItem *searchButton = [[UIBarButtonItem alloc]initWithCustomView:searchBtn];
+    [self.navigationItem setRightBarButtonItems:[NSArray arrayWithObjects:userIconButton,searchButton, nil] animated:YES];
+}
+
+-(void)userIconTapped:(id)responder{
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    SWRevealViewController *swRevealVC = self.revealViewController;
+    UserInfoViewController *userInfoVC= [storyBoard instantiateViewControllerWithIdentifier:@"UserInfoViewController"];
+    UINavigationController *NVC = [[UINavigationController alloc]initWithRootViewController:userInfoVC];
+    [swRevealVC setFrontViewController:NVC];
+    NVC.navigationBar.barTintColor=RGBA(247, 71, 17, 1);
+    //[swRevealVC revealToggle:NVC];
 }
 
 -(void)viewDidAppear:(BOOL)animated{

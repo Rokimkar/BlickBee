@@ -65,7 +65,7 @@
     self.labelForProductName.text=product.productName;
     [self.labelForProductName sizeToFit];
     self.labelForPrice.attributedText = productChangedPrice;
-    self.labelForQuantity.text=product.productQuantity;
+    self.labelForQuantity.text=product.productUnitQty;
     //self.labelForItemCount.text=quantity;
     [self.addToCartPressed setTitle:quantity forState:UIControlStateNormal];
     self.backgroundColor=RGBA(225, 225, 225, 1);
