@@ -25,6 +25,7 @@
     [self registerNib:[UINib nibWithNibName:@"DeliveryTimeTableViewCell" bundle:nil] forCellReuseIdentifier:@"DeliveryTimeTableViewCell"];
     [self registerNib:[UINib nibWithNibName:@"AddAddressTableViewCell" bundle:nil] forCellReuseIdentifier:@"AddAddressTableViewCell"];
     self.backgroundColor=RGBA(225, 225, 225, 1);
+    addressCellOneColor=YES;
     return [self initWithFrame:frame];
 }
 

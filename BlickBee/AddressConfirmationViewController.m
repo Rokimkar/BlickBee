@@ -40,6 +40,7 @@
     [btn setImage:image forState:UIControlStateNormal];
     UIBarButtonItem *menuButton = [[UIBarButtonItem alloc]initWithCustomView:btn];
     self.navigationItem.leftBarButtonItem = menuButton;
+    self.title = @"Order Confirmation";
 }
 
 -(void) moveBack{
@@ -100,31 +101,12 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    NSString *sectionName = @"";
-    switch (section) {
-        case 0:
-            sectionName=@"";
-            break;
-        case 1:
-            sectionName=@"Order Summary";
-            break;
-        case 2:
-            sectionName=@"Address";
-            break;
-            
-        default:
-            break;
-    }
-    return sectionName;
-}
-
 
 -(CGFloat) tableView:(UITableView *) tableView heightForHeaderInSection :(NSInteger) section{
-    if(section==1){
+    if(section==1||section==2){
         return 35;
     }
+    
     return 0;
 }
 
@@ -136,6 +118,27 @@
         return 125;
     }
     return 130;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 35)];
+    /* Create custom view to display section header... */
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, tableView.frame.size.width, 35)];
+    if(section==1){
+        [label setText:@"Order Summary"];
+    }
+    else if(section ==2){
+        [label setText:@"Delivery Address"];
+    }
+    [view addSubview:label];
+    //    [view setBackgroundColor:[UIColor whiteColor]]; //your background color...
+    
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(10, view.frame.size.height-3, tableView.frame.size.width-20, 1)];
+    [imgView setBackgroundColor:[UIColor lightGrayColor]];
+    [view addSubview:imgView];
+    
+    return view;
 }
 
 - (IBAction)confirmOrderClicked:(id)sender {

@@ -37,15 +37,23 @@
                             <constraint firstAttribute="height" constant="20" id="r0m-2S-Unw"/>
                         </constraints>
                     </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pc0-D9-AK4">
+                        <rect key="frame" x="0.0" y="0.0" width="298" height="47"/>
+                    </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="pc0-D9-AK4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="4hX-ML-D0c"/>
                     <constraint firstItem="5vG-zf-DhI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="C27-l0-GFe"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="pc0-D9-AK4" secondAttribute="trailing" constant="-8" id="KbF-EG-Lgr"/>
                     <constraint firstItem="n16-X3-pNN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="Knr-XM-Ngr"/>
+                    <constraint firstItem="pc0-D9-AK4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="LSB-7i-gZS"/>
                     <constraint firstItem="5vG-zf-DhI" firstAttribute="leading" secondItem="n16-X3-pNN" secondAttribute="trailing" constant="20" id="WaH-dl-Uy9"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="pc0-D9-AK4" secondAttribute="bottom" constant="-8" id="rsZ-da-NuD"/>
                     <constraint firstItem="n16-X3-pNN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="zg2-bq-eTv"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="imageForColorSeperation" destination="pc0-D9-AK4" id="BjA-RU-aab"/>
                 <outlet property="imageForDeckItem" destination="n16-X3-pNN" id="zRg-V8-YEw"/>
                 <outlet property="labelForDeckItem" destination="5vG-zf-DhI" id="dWb-ja-qLf"/>
             </connections>

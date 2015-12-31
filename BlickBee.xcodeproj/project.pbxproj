@@ -68,6 +68,7 @@
 		0C8BCF8F1BFF3AA5009051F1 /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BCF8E1BFF3AA5009051F1 /* Order.m */; };
 		0C8BCF921BFF3D14009051F1 /* OrderedProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BCF911BFF3D14009051F1 /* OrderedProduct.m */; };
 		A0385C2C1C0F07FD00220DB6 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = A0385C2B1C0F07FD00220DB6 /* 2.png */; };
+		A04E322A1C33095F007B2AE5 /* aboutus.png in Resources */ = {isa = PBXBuildFile; fileRef = A04E32291C33095F007B2AE5 /* aboutus.png */; };
 		A052530B1BE9F271007EF74F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A052530A1BE9F271007EF74F /* main.m */; };
 		A052530E1BE9F271007EF74F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A052530D1BE9F271007EF74F /* AppDelegate.m */; };
 		A05253111BE9F271007EF74F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05253101BE9F271007EF74F /* ViewController.m */; };
@@ -277,6 +278,7 @@
 		2E87C8E839077887CCA402AB /* Pods-BlickBee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlickBee.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlickBee/Pods-BlickBee.release.xcconfig"; sourceTree = "<group>"; };
 		8FB0F40B769FAB5BC701EF2B /* libPods-BlickBee.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BlickBee.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0385C2B1C0F07FD00220DB6 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		A04E32291C33095F007B2AE5 /* aboutus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aboutus.png; sourceTree = "<group>"; };
 		A05253061BE9F271007EF74F /* BlickBee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlickBee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A052530A1BE9F271007EF74F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A052530C1BE9F271007EF74F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -752,6 +754,7 @@
 		A0DA71671BF074700012490E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A04E32291C33095F007B2AE5 /* aboutus.png */,
 				D2BEF6531C30627600412D89 /* backIcon.png */,
 				A0DDA05C1BF8DA5C000D9580 /* cardLayout.png */,
 				A0DA716A1BF074E10012490E /* 1.png */,
@@ -1041,6 +1044,7 @@
 				A0DA719A1BF074E10012490E /* eyesclosed.png in Resources */,
 				A0DA71981BF074E10012490E /* dropdown.png in Resources */,
 				A05253141BE9F271007EF74F /* Main.storyboard in Resources */,
+				A04E322A1C33095F007B2AE5 /* aboutus.png in Resources */,
 				A0DA71B11BF074E10012490E /* veg_vector.jpg in Resources */,
 				A0DA719F1BF074E10012490E /* logo+text 300x.png in Resources */,
 				A0DA71A11BF074E10012490E /* menu.png in Resources */,

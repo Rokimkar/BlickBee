@@ -11,5 +11,6 @@
 @interface LeftDeckTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *imageForDeckItem;
 @property (weak, nonatomic) IBOutlet UILabel *labelForDeckItem;
+@property (weak, nonatomic) IBOutlet UIImageView *imageForColorSeperation;
 
 @end

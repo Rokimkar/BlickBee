@@ -31,7 +31,7 @@
     if(swRevealVC){
         UIImage *image =[UIImage imageNamed:@"menu.png"];
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        btn.bounds = CGRectMake(0, 0, image.size.width-30, image.size.height-30);
+        btn.bounds = CGRectMake(0, 0, image.size.width-40, image.size.height-40);
         self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc]init];
         [btn addTarget:self.revealViewController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
         [btn setImage:image forState:UIControlStateNormal];
