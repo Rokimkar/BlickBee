@@ -152,6 +152,7 @@
 		A0DDA0721BFB3DE2000D9580 /* CartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DDA0701BFB3DE2000D9580 /* CartTableViewCell.m */; };
 		A0DDA0731BFB3DE2000D9580 /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0DDA0711BFB3DE2000D9580 /* CartTableViewCell.xib */; };
 		C66BD62B4F6C18DF05937993 /* libPods-BlickBee.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB0F40B769FAB5BC701EF2B /* libPods-BlickBee.a */; };
+		D216D8F11C3677B1004A10DC /* CartServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D216D8F01C3677B1004A10DC /* CartServiceClient.m */; };
 		D22648071C117DA000E44880 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D22648041C11798100E44880 /* LaunchScreen.storyboard */; };
 		D22648131C11842D00E44880 /* WYPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22648101C11842D00E44880 /* WYPopoverController.m */; };
 		D22648141C11842D00E44880 /* WYStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D22648121C11842D00E44880 /* WYStoryboardPopoverSegue.m */; };
@@ -397,6 +398,8 @@
 		A0DDA06F1BFB3DE2000D9580 /* CartTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartTableViewCell.h; sourceTree = "<group>"; };
 		A0DDA0701BFB3DE2000D9580 /* CartTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartTableViewCell.m; sourceTree = "<group>"; };
 		A0DDA0711BFB3DE2000D9580 /* CartTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
+		D216D8EF1C3677B1004A10DC /* CartServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartServiceClient.h; sourceTree = "<group>"; };
+		D216D8F01C3677B1004A10DC /* CartServiceClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartServiceClient.m; sourceTree = "<group>"; };
 		D22648041C11798100E44880 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D226480F1C11842D00E44880 /* WYPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYPopoverController.h; sourceTree = "<group>"; };
 		D22648101C11842D00E44880 /* WYPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYPopoverController.m; sourceTree = "<group>"; };
@@ -487,6 +490,8 @@
 				0C2FBC481C0603AD00A374E1 /* UserInfoServiceClient.m */,
 				0C2FBC571C06EDD000A374E1 /* AddAddressServiceClient.h */,
 				0C2FBC581C06EDD000A374E1 /* AddAddressServiceClient.m */,
+				D216D8EF1C3677B1004A10DC /* CartServiceClient.h */,
+				D216D8F01C3677B1004A10DC /* CartServiceClient.m */,
 			);
 			name = ServiceClients;
 			sourceTree = "<group>";
@@ -1149,6 +1154,7 @@
 				A0DDA0721BFB3DE2000D9580 /* CartTableViewCell.m in Sources */,
 				A0DA71641BF0734B0012490E /* BaseTableViewCell.m in Sources */,
 				0C2F06FF1BEE45C000F6B7DB /* BaseServiceClient.m in Sources */,
+				D216D8F11C3677B1004A10DC /* CartServiceClient.m in Sources */,
 				A0DB843E1C0B7650004BFD03 /* PrivacyPolicyandTermsViewController.m in Sources */,
 				D2BED7F71C13880F0090F3EC /* BaseViewController.m in Sources */,
 				0C2F072A1BEF3A9A00F6B7DB /* TopZoneView.m in Sources */,

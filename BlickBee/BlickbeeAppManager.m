@@ -10,6 +10,7 @@
 #import "Archiver.h"
 #import "SelectedProductRepo.h"
 #import "Product.h"
+#import "CartServiceClient.h"
 @implementation BlickbeeAppManager
 
 
@@ -112,6 +113,27 @@
         }
     }
     return repoArray;
+}
+
+-(void) getSelectedProductsArrayWithUpdatedPricesWithCompletionBlock:(void(^)(bool success, NSMutableArray* selectedProdsArray))completionBlock{
+    CartServiceClient *client = [[CartServiceClient alloc] init];
+    [client fetchCartRepoForProductIds:[self getSelectedProductIdsStr] WithSuccess:^(NSMutableArray *repo) {
+        [self updateWithNewSearchedArray:repo];
+        completionBlock(YES,self.selectedProducts);
+    } failure:^(NSError *error) {
+        completionBlock(NO,self.selectedProducts);
+    }];
+}
+
+-(NSString*) getSelectedProductIdsStr{
+    NSString *idsStr=@"";
+    if (self.selectedProducts && self.selectedProducts.count) {
+        for (Product *product in self.selectedProducts) {
+            idsStr = [NSString stringWithFormat:@"%@,%@",idsStr,product.productId];
+        }
+        idsStr = [idsStr substringFromIndex:1];
+    }
+    return idsStr;
 }
 
 @end

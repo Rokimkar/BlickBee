@@ -23,4 +23,6 @@
 
 -(NSMutableArray*) updateWithNewSearchedArray:(NSMutableArray*) repoArray;
 
+-(void) getSelectedProductsArrayWithUpdatedPricesWithCompletionBlock:(void(^)(bool success, NSMutableArray* selectedProdsArray))completionBlock;
+
 @end

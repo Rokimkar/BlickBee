@@ -26,38 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    Product *product = [[Product alloc]init];
     selectedProductArray = [[NSMutableArray alloc]init];
-    if(self.productArray == nil){
-        self.productArray=[[BlickbeeAppManager sharedInstance]selectedProducts];
-    }
-    BOOL addCartTable = NO;
-    for(int i=0;i<self.productArray.count;i++){
-        product=self.productArray[i];
-        if(![product.selectedProductQuantity isEqualToString:@"0"]){
-            [selectedProductArray addObject:product];
-            addCartTable=YES;
-        }
-    }
-    if(addCartTable==YES){
-        cartTableView = [[CartTableView alloc]initWithFrame:CGRectMake(0,109, getScreenWidth(), getScreenHeight()-166) andProductsArray:[[BlickbeeAppManager sharedInstance] selectedProducts]];
-        cartTableView.openHomeVCDelegate=self;
-        cartTableView.changePriceLabelInCartViewControllerDelegate=self;
-        cartTableView.separatorColor=[UIColor clearColor];
-        [self.view addSubview:cartTableView];
-        [self.view bringSubviewToFront:cartTableView];
-        cartTableView.backgroundColor=RGBA(225, 225, 225, 1);
-//        CartFooterView* footerView = [[CartFooterView alloc] initWithFrame:CGRectMake(0, 0, getScreenWidth(), 100)];
-        CartFooterView *footerView = [[[NSBundle mainBundle] loadNibNamed:@"CartFooterView" owner:self options:nil] objectAtIndex:0];
-        [footerView prepareView];
-        cartTableView.tableFooterView = footerView;
-
-    }
-    if([[BlickbeeAppManager sharedInstance]selectedProducts].count==0){
-        [self.view bringSubviewToFront:self.imageViewForCartViewController];
-        [self.view bringSubviewToFront:self.startShoppingButtonClicked];
-    }
-    [self setTotalPriceLabel];
     [[self.startShoppingButtonClicked layer]setBorderColor:[UIColor blackColor].CGColor];
     [[self.startShoppingButtonClicked layer]setBorderWidth:1.0f];
     self.startShoppingButtonClicked.layer.cornerRadius = 0.0;
@@ -75,7 +44,40 @@
     [btn setImage:image forState:UIControlStateNormal];
     UIBarButtonItem *menuButton = [[UIBarButtonItem alloc]initWithCustomView:btn];
     self.navigationItem.leftBarButtonItem = menuButton;
-}
+    
+    [[BlickbeeAppManager sharedInstance] getSelectedProductsArrayWithUpdatedPricesWithCompletionBlock:^(bool success, NSMutableArray *updatedProdsArray) {
+        
+        self.productArray=updatedProdsArray;
+        
+        BOOL addCartTable = NO;
+        for(int i=0;i<self.productArray.count;i++){
+            Product *product=self.productArray[i];
+            if(![product.selectedProductQuantity isEqualToString:@"0"]){
+                [selectedProductArray addObject:product];
+                addCartTable=YES;
+            }
+        }
+        if(addCartTable==YES){
+            cartTableView = [[CartTableView alloc]initWithFrame:CGRectMake(0,109, getScreenWidth(), getScreenHeight()-166) andProductsArray:[[BlickbeeAppManager sharedInstance] selectedProducts]];
+            cartTableView.openHomeVCDelegate=self;
+            cartTableView.changePriceLabelInCartViewControllerDelegate=self;
+            cartTableView.separatorColor=[UIColor clearColor];
+            [self.view addSubview:cartTableView];
+            [self.view bringSubviewToFront:cartTableView];
+            cartTableView.backgroundColor=RGBA(225, 225, 225, 1);
+            //        CartFooterView* footerView = [[CartFooterView alloc] initWithFrame:CGRectMake(0, 0, getScreenWidth(), 100)];
+            CartFooterView *footerView = [[[NSBundle mainBundle] loadNibNamed:@"CartFooterView" owner:self options:nil] objectAtIndex:0];
+            [footerView prepareView];
+            cartTableView.tableFooterView = footerView;
+        }
+        if([[BlickbeeAppManager sharedInstance]selectedProducts].count==0){
+            [self.view bringSubviewToFront:self.imageViewForCartViewController];
+            [self.view bringSubviewToFront:self.startShoppingButtonClicked];
+        }
+        [self setTotalPriceLabel];
+    }];
+    
+    }
 
 -(void) moveBack{
     [self.navigationController popViewControllerAnimated:YES];
