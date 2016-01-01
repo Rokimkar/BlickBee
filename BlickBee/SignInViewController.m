@@ -134,7 +134,15 @@
 }
 
 - (IBAction)showPassword:(id)sender {
-    securityEntry=!securityEntry;
+    securityEntry=!securityEntry;    
+    if (securityEntry) {
+        [self.securityBtn setImage:[UIImage imageNamed:@"eyesclosed"] forState:UIControlStateNormal];
+        [self.securityBtn setImage:[UIImage imageNamed:@"eyesclosed"] forState:UIControlStateHighlighted];
+    }
+    else{
+        [self.securityBtn setImage:[UIImage imageNamed:@"eyesopen"] forState:UIControlStateNormal];
+        [self.securityBtn setImage:[UIImage imageNamed:@"eyesopen"] forState:UIControlStateHighlighted];
+    }
     self.passTextField.secureTextEntry = securityEntry;
 }
 - (IBAction)forgotPassword:(id)sender {

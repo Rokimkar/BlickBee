@@ -143,7 +143,14 @@
 
 - (IBAction)showPasswordPressed:(id)sender {
     securityEntry=!securityEntry;
-    self.passwordTextField.secureTextEntry = securityEntry;
+    if (securityEntry) {
+        [self.securityBtn setImage:[UIImage imageNamed:@"eyesclosed"] forState:UIControlStateNormal];
+        [self.securityBtn setImage:[UIImage imageNamed:@"eyesclosed"] forState:UIControlStateHighlighted];
+    }
+    else{
+        [self.securityBtn setImage:[UIImage imageNamed:@"eyesopen"] forState:UIControlStateNormal];
+        [self.securityBtn setImage:[UIImage imageNamed:@"eyesopen"] forState:UIControlStateHighlighted];
+    }    self.passwordTextField.secureTextEntry = securityEntry;
 }
 - (IBAction)dismiss:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];

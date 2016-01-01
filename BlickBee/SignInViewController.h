@@ -18,4 +18,6 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *smallWidthConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bigWidthConstraint;
 
+@property (weak, nonatomic) IBOutlet UIButton *securityBtn;
+
 @end
