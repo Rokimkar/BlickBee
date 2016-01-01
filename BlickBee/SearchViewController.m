@@ -49,7 +49,7 @@
     if (navSearchBar) {
         [navSearchBar removeFromSuperview];
     }
-    
+    [[BlickbeeAppManager sharedInstance] archiveSelectedProducts];
 }
 -(void) prepareNavView{
     navSearchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(60, 0, getScreenWidth()-80, 44)];
@@ -92,6 +92,7 @@
         ProductsServiceClient *client = [[ProductsServiceClient alloc] init];
         [client fetchProductRepoForSearchedString:searchedStr WithSuccess:^(NSMutableArray *repo) {
             if (repo && repo.count>0) {
+                repo = [[BlickbeeAppManager sharedInstance] updateWithNewSearchedArray:repo];
                 prodsArray=repo;
                 [self prepareView];
             }
@@ -102,8 +103,24 @@
             
         }];
     }
-
 }
+/*
+-(NSMutableArray*) checkProductsRepoForSelectedProductQuantity:(NSMutableArray*) repo{
+    NSArray *repoCopy = [NSArray arrayWithArray:repo];
+    for (int i=0; i<repoCopy.count; i++) {
+        Product *product = [repoCopy objectAtIndex:i];
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"productId = %@",product.productId];
+        NSArray *foundArray = [[BlickbeeAppManager sharedInstance].selectedProducts filteredArrayUsingPredicate:predicate];
+        if (foundArray && [foundArray count]) {
+            Product *selectedProduct = [foundArray objectAtIndex:0];
+            selectedProduct.productPrice = product.productPrice;
+            repo[i]=selectedProduct;
+        }
+    }
+    return repo;
+}
+*/
+
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
     
 }
@@ -112,6 +129,8 @@
     
     [self.floatingBtn setTitle:[NSString stringWithFormat:@"%ld",(long)[[BlickbeeAppManager sharedInstance]selectedProducts].count] forState:UIControlStateNormal];
 }
+
+
 
 /*
 #pragma mark - Navigation

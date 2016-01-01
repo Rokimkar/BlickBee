@@ -37,5 +37,8 @@
     NSError *error = [NSError errorWithDomain:@"com.gaana.localerror" code:code userInfo:_dictionary];
     return error;
 }
+- (void) showAlertWithErrorMsg :(NSString*)msg{
+    [[[UIAlertView alloc] initWithTitle:@"Error" message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil] show];
+}
 
 @end

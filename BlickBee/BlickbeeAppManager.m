@@ -96,35 +96,22 @@
     }
 }
 
--(void) matchSelectedProductsWithNewProductRepo:(ProductRepo*)productRepo{
+-(NSMutableArray*) updateWithNewSearchedArray:(NSMutableArray*) repoArray{
+    // to update the proce of the selected array and the incoming products array as well for the selected qty
     
-    if (self.selectedProducts && self.selectedProducts.count>0) {
+    NSArray *repoCopy = [NSArray arrayWithArray:repoArray];
+    for (int i=0; i<repoCopy.count; i++) {
+        Product *product = [repoCopy objectAtIndex:i];
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"productId = %@",product.productId];
+        NSArray *foundArray = [[BlickbeeAppManager sharedInstance].selectedProducts filteredArrayUsingPredicate:predicate];
         
-        for (Product* selectedProduct in self.selectedProducts) {
-            
-            if ([selectedProduct.productCatId isEqualToString:@"1"]) {
-                //veg
-                NSPredicate *predicate = [NSPredicate predicateWithFormat:@"productId == %@",selectedProduct.productId];
-                NSArray* array = [productRepo.vegetablesArray filteredArrayUsingPredicate:predicate];
-                if (array && array.count>0) {
-                    [self updateProduct:[array objectAtIndex:0] withSelectedProduct:selectedProduct];
-                }
-            }
-            else if ([selectedProduct.productCatId isEqualToString:@"2"]) {
-                //fruits
-                NSPredicate *predicate = [NSPredicate predicateWithFormat:@"productId == %@",selectedProduct.productId];
-                NSArray* array = [productRepo.fruitsArray filteredArrayUsingPredicate:predicate];
-                if (array && array.count>0) {
-                    [self updateProduct:[array objectAtIndex:0] withSelectedProduct:selectedProduct];
-                }
-            }
+        if (foundArray && [foundArray count]) {
+            Product *selectedProduct = [foundArray objectAtIndex:0];
+            selectedProduct.productPrice = product.productPrice;
+            repoArray[i]=selectedProduct;
         }
     }
-}
-
--(void) updateProduct:(Product*)fetchedProduct withSelectedProduct:(Product*)selectedProduct{
-    fetchedProduct.selectedProductQuantity=selectedProduct.selectedProductQuantity;
-    selectedProduct=fetchedProduct;
+    return repoArray;
 }
 
 @end

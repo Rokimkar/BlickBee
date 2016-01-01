@@ -48,10 +48,13 @@
                 failure(nil);
             
         }
-        else{
+        else if ([responseObject objectForKey:@"error"]){
+            [self showAlertWithErrorMsg:[responseObject objectForKey:@"error"]];
             failure(nil);
         }
-        [SVProgressHUD dismiss];
+        else{
+            failure(nil);
+        }        [SVProgressHUD dismiss];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
         if (error.code==-1009) {

@@ -34,13 +34,9 @@
         if ([[responseObject objectForKey:@"response"] isEqualToString:@"success"]) {
             success([self getUserFromRespons:[responseObject objectForKey:@"response_data"]]);
         }
-        else if ([[responseObject objectForKey:@"response"] isEqualToString:@"failed"] && [responseObject objectForKey:@"error"]){
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                                message:[responseObject objectForKey:@"error"]
-                                                               delegate:nil
-                                                      cancelButtonTitle:@"Ok"
-                                                      otherButtonTitles:nil];
-            [alertView show];
+        else if ([responseObject objectForKey:@"error"]){
+            [self showAlertWithErrorMsg:[responseObject objectForKey:@"error"]];
+            failure(nil);
         }
         else{
             failure(nil);
@@ -90,9 +86,15 @@
         if ([[responseObject objectForKey:@"response"] isEqualToString:@"success"]) {
             success([self getUserFromRespons:[responseObject objectForKey:@"response_data"]]);
         }
+        else if ([responseObject objectForKey:@"error"]){
+            [self showAlertWithErrorMsg:[responseObject objectForKey:@"error"]];
+            failure(nil);
+        }
         else{
             failure(nil);
         }
+        
+        
         [SVProgressHUD dismiss];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
@@ -139,14 +141,14 @@
         if ([[responseObject objectForKey:@"response"] isEqualToString:@"success"] && [[responseObject objectForKey:@"response_data"] isKindOfClass:[NSDictionary class]]) {
             success([self getUserFromRespons:[responseObject objectForKey:@"response_data"]]);
         }
-        else{
-            if ([responseObject objectForKey:@"error"]) {
-                NSError *error = [self returnErrorWithString:[responseObject objectForKey:@"error"]];
-                failure(error);
-            }
-            else
-                failure(nil);
+        else if ([responseObject objectForKey:@"error"]){
+            [self showAlertWithErrorMsg:[responseObject objectForKey:@"error"]];
+            failure(nil);
         }
+        else{
+            failure(nil);
+        }
+        
         [SVProgressHUD dismiss];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
@@ -189,14 +191,14 @@
         if ([[responseObject objectForKey:@"response"] isEqualToString:@"success"] && [[responseObject objectForKey:@"response_data"] isKindOfClass:[NSDictionary class]]) {
             success([self getUserFromRespons:[responseObject objectForKey:@"response_data"]]);
         }
-        else{
-            if ([responseObject objectForKey:@"error"]) {
-                NSError *error = [self returnErrorWithString:[responseObject objectForKey:@"error"]];
-                failure(error);
-            }
-            else
-                failure(nil);
+        else if ([responseObject objectForKey:@"error"]){
+            [self showAlertWithErrorMsg:[responseObject objectForKey:@"error"]];
+            failure(nil);
         }
+        else{
+            failure(nil);
+        }
+        
         [SVProgressHUD dismiss];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
@@ -235,9 +237,14 @@
         if ([[responseObject objectForKey:@"response"] isEqualToString:@"success"]) {
             success();
         }
+        else if ([responseObject objectForKey:@"error"]){
+            [self showAlertWithErrorMsg:[responseObject objectForKey:@"error"]];
+            failure(nil);
+        }
         else{
             failure(nil);
         }
+        
         [SVProgressHUD dismiss];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
@@ -279,9 +286,15 @@
             else
                 failure(nil);
         }
+        else if ([responseObject objectForKey:@"error"]){
+            [self showAlertWithErrorMsg:[responseObject objectForKey:@"error"]];
+            failure(nil);
+        }
         else{
             failure(nil);
         }
+        
+        
         [SVProgressHUD dismiss];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
@@ -323,9 +336,14 @@
         if ([[responseObject objectForKey:@"response"] isEqualToString:@"success"]) {
             success();
         }
+        else if ([responseObject objectForKey:@"error"]){
+            [self showAlertWithErrorMsg:[responseObject objectForKey:@"error"]];
+            failure(nil);
+        }
         else{
             failure(nil);
         }
+        
         [SVProgressHUD dismiss];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
@@ -363,9 +381,15 @@
         if ([[responseObject objectForKey:@"response"] isEqualToString:@"success"]) {
             success();
         }
+        else if ([responseObject objectForKey:@"error"]){
+            [self showAlertWithErrorMsg:[responseObject objectForKey:@"error"]];
+            failure(nil);
+        }
         else{
             failure(nil);
         }
+        
+        
         [SVProgressHUD dismiss];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);

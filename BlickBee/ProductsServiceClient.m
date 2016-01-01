@@ -43,7 +43,18 @@
 
     manager.responseSerializer.acceptableContentTypes= [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     [manager POST:BASE_URL_STRING parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        success([self getRepoFrom:[responseObject objectForKey:@"response_data"]]);
+
+        if ([[responseObject objectForKey:@"response"] isEqualToString:@"success"]) {
+            success([self getRepoFrom:[responseObject objectForKey:@"response_data"]]);
+        }
+        else if ([responseObject objectForKey:@"error"]){
+            [self showAlertWithErrorMsg:[responseObject objectForKey:@"error"]];
+            failure(nil);
+        }
+        else{
+            failure(nil);
+        }
+        
         [SVProgressHUD dismiss];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
@@ -88,8 +99,19 @@
                              @"keyword": searchStr};
     
     manager.responseSerializer.acceptableContentTypes= [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
-    [manager POST:BASE_URL_STRING parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        success([self getProductsFrom:[responseObject objectForKey:@"response_data"]]);
+    [manager POST:BASE_URL_STRING parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {        
+        
+        if ([[responseObject objectForKey:@"response"] isEqualToString:@"success"]) {
+            success([self getProductsFrom:[responseObject objectForKey:@"response_data"]]);
+        }
+        else if ([responseObject objectForKey:@"error"]){
+            [self showAlertWithErrorMsg:[responseObject objectForKey:@"error"]];
+            failure(nil);
+        }
+        else{
+            failure(nil);
+        }
+        
         [SVProgressHUD dismiss];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);

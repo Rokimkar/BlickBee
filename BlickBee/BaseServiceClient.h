@@ -19,4 +19,5 @@
 -(void) showNoNetworkAlert;
 - (NSError *) returnErrorWithString:(NSString *) aErrorMessage;
 - (NSError *) returnErrorWithString:(NSString *) aErrorMessage andCode:(NSInteger) code;
+- (void) showAlertWithErrorMsg :(NSString*)msg;
 @end

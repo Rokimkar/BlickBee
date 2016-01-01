@@ -75,6 +75,10 @@
             NSDictionary *orderDict = [[responseObject objectForKey:@"response_data"] objectAtIndex:0];
             success([self getOrderFor:orderDict]);
         }
+        else if ([responseObject objectForKey:@"error"]){
+            [self showAlertWithErrorMsg:[responseObject objectForKey:@"error"]];
+            failure(nil);
+        }
         else{
             failure(nil);
         }
@@ -216,6 +220,10 @@
         
         if ([[responseObject objectForKey:@"response"] isEqualToString:@"success"] && [[responseObject objectForKey:@"response_data"] isKindOfClass:[NSArray class]]) {
             success([self getFullOrderFor:[responseObject objectForKey:@"response_data"]]);
+        }
+        else if ([responseObject objectForKey:@"error"]){
+            [self showAlertWithErrorMsg:[responseObject objectForKey:@"error"]];
+            failure(nil);
         }
         else{
             failure(nil);

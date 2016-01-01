@@ -36,6 +36,10 @@
             }
             success(regionsArray);
         }
+        else if ([responseObject objectForKey:@"error"]){
+            [self showAlertWithErrorMsg:[responseObject objectForKey:@"error"]];
+            failure(nil);
+        }
         else{
             failure(nil);
         }
@@ -150,6 +154,10 @@
             Address *address = [self getAddressesWith:[responseObject objectForKey:@"response_data"]];
             success(address);
         }
+        else if ([responseObject objectForKey:@"error"]){
+            [self showAlertWithErrorMsg:[responseObject objectForKey:@"error"]];
+            failure(nil);
+        }
         else{
             failure(nil);
         }
@@ -226,6 +234,10 @@
             Address *address = [self getAddressesWith:[responseObject objectForKey:@"response_data"]];
             success(address);
         }
+        else if ([responseObject objectForKey:@"error"]){
+            [self showAlertWithErrorMsg:[responseObject objectForKey:@"error"]];
+            failure(nil);
+        }
         else{
             failure(nil);
         }
@@ -275,6 +287,10 @@
         
         if ([[responseObject objectForKey:@"response"] isEqualToString:@"success"]) {
             success();
+        }
+        else if ([responseObject objectForKey:@"error"]){
+            [self showAlertWithErrorMsg:[responseObject objectForKey:@"error"]];
+            failure(nil);
         }
         else{
             failure(nil);

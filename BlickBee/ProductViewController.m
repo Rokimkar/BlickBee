@@ -73,10 +73,16 @@
     
     switch (self.deliveryOptions) {
         case kFruits:
+        {
+            self.productRepo.fruitsArray = [[BlickbeeAppManager sharedInstance] updateWithNewSearchedArray:self.productRepo.fruitsArray];
             productTableView.productArray=self.productRepo.fruitsArray;
+        }
             break;
         case kVegetables:
+        {
+            self.productRepo.vegetablesArray = [[BlickbeeAppManager sharedInstance] updateWithNewSearchedArray:self.productRepo.vegetablesArray];
             productTableView.productArray=self.productRepo.vegetablesArray;
+        }
             break;
         default:
             break;

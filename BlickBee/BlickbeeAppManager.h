@@ -20,7 +20,7 @@
 @property (nonatomic,strong) HomeViewController *homeViewController;
 
 -(void) archiveSelectedProducts;
--(void) matchSelectedProductsWithNewProductRepo:(ProductRepo*)productRepo;
 
+-(NSMutableArray*) updateWithNewSearchedArray:(NSMutableArray*) repoArray;
 
 @end
