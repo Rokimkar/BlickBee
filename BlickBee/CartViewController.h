@@ -19,5 +19,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelForDelivery;
 @property (weak, nonatomic) IBOutlet UILabel *labelForTotal;
 @property (strong, nonatomic) NSMutableArray *productArray;
--(void) presentHome;
+-(void)openHomeVC;
 @end
