@@ -19,7 +19,10 @@
 @property (nonatomic,strong) NSMutableArray *regionsArray;
 @property (nonatomic,strong) HomeViewController *homeViewController;
 
+-(void) userLoginSuccessfulWith:(User*)user;
 -(void) archiveSelectedProducts;
+-(void) archiveUser;
+-(void) readUserDataFromArchiver;
 
 -(NSMutableArray*) updateWithNewSearchedArray:(NSMutableArray*) repoArray;
 

@@ -154,6 +154,7 @@
 		A0DDA0731BFB3DE2000D9580 /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0DDA0711BFB3DE2000D9580 /* CartTableViewCell.xib */; };
 		C66BD62B4F6C18DF05937993 /* libPods-BlickBee.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB0F40B769FAB5BC701EF2B /* libPods-BlickBee.a */; };
 		D216D8F11C3677B1004A10DC /* CartServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D216D8F01C3677B1004A10DC /* CartServiceClient.m */; };
+		D216D8F61C36857C004A10DC /* UIAlertView+BlockExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D216D8F51C36857C004A10DC /* UIAlertView+BlockExtensions.m */; };
 		D22648071C117DA000E44880 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D22648041C11798100E44880 /* LaunchScreen.storyboard */; };
 		D22648131C11842D00E44880 /* WYPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22648101C11842D00E44880 /* WYPopoverController.m */; };
 		D22648141C11842D00E44880 /* WYStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D22648121C11842D00E44880 /* WYStoryboardPopoverSegue.m */; };
@@ -402,6 +403,8 @@
 		A0DDA0711BFB3DE2000D9580 /* CartTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
 		D216D8EF1C3677B1004A10DC /* CartServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartServiceClient.h; sourceTree = "<group>"; };
 		D216D8F01C3677B1004A10DC /* CartServiceClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartServiceClient.m; sourceTree = "<group>"; };
+		D216D8F41C36857C004A10DC /* UIAlertView+BlockExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+BlockExtensions.h"; sourceTree = "<group>"; };
+		D216D8F51C36857C004A10DC /* UIAlertView+BlockExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+BlockExtensions.m"; sourceTree = "<group>"; };
 		D22648041C11798100E44880 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D226480F1C11842D00E44880 /* WYPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYPopoverController.h; sourceTree = "<group>"; };
 		D22648101C11842D00E44880 /* WYPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYPopoverController.m; sourceTree = "<group>"; };
@@ -583,12 +586,11 @@
 		A05253081BE9F271007EF74F /* BlickBee */ = {
 			isa = PBXGroup;
 			children = (
-				D22648081C1183CB00E44880 /* WYPopOver */,
+				D216D8F21C368544004A10DC /* ThirdPartyFrameworks */,
 				0C2FBC661C0915EC00A374E1 /* ShareClasses */,
 				0C8183491BF9147E00882A65 /* Managers */,
 				0C2F07101BEE6AF100F6B7DB /* ModalClasses */,
 				0C2F06F91BEE453C00F6B7DB /* ServiceClients */,
-				A052533C1BE9F2BD007EF74F /* SWRevealViewController */,
 				A0DA71661BF073D80012490E /* BaseTableView */,
 				A0DA71671BF074700012490E /* Images */,
 				A0DDA06B1BFB2F86000D9580 /* Cart */,
@@ -850,6 +852,25 @@
 				2E87C8E839077887CCA402AB /* Pods-BlickBee.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D216D8F21C368544004A10DC /* ThirdPartyFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D216D8F31C36855F004A10DC /* UIAlertViewExtensions */,
+				A052533C1BE9F2BD007EF74F /* SWRevealViewController */,
+				D22648081C1183CB00E44880 /* WYPopOver */,
+			);
+			name = ThirdPartyFrameworks;
+			sourceTree = "<group>";
+		};
+		D216D8F31C36855F004A10DC /* UIAlertViewExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				D216D8F41C36857C004A10DC /* UIAlertView+BlockExtensions.h */,
+				D216D8F51C36857C004A10DC /* UIAlertView+BlockExtensions.m */,
+			);
+			name = UIAlertViewExtensions;
 			sourceTree = "<group>";
 		};
 		D22648081C1183CB00E44880 /* WYPopOver */ = {
@@ -1190,6 +1211,7 @@
 				A052530B1BE9F271007EF74F /* main.m in Sources */,
 				A0D4140D1C0647A10077BA42 /* OrdersDetailTableView.m in Sources */,
 				A0D414111C0648840077BA42 /* OrdersDetailTableViewCell.m in Sources */,
+				D216D8F61C36857C004A10DC /* UIAlertView+BlockExtensions.m in Sources */,
 				0C2FBC6D1C09164800A374E1 /* GaanaFacebook.m in Sources */,
 				0C2FBC551C06494C00A374E1 /* AddAddressViewController.m in Sources */,
 				A0DB84471C0B8D2B004BFD03 /* AddressConfirmationTableViewCell.m in Sources */,
@@ -1347,7 +1369,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: PAT RAM BISHNOI (CGFN49HM94)";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/Rokimkar/Desktop/BlickBee/BlickBee/BlickbeePrefix.pch;
+				GCC_PREFIX_HEADER = /Users/kunalchelani/Desktop/BlickBee/BlickBee/BlickbeePrefix.pch;
 				INFOPLIST_FILE = BlickBee/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1367,7 +1389,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: PAT RAM BISHNOI (CGFN49HM94)";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/Rokimkar/Desktop/BlickBee/BlickBee/BlickbeePrefix.pch;
+				GCC_PREFIX_HEADER = /Users/kunalchelani/Desktop/BlickBee/BlickBee/BlickbeePrefix.pch;
 				INFOPLIST_FILE = BlickBee/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

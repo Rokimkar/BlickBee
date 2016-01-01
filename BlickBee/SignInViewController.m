@@ -24,6 +24,7 @@
     [super viewDidLoad];
     securityEntry=YES;
     self.passTextField.secureTextEntry = securityEntry;
+    [self checkIfUserIsLoggedIn];
     // Do any additional setup after loading the view.
 }
 
@@ -107,7 +108,7 @@
         
         if (user.userId && ![user.userId isEqualToString:@""]) {
             
-            [[BlickbeeAppManager sharedInstance] setUser:user];
+            [[BlickbeeAppManager sharedInstance] userLoginSuccessfulWith:user];
             UIStoryboard *storyBoard  = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             SWRevealViewController *cont = [storyBoard instantiateViewControllerWithIdentifier:@"SWRevealViewController"];
 //            [self presentViewController:cont animated:YES completion:^{
@@ -175,6 +176,20 @@
     self.signUpBtn.layer.masksToBounds = YES;
     
 }
+
+-(void) checkIfUserIsLoggedIn{
+    [[BlickbeeAppManager sharedInstance] readUserDataFromArchiver];
+    User *user = [BlickbeeAppManager sharedInstance].user;
+    if (user && ![user.userId isEqualToString:@""]) {
+        UIStoryboard *storyBoard  = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        SWRevealViewController *cont = [storyBoard instantiateViewControllerWithIdentifier:@"SWRevealViewController"];
+        //            [self presentViewController:cont animated:YES completion:^{
+        //
+        //            }];
+        [self.navigationController pushViewController:cont animated:NO];
+    }
+}
+
 /*
 #pragma mark - Navigation
 

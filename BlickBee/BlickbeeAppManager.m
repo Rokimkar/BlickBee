@@ -38,7 +38,7 @@
 //    self.selectedProducts = [[NSMutableArray alloc]init];
     self.userAddresses = [[NSMutableArray alloc] init];
     self.regionsArray = [[NSMutableArray alloc] init];
-    [self readDataFromArchiver];
+    [self readSelectedProdsDataFromArchiver];
     return self;
     
 }
@@ -88,12 +88,35 @@
     }
 }
 
--(void) readDataFromArchiver
+-(void) readSelectedProdsDataFromArchiver
 {
     SelectedProductRepo *productRepo = [Archiver retrieve:@"SelectedProductRepo"];
     _selectedProducts=productRepo.selectedProdsArray;
     if (!_selectedProducts) {
         _selectedProducts = [[NSMutableArray alloc] init];
+    }
+}
+
+-(void) userLoginSuccessfulWith:(User*)user{
+    self.user=user;
+    [self archiveUser];
+}
+
+-(void) archiveUser{
+    BOOL fileSaved = [Archiver persist:self.user key:@"LoggedInUser"];
+    if (fileSaved) {
+        NSLog(@"LoggedInUser saved");
+    }
+    else{
+        NSLog(@"LoggedInUser not saved");
+    }
+}
+
+-(void) readUserDataFromArchiver
+{
+    User *user = [Archiver retrieve:@"LoggedInUser"];
+    if (user) {
+        self.user=user;
     }
 }
 

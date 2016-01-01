@@ -7,8 +7,8 @@
 //
 
 #import "BaseModel.h"
-
-@interface User : BaseModel
+#import "NSObject+NSCoding.h"
+@interface User : BaseModel <NSCoding,NSCopying>
 
 @property(nonatomic,strong) NSString *userId;
 @property(nonatomic,strong) NSString *deviceId;

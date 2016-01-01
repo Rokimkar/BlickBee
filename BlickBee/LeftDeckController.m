@@ -18,6 +18,7 @@
 #import "ShareViewController.h"
 #import "AboutUsViewController.h"
 #import "SignInViewController.h"
+#import "UIAlertView+BlockExtensions.h"
 @interface LeftDeckController (){
     NSArray *itemsArray;
     NSArray *imageArray;
@@ -129,17 +130,30 @@
         [revealVC setFrontViewController:NVC animated:YES];
     }
     else if(indexPath.row==9){
-        [BlickbeeAppManager sharedInstance].user = [[User alloc] init];
-        if (revealVC) {
-            [revealVC.navigationController popToRootViewControllerAnimated:YES];
-        }
-        else{
-            UIStoryboard *storyBoard  = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-            SignInViewController *cont = [storyBoard instantiateViewControllerWithIdentifier:@"SignInViewController"];
-            [self presentViewController:cont animated:YES completion:^{
-                
-            }];
-        }
+        
+        [[[UIAlertView alloc] initWithTitle:@"Blickbee" message:@"Are you sure, you want to logout?" completionBlock:^(NSUInteger buttonIndex, UIAlertView *alertView) {
+            
+            //No
+            if(buttonIndex ==0)
+            {
+            }
+            //Yes
+            else{
+                [[BlickbeeAppManager sharedInstance] userLoginSuccessfulWith:[[User alloc] init]];
+                if (revealVC) {
+                    [revealVC.navigationController popToRootViewControllerAnimated:YES];
+                }
+                else{
+                    UIStoryboard *storyBoard  = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+                    SignInViewController *cont = [storyBoard instantiateViewControllerWithIdentifier:@"SignInViewController"];
+                    [self presentViewController:cont animated:YES completion:^{
+                        
+                    }];
+                }
+            }
+            
+            
+        } cancelButtonTitle:nil otherButtonTitles:@"No",@"Yes",nil] show];
     }
 }
 

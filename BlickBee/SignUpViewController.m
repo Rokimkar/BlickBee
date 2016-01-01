@@ -109,7 +109,7 @@
         
         if (user.userId && ![user.userId isEqualToString:@""]) {
             
-            [[BlickbeeAppManager sharedInstance] setUser:user];
+            [[BlickbeeAppManager sharedInstance] userLoginSuccessfulWith:user];
             UIStoryboard *storyBoard  = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
 //            SWRevealViewController *cont = [storyBoard instantiateViewControllerWithIdentifier:@"SWRevealViewController"];
             OTPViewController *cont = [storyBoard instantiateViewControllerWithIdentifier:@"OTPViewController"];
