@@ -9,6 +9,7 @@
 #import "UserInfoViewController.h"
 #import "SWRevealViewController.h"
 #import "BlickbeePrefix.pch"
+#import "LoginServiceClient.h"
 
 @interface UserInfoViewController ()
 
@@ -60,7 +61,13 @@
 
 - (IBAction)updateButtonClicked:(id)sender {
     NSString *name = self.textForName.text;
-    self.user.name = name;
-    self.textForName.text=[[BlickbeeAppManager sharedInstance]user].name;
-}
+    LoginServiceClient *client=[[LoginServiceClient alloc]init];
+    [client changeNameWithNew:name withSuccess:^{
+    } failure:^(NSError *error) {
+        
+    }];
+    
+//    self.user.name = name;
+//    self.textForName.text=[[BlickbeeAppManager sharedInstance]user].name;
+    }
 @end

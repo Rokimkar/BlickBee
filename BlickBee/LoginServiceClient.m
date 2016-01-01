@@ -425,4 +425,48 @@
     return user;
 }
 
+- (void) changeNameWithNew:(NSString*)newName withSuccess:(void (^) ())success failure:(void (^) (NSError *error)) failure
+{
+    NSURL *url = [self getBaseURL];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [self printApi:url];
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    NSDictionary *params = @{@"request": @"updateProfile()",
+                             @"auth_key":[BlickbeeAppManager sharedInstance].user.accessToken,
+                             @"user_id": [BlickbeeAppManager sharedInstance].user.userId,
+                             @"name":newName
+                             };
+//Parameters: request=updateProfile()
+//    
+//    {"request":"updateProfile()", "auth_key":"sjhdjkfgd54d5fg4dfgj", "user_id":"5", "name": "Romec"}
+    
+    manager.responseSerializer.acceptableContentTypes= [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
+    [manager POST:BASE_URL_STRING parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if ([[responseObject objectForKey:@"response"] isEqualToString:@"success"]) {
+            success();
+        }
+        else{
+            failure(nil);
+        }
+        [SVProgressHUD dismiss];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+        if (error.code==-1009) {
+            [self showNoNetworkAlert];
+            return;
+        }
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                            message:@"Error in retrieving information."
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"Ok"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+        failure(error);
+        [SVProgressHUD dismiss];
+    }];
+}
+
 @end

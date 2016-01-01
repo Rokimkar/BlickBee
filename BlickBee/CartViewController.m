@@ -110,6 +110,9 @@
     self.labelForSubtotal.text=[NSString stringWithFormat:@"%@ %ld",@"₹",(long)totalAmount];
     self.labelForDelivery.text=@"Free";
     self.labelForTotal.text=[NSString stringWithFormat:@"%@ %ld",@"₹",(long)totalAmount];
+    if(totalAmount==0){
+        self.startShoppingButtonClicked.hidden=NO;
+    }
 }
 
 -(void)addAlertView{
@@ -135,8 +138,4 @@
     }
 }
 
--(void) presentHome{
-
-    [self.navigationController popToRootViewControllerAnimated:YES];
-}
 @end
