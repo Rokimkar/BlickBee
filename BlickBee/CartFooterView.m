@@ -14,7 +14,7 @@
 - (IBAction)shopMorePressed:(id)sender {
     UIViewController *home = [self getViewController];
     if ([home isKindOfClass:[CartViewController class]]) {
-        [(CartViewController*)home presentHome];
+        [(CartViewController*)home openHomeVC];
     }
 }
 
