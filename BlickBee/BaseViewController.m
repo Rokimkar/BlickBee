@@ -8,8 +8,9 @@
 
 #import "BaseViewController.h"
 #import "UIFont+Custom.h"
-@interface BaseViewController ()
-
+@interface BaseViewController () <SWRevealViewControllerDelegate>
+    @property (nonatomic, strong) UITapGestureRecognizer *tapGestureRecognizer;
+    @property (nonatomic,strong) UIView *overlayView;
 @end
 
 @implementation BaseViewController
@@ -32,7 +33,36 @@
     [btn setImage:image forState:UIControlStateNormal];
     UIBarButtonItem *menuButton = [[UIBarButtonItem alloc]initWithCustomView:btn];
     self.navigationItem.leftBarButtonItem = menuButton;
-    
+}
+
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    SWRevealViewController *swRevealVC = self.revealViewController;
+    if (swRevealVC) {
+        swRevealVC.delegate=self;
+        self.tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self.revealViewController action:@selector(rightRevealToggle:)];
+        
+        self.overlayView  = [[UIView alloc] initWithFrame:swRevealVC.frontViewController.view.frame];
+        self.overlayView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
+        [self.overlayView addGestureRecognizer:self.tapGestureRecognizer];
+//        self.tapGestureRecognizer.enabled = NO;
+    }
+}
+
+#pragma mark - SWRevealViewController Delegate Methods
+
+- (void)revealController:(SWRevealViewController *)revealController willMoveToPosition:(FrontViewPosition)position
+{
+    if(position == FrontViewPositionLeft){
+//        [revealController.frontViewController.view removeGestureRecognizer:self.tapGestureRecognizer];
+//        self.tapGestureRecognizer.enabled = NO;                 // Enable the tap gesture Recognizer
+        [self.overlayView removeFromSuperview];
+    }else{
+//        [revealController.frontViewController.view addGestureRecognizer:self.tapGestureRecognizer];
+//        self.tapGestureRecognizer.enabled = YES;
+        [revealController.frontViewController.view addSubview:self.overlayView];
+        [revealController.frontViewController.view bringSubviewToFront:self.overlayView];
+    }
 }
 
 -(void)moveBack{

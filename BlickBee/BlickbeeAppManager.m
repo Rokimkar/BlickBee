@@ -132,6 +132,7 @@
         if (foundArray && [foundArray count]) {
             Product *selectedProduct = [foundArray objectAtIndex:0];
             selectedProduct.productPrice = product.productPrice;
+            selectedProduct.productBbPrice = product.productBbPrice;
             repoArray[i]=selectedProduct;
         }
     }

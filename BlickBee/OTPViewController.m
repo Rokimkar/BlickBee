@@ -27,10 +27,50 @@
     // Do any additional setup after loading the view.
 }
 
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillShow)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHide)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+}
+-(void) viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:UIKeyboardWillShowNotification];
+    [[NSNotificationCenter defaultCenter] removeObserver:UIKeyboardWillHideNotification];
+}
+-(void)keyboardWillShow {
+    // Animate the current view out of the way
+    self.topSpaceConstraint.constant=-100;
+    [self.view layoutSubviews];
+    [self.view layoutIfNeeded];
+}
+
+-(void)keyboardWillHide {
+    self.topSpaceConstraint.constant=32;
+    [self.view layoutSubviews];
+    [self.view layoutIfNeeded];
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    if ([string isEqualToString:@"\n"]) {
+        [textField resignFirstResponder];
+    }
+    return YES;
+}
+
+
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {// return NO to disallow editing.
@@ -144,6 +184,9 @@
     [self.otpTextField becomeFirstResponder];
 }
 
+- (IBAction)back:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 
 

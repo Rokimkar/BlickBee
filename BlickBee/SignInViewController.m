@@ -90,7 +90,7 @@
 - (IBAction)loginBtn:(id)sender {
     
     if ([self.emailTxtField.text isEqualToString:@""]) {
-        [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter a valid email address." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+        [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter a valid email address or mobile number." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
         return;
     }
     if ([self.passTextField.text isEqualToString:@""]) {

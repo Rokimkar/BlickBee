@@ -27,6 +27,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    UIImage *image =[UIImage imageNamed:@"back.png"];
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.bounds = CGRectMake(-30, 0, image.size.width-40, image.size.height-40);
+    self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc]init];
+    [btn addTarget:self action:@selector(moveBack) forControlEvents:UIControlEventTouchUpInside];
+    [btn setImage:image forState:UIControlStateNormal];
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc]initWithCustomView:btn];
+
     optionsBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     optionsBtn.bounds = CGRectMake(0, 0, 130, 44);
     [optionsBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -38,8 +46,8 @@
     self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc]init];
     [optionsBtn addTarget:self action:@selector(optionsButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *optionsMenuButton = [[UIBarButtonItem alloc]initWithCustomView:optionsBtn];
-    self.navigationItem.leftItemsSupplementBackButton = YES;
-    self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:optionsMenuButton, nil];
+//    self.navigationItem.leftItemsSupplementBackButton = YES;
+    self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:backButton,optionsMenuButton, nil];
     productTableView = [[BaseTableView alloc]initWithFrame:CGRectMake(0, 0, getScreenWidth(), getScreenHeight()) andProductsArray:nil];
     productTableView.separatorColor=[UIColor clearColor];
     productTableView.backgroundColor=RGBA(225, 225, 225, 1);
@@ -62,6 +70,10 @@
         default:
             break;
     }
+}
+
+-(void) moveBack{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void) viewWillDisappear:(BOOL)animated{
