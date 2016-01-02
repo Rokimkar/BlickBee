@@ -10,6 +10,7 @@
 #import "BaseViewController.h"
 @interface ForgotPasswordViewController : BaseViewController
 @property (weak, nonatomic) IBOutlet UIButton *backBtn;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topConstraint;
 
 @property (weak, nonatomic) IBOutlet UIButton *nextBtn;
 @property (weak, nonatomic) IBOutlet UITextField *phoneTextField;

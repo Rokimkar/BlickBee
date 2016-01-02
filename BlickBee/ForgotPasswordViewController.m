@@ -9,7 +9,7 @@
 #import "ForgotPasswordViewController.h"
 #import "LoginServiceClient.h"
 #import "OTPViewController.h"
-@interface ForgotPasswordViewController ()
+@interface ForgotPasswordViewController () <UITextFieldDelegate>
 
 @end
 
@@ -29,6 +29,37 @@
     [self prepareView];
     // Your layout logic here
 }
+
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillShow)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHide)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+}
+-(void) viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:UIKeyboardWillShowNotification];
+    [[NSNotificationCenter defaultCenter] removeObserver:UIKeyboardWillHideNotification];
+}
+-(void)keyboardWillShow {
+    // Animate the current view out of the way
+    self.topConstraint.constant=-150;
+    [self.view layoutSubviews];
+    [self.view layoutIfNeeded];
+}
+
+-(void)keyboardWillHide {
+    self.topConstraint.constant=20;
+    [self.view layoutSubviews];
+    [self.view layoutIfNeeded];
+}
+
 -(void) prepareView{
     CALayer *border = [CALayer layer];
     CGFloat borderWidth = 1;
@@ -65,6 +96,14 @@
 - (IBAction)backBtnPressed:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    if ([string isEqualToString:@"\n"]) {
+        [textField resignFirstResponder];
+    }
+    return YES;
+}
+
 
 /*
 #pragma mark - Navigation
