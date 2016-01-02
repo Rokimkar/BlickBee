@@ -23,7 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    deliveryDetailTableView = [[DeliveryDetailTableView alloc]initWithFrames :CGRectMake(0,64, getScreenWidth(), getScreenHeight()-61-64)];
+    deliveryDetailTableView = [[DeliveryDetailTableView alloc]initWithFrames :CGRectMake(0,64, getScreenWidth(), getScreenHeight()-58-64)];
     deliveryDetailTableView.addressDelegate=self;
     deliveryDetailTableView.addressrecievedDelegate=self;
     deliveryDetailTableView.separatorColor=[UIColor clearColor];
