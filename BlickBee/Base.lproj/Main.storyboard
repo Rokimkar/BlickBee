@@ -833,7 +833,7 @@
                                     <constraint firstAttribute="height" constant="45" id="lah-hk-lqb"/>
                                 </constraints>
                                 <inset key="contentEdgeInsets" minX="7" minY="0.0" maxX="0.0" maxY="7"/>
-                                <state key="normal" title="11" backgroundImage="floatingCart">
+                                <state key="normal" title="0" backgroundImage="floatingCart">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1605,6 +1605,6 @@
         <image name="user icon.png" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2ml-qF-5Sd"/>
+        <segue reference="mGd-mu-ZFH"/>
     </inferredMetricsTieBreakers>
 </document>

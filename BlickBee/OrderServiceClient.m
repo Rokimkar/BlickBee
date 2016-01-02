@@ -46,9 +46,9 @@
     for (Product *product in productsArray) {
         productId=[NSString stringWithFormat:@"%@,%@",productId,product.productId];
         productQty=[NSString stringWithFormat:@"%@,%@",productQty,product.selectedProductQuantity];
-        productAmt=[NSString stringWithFormat:@"%@,%@",productAmt,product.productPrice];
+        productAmt=[NSString stringWithFormat:@"%@,%@",productAmt,product.productBbPrice];
         productUnitQty=[NSString stringWithFormat:@"%@,%@",productUnitQty,product.productUnitQty];
-        totalAmt += [product.selectedProductQuantity doubleValue]*[product.productPrice doubleValue];
+        totalAmt += [product.selectedProductQuantity doubleValue]*[product.productBbPrice doubleValue];
     }
     
     productId = [productId substringFromIndex:1];

@@ -52,11 +52,11 @@
     }
     
     NSMutableAttributedString *productChangedPrice= [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@%@",@"₹",product.productPrice]];//₹
-    NSMutableAttributedString *productPrice = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@%@",@"₹",product.productPrice]];
+    NSMutableAttributedString *productPrice = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@%@",@"₹",product.productBbPrice]];
     [productChangedPrice addAttribute:NSStrikethroughStyleAttributeName
                                 value:@2
                                 range:NSMakeRange(0, [productChangedPrice length])];
-    [productPrice addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0, [productChangedPrice length])];
+    [productChangedPrice addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0, [productChangedPrice length])];
     NSAttributedString *space = [[NSAttributedString alloc]initWithString:@" "];
     [productChangedPrice appendAttributedString:space];
     [productChangedPrice appendAttributedString:productPrice];

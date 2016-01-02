@@ -25,12 +25,12 @@
     NSInteger totalAmount=0;
     NSInteger totalQuantity=0;
     for(int i=0;i<[BlickbeeAppManager sharedInstance].selectedProducts.count;i++){
-        NSInteger productCost=0;
+        //NSInteger productCost=0;
         Product *product=[[Product alloc]init];
         product = [[BlickbeeAppManager sharedInstance].selectedProducts objectAtIndex:i];
-        productCost=[product.productPrice integerValue];
+        //productCost=[product.productPrice integerValue];
         totalQuantity+=[product.selectedProductQuantity integerValue];
-        totalAmount+=([product.selectedProductQuantity integerValue]*[product.productPrice integerValue]);
+        totalAmount+=([product.selectedProductQuantity integerValue]*[product.productBbPrice integerValue]);
     }
     self.labelForTotalAmount.text=[NSString stringWithFormat:@"%@ %ld",@"₹",(long)totalAmount];
     self.labelForTotalQuantity.text=[NSString stringWithFormat:@"%ld",totalQuantity];

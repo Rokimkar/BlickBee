@@ -102,7 +102,7 @@
     for(int i=0;i<[BlickbeeAppManager sharedInstance].selectedProducts.count;i++){
         Product *product=[[Product alloc]init];
         product = [[BlickbeeAppManager sharedInstance].selectedProducts objectAtIndex:i];
-        totalAmount+=([product.selectedProductQuantity integerValue]*[product.productPrice integerValue]);
+        totalAmount+=([product.selectedProductQuantity integerValue]*[product.productBbPrice integerValue]);
     }
     if(totalAmount==0){
         [self.proceedButtonClicked setHidden:YES];
