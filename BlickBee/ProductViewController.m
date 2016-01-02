@@ -118,7 +118,7 @@
     for(int i=0;i<[BlickbeeAppManager sharedInstance].selectedProducts.count;i++){
         Product *product=[[Product alloc]init];
         product = [[BlickbeeAppManager sharedInstance].selectedProducts objectAtIndex:i];
-        totalAmount+=([product.selectedProductQuantity integerValue]*[product.productPrice integerValue]);
+        totalAmount+=([product.selectedProductQuantity integerValue]*[product.productBbPrice integerValue]);
     }
     [btn setTitle:[NSString stringWithFormat:@"₹%ld",(long)totalAmount] forState:UIControlStateNormal];
     self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]init];
@@ -133,6 +133,7 @@
         [self prepareView];
     }
     [self setNavOptionButton];
+    [self setRightNavigationItem];
     
 }
 
@@ -163,18 +164,20 @@
     controller.optionSelectedDelegate = self;
     controller.preferredContentSize = CGSizeMake(120, 88);
     UINavigationController *contentViewController = [[UINavigationController alloc] initWithRootViewController:controller];
-    optionsPopoverController = [[WYPopoverController alloc] initWithContentViewController:contentViewController];
-    optionsPopoverController.delegate = self;
-    optionsPopoverController.passthroughViews = @[btn];
-    optionsPopoverController.popoverLayoutMargins = UIEdgeInsetsMake(10, 10, 10, 10);
-    optionsPopoverController.wantsDefaultContentAppearance = NO;
-    optionsPopoverController.theme.arrowBase = 16;
-    optionsPopoverController.theme.arrowHeight = 8;
-    [optionsPopoverController presentPopoverFromRect:btn.bounds
-                                              inView:btn
-                            permittedArrowDirections:WYPopoverArrowDirectionAny
-                                            animated:YES
-                                             options:WYPopoverAnimationOptionFadeWithScale];
+    if (!optionsPopoverController) {
+        optionsPopoverController = [[WYPopoverController alloc] initWithContentViewController:contentViewController];
+        optionsPopoverController.delegate = self;
+        optionsPopoverController.passthroughViews = @[btn];
+        optionsPopoverController.popoverLayoutMargins = UIEdgeInsetsMake(10, 10, 10, 10);
+        optionsPopoverController.wantsDefaultContentAppearance = NO;
+        optionsPopoverController.theme.arrowBase = 16;
+        optionsPopoverController.theme.arrowHeight = 8;
+        [optionsPopoverController presentPopoverFromRect:btn.bounds
+                                                  inView:btn
+                                permittedArrowDirections:WYPopoverArrowDirectionAny
+                                                animated:YES
+                                                 options:WYPopoverAnimationOptionFadeWithScale];        
+    }
 }
 
 
