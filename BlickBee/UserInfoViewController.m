@@ -23,7 +23,7 @@
     if(swRevealVC){
         UIImage *image =[UIImage imageNamed:@"menu.png"];
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        btn.bounds = CGRectMake(0, 0, image.size.width-30, image.size.height-30);
+        btn.bounds = CGRectMake(0, 0, image.size.width-40, image.size.height-40);
         self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc]init];
         [btn addTarget:self.revealViewController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
         [btn setImage:image forState:UIControlStateNormal];
@@ -41,6 +41,9 @@
     self.labelForEmail.text=self.user.email;
     self.labelForMobNumb.text=self.user.phone;
     self.textForName.text=self.user.name;
+    self.title=@"My Profile";
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [self prepareView];
     [self.view setBackgroundColor:RGBA(235, 235, 235, 1)];
 }

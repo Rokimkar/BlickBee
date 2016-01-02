@@ -74,6 +74,7 @@
             [self.view bringSubviewToFront:self.imageViewForCartViewController];
             [self.view bringSubviewToFront:self.startShoppingButtonClicked];
         }
+        self.startShoppingButtonClicked.hidden=YES;
         [self setTotalPriceLabel];
     }];
     

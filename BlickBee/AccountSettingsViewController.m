@@ -44,6 +44,7 @@
         //[swRevealVC revealToggle:self];
         [swRevealVC revealToggleAnimated:YES];
     }
+    self.title=@"Account Settings";
     [self.view setBackgroundColor:RGBA(225, 225, 225, 1)];
     [self.accountSettingsTableView setBackgroundColor:RGBA(225, 225, 225, 1)];
 
