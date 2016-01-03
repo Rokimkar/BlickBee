@@ -79,6 +79,7 @@
 		A052533F1BE9F35A007EF74F /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A052533E1BE9F35A007EF74F /* SWRevealViewController.m */; };
 		A05253421BEA0B59007EF74F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05253411BEA0B59007EF74F /* HomeViewController.m */; };
 		A05253451BEA0EC9007EF74F /* LeftDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05253441BEA0EC9007EF74F /* LeftDeckController.m */; };
+		A08173A41C392E4D00FC7E1E /* person.png in Resources */ = {isa = PBXBuildFile; fileRef = A08173A31C392E4D00FC7E1E /* person.png */; };
 		A0AB9D001C306BF40058B144 /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0AB9CFF1C306BF40058B144 /* UserInfoViewController.m */; };
 		A0D060E61C034268001E70B9 /* MyOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D060E51C034268001E70B9 /* MyOrdersViewController.m */; };
 		A0D060EA1C03441C001E70B9 /* MyOrdersTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D060E81C03441C001E70B9 /* MyOrdersTableViewCell.m */; };
@@ -302,6 +303,7 @@
 		A05253411BEA0B59007EF74F /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		A05253431BEA0EC9007EF74F /* LeftDeckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftDeckController.h; sourceTree = "<group>"; };
 		A05253441BEA0EC9007EF74F /* LeftDeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftDeckController.m; sourceTree = "<group>"; };
+		A08173A31C392E4D00FC7E1E /* person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = person.png; sourceTree = "<group>"; };
 		A0AB9CFE1C306BF40058B144 /* UserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoViewController.h; sourceTree = "<group>"; };
 		A0AB9CFF1C306BF40058B144 /* UserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoViewController.m; sourceTree = "<group>"; };
 		A0D060E41C034268001E70B9 /* MyOrdersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOrdersViewController.h; sourceTree = "<group>"; };
@@ -761,6 +763,7 @@
 		A0DA71671BF074700012490E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A08173A31C392E4D00FC7E1E /* person.png */,
 				A04E32291C33095F007B2AE5 /* aboutus.png */,
 				D2BEF6531C30627600412D89 /* backIcon.png */,
 				A0DDA05C1BF8DA5C000D9580 /* cardLayout.png */,
@@ -1019,6 +1022,7 @@
 				A0DA71A21BF074E10012490E /* my orders empty.png in Resources */,
 				0C296DF21C0CC6D5001AE0FC /* Roboto-Light.ttf in Resources */,
 				A0D5E31F1BFE02BD00650E58 /* DeliveryDetailTableViewCell.xib in Resources */,
+				A08173A41C392E4D00FC7E1E /* person.png in Resources */,
 				A0DA71AB1BF074E10012490E /* settings.png in Resources */,
 				A0DA719B1BF074E10012490E /* eyesopen.png in Resources */,
 				A0DA71AE1BF074E10012490E /* truck.png in Resources */,
@@ -1314,7 +1318,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "ee1a9fe7-a84e-4b96-aeff-dd6a8f2ee09d";
+				PROVISIONING_PROFILE = "cf4549c9-f57b-4260-bcac-bcb17a2e19b0";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1353,7 +1357,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "ee1a9fe7-a84e-4b96-aeff-dd6a8f2ee09d";
+				PROVISIONING_PROFILE = "cf4549c9-f57b-4260-bcac-bcb17a2e19b0";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1375,7 +1379,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ram.blickbee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ee1a9fe7-a84e-4b96-aeff-dd6a8f2ee09d";
+				PROVISIONING_PROFILE = "cf4549c9-f57b-4260-bcac-bcb17a2e19b0";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1395,7 +1399,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ram.blickbee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ee1a9fe7-a84e-4b96-aeff-dd6a8f2ee09d";
+				PROVISIONING_PROFILE = "cf4549c9-f57b-4260-bcac-bcb17a2e19b0";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

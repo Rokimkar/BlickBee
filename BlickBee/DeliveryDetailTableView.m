@@ -148,7 +148,7 @@
     UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(10, view.frame.size.height-3, tableView.frame.size.width-20, 1)];
     [imgView setBackgroundColor:[UIColor lightGrayColor]];
     [view addSubview:imgView];
-    
+    view.backgroundColor=RGBA(225, 225, 225, 1);
     return view;
 }
 
