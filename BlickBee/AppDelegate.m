@@ -40,6 +40,8 @@
 {
     NSString *token = [[deviceToken description] stringByTrimmingCharactersInSet: [NSCharacterSet characterSetWithCharactersInString:@"<>"]];
     token = [token stringByReplacingOccurrencesOfString:@" " withString:@""];
+    [[NSUserDefaults standardUserDefaults] setObject:token forKey:@"devicetoken"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     NSLog(@"content---%@", token);
 }
 

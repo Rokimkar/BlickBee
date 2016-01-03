@@ -100,10 +100,20 @@
     NSMutableDictionary *credentialsDict = [[NSMutableDictionary alloc] init];
     [credentialsDict setObject:self.emailTextField.text forKey:@"email"];
     [credentialsDict setObject:self.passwordTextField.text forKey:@"password"];
-    [credentialsDict setObject:@"kjhskjhaskjhasdkjsahk" forKey:@"access_token"];
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"devicetoken"]) {
+        [credentialsDict setObject:[[NSUserDefaults standardUserDefaults] objectForKey:@"devicetoken"] forKey:@"access_token"];
+    }
+    else{
+        [credentialsDict setObject:@"kjhskjhaskjhasdkjsahk" forKey:@"access_token"];
+    }
     [credentialsDict setObject:self.phoneTextField.text forKey:@"phone"];
     [credentialsDict setObject:self.nameTextField.text forKey:@"name"];
-    [credentialsDict setObject:@"kjhskjhaskjhasdkjsahk" forKey:@"device_id"];
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"devicetoken"]) {
+        [credentialsDict setObject:[[NSUserDefaults standardUserDefaults] objectForKey:@"devicetoken"] forKey:@"device_id"];
+    }
+    else{
+        [credentialsDict setObject:@"kjhskjhaskjhasdkjsahk" forKey:@"device_id"];
+    }
     
     [client signUpWithDictionary:credentialsDict WithSuccess:^(User *user) {
         

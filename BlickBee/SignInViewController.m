@@ -49,7 +49,7 @@
 }
 -(void)keyboardWillShow {
     // Animate the current view out of the way
-    self.topSpaceConstraint.constant=-155;
+    self.topSpaceConstraint.constant=-170;
     [self.view layoutSubviews];
     [self.view layoutIfNeeded];
 }
@@ -102,7 +102,12 @@
     NSMutableDictionary *credentialsDict = [[NSMutableDictionary alloc] init];
     [credentialsDict setObject:self.emailTxtField.text forKey:@"email"];
     [credentialsDict setObject:self.passTextField.text forKey:@"password"];
-    [credentialsDict setObject:@"kjhskjhaskjhasdkjsahk" forKey:@"access_token"];
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"devicetoken"]) {
+        [credentialsDict setObject:[[NSUserDefaults standardUserDefaults] objectForKey:@"devicetoken"] forKey:@"access_token"];
+    }
+    else{
+        [credentialsDict setObject:@"kjhskjhaskjhasdkjsahk" forKey:@"access_token"];
+    }
     
     [client signInWithDictionary:credentialsDict WithSuccess:^(User *user) {
         
