@@ -83,6 +83,8 @@
     UIButton *searchBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.bounds = CGRectMake(0, 0, image.size.width-45, image.size.height-45);
     searchBtn.bounds = CGRectMake(0, 0, image.size.width-45, image.size.height-45);
+    btn.imageEdgeInsets=UIEdgeInsetsMake(0, 5, 0, -5);
+    searchBtn.imageEdgeInsets=UIEdgeInsetsMake(0, -10, 0, 10);
     self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]init];
     [searchBtn addTarget:self action:@selector(searchIconTapped:) forControlEvents:UIControlEventTouchUpInside];
     [btn setImage:image forState:UIControlStateNormal];
