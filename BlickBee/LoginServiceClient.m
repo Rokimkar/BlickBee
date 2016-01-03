@@ -26,7 +26,8 @@
     NSDictionary *params = @{@"request": @"logIn()",
                              @"password": [inputDict objectForKey:@"password"],
                              @"email": [inputDict objectForKey:@"email"],
-                             @"access_token": [inputDict objectForKey:@"access_token"]};
+                             @"access_token": [inputDict objectForKey:@"access_token"],
+                             @"device_type": @"ios"};
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
     manager.responseSerializer.acceptableContentTypes= [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     [manager POST:BASE_URL_STRING parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -78,7 +79,8 @@
                              @"access_token": [inputDict objectForKey:@"access_token"],
                              @"phone": [inputDict objectForKey:@"phone"],
                              @"name": [inputDict objectForKey:@"name"],
-                             @"device_id": [inputDict objectForKey:@"device_id"]};
+                             @"device_id": [inputDict objectForKey:@"device_id"],
+                             @"device_type": @"ios"};
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
     manager.responseSerializer.acceptableContentTypes= [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     [manager POST:BASE_URL_STRING parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {

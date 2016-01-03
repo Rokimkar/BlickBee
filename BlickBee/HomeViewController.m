@@ -148,7 +148,6 @@
     
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
 
-//    if (indexPath.row==0) {
         if (indexPath.section==0) {
             TopZoneView *topZoneView = [[TopZoneView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, getScreenWidth()*288.0/720.0) andItems:self.productRepo.offersArray];
             [cell addSubview:topZoneView];
@@ -165,15 +164,7 @@
             imgView.image = [UIImage imageNamed:@"veg_vector"];
             [cell addSubview:imgView];
         }
-//    }
-//    else{
-//        NSString *CellIdentifier=@"cell";
-//        cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-//        if (cell == nil) {
-//            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-//        }
-//    }
-
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     [cell setBackgroundColor:[UIColor whiteColor]];
     return cell;
 }
@@ -204,9 +195,10 @@
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-        if (indexPath.section==0) {
-            return getScreenWidth()*288.0/720.0;
-        }
+        if (indexPath.section==0)
+            return getScreenWidth()*288.0/720.0 +8;
+        else if(indexPath.section==1)
+            return getScreenWidth()*192.0/320.0 +8;
         else
             return getScreenWidth()*192.0/320.0;
 }
