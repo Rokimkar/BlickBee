@@ -24,7 +24,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="361" height="84"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cardLayout.png" translatesAutoresizingMaskIntoConstraints="NO" id="WAa-m7-g94">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cardLayout.png" translatesAutoresizingMaskIntoConstraints="NO" id="WAa-m7-g94">
                         <rect key="frame" x="8" y="6" width="345" height="72"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsj-3v-tIh">
@@ -54,14 +54,14 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="viu-uG-NFs">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="viu-uG-NFs">
                         <rect key="frame" x="79" y="13" width="1" height="58"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="1" id="afO-Xc-jre"/>
                         </constraints>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLD-A5-gAQ">
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLD-A5-gAQ">
                         <rect key="frame" x="317" y="4" width="35" height="35"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="35" id="FJ9-ZB-PBl"/>
@@ -76,7 +76,7 @@
                             <action selector="addButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Y5h-QD-CSh"/>
                         </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PvH-HO-omg">
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PvH-HO-omg">
                         <rect key="frame" x="317" y="42" width="35" height="35"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="35" id="hNf-rh-dHp"/>
@@ -91,7 +91,7 @@
                             <action selector="subtractButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="6u3-3E-H0Y"/>
                         </connections>
                     </button>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IvG-S9-oBS">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IvG-S9-oBS">
                         <rect key="frame" x="317" y="15" width="1" height="54"/>
                         <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -99,7 +99,7 @@
                             <constraint firstAttribute="width" constant="1" id="36W-zB-axL"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cdL-ge-tnD">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cdL-ge-tnD">
                         <rect key="frame" x="319" y="41" width="30" height="1"/>
                         <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -108,7 +108,7 @@
                             <constraint firstAttribute="height" constant="1" id="eMs-3f-tuN"/>
                         </constraints>
                     </imageView>
-                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqM-nJ-Yft">
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqM-nJ-Yft">
                         <rect key="frame" x="275" y="25" width="35" height="35"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="35" id="JU2-Pj-QOB"/>
@@ -120,7 +120,7 @@
                             <color key="titleColor" red="0.9882352941176471" green="0.37254901960784315" blue="0.062745098039215685" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
                     </button>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eod-vU-b7K">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eod-vU-b7K">
                         <rect key="frame" x="9" y="13" width="67" height="58"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="NaX-Nv-Xu2"/>
@@ -146,6 +146,7 @@
                     <constraint firstItem="WAa-m7-g94" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="BrH-Vc-E5s"/>
                     <constraint firstItem="sqM-nJ-Yft" firstAttribute="leading" secondItem="caw-ZH-EU9" secondAttribute="trailing" constant="6" id="CPL-rd-p1J"/>
                     <constraint firstItem="fsj-3v-tIh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="9" id="Dut-d1-5Ah"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="hO8-8G-O0V" secondAttribute="bottom" constant="5" id="E2h-jZ-CVO"/>
                     <constraint firstItem="hO8-8G-O0V" firstAttribute="top" secondItem="caw-ZH-EU9" secondAttribute="bottom" constant="8" id="Eii-Ym-aqG"/>
                     <constraint firstItem="caw-ZH-EU9" firstAttribute="leading" secondItem="viu-uG-NFs" secondAttribute="trailing" constant="5" id="Fc9-Ig-dRU"/>
                     <constraint firstItem="viu-uG-NFs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="Fo9-UC-RP8"/>
