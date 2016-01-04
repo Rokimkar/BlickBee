@@ -93,19 +93,20 @@
         cell.backgroundColor = RGBA(225, 225, 225, 1);
         return cell;
     }
-    
-    
-    BaseTableViewCell *cell= (BaseTableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"BaseTableViewCell"];
-    if(cell == nil){
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BaseTableViewCell" owner:self options:nil];
-        cell = [nib objectAtIndex:0];
-    }
     Product *product = [self.productArray objectAtIndex:indexPath.row];
-       cell.selectionStyle=UITableViewCellSelectionStyleNone;
-    cell.productDelegate=self;
-   // cell.imageViewForCart.image=[UIImage imageNamed:@"cartadd.png"];
-    [cell bindData:product];
-    if(![product.selectedProductQuantity isEqualToString:@"0"]){
+    if([product.selectedProductQuantity isEqualToString:@"0"]){
+
+        BaseTableViewCell *cell= (BaseTableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"BaseTableViewCell"];
+        if(cell == nil){
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BaseTableViewCell" owner:self options:nil];
+            cell = [nib objectAtIndex:0];
+        }
+        cell.productDelegate=self;
+        cell.selectionStyle=UITableViewCellSelectionStyleNone;
+        [cell bindData:product];
+        return cell;
+    }
+    else{
         AddToCartTableViewCell *coverCell = (AddToCartTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"AddToCartTableViewCell"];
         if(coverCell == nil){
             NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"AddToCartTableViewCell" owner:self options:nil];
@@ -116,7 +117,6 @@
         coverCell.selectionStyle=UITableViewCellSelectionStyleNone;
         return coverCell;
     }
-    return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

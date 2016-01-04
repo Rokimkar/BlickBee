@@ -11,7 +11,7 @@
 #import "BlickbeePrefix.pch"
 #import "LoginServiceClient.h"
 
-@interface UserInfoViewController ()
+@interface UserInfoViewController () <UITextFieldDelegate>
 
 @end
 
@@ -29,7 +29,35 @@
     [self prepareView];
     [self.view setBackgroundColor:RGBA(235, 235, 235, 1)];
 }
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillShow)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHide)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+}
+-(void) viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:UIKeyboardWillShowNotification];
+    [[NSNotificationCenter defaultCenter] removeObserver:UIKeyboardWillHideNotification];
+}
+-(void)keyboardWillShow {
+    // Animate the current view out of the way
+    self.topSpaceConstraint.constant=-110;
+    [self.view layoutSubviews];
+    [self.view layoutIfNeeded];
+}
 
+-(void)keyboardWillHide {
+    self.topSpaceConstraint.constant=25;
+    [self.view layoutSubviews];
+    [self.view layoutIfNeeded];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -46,6 +74,7 @@
 
 - (IBAction)updateButtonClicked:(id)sender {
     NSString *name = self.textForName.text;
+    [self.textForName resignFirstResponder];
     LoginServiceClient *client=[[LoginServiceClient alloc]init];
     [client changeNameWithNew:name withSuccess:^{
     } failure:^(NSError *error) {
@@ -55,4 +84,12 @@
 //    self.user.name = name;
 //    self.textForName.text=[[BlickbeeAppManager sharedInstance]user].name;
     }
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    if ([string isEqualToString:@"\n"]) {
+        [textField resignFirstResponder];
+    }
+    return YES;
+}
+
 @end
