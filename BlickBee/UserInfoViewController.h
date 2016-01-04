@@ -17,4 +17,5 @@
 @property (weak, nonatomic) IBOutlet UITextField *textForName;
 @property (weak, nonatomic) IBOutlet UIImageView *imageForProfilePic;
 @property (strong,nonatomic) User *user;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topSpaceConstraint;
 @end
