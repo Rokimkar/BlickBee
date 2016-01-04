@@ -62,11 +62,13 @@
 }
 
 - (IBAction)addButtonClicked:(id)sender {
-    if (![self.item.selectedProductQuantity isEqualToString:@"10"] ) {
+    NSInteger selectedQty = [self.item.selectedProductQuantity integerValue];
+    NSInteger productCap = [self.item.productCap integerValue];
+    if (selectedQty < productCap ) {
     self.item.selectedProductQuantity = [NSString stringWithFormat:@"%ld",(long)([self.item.selectedProductQuantity integerValue]+1)];
         [self.reloadCellDelegate reloadCellWithProduct:self.item];
+        [self.productQuantityChangedDelegate productQuantityChanged];
     }
-    [self.productQuantityChangedDelegate productQuantityChanged];
 
 }
 - (IBAction)subtractButtonClicked:(id)sender {
