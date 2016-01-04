@@ -41,7 +41,7 @@
     self.labelForQuantity.text=product.selectedProductQuantity;
     if([product.productImages objectAtIndex:0]){
         NSURLRequest *req = [NSURLRequest requestWithURL:[NSURL URLWithString:[product.productImages objectAtIndex:0]] cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:60];
-    [self.imageViewForProduct setImageWithURLRequest:req placeholderImage:[UIImage imageNamed:@"my orders empty.png"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+    [self.imageViewForProduct setImageWithURLRequest:req placeholderImage:[UIImage imageNamed:@"loading-img.png"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
         
         if (!request) {
             self.imageViewForProduct.image=image;

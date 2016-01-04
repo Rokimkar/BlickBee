@@ -24,7 +24,18 @@
     self.labelForOrderDate.text=myOrder.orderCreatedDate;
     self.labelForOrderID.text=myOrder.uniqueOrderId;
     self.labelForPrice.text=[NSString stringWithFormat:@"₹%@",myOrder.orderAmount];
+    if([myOrder.orderStatus isEqualToString:@"0"]||[myOrder.orderStatus isEqualToString:@"Pending"]){
     self.imageViewForStatus.image=[UIImage imageNamed:@"2_a.png"];
+    }
+    else if([myOrder.orderStatus isEqualToString:@"1"]){
+    self.imageViewForStatus.image=[UIImage imageNamed:@"2_b.png"];
+    }
+    else if([myOrder.orderStatus isEqualToString:@"2"]){
+        self.imageViewForStatus.image=[UIImage imageNamed:@"2_c.png"];
+    }
+    else if([myOrder.orderStatus isEqualToString:@"3"]){
+        self.imageViewForStatus.image=[UIImage imageNamed:@"4.png"];
+    }
     [self.imageViewForStatus sizeToFit];
     self.selectionStyle=UITableViewCellSelectionStyleNone;
 }
