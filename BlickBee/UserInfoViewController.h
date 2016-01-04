@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "User.h"
+#import "BaseViewController.h"
 
-@interface UserInfoViewController : UIViewController
+@interface UserInfoViewController : BaseViewController
 @property (weak, nonatomic) IBOutlet UILabel *labelForEmail;
 @property (weak, nonatomic) IBOutlet UILabel *labelForMobNumb;
 - (IBAction)updateButtonClicked:(id)sender;

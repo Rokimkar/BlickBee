@@ -19,5 +19,6 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bigWidthConstraint;
 
 @property (weak, nonatomic) IBOutlet UIButton *securityBtn;
+@property (weak, nonatomic) IBOutlet UIImageView *topImageView;
 
 @end

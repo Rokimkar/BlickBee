@@ -114,9 +114,9 @@
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     SWRevealViewController *swRevealVC = self.revealViewController;
     UserInfoViewController *userInfoVC= [storyBoard instantiateViewControllerWithIdentifier:@"UserInfoViewController"];
-    UINavigationController *NVC = [[UINavigationController alloc]initWithRootViewController:userInfoVC];
-    [swRevealVC setFrontViewController:NVC];
-    NVC.navigationBar.barTintColor=RGBA(247, 71, 17, 1);
+//    UINavigationController *NVC = [[UINavigationController alloc]initWithRootViewController:userInfoVC];
+    [self.navigationController pushViewController:userInfoVC animated:YES];
+//    NVC.navigationBar.barTintColor=RGBA(247, 71, 17, 1);
     //[swRevealVC revealToggle:NVC];
 }
 
@@ -134,8 +134,6 @@
 }
 
 
-
-
 #pragma mark UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -150,22 +148,23 @@
     
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
 
-    if (indexPath.section==0) {
-        TopZoneView *topZoneView = [[TopZoneView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, getScreenWidth()*288.0/720.0) andItems:self.productRepo.offersArray];
-        [cell addSubview:topZoneView];
-    }
-    else if(indexPath.section==1){
-        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, getScreenWidth()*192/320)];
-        [imgView setContentMode:UIViewContentModeScaleAspectFit];
-        imgView.image = [UIImage imageNamed:@"fruits_vector"];
-        [cell addSubview:imgView];
-    }
-    else if(indexPath.section==2){
-        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, getScreenWidth()*192/320)];
-        [imgView setContentMode:UIViewContentModeScaleAspectFit];
-        imgView.image = [UIImage imageNamed:@"veg_vector"];
-        [cell addSubview:imgView];
-    }
+        if (indexPath.section==0) {
+            TopZoneView *topZoneView = [[TopZoneView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, getScreenWidth()*288.0/720.0) andItems:self.productRepo.offersArray];
+            [cell addSubview:topZoneView];
+        }
+        else if(indexPath.section==1){
+            UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, getScreenWidth()*192/320)];
+            [imgView setContentMode:UIViewContentModeScaleAspectFit];
+            imgView.image = [UIImage imageNamed:@"fruits_vector"];
+            [cell addSubview:imgView];
+        }
+        else if(indexPath.section==2){
+            UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, getScreenWidth()*192/320)];
+            [imgView setContentMode:UIViewContentModeScaleAspectFit];
+            imgView.image = [UIImage imageNamed:@"veg_vector"];
+            [cell addSubview:imgView];
+        }
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     [cell setBackgroundColor:[UIColor whiteColor]];
     return cell;
 }
@@ -173,33 +172,35 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSIndexPath *idx= indexPath;
     NSLog(@"%ld",(long)idx.section);
-    if(indexPath.section==1){
-        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        ProductViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"ProductViewController"];
-//        ProductViewController *vc = [[ProductViewController alloc]init];
-        vc.productRepo=self.productRepo;
-        vc.deliveryOptions=kFruits;
-//        vc.productArray=self.productRepo.fruitsArray;
-        [self.navigationController pushViewController:vc animated:YES];
-    }
-    else if (indexPath.section==2){
-        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        ProductViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"ProductViewController"];
-        vc.productRepo=self.productRepo;
-        vc.deliveryOptions=kVegetables;
-//        vc.productArray=self.productRepo.vegetablesArray;
-        [self.navigationController pushViewController:vc animated:YES];
+    if (indexPath.row==0) {
+        if(indexPath.section==1){
+            UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            ProductViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"ProductViewController"];
+            //        ProductViewController *vc = [[ProductViewController alloc]init];
+            vc.productRepo=self.productRepo;
+            vc.deliveryOptions=kFruits;
+            //        vc.productArray=self.productRepo.fruitsArray;
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+        else if (indexPath.section==2){
+            UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            ProductViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"ProductViewController"];
+            vc.productRepo=self.productRepo;
+            vc.deliveryOptions=kVegetables;
+            //        vc.productArray=self.productRepo.vegetablesArray;
+            [self.navigationController pushViewController:vc animated:YES];
+        }
     }
 }
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section==0) {
-        return getScreenWidth()*288.0/720.0;
-    }
-    else
-        return getScreenWidth()*192.0/320.0;
-
+        if (indexPath.section==0)
+            return getScreenWidth()*288.0/720.0 +8;
+        else if(indexPath.section==1)
+            return getScreenWidth()*192.0/320.0 +8;
+        else
+            return getScreenWidth()*192.0/320.0;
 }
 
 @end
