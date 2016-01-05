@@ -117,7 +117,8 @@
 }
 
 -(void)addAlertView{
-    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:nil message:@"Your order must be greater than ₹ 250" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+    NSString *msg = [NSString stringWithFormat:@"%@ %d",@"Your order must be greater than ₹",[BlickbeeAppManager sharedInstance].orderAmountLimit];
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:nil message:msg delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
     [alertView show];
 }
 
@@ -129,7 +130,7 @@
     [self openHomeVC];
 }
 - (IBAction)proceedButtonClicked:(id)sender {
-    if(totalAmount<250 ){
+    if(totalAmount<[BlickbeeAppManager sharedInstance].orderAmountLimit ){
         [self addAlertView];
     }
     else{

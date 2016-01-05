@@ -146,6 +146,8 @@
     for (NSMutableDictionary *dict in [responsDict objectForKey:@"delivery_slots"]) {
         [repo.deliverySlotsArray addObject:[self getDeliverySlotForDict:dict]];
     }
+    repo.orderAmountLimit=[responsDict objectForKey:@"orderAmountLimit"];
+    [[BlickbeeAppManager sharedInstance] setOrderAmountLimit:[repo.orderAmountLimit intValue]];
     return repo;
 }
 

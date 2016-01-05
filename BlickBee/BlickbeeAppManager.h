@@ -18,6 +18,7 @@
 @property (nonatomic,strong) NSMutableArray *userAddresses;
 @property (nonatomic,strong) NSMutableArray *regionsArray;
 @property (nonatomic,strong) HomeViewController *homeViewController;
+@property (nonatomic,assign) int orderAmountLimit;
 
 -(void) userLoginSuccessfulWith:(User*)user;
 -(void) archiveSelectedProducts;

@@ -14,5 +14,5 @@
 @property (nonatomic,strong) NSMutableArray *fruitsArray;
 @property (nonatomic,strong) NSMutableArray *vegetablesArray;
 @property (nonatomic,strong) NSMutableArray *deliverySlotsArray;
-
+@property (nonatomic,strong) NSString *orderAmountLimit;
 @end

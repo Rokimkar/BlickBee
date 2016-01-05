@@ -38,6 +38,7 @@
 //    self.selectedProducts = [[NSMutableArray alloc]init];
     self.userAddresses = [[NSMutableArray alloc] init];
     self.regionsArray = [[NSMutableArray alloc] init];
+    self.orderAmountLimit = 250;
     [self readSelectedProdsDataFromArchiver];
     return self;
     

@@ -19,6 +19,7 @@
         self.fruitsArray=[[NSMutableArray alloc] init];
         self.vegetablesArray=[[NSMutableArray alloc] init];
         self.deliverySlotsArray=[[NSMutableArray alloc] init];
+        self.orderAmountLimit = @"";
     }
     return self;
 }
