@@ -147,7 +147,10 @@
         [repo.deliverySlotsArray addObject:[self getDeliverySlotForDict:dict]];
     }
     repo.orderAmountLimit=[responsDict objectForKey:@"orderAmountLimit"];
-    [[BlickbeeAppManager sharedInstance] setOrderAmountLimit:[repo.orderAmountLimit intValue]];
+    
+    if (repo.orderAmountLimit && ![repo.orderAmountLimit isEqualToString:@""]) {
+        [[BlickbeeAppManager sharedInstance] setOrderAmountLimit:[repo.orderAmountLimit intValue]];
+    }
     return repo;
 }
 
