@@ -38,10 +38,10 @@
     
     UIBarButtonItem *leftBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel)];
     self.navigationItem.leftBarButtonItem =leftBtn;
-
+    leftBtn.tintColor=[UIColor whiteColor];
     UIBarButtonItem *rightBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(save)];
     self.navigationItem.rightBarButtonItem =rightBtn;
-    
+    rightBtn.tintColor=[UIColor whiteColor];
     self.title=@"Add New Address";
     
     self.nameTextField.layer.cornerRadius = 5.0;
@@ -60,6 +60,9 @@
     self.areasTableView.layer.borderWidth = 1.0;
     self.areasTableView.layer.borderColor = [UIColor lightGrayColor].CGColor;
     self.phoneNumberTextField.keyboardType=UIKeyboardTypeNumberPad;
+    self.navigationController.navigationBar.barTintColor=RGBA(246, 71, 17, 1);
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     // Do any additional setup after loading the view from its nib.
 }
 

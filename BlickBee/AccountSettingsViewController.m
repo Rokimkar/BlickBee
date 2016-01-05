@@ -142,7 +142,7 @@
         return cell;
     }
     [cell setBackgroundColor:RGBA(225, 225, 225, 1)];
-
+    cell.selectionStyle=UITableViewCellSelectionStyleNone;
     return cell;
 }
 
@@ -182,6 +182,25 @@
         
     }];
 }
+
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 35)];
+    /* Create custom view to display section header... */
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, tableView.frame.size.width, 35)];
+    [label setText:@"Addresses :"];
+    [view addSubview:label];
+//    //    [view setBackgroundColor:[UIColor whiteColor]]; //your background color...
+//    
+//    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(10, view.frame.size.height-3, tableView.frame.size.width-20, 1)];
+//    [imgView setBackgroundColor:[UIColor lightGrayColor]];
+//    [view addSubview:imgView];
+//    view.backgroundColor=RGBA(225, 225, 225, 1);
+    view.backgroundColor = [UIColor whiteColor];
+    return view;
+}
+
 -(void) openAddressPopUp{
     AddAddressViewController *cont = [[AddAddressViewController alloc] initWithNibName:@"AddAddressViewController" bundle:nil andPreviouslySelectedAddress:nil];
     cont.addressDelegate=self;
@@ -205,6 +224,14 @@
 
 -(void) removeBtnClicked{
     [self.accountSettingsTableView reloadData];
+}
+
+
+-(CGFloat) tableView:(UITableView *) tableView heightForHeaderInSection :(NSInteger) section{
+    if(section == 0 ){
+        return  35;
+    }
+    return 0;
 }
 
 /*

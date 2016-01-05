@@ -22,6 +22,7 @@
     self.labelForParagraphTwo.backgroundColor=[UIColor clearColor];
     self.labelForAboutUs.backgroundColor=[UIColor clearColor];
     self.labelForAboutUs.text=@"Farming sector in India is highly unorganized lives of the most of the farmer remains vulnerable because of irregular income and uncertainty of production. On the other hand, we have the consumers who always aspire for the best quality production of the fair prices.";
+    self.labelForAboutUs.textAlignment=NSTextAlignmentJustified;
     self.labelForAboutUs.lineBreakMode=NSLineBreakByWordWrapping;
     self.labelForAboutUs.numberOfLines=0;
     self.labelForParagraphTwo.text=@"BlickBee is the aspiration of the young enthusiastic minds to bridge this gap by addressing issues at the producers and consumers by stringent quality control and effective supply chain.";
