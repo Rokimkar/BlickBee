@@ -82,7 +82,7 @@
 }
 
 -(void) prepareView{
-    
+    productTableView.frame = CGRectMake(0, 0, getScreenWidth(), getScreenHeight());
     switch (self.deliveryOptions) {
         case kFruits:
         {
