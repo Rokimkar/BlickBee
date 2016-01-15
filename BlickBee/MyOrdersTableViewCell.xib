@@ -105,6 +105,7 @@
                     </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="eiu-F2-2og" firstAttribute="leading" secondItem="FT3-OL-nIw" secondAttribute="trailing" constant="51" id="2up-aa-Oke"/>
                     <constraint firstItem="IS3-xs-JL7" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="4gL-MD-oek"/>
                     <constraint firstItem="yDo-S5-cqY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="6el-s5-IBE"/>
                     <constraint firstItem="hHV-3K-2qf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="79R-y2-O8H"/>

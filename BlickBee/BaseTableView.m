@@ -33,6 +33,9 @@
         [self registerNib:[UINib nibWithNibName:@"BaseTableViewCell" bundle:nil] forCellReuseIdentifier:@"BaseTableViewCell"];
         self.backgroundColor=RGBA(0, 0, 255, 1);
         indexPathArray = [[NSMutableArray alloc]init];
+        if(SYSTEM_VERSION_LESS_THAN(@"8.0")){
+            self.contentInset = UIEdgeInsetsMake(64,0,0,0);
+        }
         return self;
     }
     return nil;

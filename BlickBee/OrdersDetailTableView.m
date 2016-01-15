@@ -13,13 +13,18 @@
 @implementation OrdersDetailTableView
 
 -(id) initWithFrame:(CGRect)frame andOrder:(Order*) order{
-    self.order=order;
-    self.dataSource=self;
-    self.delegate=self;
-    [self registerNib:[UINib nibWithNibName:@"OrdersDetailTableViewCell" bundle:nil] forCellReuseIdentifier:@"OrdersDetailTableViewCell"];
-    self.backgroundColor=RGBA(0, 0, 255, 1);
-    
-    return [self initWithFrame:frame];
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.order=order;
+        self.dataSource=self;
+        self.delegate=self;
+        [self registerNib:[UINib nibWithNibName:@"OrdersDetailTableViewCell" bundle:nil] forCellReuseIdentifier:@"OrdersDetailTableViewCell"];
+        self.backgroundColor=RGBA(0, 0, 255, 1);
+        if(SYSTEM_VERSION_LESS_THAN(@"8.0")){
+            self.contentInset = UIEdgeInsetsMake(64,0,0,0);
+        }
+    }
+    return self;
 }
 
 - (NSInteger) numberOfSectionsInTableView : (UITableView *)tableView{

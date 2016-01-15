@@ -68,7 +68,6 @@
     [productChangedPrice appendAttributedString:productPrice];
     [self.labelForProductName setNumberOfLines:0];
     self.labelForProductName.text=product.productName;
-    [self.labelForProductName sizeToFit];
     
     self.labelForProductPrice.attributedText=productChangedPrice;
     self.labelForProductQuantity.text=product.productUnitQty;

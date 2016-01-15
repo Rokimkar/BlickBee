@@ -24,5 +24,5 @@
 - (IBAction)buttonPressedViewOrder:(id)sender;
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewForStatus;
 @property (weak,nonatomic) id <launchOrderDetailVC> launchOrderDetailVCDelegate;
-@property (weak,nonatomic) Order *item;
+@property (strong,nonatomic) Order *item;
 @end

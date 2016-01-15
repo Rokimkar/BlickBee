@@ -36,11 +36,12 @@
     else if([myOrder.orderStatus isEqualToString:@"3"]){
         self.imageViewForStatus.image=[UIImage imageNamed:@"4.png"];
     }
-    [self.imageViewForStatus sizeToFit];
+//    [self.imageViewForStatus sizeToFit];
     self.selectionStyle=UITableViewCellSelectionStyleNone;
 }
 
 - (IBAction)buttonPressedViewOrder:(id)sender{
     [self.launchOrderDetailVCDelegate launchOrderDetailVC : self.item];
 }
+
 @end
