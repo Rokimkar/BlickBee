@@ -25,13 +25,17 @@
 
 -(id) initWithFrame:(CGRect)frame andProductsArray:(NSMutableArray*) prodsArray{
     
-    self.productArray=prodsArray;
-    self.dataSource=self;
-    self.delegate=self;
-    [self registerNib:[UINib nibWithNibName:@"BaseTableViewCell" bundle:nil] forCellReuseIdentifier:@"BaseTableViewCell"];
-    self.backgroundColor=RGBA(0, 0, 255, 1);
-    indexPathArray = [[NSMutableArray alloc]init];
-    return [self initWithFrame:frame];
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.productArray=prodsArray;
+        self.dataSource=self;
+        self.delegate=self;
+        [self registerNib:[UINib nibWithNibName:@"BaseTableViewCell" bundle:nil] forCellReuseIdentifier:@"BaseTableViewCell"];
+        self.backgroundColor=RGBA(0, 0, 255, 1);
+        indexPathArray = [[NSMutableArray alloc]init];
+        return self;
+    }
+    return nil;
 }
 
 -(void) productRecievedFromCell: (Product*) product{
