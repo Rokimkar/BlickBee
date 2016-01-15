@@ -10,6 +10,10 @@
 #import "User.h"
 #import "HomeViewController.h"
 #import "SWRevealViewController.h"
+
+
+
+
 @interface BlickbeeAppManager : NSObject
 
 + (BlickbeeAppManager*)sharedInstance;
@@ -19,7 +23,6 @@
 @property (nonatomic,strong) NSMutableArray *regionsArray;
 @property (nonatomic,strong) HomeViewController *homeViewController;
 @property (nonatomic,assign) int orderAmountLimit;
-
 -(void) userLoginSuccessfulWith:(User*)user;
 -(void) archiveSelectedProducts;
 -(void) archiveUser;

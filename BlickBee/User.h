@@ -23,5 +23,6 @@
 @property(nonatomic,strong) NSString *avatarMineType;
 @property(nonatomic,strong) NSString *myWallet;
 @property(nonatomic,strong) NSString *accessToken;
+@property(nonatomic,strong) NSString *otpRequest;
 
 @end

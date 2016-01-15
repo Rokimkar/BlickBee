@@ -28,6 +28,7 @@
         self.avatarMineType=@"";
         self.myWallet=@"";
         self.accessToken=@"";
+        self.otpRequest=@"";
     }
     return self;
 }

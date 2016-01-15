@@ -124,7 +124,7 @@
 //            SWRevealViewController *cont = [storyBoard instantiateViewControllerWithIdentifier:@"SWRevealViewController"];
             OTPViewController *cont = [storyBoard instantiateViewControllerWithIdentifier:@"OTPViewController"];
             cont.isFromSignUp=YES;
-            
+            cont.user=user;
             [self.navigationController pushViewController:cont animated:YES];
             
 //            [self presentViewController:cont animated:YES completion:^{

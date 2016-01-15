@@ -424,6 +424,7 @@
         user.avatarMineType = [responseDict objectForKey:@"avatar_mine_type"];
         user.myWallet = [responseDict objectForKey:@"myWallet"];
         user.accessToken = [responseDict objectForKey:@"access_token"];
+    user.otpRequest = [responseDict objectForKey:@"otp"];
     return user;
 }
 

@@ -48,7 +48,7 @@
     UIBarButtonItem *optionsMenuButton = [[UIBarButtonItem alloc]initWithCustomView:optionsBtn];
 //    self.navigationItem.leftItemsSupplementBackButton = YES;
     self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:backButton,optionsMenuButton, nil];
-    productTableView = [[BaseTableView alloc]initWithFrame:CGRectMake(0, 0, getScreenWidth(), getScreenHeight()) andProductsArray:nil];
+    productTableView = [[BaseTableView alloc]initWithFrame:CGRectMake(0,0, getScreenWidth(), getScreenHeight()) andProductsArray:nil];
     productTableView.separatorColor=[UIColor clearColor];
     productTableView.backgroundColor=RGBA(225, 225, 225, 1);
     productTableView.changeFlotingBtnDelegate=self;

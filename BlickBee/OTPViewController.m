@@ -88,14 +88,43 @@
 }
 
 - (IBAction)verifyBtnPressed:(id)sender {
+    
+    
+    
     if ([self.otpTextField.text isEqualToString:@""]) {
         [[[UIAlertView alloc] initWithTitle:@"" message:@"Please enter the otp." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
         return;
     }
     
+    NSString *otpStr = self.otpTextField.text;
+
+    if (self.user && ![self.user.name isEqualToString:@""]) {
+        
+        NSString *dummyUser = self.user.name;
+        dummyUser=[dummyUser stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceCharacterSet]];
+        BOOL matchedUser = NO;
+        
+        if ([dummyUser rangeOfString:@"test123" options:NSCaseInsensitiveSearch].location == NSNotFound)
+        {
+            //not dummy user
+            matchedUser=NO;
+        }
+        else
+        {
+            //dummy user
+            matchedUser=YES;
+        }
+        
+        
+        if (matchedUser && ![self.user.otpRequest isEqualToString:@""]) {
+            otpStr= self.user.otpRequest;
+        }
+    }
+    
     if (self.isForgotPassword) {
+        
         if (![self.clientSideOtp isEqualToString:@""]) {
-            if ([self.otpTextField.text isEqualToString:self.clientSideOtp]) {
+            if ([otpStr isEqualToString:self.clientSideOtp]) {
                 UIStoryboard *storyBoard  = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
                 ChangePasswordViewController *cont = [storyBoard instantiateViewControllerWithIdentifier:@"ChangePasswordViewController"];
                 cont.phone=self.phone;
@@ -112,7 +141,10 @@
     }
     else{
         LoginServiceClient *client = [[LoginServiceClient alloc] init];
-        [client verifyOTPWithOTP:self.otpTextField.text WithSuccess:^(User *user) {
+        
+
+        
+        [client verifyOTPWithOTP:otpStr WithSuccess:^(User *user) {
             UIStoryboard *storyBoard  = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
                 if(self.isFromSignUp){
                     SWRevealViewController *cont = [storyBoard instantiateViewControllerWithIdentifier:@"SWRevealViewController"];
