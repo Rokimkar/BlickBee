@@ -68,7 +68,7 @@
     }
     cell.backgroundColor=RGBA(225, 225, 225, 1);
     cell.imageViewFordeliveryDetail.image=[UIImage imageNamed:@"2.png"];
-    [cell.imageViewFordeliveryDetail sizeToFit];
+   // [cell.imageViewFordeliveryDetail sizeToFit];
     
     if(indexPath.section==2){
         AddressConfirmationTableViewCell *cellOne = (AddressConfirmationTableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"AddressConfirmationTableViewCell"];
@@ -144,8 +144,7 @@
 - (IBAction)confirmOrderClicked:(id)sender {
     OrderServiceClient *client = [[OrderServiceClient alloc] init];
     if ([BlickbeeAppManager sharedInstance].userAddresses.count>0) {
-        Address *address = [[BlickbeeAppManager sharedInstance].userAddresses objectAtIndex:0];
-        [client makeOrderWithProductArray:[BlickbeeAppManager sharedInstance].selectedProducts andAddress:address WithSuccess:^(Order *order) {
+        [client makeOrderWithProductArray:[BlickbeeAppManager sharedInstance].selectedProducts andAddress:self.address WithSuccess:^(Order *order) {
             UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             OrderConfirmationViewController *orderConfirmationVC = [storyBoard instantiateViewControllerWithIdentifier:@"OrderConfirmationViewController"];
             orderConfirmationVC.orderItem=order;
