@@ -11,7 +11,8 @@
 
 @interface ReferalServiceClient : BaseServiceClient
 
--(void) validateCodeWithDeviceId : (NSString *)deviceId withSuccess:(void (^) (User* user))success failure:(void (^) (NSError *error)) failure;
+-(void) validateCodeWithDeviceId : (NSString *)deviceId :(NSString *)referralCode withSuccess:(void (^) (User* user))success failure:(void (^) (NSError *error)) failure;
 
+-(void) validationDoneWithDeviceId : (NSString *)deviceId :(NSString *)referralCode withSuccess:(void(^)(User* user))success failure:(void (^) (NSError *error)) failure;
 
 @end

@@ -37,7 +37,7 @@
     }
     [self.imageViewForStatus sizeToFit];
     self.labelForOrderID.text=order.uniqueOrderId;
-    self.labelForAmount.text=[NSString stringWithFormat:@"%@ %@",@"₹",order.orderAmount];
+    self.labelForAmount.text=[NSString stringWithFormat:@"₹ %.2f",[order.orderAmount floatValue]];
     self.labelForDate.text=order.orderCreatedDate;
     self.selectionStyle=UITableViewCellSelectionStyleNone;
 

@@ -23,7 +23,7 @@
     self.item=myOrder;
     self.labelForOrderDate.text=myOrder.orderCreatedDate;
     self.labelForOrderID.text=myOrder.uniqueOrderId;
-    self.labelForPrice.text=[NSString stringWithFormat:@"₹%@",myOrder.orderAmount];
+    self.labelForPrice.text=[NSString stringWithFormat:@"₹%.2f",[myOrder.orderAmount floatValue]];
     if([myOrder.orderStatus isEqualToString:@"0"]||[myOrder.orderStatus isEqualToString:@"Pending"]){
     self.imageViewForStatus.image=[UIImage imageNamed:@"2_a.png"];
     }
