@@ -66,7 +66,7 @@
                              @"billing_id": address.addressId,
                              @"shipping_id": address.addressId,
                              @"product_unit_qnt": productAmt,
-                             @"total_amount": [NSString stringWithFormat:@"%f",totalAmt]};
+                             @"total_amount": [NSString stringWithFormat:@"%0.2f",totalAmt]};
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
     manager.responseSerializer.acceptableContentTypes= [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     [manager POST:BASE_URL_STRING parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {

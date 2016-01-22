@@ -54,7 +54,7 @@
 
 -(void) emptySelectedProduct{
     for(int i=0;i<[BlickbeeAppManager sharedInstance].selectedProducts.count;i++){
-        Product*product = [[BlickbeeAppManager sharedInstance].selectedProducts objectAtIndex:0];
+        Product*product = [[BlickbeeAppManager sharedInstance].selectedProducts objectAtIndex:i];
         product.selectedProductQuantity=@"0";
 //        [[BlickbeeAppManager sharedInstance].selectedProducts removeLastObject];
     }
