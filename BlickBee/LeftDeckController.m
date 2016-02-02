@@ -19,6 +19,7 @@
 #import "AboutUsViewController.h"
 #import "SignInViewController.h"
 #import "UIAlertView+BlockExtensions.h"
+#import "ReferAndEarnViewController.h"
 @interface LeftDeckController (){
     NSArray *itemsArray;
     NSArray *imageArray;
@@ -34,8 +35,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     screenSize=([UIScreen mainScreen]).bounds.size;
-    itemsArray = [[NSArray alloc]initWithObjects:@"Home",@"My Orders",@"Account Settings",@"Notification",@"",@"Customer Service",@"Rate Us",@"Share",@"About Us",@"LogOut",nil];
-    imageArray = [[NSArray alloc]initWithObjects:@"home.png",@"my_orders.png",@"settings.png",@"notifications.png",@"",@"customerservice.png",@"rateus.png",@"share.png",@"aboutus.png", @"power17.png",nil];
+    itemsArray = [[NSArray alloc]initWithObjects:@"Home",@"My Orders",@"Account Settings",@"Notification",@"",@"Customer Service",@"Rate Us",@"Referals",@"Share",@"About Us",@"LogOut",nil];
+    imageArray = [[NSArray alloc]initWithObjects:@"home.png",@"my_orders.png",@"settings.png",@"notifications.png",@"",@"customerservice.png",@"rateus.png",@"",@"share.png",@"aboutus.png", @"power17.png",nil];
     // Do any additional setup after loading the view.
     [self.itemListingTableView registerNib:[UINib nibWithNibName:@"LeftDeckTableViewCell" bundle:nil] forCellReuseIdentifier:@"LeftDeckTableViewCell"];
     self.itemListingTableView.scrollEnabled=NO;
@@ -114,22 +115,27 @@
     }
     else if(indexPath.row==6){
         [[iRate sharedInstance]promptForRating];
+
     }
-    else if (indexPath.row==7){
+    else if(indexPath.row==7){
+        ReferAndEarnViewController *referAndEarnVC = [storyboard instantiateViewControllerWithIdentifier:@"ReferAndEarnViewController"];
+        UINavigationController *NVC = [[UINavigationController alloc]initWithRootViewController:referAndEarnVC];
+        [revealVC setFrontViewController:NVC];
+    }
+    else if (indexPath.row==8){
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         ShareViewController *shareCont = [storyboard instantiateViewControllerWithIdentifier:@"ShareViewController"];
         UINavigationController *NVC = [[UINavigationController alloc]initWithRootViewController:shareCont];
         [revealVC setFrontViewController:NVC];
     }
 
-    else if(indexPath.row==8){
+    else if(indexPath.row==9){
         AboutUsViewController *abtUsVC = [storyboard instantiateViewControllerWithIdentifier:@"AboutUsViewController"];
         UINavigationController *NVC = [[UINavigationController alloc]initWithRootViewController:abtUsVC];
-        NVC.navigationBar.barTintColor=RGBA(247, 71, 17, 1);
         //[revealVC revealToggle:abtUsVC];
         [revealVC setFrontViewController:NVC animated:YES];
     }
-    else if(indexPath.row==9){
+    else if(indexPath.row==10){
         
         [[[UIAlertView alloc] initWithTitle:@"Blickbee" message:@"Are you sure, you want to logout?" completionBlock:^(NSUInteger buttonIndex, UIAlertView *alertView) {
             
@@ -144,8 +150,7 @@
                     [revealVC.navigationController popToRootViewControllerAnimated:YES];
                 }
                 else{
-                    UIStoryboard *storyBoard  = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-                    SignInViewController *cont = [storyBoard instantiateViewControllerWithIdentifier:@"SignInViewController"];
+                    SignInViewController *cont = [storyboard instantiateViewControllerWithIdentifier:@"SignInViewController"];
                     [self presentViewController:cont animated:YES completion:^{
                         
                     }];

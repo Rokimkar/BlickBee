@@ -16,7 +16,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    SWRevealViewController *swRevealVC = self.revealViewController;
+    if(swRevealVC){
+        UIImage *image =[UIImage imageNamed:@"menu.png"];
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        btn.bounds = CGRectMake(0, 0, image.size.width-40, image.size.height-40);
+        self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc]init];
+        [btn addTarget:self.revealViewController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
+        [btn setImage:image forState:UIControlStateNormal];
+        UIBarButtonItem *menuButton = [[UIBarButtonItem alloc]initWithCustomView:btn];
+        self.navigationItem.leftBarButtonItem = menuButton;
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+        self.revealViewController.panGestureRecognizer.delegate=self;
+        self.navigationController.navigationBar.barTintColor=RGBA(246, 71, 17, 1);
+        [self.navigationItem.leftBarButtonItem setAction:@selector(revealToggle:)];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+        [swRevealVC revealToggleAnimated:YES];
+    }
+    self.title=@"Refer and Earn";
+    [self.view setBackgroundColor:RGBA(225, 225, 225, 1)];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +43,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
